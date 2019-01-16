@@ -16,5 +16,5 @@ Thesis was written in _Overleaf_ (https://www.overleaf.com/) platform, and then 
 
 ## Table of Contents
 
-Hereby, for sake of simplicity, the NU guidelines are presented and signed if applied correctly.
+Coming Soon
 
