@@ -114,6 +114,27 @@
 \usepackage{natbib}
 \usepackage{bibunits}
 
+% *****************************************************************************
+% *************************** Epigraph ************************************
+
+\usepackage{epigraph}
+
+% \epigraphsize{\small}% Default
+%\setlength\epigraphwidth{8cm}
+% \setlength{\epigraphwidth}{0.8\textwidth}
+\renewcommand{\epigraphsize}{\small}
+\setlength{\epigraphwidth}{0.8\textwidth}
+\renewcommand{\textflush}{flushright}
+\renewcommand{\sourceflush}{flushright}
+\setlength\epigraphrule{0pt}
+\setlength\epigraphrule{0pt}
+
+\usepackage{etoolbox}
+
+\makeatletter
+\patchcmd{\epigraph}{\@epitext{#1}}{\itshape\@epitext{#1}}{}{}
+\makeatother
+
 % ******************************************************************************
 % ************************* User Defined Commands ******************************
 % ******************************************************************************
