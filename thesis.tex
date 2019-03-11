@@ -2,7 +2,7 @@
 
 % Please have a look at the README.md file for info on how to use the template
 
-\documentclass[a4paper,12pt,times,twoside,flushleft,print,custommargin,authoryear,PageStyleII]{PhDThesisPSnPDF}
+\documentclass[a4paper,12pt,times,twoside,flushleft,print,custommargin,authoryear,PageStyleII,chapter]{PhDThesisPSnPDF}
 
 % ********************************** Preamble **********************************
 
@@ -11,6 +11,26 @@
 % ********************************* Meta ********************************
 
 \input{Meta/meta}
+
+% ***************************** Abstract Separate ******************************
+% To printout only the titlepage and the abstract with the PhD title and the
+% author name for submission to the Student Registry, use the `abstract' option in
+% the document class.
+
+\ifdefineAbstract
+ \pagestyle{empty}
+ \includeonly{Declaration/declaration, Abstract/abstract}
+\fi
+
+% ***************************** Chapter Mode ***********************************
+% The chapter mode allows user to only print particular chapters with references
+% Title, Contents, Front matter are disabled by default
+% Useful option to review a particular chapter or to send it to supervisor.
+% To use choose `chapter' option in the document class
+
+\ifdefineChapter
+ \includeonly{Introduction/introduction}
+\fi
 
 % ******************************** Front Matter ********************************
 \begin{document}
@@ -23,7 +43,8 @@
 \include{Declaration/declaration}
 \include{Acknowledgements/acknowledgements}
 \include{Abstract/abstract}
-\include{Publications/publications}
+% Include publications
+% \include{Publications/publications}
 
 
 % *********************** Adding TOC and List of Figures ***********************
