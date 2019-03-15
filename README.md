@@ -14,6 +14,16 @@ Added publications section to list all the publications related to the thesis.
 
 Thesis was written in _Overleaf_ (https://www.overleaf.com/) platform, and then cloned here.
 
+## Counting Words
+
+To count words in Tex files use a _Git Count Words_ LateX script by Bastian Rieck, available at https://gist.github.com/Submanifold/d7b996492dc3020f2acea87b49cc54c3.
+
+### to use it
+
+``` sh
+$ ./word_count.sh
+```
+
 ## Table of Contents
 
 Coming Soon
