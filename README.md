@@ -6,7 +6,7 @@ This PhD research explores more inclusive and participatory ways of designing da
 
 ## Declaration
 
-This thesis is using a _Newcastle University template_ by André Catarino Guerra, available at https://github.com/AndreGuerra123/NUTT. Thanks for uploading the source on GitHub.
+This thesis is using a _Newcastle University template_ by André Catarino Guerra, available at https://github.com/AndreGuerra123/NUTT. Thanks for uploading the source on GitHub!
 
 Also using some styles adapted from _CUED LaTeX template_ by Krishna Kumar, available at https://github.com/kks32/phd-thesis-template.
 
@@ -16,7 +16,7 @@ Thesis was written in _Overleaf_ (https://www.overleaf.com/) platform, and then 
 
 ## Counting Words
 
-To count words in Tex files use a _Git Count Words_ LateX script by Bastian Rieck, available at https://gist.github.com/Submanifold/d7b996492dc3020f2acea87b49cc54c3.
+To count words over time in Tex files use a _Git Count Words_ LateX script by Bastian Rieck, available at https://gist.github.com/Submanifold/d7b996492dc3020f2acea87b49cc54c3.
 
 ### to use it
 
