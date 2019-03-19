@@ -1,4 +1,11 @@
+\ifpdf
+    \graphicspath{{Introduction/Figs/Raster/}{Introduction/Figs/PDF/}{Introduction/Figs/}}
+\else
+    \graphicspath{{Introduction/Figs/Vector/}{Introduction/Figs/}}
+\fi
+
 \begin{introduction}
+
 
 \begin{section}{Prelude}
 
@@ -26,10 +33,9 @@ Regardless of the the fact that computer systems can not create wisdom, they are
 % Digital civics approaches
 
 To respond to these challenges, new \textit{digital civics} approaches have emerged that recognise the importance of `social' in these processes. rom citizen sensing  \citep{balestrini_city_2017}, crowdsourced data \citep{maskell_spokespeople:_2018,le_dantec_planning_2015} to even communities commissioning their own technologies to create a new data sources \citep{garbett_app_2016}.
-
 and Public Participation Geographic Information Systems (PPGIS) or volunteered geographic information (VGI) \citep{le_dantec_planning_2015,tenney_data-driven_2016} have made good steps to bring people closer to making data useful.
 
-The value of data and its usefulness for civil society to influence governance and decision-making is still unclear. Mainly because it is underutilised by communities due to lack of access, understanding and resources to support data science practices. These practices and skills which are essential for knowledge creation and value generation in this data saturated world. However not only enabling access to new and improved tools will solve the problem of inequality, it is also crucial for research to pursue deeper meanings of data in these contexts. Working together with communities, researchers need to identifying caps and barriers, and help increase data literacy in order to empower communities to create knowledge. This thesis is seeking to do exactly that, by investigating how citizens can effectively use data in civic participation, advocacy and action. Through contacting two case studies, it looks at how different communities use data for knowledge creation and local action. Case study one supports communities in commission environmental data from scientific grade sensors by establishing a toolkit called SenseMyStreet. Helping people to generate their own data sources to help raise awareness about local issues, use in civic advocacy and influence local policy making processes. Second case study looks at the opportunities and challenges of using Open Data in community setting and for informing local decision-making processes. 
+The value of data and its usefulness for civil society to influence governance and decision-making is still unclear. Mainly because it is underutilised by communities due to lack of access, understanding and resources to support data science practices. These practices and skills which are essential for knowledge creation and value generation in this data saturated world. However not only enabling access to new and improved tools will solve the problem of inequality, it is also crucial for research to pursue deeper meanings/underestandings of data in these contexts. Working together with communities, researchers need to identifying caps and barriers, and help increase data literacy in order to empower communities to create knowledge. This thesis is seeking to do exactly that, by investigating how citizens can effectively use data in civic participation, advocacy and action. Through conducting two case studies, it looks at how different communities use data for knowledge creation and local action. Case study one supports communities in commission environmental data from scientific grade sensors by establishing a toolkit called SenseMyStreet. Helping people to generate their own data sources to raise awareness about local issues, use it in civic advocacy and influence local policy making processes. Second case study looks at the opportunities and challenges of using Open Data in community setting and for informing local decision-making processes.
 
 contributing new understanding of the relationships between data, communities and knowledge networking.
 \end{section}
@@ -44,23 +50,14 @@ This research explores the use of data within civil society and looks at how can
 
 From this the underlining objectives are:
 \begin{itemize}
-\item[i.] (\textit{Theoretical objective}) Build up a theoretical model and vocabulary that helps understand and articulate concepts and important factors of \textit{data}, \textit{information}, \textit{knowledge} and \textit{wisdom} in the context of community knowledge making; that sits at the intersection of engineering (i.e. Information Theory), epistemology and social studies.
+\item[i.] (\textit{Theoretical objective}) Build up a theoretical model and vocabulary that helps understand and articulate concepts and important factors of \textit{data}, \textit{information}, \textit{knowledge} and \textit{wisdom} in the context of community knowledge making; that sits at the intersection of engineering (i.e., Information Theory), epistemology and social studies.
 
-\item[ii.] (\textit{Technical objective}) Design and build tools that promote the use of data in civic participation and advocacy. This involves understanding the context, culture, values and practices of different community groups working with data, in order to adequately respond to their needs and issues they are tackling. This also includes establish processes that will help build capacity within the community to help sustain the support for community groups working with data.
+\item[ii.] (\textit{Technical objective}) Design and build tools that enable and promote the use of data in civic participation and advocacy. This involves understanding the context, culture, values and practices of different community groups working with data, in order to adequately respond to their needs and issues they are tackling. This also includes establish processes that will help build capacity within the community to help sustain the support for community groups working with data.
 
 \item[iii.] (\textit{Conceptual objective}) Provide an understanding around the role of data in knowledge networking/creation/making at community level, that can be applied when designing and building tools for effective use of data in civic participation and advocacy. 
 \end{itemize}
 
 \begin{subsection}{Research Questions}
-
-
-% The aim of PhD is to design and build tools that promote the use of data in civic participation and the appropriate tools and processes to support civic advocacy. For coherence and referencing in case study descriptions, I will reiterate the research questions below:
-% 1. What is the level of engagement with data and literacy around using data that local communities currently have?
-% 2. What does it mean to participate in civic action through data sharing and use? 
-    % a. What are the different ways of enabling data-driven participation?
-    % b. What tools are appropriate for collaborative sensemaking of data?
-% 3. What is the role of data in civic participation and advocacy?
-    % a. Does the process of citizen sensemaking and giving people voices through data shift the power relationship between the publics and decision-makers, and strengthen the community?
 
 The following research questions are taken up to further study this area and address the aims and objectives of this thesis:
 \begin{itemize}
@@ -70,13 +67,60 @@ The following research questions are taken up to further study this area and add
 \end{subsection}
 
 \begin{subsection}{Research Approach}
-Established an argument that for effective use of data in civic advocacy and action, that need for creating effective knowledge networks withing communities is essential for creating knowledge society \cite{hakken_social_2003} which can then help create processes and tools that better serve citizens.
-\end{subsection}
+The availability of different datasets and capabilities of information technologies helps us re-think the role of data in civic participation and in complex sociotechnical processes. This provides opportunities to focus on digital technology and mechanisms that support human centred and alternative approaches. To answer the proposed research questions, after stating an argument that effective use of data in civic advocacy and action needs establishment of knowledge networks within communities, this thesis has adopted a case study approach to explore barriers and opportunities for knowledge making in different contexts and the technologies that support the foundation of \textit{knowledge society} \citep{hakken_social_2003}.
 
+%FIGURE framework HERE
+\begin{figure}
+\centering
+ \includegraphics[scale=0.4]{framework}
+  \caption{Illustration of the the four steps of the toolkit}
+  \label{fig:framework}
+\end{figure}
+
+This thesis undertook a Participatory Action Research (PAR) approach manifesting through a user-centred design processes where iterative design and more engineering focused design sprints where applied. Research focused on the active involvement of people in the design processes; not only to identify their particular needs in order to respond with technical solutions, but also to encourage community-based inquires and activities that would drive the research forward. After each iteration there was a feedback loop from the community which dictated the next steps and refinement the developed technologies. This process involved frequent field visits, ethnographical work, engagements, focus groups and workshops with the communities; followed by design and development which resulted in technical tools and platforms. Throughout the case studies the following framework (see figure \ref{fig:framework}) was applied to study the role of data and technology in knowledge creation for meaningful civic participation and community decision-making:
+
+\begin{itemize}
+  \item Identifying the need for data (\textit{Discovery Phase}). Through conducting interviews and observations of existing community of practice to map out how they are using or not using data. 
+  \item Making data and technology accessible (\textit{Design/Develop Phase}). Undertaking user centred design process to create tools and platforms that respond to the needs of the community -- either for data access or production. Starting with paper based methods and then moving to digital tools where appropriate.
+  \item Meaningful presentation of data (\textit{Deploy Phase}). Ascertain what visualisations and formats of data are more accessible and useful for the sensemaking processes in different contexts and with different communities. 
+  \item Taking collective action by purposing data (\textit{Sensemaking Phase}). Supporting processes of sensemaking and knowledge creation in local communities to use data for decision-making and developing new thinking and solutions.
+  \item Assessing the outcomes of data use (\textit{Evaluation Phase}). Evaluating the use of data for improving civic participation and turning it to activities for local benefit.
+\end{itemize}
+
+The contexts and the communities with which the research was conducted, differed in terms of social, economic and cultural backgrounds; (i) local groups of activist residents in Newcastle Upon Tyne, UK leveraging environmental monitors to produce data for campaigning and local decision-making (ii) a neighbourhood-planning group in North Tyneside, UK exploring the use of data to inform the process of local policy-making, (iii) two charity organisations in Newcastle Upon Tyne and North Tyneside, UK reliant upon data to focus their work based on the needs of the community, and to illustrate their impact to extend their funding. 
+
+%Open source platforms and longitudinal deployment
+% Building capacity
+% Usage without the lead from researchers
+% Ownership of data
+% Usage of these technologies (resources) in the wild. Eliminating the barriers for engagement
+%Sustaining engagement by putting in processes
+
+This thesis has embraced the messiness of society and of conducting research outside the lab environment (i.e., `in the wild') with a wide range of stakeholders, which gives no guarantee of successful outcomes because of the multiplicity of uncontrolled variables for success. Hence the lens which the case studies have been analysed and reflected upon is mainly empirical and qualitative in nature, and focused on observations within the communities of practice; and consisting of both, communities and researchers reflections on the impact of created tools and platforms for enabling/empowering people to take action.
+
+\end{subsection}
 \end{section}
+\clearpage
 
 \begin{section}{Summary of Contributions}
+
+The research undertaken during this thesis resulted in five contributions to the field of HCI and information engineering. In addition to published work in peer-reviewed scientific journals (see publications), the research also produced open-source tools and processes that are continued to being used and making a lasting impact for communities. The list of contributions from the thesis are as follows: 
+
+\begin{itemize}
+\item Establishing a basis of effective use of data in communities and contributing new understanding of the relationships between data, communities and knowledge networking though the design and development of open-source data platforms.
+
+\item\textit{SenseMyStreet}\footnote{\url{https://sensemystreet.uk}}, establishing a first sensor commissioning toolkit for communities that enables people to use scientific grade environmental monitors to produce data about their neighbourhood. (i) The design and development of SenseMyStreet toolkit; (ii) Evaluation of the toolkit and its tools through multiple deployments `in the wild' to determine the needed commissioning services for data production and the utility of that data to support local decision-making; (iii) Establishing a sustainable model for sensor commissioning.
+
+\item\textit{Data:In Place}\footnote{\url{https://data-in.place}}, an open-source web platform which supports citizens in accessing, interpreting and making sense of open data for purpose of civic advocacy. The main contributions of Data:In Place: (i) The iterative design process of Data:In Place, from the perspective of community data needs and the barriers and opportunities for utilising open data; (ii) An online tool with novel map-based querying system for access official statistics about a place, helping interrogate the data, and enabling to map additional data sources and create data visualisations (see \ref{sec:datainplace}); (iii) Reflections on Data:In Place system, its utility and current limitations as a tool for civic advocacy; (iv) Design recommendations to inform future research of data systems for community knowledge making and civic advocacy.
+
+\item A reflection on the process of building and deploying data platforms to support community knowledge creation for purposes of civic advocacy and action. 
+
+\item Definition of a framework to understand the process of community knowledge making and linked processes for effective use of data that helps identify the gaps and needed resources to support data science practices within the civil society.
+
+\end{itemize}
+
 \end{section}
+\clearpage
 
 \begin{section}{Thesis Outline}
 
@@ -86,14 +130,14 @@ The remainder of this thesis consists of seven chapters that reflect upon two ca
 Chapter 1 explores the relevant literature for this work. Use of data within communities and in civic action explores a wide range of disciplines from technical fields like sensing networks, pervasive computing and data systems to human computer interaction and computer-supported collaborative work. Purpose of this chapter is to point out the value of data in knowledge creation and different uses of data in decision-making, and the way citizens are involved or not involved in these data-driver processes.
 \newline
 
-Chapter 2 describes the overall approach and methodology for conducting the research and the lens which the case studies are analysed and reflected upon.
-\newline
-
-Chapter 3 presents the iterative design, development and deployment of SenseMyStreet, a sensor commissioning toolkit for communities that enables people to use scientific grade environmental monitors to collect data about their neighbourhood. Chapter describes the evolution of the toolkit, the analysis of lessons learned from setting it up and the results from particular case study with group called SPACEforHeaton, where citizens are using the data that is being collected to evidence an issue and influence policies linked to their local areas. 
+Chapter 2 presents the iterative design, development and deployment of SenseMyStreet, a sensor commissioning toolkit for communities that enables people to use scientific grade environmental monitors to collect data about their neighbourhood. Chapter describes the evolution of the toolkit, the analysis of lessons learned from setting it up and the results from particular case study with group called SPACEforHeaton, where citizens are using the data that is being collected to evidence an issue and influence policies linked to their local areas. 
 % should I include all the groups? It seems that groups who had an aim for the data will be successful.
 \newline
 
-Chapter 4 focuses on additional sources of data to promote civic advocacy and presents case study two, the design and iterative development process of Data:In Place, a online map based system for accessing and interpreting open data from governmental sources to support local decision-making and civic action.
+Chapter 3 focuses on additional sources of data to promote civic advocacy and presents case study two, the design and iterative development process of Data:In Place, a online map based system for accessing and interpreting open data from governmental sources to support local decision-making and civic action.
+\newline
+
+Chapter 4 describes the technical, financial, political aspects involved for appropriating data and making data \textit{open}, \textit{accessible} and \textit{usable} for communities. Chapter touches on some of the points raised by \cite{gurstein_open_2011} around `effective data use', and involves the description of the researchers process and the difficulties faced when making data accessible and usable for communities.
 \newline
 
 Chapter 5 reflects on two case studies and goes deeper into the barriers and issues around data use and appropriation for local benefit. Through engagement activities and evaluation of the case studies, an understanding of relevant stakeholders and needed processes for effective use of data are identified.
