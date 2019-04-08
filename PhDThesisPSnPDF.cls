@@ -1055,7 +1055,7 @@ wish to left align your text}
 \newenvironment{introduction}{
 \setsinglecolumn
 \chapter*{\centering \normalfont\fontsize{14}{15}\bfseries Introduction}
-\addcontentsline{toc}{chapter}{Introduction}%
+\addcontentsline{toc}{chapter}{Introduction}
 \renewcommand\thesection{\arabic{section}}
 \renewcommand\thesubsection{\thesection.\arabic{subsection}}
 \thispagestyle{empty}
