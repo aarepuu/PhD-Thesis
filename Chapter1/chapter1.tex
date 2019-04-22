@@ -12,7 +12,11 @@
     \graphicspath{{Chapter1/Figs/Vector/}{Chapter1/Figs/}}
 \fi
 
-This chapter describes related research around the use of data in knowledge creation and citizen participation in democracy. The use of data within communities and in civic action spans across a wide range of disciplines from technical fields like sensing networks, pervasive computing and systems engineering to human computer interaction (HCI) and computer-supported collaborative work (CSCW). First two sections give an overview of the increasing use of data in decision-making through the lens of smart city and looks at the ways that citizens are involved or not involved in these data-driver processes. Subsequent two section describe the new ways of creating knowledge sources and opening them up for everyone to use and re-purpose. This also includes opportunities for new interpretation of open data sources published by the governments or other data generators. Fifth section describes the research around data production and different ways citizens can generate their own data sources, whether it is to contribute to science or to evidence local issues and contest decisions. Sixth section describes the current state of the art of data visualisation and storytelling through data which is essential for data science practices and the effective us of data. 
+This chapter describes related research around the use of data in knowledge creation and citizen participation in democracy. The use of data in civic life and within communities spans across a wide range of disciplines from technical fields like sensing networks, pervasive computing and information engineering to human computer interaction (HCI) and computer-supported collaborative work (CSCW). First two sections of the literature review give an overview of the increasing use of data in decision-making through the lens of smart city and looks at the ways that citizens are involved or not involved in these data driver processes. Subsequent section describe the new ways of creating knowledge sources and opening them up for everyone to use and re-purpose. This also includes opportunities for new interpretation of open data sources published by the governments or other data generators. Forth section describes the research around data production and different ways citizens can generate their own data sources, whether it is to contribute to science or to evidence local issues and contest decisions. Fifth section describes the current state-of the-art of data visualisation and storytelling through data which is essential for data science practices and the effective us of data. 
+
+Sixth section tries to map out the relevant stakeholder groups around data production, use and dissemination of derived knowledge from it. It is essential to understand these complex relationships and roles of stakeholders, as we are increasingly coming to contend with significant challenges and questions relating to what data may be relevant and for whom; how to translate and represent it; as well as how different representations might be combined to better support communication and sense-making of complex information that sits at the boundaries between what may be private, shared and public. Building from that, section seven reviews the relevant literature about communities of practice and and the knowledge networking within these communities. 
+
+Finally the last section looks at the research into civic advocacy and action with the support of data and technology, including the existing models of successful and unsuccessful citizen decision-making. This literature review gives an overview of the underlying concepts touched in this thesis, however for each case study a more detailed and specific body of research is reviewed and presented.
 
 % Communities of practice and the knowledge networking within these communities
 % The role of different actor involved and the social capital surrounding the use of data in this context
@@ -20,72 +24,138 @@ This chapter describes related research around the use of data in knowledge crea
 % Existing models of successful and unsuccessful citizen decision-making 
 % Summary
 
-This literature review gives an overview of the underlying concepts touched in this thesis, however for each case study a more detailed and specific body of research is reviewed and presented.
-
-\section{Participation in a Smart City}
+\section{Participation in Smart City}
 \label{smart-city}
-A vision of a smart city, where information technology is woven into the city infrastructure helping to optimise resources and improve the lives of citizens \citep{chourabi_understanding_2012}, has been greatly discussed over the past five years \footnote{\url{https://trends.google.com/trends/explore?date=all&q=smart\%20city}}. This also closely relates to the third wave of computing or ubiquitous computing as it was envisioned by \citet{weiser_computer_1991,weiser_computer_1993} in the early 90s. For many years now commercial companies -- IBM, Cisco and Siemens, to name a few -- have been `hooking up’ the city with sensors and other information technologies to gather all the data about the city in the hopes of solving some of the old and new `wicked’ problems of society. There is a push for using data in all aspects of life -- to optimise and organise resources [REF], to reduce carbon footprint and improve sustainability [REF], but also to facilitate novel modes of participation [REF], democracy and social interaction [REF]. With the increase of urbanisation and expansion of cities, this trend is more that likely to grow and more businesses are coming up solutions that can supposedly ``\textit{compute away local problems}'' \citep{townsend_smart_2013}.
+A vision of a smart city, where information technology is woven into the city infrastructure helping to optimise resources and improve the lives of citizens \citep{chourabi_understanding_2012}, has been greatly discussed over the past five years\footnote{\url{https://trends.google.com/trends/explore?date=all&q=smart\%20city}}. Perhaps considered fictional at the time, but these ideas where echoed from concepts like \textit{`third wave'} of computing or \textit{`ubiquitous computing'} as it was envisioned by \citet{weiser_computer_1991,weiser_computer_1993} in the early 90s. For many years now commercial companies -- IBM, Cisco and Siemens, to name a few -- have been `hooking up’ the city with sensors and other information technologies to gather all the data about the city in the hopes of solving some of the old and new `wicked’ problems of society. There is a push for using data in all aspects of life -- to optimise and organise resources [REF], to reduce carbon footprint and improve sustainability [REF], but also to facilitate novel modes of participation [REF], democracy and social interaction [REF]. With the increase of urbanisation and expansion of cities, this trend is more that likely to grow and more businesses are coming up solutions that can supposedly ``\textit{compute away local problems}'' \citep{townsend_smart_2013}.
+% (Thrift 2014)
+Smart cities live off data -- traditionally acquired through a rigorous collection process ran by the government (i.e. conducting censuses), increasingly now captured using sensor networks located on lampposts, roadsides, tree and rooftops \citep{zanella_internet_2014,su_smart_2011}, but also scraped from the web and social media platforms \citep{puiu_citypulse:_2016,batty_pulse_2010}. 
+% Data driven decision making
+% (Kontokosta 2017 - Urban Informatics for Social Good)
+% Forth 2009
 
-Smart cities live off data -- traditionally acquired through a rigorous collection process ran by the government (i.e. conducting censuses), increasingly now captured using sensor networks located on lampposts, roadsides, tree and rooftops \citep{zanella_internet_2014,su_smart_2011}, but also scraped from the web and social media platforms \citep{puiu_citypulse:_2016,batty_pulse_2010}. A popular way of showing and using all that accumulated data is through real time `data dashboards` \citep{kitchin_real-time_2014-1,kitchin_knowing_2015}. Almost all aspiring smart cities have at least one dashboard in hand to create and visualise statistical indicators, benchmark the city against others and drive the governance of the city \citep{kitchin_knowing_2015}. Developing statistical indicators and visualising them through dashboards is a necessary and valid approach in city management, specially when trying to condense down all that messy data into some useful chunks that could be represented and used by decision-makers. However, \citet{kitchin_knowing_2015} points out the issue that often these initiatives are presented as the mirrored model of the city through numbers -- ``\textit{visualised facts; that reflect the truth about the world}''. What these dashboards actually are is a representation of abstractions that make up a view of the city. Unfortunately, in many cases these dashboards are representations of the view of the city from the perspective of management. This means that the data collection and the problems are framed by institutional actors to fit into the governance processes of the city and often done without engaging the concerned publics \citep{asad_creating_2017}. Similar cirques have come from 
-\cite{greenfield_against_2013} and \cite{townsend_smart_2013}, stating that currently the power of making educated decisions based on that data is in the hands of the big tech giants, whose software works in controlled centralised locations. In addition to concerns around transparency and ethics surrounding surveillance and control, this lack of inclusivity in smart cities can lead to narrow representation of views and desires of society in governance \citep{mcmillan_data_2016}.
+A popular way of showing and using all that accumulated data is through real time \textit{`data dashboards'} \citep{kitchin_real-time_2014-1,kitchin_knowing_2015}. Almost all aspiring smart cities have at least one dashboard in hand to create and visualise statistical indicators, benchmark the city against others and drive the governance of the city \citep{kitchin_knowing_2015}. \citet{kitchin_knowing_2015} broadly categorises the utilisation of these dashboards into two -- managerial and contextual. First is more linked to assessment and performance measurement of the city governance and second prioritises the use of indicators for informing policy. Developing statistical indicators and visualising them through dashboards is a necessary and valid approach in city management, specially when trying to condense down all that messy data into some useful chunks that could be represented and used by decision-makers. However, \citet[p. 24]{kitchin_knowing_2015} points out the issue that often these initiatives are presented as the mirrored model or an exact digital twin \citep{bolton_gemini_2018} of the city through numbers -- ``\textit{visualised facts; that reflect the truth about the world}''. What these dashboards actually are, is a representation of abstractions that make up a view of the city. Unfortunately, in many cases these dashboards are representations of the view of the city from the perspective of management. This means that the data collection and the problems are framed by institutional actors to fit into the governance processes of the city and often done without engaging the concerned publics \citep{asad_creating_2017}. Similar cirques have come from 
+\cite{greenfield_against_2013} and \cite{townsend_smart_2013}, arguing that currently the power of making educated decisions based on that data is in the hands of the big tech giants, whose software works in controlled centralised locations. In addition to concerns around transparency and ethics surrounding surveillance and control, this lack of inclusivity in smart cities can lead to narrow representation of views and desires of society in governance \citep{mcmillan_data_2016}.
 
-In the modern democratic society, citizens should be also actively participating in all matters of civic life, including political discourse [REF], through civic engagement and citizen initiatives. However, a lot of the solutions provided by institutional actors are not relevant to the real issues in the community \citep{boehner_data_2016}. People living in the communities often have a much keener sense of what the real problems are \citep{disalvo_neighborhood_2008}. With the age of internet and information technologies becoming more accessible, digital civics approaches \citep{olivier_digital_2015} have been emerging from HCI related disciplines, which promote active participation in civic life and engagement in service creation and delivery, with hopes of increasing civic professionalism \citep{boyte_boyte_2010} within the society. Examples of these kind of study areas are, but not exclusively; community commissioning \citep{garbett_app_2016,taylor_creating_2010,taylor_supporting_2009}, democratic discourse \citep{johnson_community_2017,johnson_reflections_2016,valkanova_myposition:_2014,crivellaro_contesting_2015} situated voting \citep{vlachokyriakos_postervote:_2014,golsteijn_sens-us:_2016,taylor_viewpoint:_2012,behrens_smart_2014} and community infographics \citep{koeman_what_2014,claes_street_2013,hutchison_comparative_2011,lindley_surfacing_2017}. 
-% sentence about the theme of these studies
+In the modern democratic society, citizens should be also actively participating in all matters of civic life, including political discourse \citet{hoffman_participation_2012}, through civic engagement activities run by the state but also citizen initiatives. All of this potential however comes at the time when the UK, among other countries in the EU, is subjected to acute economic austerity which has tragic effects to local governance. Meaning that public services delivery has severely suffered and in some cases even outsourced or privatised. However, a lot of the solutions provided by institutional actors are not relevant to the real issues in the community \citep{boehner_data_2016}. People living in the communities often have a much keener sense of what the real problems are \citep{disalvo_neighborhood_2008}. With the age of internet and information technologies becoming more accessible, digital civics approaches \citep{olivier_digital_2015} have been emerging from HCI related disciplines, which promote active participation in civic life and engagement in service creation and delivery, with hopes of increasing civic professionalism \citep{boyte_boyte_2010} within the society and increasing the dialog between citizens and the government \citet{boyte_everyday_2004}. Examples of these kind of study areas are, but not exclusively; community commissioning \citep{garbett_app_2016,taylor_creating_2010,taylor_supporting_2009}, democratic discourse \citep{johnson_community_2017,johnson_reflections_2016,valkanova_myposition:_2014,crivellaro_contesting_2015} situated voting \citep{vlachokyriakos_postervote:_2014,golsteijn_sens-us:_2016,taylor_viewpoint:_2012,behrens_smart_2014,hespanhol_vote_2015} and community infographics \citep{koeman_what_2014,claes_street_2013,hutchison_comparative_2011,lindley_surfacing_2017}. What is common with these studies is that they are moving out from the research facilities and labs to conduct investigations in the real world. \citet{rogers_interaction_2011} calls this approach research \textit{`in the wild'} -- carrying out in situ studies, and rather than conducting observations of existing practices, focusing on local issues and designing disruptive technologies to address concerns and needs of specific population.
+% Although these approaches can be messy and uncontrollable, they provide a better insight of how technology is used in the real world (Suchman)
+% Need a bridge sentence here in the lines of people using technology 
+% Designing technology for user needs or with the users as co-designers
+% important to design the technology for its specific use
+% Machines and algorithms gaining more agency - "nonhuman agency" - AI Casper (1994) and Suchman
+% These approaches should not only stay in HCI put overlap over to engineering, geography, planning and spacial modelling - Rachel Franklin
+% Berntzen 2016
 
-% role of citizen in producing data for the city and using the data swiss army knife of smart city (Townsend 2013)
-% In addition to citizens being subjects of the data collected by the city 
-% Also citizens contribute to the smart city agenda by collecting data using smart devices embedded in our pockets - smart-phones.
+Citizens are not only moving around in this sensed environment (i.e. smart city), they are also contributing some of the data to it by using smart devices in their pockets -- smart-phones. \citet{townsend_smart_2013} calls them \textit{"smart-city construction kits"} or \textit{"digital Swiss Army knifes"} which are increasingly becoming the sources of data for studying human behaviour, but they are also becoming a platform for new bottom up civic movements. The method of data collection from these devices can be either voluntarily or done passively by using some type of service on the them. For example there is a growing body or research into usage of mobile phone call logs for coming up with near-real time models of spacial interactions [REF] and deriving early statistical indicators [REFs]. Also people are tapping into data generated by social media to gather opinions and model large scale human behaviours.
+% Example studies in epidemiology (health), sematics
+% (Berntzen 2018, Choudhury 2013, Tumasjan 2010, Golder 2011)
+% Bond 2012 - 61 million-experiment
+% José van Dijck 2014
 
-Citizens are not only passively moving around in this sensed environment (i.e. smart city), they are also contributing some of the data to it by using smart devices in their pockets -- smart-phones. \citet{townsend_smart_2013} calls them \textit{"smart-city construction kits"} or \textit{"digital Swiss Army knifes"} that are becoming a platform for new bottom up civic movements. Through the use of social media platform we have already seen disruptive social movements [REF arab spring], we have seen uses of these devices in urban planning by collecting movement data of cyclist in the city to improve infrastructure \citep{le_dantec_planning_2015}.
-% expand on this a bit more
+At the other end of perspective, we have already witnessed disruptive social movements through the use of social media platforms \citep{howard_opening_2011} and seen uses of these devices in urban planning by people contributing their movement data while cycling in the city to improve the infrastructure \citep{le_dantec_planning_2015}. 
+% Add more social movement studies here
 
-The promises from tech giants to `wire up` the city to solve some of the `wicked’ problems might have been overstated or perhaps a bit premature. Many fancy dashboards and data silos later, society is starting to realise that data is not an end in itself. Having all the numbers does not give all the answers. To make sense and use the data, we must ask the right questions or possess the knowledge relevant to the issue at hand which can only obtained through a collaborative effort. This means we are not relaying on one piece of knowledge, but multiple and obtained from different sources - citizens, smart city sensors, experts, researchers and decision-makers (i.e. government).
+There are differently new opportunities that emerge around designing tools that successfully facilitate this kind of data collection which tries to foster collective intelligence. However caution needs to be taken, not to fall into the same pitfalls again by taking data at face value. As \cite{le_dantec_planning_2015} and \citet{kitchin_knowing_2015} observed, it is often appealing for city managers to base their decisions solely on what numbers are showing and maps are identifying, rather than engaging directly with the citizens to also considering what people on the ground are experiencing. Including not considering that sometimes technology excludes groups of people who are snuggling with low tech literacy or just does not have resources to access them. People need to be reminded that big data can only show the `what is', but can not reveal the `how', `why' and most importantly `what is not' \citep{mayer-schonderger_big_2013}.
 
-\cite{kitchin_real-time_2014-1} encourages smart city initiatives to openly recognise their flaws, uncertainty and and levels of error and accept the fact that they do not reflect the world as it actually is, but actively frame and produce the world through measuring and observations of it. Meaning there is no one true image of the city and everything depends on the perspective of the observer. Perhaps the way forward is to open up and democratise data and technology to integrate a multiplicity of views -- and data -- into the smart city. \citet{townsend_smart_2013} wrote in his book \textit{Smart Cities: Big Data, Civic Hackers, and the Quest for a New Utopia} that the answer to the question of what is the smartest city, is \textit{"...the one you live in"}. People make the city smart not the technology, although technology can certainly lend a helpful hand of defining and informing people of some of the issues in the city. There is an active effort being done to integrate sensors into our spaces and lot of technology is already in place, but it has to be configured and shaped in a way that it serves the needs of citizens, not technology itself. There is an important role for designers and technologist to play here, working with citizens to develop smart city tools for data collection, access and sensemaking that promote civic participation and democratise data science practices in the smart city. These design principles have guided the development of case studies in this thesis where developed tools and technology is a direct response to the needs of citizens.
+The promises from tech giants to `wire up' the city to solve some of the `wicked' problems might have been overstated or perhaps a bit premature. Many fancy dashboards and data silos later, society is starting to realise that data is not an end in itself. Having all the numbers does not give all the answers, to make sense and use the data, we must ask the right questions or possess the knowledge relevant to the issue at hand which can only obtained through a collaborative effort. This means we are not relaying on one piece of knowledge, but multiple and obtained from different sources -- smart city sensors, experts, city managers, researchers, decision-makers and citizens. 
+% need some literature here
+
+This can be only done by opening up these processes and moving away from technocratic governance and corporatisation of city management \citep{kitchin_real-time_2014-1}. \cite{kitchin_knowing_2015} encourages smart city initiatives to openly recognise their flaws, uncertainty and levels of error, and accept the fact that they do not reflect the world as it actually is, but actively frame and produce the world through measuring and observations of it. Meaning there is no one true image of the city and everything depends on the perspective of the observer. Clearly, the way forward is to open up and democratise data and technology to help integrate a multiplicity of views, and data, into the smart city.
+
+\citet{townsend_smart_2013} wrote in his book \textit{Smart Cities: Big Data, Civic Hackers, and the Quest for a New Utopia} that the answer to the question of what is the smartest city, is \textit{"...the one you live in"}. People make the city smart not the technology, although technology can certainly lend a helpful hand of defining and informing people of some of the issues in the city, or helping to communicate ideas and knowledge. Whilst there is great potential in using data in these contexts, and there is an active effort being done to integrate sensors into our spaces, meaning that lot of technology is already in place, it has to be configured and shaped in a way that it serves the needs of citizens, not technology itself. There is an important role for designers and technologist to play here, working together with citizens to develop smart city tools for data collection, access, sensemaking that promote civic participation and aim to democratise data science practices in the smart city. Similar design principles have guided the development of case studies in this thesis, where the developed tools and technology are direct responses to the needs of citizens.
 
 \section{Data Driven Participation}
 \label{data-driven-participation}
 % Passive and active participation
-Review and critique on literature on passive and active participation using data and case studies which used either techniques and technologies.
-Talk about data driven life and bring in some stuff from personal informatics
-Public Participation Geographic Information Systems (PPGIS) or Volunteered Geographic Information (VGI) systems \citep{tenney_data-driven_2016} 
+% Review and critique on literature on passive and active participation using data and case studies which used either techniques and technologies.
+Historically people were mainly connecting by trade, post, telephone or face-to-face interactions. In the digital age it is becoming more commonplace to use computerised systems and data to mediate communication of ideas and opinions. Internet enables us to establish enormously complex networks, connecting us with different people and helping to engage in number of activities -- individual and collaborative. Although not always explicit, all participation in the cyberspace is driven through data sharing and use. This can manifest for example in participation on social media platforms like Twitter and Facebook \citep{crivellaro_pool_2014}, using personal informatics tools\footnote{\url{http://www.personalinformatics.org/}} for self reflection or improvement [REF], or engaging with collaborative platforms to work towards a common goal [REF]. Popular examples of latter are Wikipedia, a crowd powered free encyclopedia and OpenStreetMap, an open source geographical database compiled by community of volunteer mappers.
 
-% Crowdsourced planning
-There is a push for encouraging participation with data and using pervasive technology to mediate civic interaction. In other words, trying to harness the power of crowds through data science \citep{tenney_data-driven_2016}. Although this might appear to be an easy win for doing large scale participation, it comes with a lot of challenges \citep{le_dantec_planning_2015}
+There is a lot potential for crowdsourced data collection approaches to broaden the participation and create alternative sources of data for public use in multiple domains. \citet{salim_urban_2015} came up with a taxonomy of interaction and participation to assess different types of urban computing solutions. Their paper surveyed a variety of applications in mobile crowdsensing, urban informatics, urban probes and interventions, and Internet of Things, categorising them in terms of \textit{``the technologies used, the level of participation they stimulate, the participation scale they support, the manipulation and effects mode they enable, the interaction mode and scale they enable''} \citep[p. 44]{salim_urban_2015}. Although urban computing systems my vary in shapes and sizes, they all aim for maximum participation from the public. Through the reflection on projects \citet{salim_urban_2015} came up with list of strategies that put emphasis on identification of needs and tensions through active dialog with stakeholders, and providing open and accessible tools that help citizens construct their own rationals for participating. Clearly the key for success is not to provide the best technology for participation, but to prioritise the social interactions surrounding it.
 
-New opportunities and challenges emerge around designing tools that successfully facilitate and foster this collective intelligence. When designing these tools for sensemaking there is an obligation to think about how they support different publics and promote civic participation and advocacy among citizens \citep{asad_tap_2017}.
+Certainly, civic engagement is one domain where these technologies are being introduced with an aim to increase participation in democracy through data. These new approaches have particularly peaked interest of city planners, who see this as a great opportunity for large scale participation through usage of data and pervasive technology. In other words, trying to harness the power of crowds through data science \citep{tenney_data-driven_2016}. There is a ongoing discourse around usage of crowdsourced geospatial data to mediate civic interaction, both in term of its validity for participation in democracy \citep{le_dantec_planning_2015} and as a tool for decision-making \citet{brabham_crowdsourcing_2009,tenney_data-driven_2016}.
 
-\section{Open Movement}
+However not all participation is created equal. There are two distinct modes of data driven participation: passive and active. Passive participation refers to the use of some automated system (e.g., data logger or a service on a phone) or as a result of a data exhaust, that sends off anonymous data to be analysed by algorithm implemented on automated systems. In big geography and urban planning it is often referred to as volunteered geographic information (VGI) and it has been argued that it increases participation and the representativness of data \citep{goodchild_citizens_2007}. Examples of these type of systems include projects like MetaPos\footnote{\url{https://www.gsa.europa.eu/r-d/gnss-project-portfolio}}, Habits\footnote{\url{https://habitsdata.org}} and Sunset\footnote{\url{http://sunset-project.eu}}, each having a mobile application which collects anonymous location data to be used in spatial modelling that aim to aid organisation of infrastructure and traffic in the city. Although these applications have elements of feedback in terms of people seeing their analysed mobility patterns or being able to share travel tips with others on social media, they are still contained within the frame of the research or agendas of city authorities. Furthermore, some of these agendas can also be linked to behavioural change (not necessarily bad), which is administered through incentives. This \textit{`citizens as sensors'} form of participation is often preferred by corporation, busy citizens and city managers, because of its low impact on citizens everyday lives and reduced workload on city officials to actively engage their citizenry \citep{tenney_data-driven_2016}. 
+
+Active data driven participation also leverages capabilities of modern day information technologies and internet, however it tries to actively involve and engage in the design and reorganisation of urban environments. These active partition approaches such as Public Participation Geographic Information Systems (PPGIS) as perceived to be more grassroots, enabling citizens to actively influence decision-making processes \citep{sieber_public_2006,jankowski_towards_2009}. Examples of such systems include FixMyStreet\footnote{\url{https://www.fixmystreet.com}} popular in the UK and its Norwegian clone FiksGataMi\footnote{\url{http://www.fiksgatami.no}}; SeeClickFix\footnote{\url{https://seeclickfix.com}}, PublicStuff\footnote{\url{http://www.publicstuff.com}} and Street Bump\footnote{\url{http://www.streetbump.org}} in the US. Although PPGIS in its core is \textit{`bottom-up'} approach, its technological realisation is often more \textit{`top-down'} and serves government interests \citep{tenney_data-driven_2016}. Issue here is that the scope for these technologies originate from institutional actors, who phrase the issue from their perspective. Although helpful for citizens as well, this can end up with a product that helps generate data that is specific to the formulation of governmental concerns.
+
+Although these methods might appear to be an easy win for doing large-scale participation, they come with a lot of challenges.
+% Data exhaust and it's use
+% accuracy and privacy
+Scepticism of the value of data and opinions from non-expert citizens in the eyes of city managers.
+% Tenney 2016
+% Use and misuse of data
+This is particularly evident in the use of the generated data \citep{le_dantec_planning_2015}. 
+
+% Representativness of big data - tool for decision-making
+% Tufekci 2014
+
+% What makes people participate? - does it increase participation. 
+% Do digital tools increase participation? - E-Voting in Estonia
+Finally, there is the question of what makes people participate and whether these new digital tools guarantee increase in participation? Multiple researchers have studied the changes in participation when digital means are implemented [REF]. Perhaps the most influential digital participation to governance is internet voting (I-voting) which is gaining popularity countries like Estonia, Switzerland, US, Canada and France. One of the pioneers in the area Estonia, has been using I-voting for all of its elections (local, parliamentary and EU parliamentary) since 2005. Although the participation through e-voting has increased, the overall voter turnout has stayed pretty much the same \footnote{\url{https://www.valimised.ee/en/archive/statistics-about-internet-voting-estonia}}. \citet{kitsing_online_2011} argues that though internet voting has a quicker turnover and is cheaper for the government, it does not necessarily make the process more inclusive. People who are already activity engaged will have another channel for participation, however the people who have never engaged will not necessarily start now because of a new technologically superior system. \citet{kitsing_online_2011} adds however, that having insights from a real world use case helps us understand these processes, and the heterogeneous nature of them, a bit better which opens up a space for reconfigurement of these processes. 
+% sum up the section
+When designing tools for engagement there is an obligation to think about how they support different publics and promote civic participation and advocacy among all the citizens \citep{asad_tap_2017}.
+Rather than made together with people to address the concerns they have
+
+\section{Open Movements, Data and Knowledge}
 \label{open-data}
-New movement for providing tools and resources for the good of the society
+Just like all the ideas and opinions where historically shared through face-to-face encounters, all data, information and knowledge was also exchanged orally. However with rise of the printing press in the 1400s, knowledge started to be seen as individual rather than a collective property. Soon multiple copyright laws were put in place and enforced by governments across the world to protect the property rights of the publishers. With the coming of the Internet, which made sharing and copying of information even easier and more broader, resulted in copyright laws to become stricter and more unified across the globe. In response to the prevalence of the copyright laws a new political an social movement was forced that seeks to promote sharing of content and resources for the good of the society. Movement operates in a spirit of transparency, collaboration, re-use and free access. Open Movement is an umbrella term that encompasses things like open data, open government, open development, open science.
 
-\section{Open Data}
-\label{open-data}
+Open movements aim to promote participatory processes through sharing of data, knowledge and outputs as well as source code of technical implementations. The openness of these projects and the resources they provide is not always defined the same. Open Data and knowledge is commonly defined by the Open Definition\footnote{\url{http://opendefinition.org}}, which states: \textit{``Open data and content can be freely used, modified, and shared by anyone for any purpose''}. Most successful example of open knowledge sharing is Wikipedia, founded in 2001, the same year as Creative Commons, which aims to facilitate sharing of creative works in public domain and is used by Wikimedia to publish all its content. Wikipedia is an online encyclopedia where everyone can become a contributor of content which is interlinked and publicly shared. According to internet rankings it is in the top five most visited sites on the web\footnote{\url{https://www.alexa.com/topsites}}. Although just about anyone can edit and add content on Wikipedia it has been showed that the information shared has value and quality like any other professional source of knowledge \citep{giles_internet_2005}. Open knowledge also extends itself to publishing scientific research, where people are advocating for open access to publications, specially if the research is publicly funded \citep{garciapenalvo_open_2010}. This also includes publishing of all the data and tools to reproduce the results in the benefits of public knowledge \citep{molloy_open_2011}. 
 
+However with software it is not always clear what is freely usable and what is not, there is difference between `open' and `free' software. The initial idea of open source software was proposed by the members of Free Software Foundation who promoted sharing of software and design documents for re-use and re-purposing in other projects. Open source software is published using open source licences\footnote{\url{https://opensource.org/licenses}} which dictates the specific rules of how people can use and modify the the source code. Perhaps the most well known and successful open source project is Linux, created by Linus Tonvalds in 1991, which kernel code is used in multiple operating systems, including UNIX-like GNU operating system which was initiated by Richard Stallman. Nowadays models of free and open source software are becoming more popular to the point that even commercial companies are publishing their software on online code repositories like GitHub, Bitbuket and SourceForge.
+
+% Pluses and minuses
+% Motivations for open publishers/contributors 
+% Just to show that you can do it, Linux law, bug fixes, can be possible to develop like this
+% Availability of these systems promote new ways of using them for social good
+
+% Initially all notable members of free software movement adopted the term, however later Richard Stallman, the founder of the foundation have criticised that open source has missed the point of `free software'\footnote{\url{https://www.gnu.org/philosophy/open-source-misses-the-point.html.en}}.
+% He argues that when software is published `free', then all the modification of that software has to be published also as `free software', and using the same licence. However Linus Tonvalds, the creator of Linux kernel, does not agree with these principles and stated that the creator of the software should have the freedom to choose what ever kind of licences she preference -- even proprietary software. Putting restrictions on the release of the software does in fact restrict the freedom of it and therefore suppresses progress.
+
+
+% Open Data
+% Explanation of open data and its tended uses or lack them through literature and evaluation of related case studies on the topic. Also talk about the the differences of open data and accessible data. 
+% Definition of Open data and differences in licences
 Data exists or can be collected for just about everything, but it is often not accessible for everyone. Although there is an active effort by governments and other institutions to release datasets to improve services, there are a lot of barriers to effectively using data in civic participation and decision-making.
 
-Explanation of open data and its tended uses or lack them through literature and evaluation of related case studies on the topic. Also talk about the the differences of open data and accessible data. 
+% How it is released (Open Data portals) How data is made open???
+% Technology behind it
+% How people can get data released by the government - FOI WhatDoTheyKnow
+
+% How it is accessed and who can access (Open data software)
 
 Furthermore, there is another layer of data which could be used in participatory democracy. Open data from governments and private companies could also provide valuable input for citizens to leverage to improve their communities1. By opening up data and giving it out for people to use, the power relationships shift, moving away from the transactional model of service delivery. However, community groups often lack the tools, skills or know-how to make sense of this data and to use it effectively.
 
+% Initiatives that tries to make data available engaging people with open data Sens-Us/YoHa/Take a bullet for the city
 
-Simply having access to these different datasets does not mean better civic engagement and participation. To make data actionable, it needs to be put into context with the community (Taylor, Lindley, Regan, et al. 2015). Trying to explore/map out and make sense of complex issues in a multi-stakeholder setting is not a new problem. It is often called dialogue mapping and associated with Issue Based Information Systems (IBIS). The original IBIS was developed in the early 1970s by Kunz and Rittel as a tool to support planning and policy design processes (Kunz & Rittel 1970). However, new challenges arise when trying to connect and navigate analytics and qualitative data, dialogues and opinions. There are two parts to this: (1) the visual sensemaking of analytics and (2) the exchange of opinions and judgements on the subject. Both are highly social and shared activities, where people collectively make sense of (Furnas & Russell 2005) analytics and then add their own layers of meaning. 
+% What is the use of it and who benefits
 
+% What is the value of that data
+% Hakken, Gurstein, Gitelan, (e.g., Rorty, 1980; Lakoff, 1987; Kuhn, 1970; Gibson, 1950; Berger and Luckmann, 1966)
+% Ilkka Tuomi (1999)
+And the idea of there is no raw data.
 ‘Big Data’ itself cannot solve the issues of humans, however it has a lot of potential and needs to be unlocked by citizens with skills, literacy and tools to access, interpret and contribute their own data to existing datasets.
 
-And the idea of there is no raw data.
-How data is made open???
-Open data software
-FOI
+% The impact it is having
+Simply having access to these different datasets does not mean better civic engagement and participation. To make data actionable, it needs to be put into context with the community (Taylor, Lindley, Regan, et al. 2015). 
 
-% engaging people with open data Sens-Us/YoHa/Take a bullet for the city
+% Sharing data and knowledge takes it closer to being focal, helps understand different perspectives
+% it is difficult to share ideas and knowledge if 
+Openly sharing knowledge, whether it is originated from official research or shared by Wikipedians on the web, takes it closer to becoming knowledge that is understood and accessible by anyone. But not only that, if knowledge is shared it can be contested and questioned through systematic reviews and meta-analyses which ultimately lead to a better quality of.
 
 \section{Citizen Science}
 \label{citizen-science}
-In addition to sensors in the city and passive data-driven participation that support the algorithmic smart city agenda, there is also citizen sensing. An approach that involves using lightweight sensing technologies together with people from local communities and enabling them to collect, make sense and take action using the data (Balestrini, Rogers, Hassan, et al. 2017). This provides an opportunity to rethink the role of data in civic participation and focus on digital technology and mechanisms that could support these grassroots approaches.
+In addition to sensors in the city and passive data-driven participation that support the algorithmic smart city agenda, there is also citizen sensing. An approach that involves using lightweight sensing technologies together with people from local communities and enabling them to collect, make sense and take action using the data (Balestrini, Rogers, Hassan, et al. 2017). 
+
+This provides an opportunity to rethink the role of data in civic participation and focus on digital technology and mechanisms that could support these grassroots approaches.
 
 Based on \citet{haklay_citizen_2013} categorisation of citizen science, I will give an overview of different levels of participation from crowdsourcing to extreme citizen science. Also, giving an overview of at tools for citizen data collection.x
 Citizen science projects are projects where citizen participation contribute to a genuine science contribution project. 
+% . All too often in actual constructivist science education, while the learning is approached processually—to be accessed via a postmodernist, socialed pedagogy— the content of scientific knowledge remains framed in modernist, “thing,” individuated terms. A typical result of failure to acknowledge the underlying inconsistency is that participation in activities framed as contributing to the development of scientific knowledge (for example, collecting data on weather) is substituted for real coconstructive learning. Related variations of this failure are frequent enough so that they are sometimes mistaken as characteristic of constructivism. Hakken (Page 384). 
+
+% Other purposes for data collection (non scientific)
+% data for activism, lack of data on specific concern
+
+% issues with data and its value
 
 \section{Data Visualisation}
 \label{data-viz}
@@ -94,37 +164,52 @@ Overview and critique of different visualisation techniques and reviewing the cu
 There is often an assumption that data visualising is just reflecting the information that data is giving out. As there is no such thing as raw data, there is also no such thing as direct or 'raw visualisation'. Data visualisations, although based on data, are already analysed and edited forms of data projections which convey the message of the data analyst or editor.
 Also tools
 
-\section{Community Organising and Community Networks}
-\label{community-networks}
-Review of forms of community organising and creation of community networks through evaluation existing platforms and related case studies.
-Communities of practice
-Knowledge society
-
 \section{Stakeholder Groups}
 \label{stakeholders}
 % Government (data generator, data provider, policy maker)
 % Business/Private Sector (data generator, data provider, data user)
-% Research (data generator, data user)
-% Journalists/Media (data user)
-% Civil Society (data user, data generator)
+% Research (data generator, data provider, data user)
+% Journalists/Media (data user, data provider?)
+% Civil Society (data user, data provider?)
 % Multilateral Organisations (data user)
 % People/Public (data user, data generator) - neighbourhood data
 
 Different stakeholders and their role.
+% echo chambers (Ian's stuff and Neighbourhood data?)
+
+% lack of communication
+
+Trying to explore/map out and make sense of complex issues in a multi-stakeholder setting is not a new problem. It is often called dialogue mapping and associated with Issue Based Information Systems (IBIS). The original IBIS was developed in the early 1970s by Kunz and Rittel as a tool to support planning and policy design processes (Kunz & Rittel 1970). However, new challenges arise when trying to connect and navigate analytics and qualitative data, dialogues and opinions. There are two parts to this: (1) the visual sensemaking of analytics and (2) the exchange of opinions and judgements on the subject. Both are highly social and shared activities, where people collectively make sense of (Furnas & Russell 2005) analytics and then add their own layers of meaning. 
+
+% reconfigure and change these roles
+
+% what resources are needed
 Also looking at the aspect of social capital
+
+% maybe change this to knowledge society
+\section{Community Organising and Community Networks}
+\label{community-networks}
+% Lave, Jean; Wenger, Etienne (1991). Situated Learning: Legitimate Peripheral Participation
+% Wenger, Etienne (1998). Communities of Practice: Learning, Meaning, and Identity. Cambridge: Cambridge University Press.
+% https://en.wikipedia.org/wiki/Community_of_practice
+
+Review of forms of community organising and creation of community networks through evaluation existing platforms and related case studies.
+Communities of practice
+Knowledge society
+% tacit and focal knowledge and knowledge networking
 
 \section{Civic Advocacy}
 \label{civic-advocacy}
-Review of literature on citizen initiatives and tools that promote civic advocacy. 
+Review of literature on citizen initiatives and tools that promote civic advocacy.
+% Protests, lobbing, citizen initiatives
+% How does technology supports them
 
 % not sure if this would be included or might change the name
 \section{Transparency and Accountability}
 \label{transparency-accountability}
 Review of literature around the value of citizens contributing to decision-making and how/if it is changing the power relationships between citizens and decision-makers.
 Initiatives like Media Mill and Episode
-FixMyStreet
-TheyWorkForYou
-WhatTheyKnow
 
 \section{Summary}
 \label{literature-summary}
+% Lack of understanding of the hole proccess from data access to use and a clear framework to guide it
