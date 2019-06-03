@@ -1,30 +1,230 @@
 %!TEX root = ../thesis.tex
 %*******************************************************************************
-%****************************** Second Chapter *********************************
+%****************************** Second Chapter **********************************
 %*******************************************************************************
+\chapter[SenseMyStreet]{SenseMyStreet - Sensor Commissioning Toolkit for Communities}
 
-\chapter{Methodology}
 
+% **************************** Define Graphics Path **************************
 \ifpdf
     \graphicspath{{Chapter2/Figs/Raster/}{Chapter2/Figs/PDF/}{Chapter2/Figs/}}
 \else
     \graphicspath{{Chapter2/Figs/Vector/}{Chapter2/Figs/}}
 \fi
 
-The availability of different datasets and sensing technologies enables to rethink the role of data in civic participation. This provides opportunities to focus on digital technology and mechanisms that support human centred and alternative approaches. Taking a Participatory Action Research (PAR) approach as a co-design processes and applying iterative design and more engineering focused design sprints, this work undertakes the following process to study the use of data and technology in civic participation and advocacy:
 
-\begin{itemize}
-  \item Identifying the need for data (Discovery Phase). Through conducting interviews and observations of existing groups map out how they are using/not using data. 
-  \item Making data and technology accessible (Design/Develop Phase). Undertaking a co-design process to make platforms and tools that respond to the needs of citizens. Starting with paper based methods and then moving to digital.
-  \item Meaningful presentation of data (Deploy Phase). Ascertain what visualisations and formats of data are more accessible and useful for the sensemaking processes in different contexts. 
-  \item Taking collective action by purposing data (Sensemaking Phase). Supporting the processes of sensemaking and assessing the use of data for decision-making and developing new solutions.
-  \item Assessing the outcomes of data use (Evaluation Phase). Evaluating the use of data for improving civic participation and turning it to activities for local benefit.
-\end{itemize}
+\section{Introduction}
+A strong case has been made for evidence based decision-making by using data as resource to make educated and informed decisions. However, there is a disjoint between the people who are affected by these decisions and them also having access to tools and resources to collect data in order to provide the needed evidence for change. To investigate how data collected through a sensor commissioning toolkit can support citizen evidencing local concerns, and to understand the processes linked to operating a sustainable and transparent sensor commissioning toolkit, a number of deployments and engagement activities have been carried out in Newcastle Upon Tyne and surrounding areas over the period of three years. This Chapter describes the iterative design process and deployments of SenseMyStreet, a project that has been set up together with Urban Observatory – UK’s largest urban data sensing network. Sensor commissioning toolkit enables citizens and communities to commission environmental monitors and determine where they will be located on their streets, collecting evidence to inform local issues. SenseMyStreet toolkit was officially launched in the summer of 2017. Since then over 50 people have signed up, 7 groups of people have done environmental sensing with hand-held monitors loaned from the toolkit in their commutes to explore issues in their local area and two communities have commissioned stationary sensors to be deployed in their neighbourhood. Through constant engagement activities with the communities and feedback from online systems, the toolkit went through an iterative design process to involve into an operational citizen sensor commissioning toolkit.
 
-%FIGURE framework HERE
+% mention amount of sensor we have in the toolkit??
+
+This chapter sums up the process of setting up the toolkit and the development and deployments carried out by the author and the technicians from the Urban Observatory. The data will also include the fieldwork conducted by the author which studied different groups using the toolkit and appropriating the data gathered from the environmental monitors. The results from this project will be used to analyse the methods used in the design process and the overall challenges and opportunities associated with developing a transparent sensor commissioning toolkit, which allows people to collect, share, explore and purpose data collected using high precision environmental sensors. Furthermore, the toolkit continues to operate as part of Urban Observatory at Newcastle University to give communities and citizens the power to gather data relevant to issues that are important to them at a very local scale.
+
+\section{Background/Related work}
+% \subsection{Civic Participation}
+%Participation in smart city
+
+% \subsection{Data-driven Solutions}
+
+% \subsection{Participatory sensing, VGI, participatory GIS}
+
+% \subsection{From Citizen Science to Citizen Sensing}
+% Hakalay from crowdsourcing to extreme citizen science (group projects)
+
+\subsection{Sensing the Urban Environment}
+Monitoring the urban environment is an important part of figuring out how the city operates and how are people influencing the city as a whole with their everyday lives. Collected data from the city can be a useful tool to understanding these complex processes, but also monitoring and evidencing the changes implemented. Motivations for doing monitoring can be for example creating a digital twin of a city \citep{bolton_gemini_2018}, understanding city soundscapes \citep{adams_sustainable_2006} or air quality \citep{department_for_environment_air_2018} to inform polices around planning and infrastructure changes in the city, or to build a smart city analytics tools for smart service delivery \citep{puiu_citypulse:_2016}. Majority of drivers for monitoring comes however from institutional actors and are ran by experts making assumptions about the population \citep{townsend_smart_2013}. It is partly to do with citizens not having the resources to acquire tools for monitoring, but also the lack of models that would enable citizens to access already existing resources to conduct their own investigations.
+
+More and more cities around the world are working on implementing their sensor networks do collect data, but also trying to pull other sources of data (e.g., administrative data, official statistics, operational data, social media, LBS data) together into one place to answer questions about the city. In addition to using that data in decision-making and governance, cities are also pushing that data out for others through data dashboards \citep{kitchin_real-time_2014}. Dashboards such as CityDashboard London\footnote{\url{http://citydashboard.org/london/}}, City of Los Angeles Hub\footnote{\url{http://geohub.lacity.org/}}, City of Sydney Dashboard\footnote{\url{http://citydashboard.be.unsw.edu.au/}} and Smart CEI Moncloa in Madrid\footnote{\url{https://ceiboard.dit.upm.es/dashboard/}}. It seems that in order to start calling the city `smart' it has to at least have one city data dashboard.
+
+% Pittsburgh air pollution monitoring, aircast, airbeam
+The affordances of ICT and IoT have enabled a new wave of citizen sensing toolkits.
+
+% Experts are making assumptions
+% The public / citizens cannot afford equipment that really works. Toys… 
+% What is anybody going to do with the data?
+% Sensors are cheap and presented seductively for users to ‘have a go’
+
+% Making data meaningful by linking it to local issues
+% Pushing for change in the community How does sensor commissioning work? How do you manage this, common resource for people
+
+% Also, giving an overview of at tools for citizen data collection.
+% http://aircasting.org/
+% https://smartcitizen.me
+% https://airqualityegg.com/home
+% http://sensors-in-social-research.net/homesense-trial/
+
+% https://foobot.io/
+% https://www.netatmo.com/en-gb/aircare/homecoach
+% https://www.airthings.com Wave Plus
+
+% http://www.sensr.org/
+% http://www.inhaleproject.ca/citizen_science_resources
+% http://www.bristolapproach.org
+
+% issues with data and its value
+
+% . All too often in actual constructivist science education, while the learning is approached processually—to be accessed via a postmodernist, socialed pedagogy— the content of scientific knowledge remains framed in modernist, “thing,” individuated terms. A typical result of failure to acknowledge the underlying inconsistency is that participation in activities framed as contributing to the development of scientific knowledge (for example, collecting data on weather) is substituted for real coconstructive learning. Related variations of this failure are frequent enough so that they are sometimes mistaken as characteristic of constructivism. Hakken (Page 384).
+
+
+\subsection{Community organising}
+% Community networks - (John M Carroll and Mary Beth Rosson. 2003. A Trajectory for Community Networks. The Information Society 19: 381–393.)
+
+\section{Study context}
+
+\subsection{Effects of Urbanisation}
+
+Everyone needs their space to live, work and get around doing their everyday activities. However with more than half of the world's population now living in cities it is becoming increasingly more difficult. It is also estimated that the urbanisation will continue and almost 90\% of they world's population will live in densely populated urban environments by the year 2050. As the space in the centres become more of a deficit, cities become dispersed and more people inhabit the outskirts of urban areas. Although people live on the edges of downs and cities, they often work or have to travel because of work to the centres. According to UK government's department of transport the total number of vehicles in Great Britain has increased every year since the Second World War with an average growth of 640 thousand per year. This increased volumes of traffic and people commuting to the city centres consequently creates problems of congestion and air quality. This means that cities are faced with a multifaceted problem that requires the collaboration of policy-makers, city architects, transportation and city planners, public health officials, but also citizens. 
+
+% add stats about the population (count, med age, etc) and car ownership old mining and ship building industrial area
+
+% similarly to other cities like Atlanta (Asad 2017) the city is undergoing an urban shift and trying to create an environment for modal changes. cycling focus
+
+In July 2017 the Department for Environment, Food and Rural Affairs and Department for Transport announced its plan for tackling roadside nitrogen dioxide concentrations in the UK. This was a direct response to the illegal levels of air pollutants in 45 of local authorities in the UK. Among them were Gateshead Metropolitan Borough, North Tyneside and Newcastle upon Tyne which are the focus areas of this case study. The local authorities have to come up with a combined task force to come up with proposals and solution to tackle these illegal levels of air pollutants. There were already two 'Air quality Management Zones' is the Newcastle upon Tyne which have been under constant monitoring from 1995 since the release of the Environmental Act. Up to this date, the local council has taken steps to promote alternative means of travel and invested in infrastructure for active travel through the UK Government's The Cycling and Walking Investment Strategy (CWIS). Despite these measures, the problems still persist and there are discussions of implementing more drastic measures like closing roads and implementing Clean Air Zones. Even if these kind of measures are put in place, with the growing trend of urbanisation, the estimation of zero emissions journeys emissions by 2050 seem unrealistic. It became clear quite early that the only way to tackle issues with air quality is to tackle the sources. This means a wider engagement with citizens to increase public awareness around the issue and work together to come up with viable solution for getting around the city for everyone.
+
+% section about Streets for People and SpaceForGosforth?
+
+\subsection{The Air We Breathe}
+
+According to the 2016 report "Every breath we take - The lifelong impact of air pollution" published by the Royal College of Physicians and the Royal College of Paediatrics and Child Health, outdoor pollution is linked to around 40,000 yearly deaths in the United Kingdom. In addition to explaining the repercussions of bad air quality on people's health, the report also provides recommendations for action and research for national and local
+government, business and industry, schools and the National Health Service (NHS), as well as communities and individuals citizens. Among the recommendations for tackling air pollution as an individual were: be aware of the air quality where you live and harness technology to stay informed and monitor air pollution effectively. Having access to this kind of information locally could not only help raise awareness around the issue, but also could help people make better decisions about their travel choices. However, what does it mean to monitor air pollution effectively and does everyone have the means to do that in their neighbourhood?
+
+City of Newcastle upon Tyne hosts one of six national urban observatories in the United Kingdom [REF]. Each city take a slightly different viewpoint, but are all focused on environmental monitoring and data collection in some way or another. Newcastle's Urban Observatory\footnote{http://urbanobservatory.ac.uk} aims to provide a resource for understanding the impact of the city and the complex interactions in it through sensing and data collection. The observatory operates as openly and transparently as possible to provide the best public access to environmental information from the city and do it the way in which promotes that information being used by a wide range of stakeholders - environmental scientists, city officials, universities, businesses, but also including regular citizens to promote initiatives that involve community-led investigation. Despite of the best efforts of the project to make data accessible and usable for everyone the data was mainly used by individuals or groups of expert users thus not living up for the slogan of the observatory - "Data for Everyone". The questions that surfaced where whether the public actually cares about environmental data or is there a need for a different approach of citizen engagement? In order to answer these questions, a more participatory approach was taken to explore ideas of engaging citizens with the smart city and data produced by the Urban Observatory. 
+Although issue of air quality is not the sole focus of the study around citizen participation in the smart city it is definitely one of the key drivers for the local authority and the citizens effected and involved in the study.
+
+\subsection{Participants}
+% ethnographic work, interviews
+
+\subsection{Approach}
+
+% ¥	Identifying the need for data (Discovery Phase). Through conducting interviews and observations of existing groups map out how they are using/not using data. 
+
+% ¥	Making data and technology accessible (Design/Develop Phase). Undertaking a co-design process to make platforms and tools that respond to the needs of citizens. Starting with paper based methods and then moving to digital.
+
+% ¥	Meaningful presentation of data (Deploy Phase). Ascertain what visualisations and formats of data are more accessible and useful for the sensemaking processes in different contexts. 
+
+% ¥	Taking collective action by purposing data (Sensemaking Phase). Supporting the processes of sensemaking and assessing the use of data for decision-making and developing new solutions. 
+
+\section{Designing Community Resources}
+
+\subsection{Design Workshop}
+% Change this as part of the actual study
+
+One of the areas of Newcastle upon Tyne had already an established community action group who were advocating for changes to city infrastructure to promote walking and cycling. It consisted of people of different demographics, skills and backgrounds. The group was doing a lot of lobbing and raising awareness around the effects of air quality and the infrastructure changes being 
+implemented in the city, but doing it in a more digestible blog form to the members of the general public. They were also actively using the data produced by some of the sensors deployed by the Urban Observatory. I attended their annual meeting where they planned their focus and activities for the year. Based on my observations and conversations with members of the group, it was evident there is a lot of interest in using data in and actionable way. Also there was potential funds for infrastructure changes allocated for public proposals and people were keen to gather evidence about air quality and traffic movements in the area to use as a basis for backing up their proposed changes. From these findings the initial workshop was designed to explore further ways to promote usage of data for raising awareness about the issues in local neighbourhoods and for civic action.
+
+A community workshop called "Beyond Pins On A Map" was run by the research team\footnote{The research team consisted of Thomas Maskell and Aare Puussaar. Together we designed the workshop activities, conducted and analysed the workshops to come up with the initial design requirements for the toolkit.} in spring 2017 around how people can collect meaningful data about their everyday journeys, take ownership and use the data in advocating for positive changes in local communities. Workshop engaged with 22 local residents from different parts of Newcastle upon Tyne who took part of two activities to explore the opportunities and challenges of using data to push for change.
+
+The first activity looked at some challenging scenarios that were related to collecting data about air pollution and safety. In groups, people explored issues such as privacy, reliability of the data and how other people not involved in the study might trust the data that has been collected. There were lively discussions going around the tables which were captured and transcribed for further analysis. Second task prompted participants to think about how could that data be used to advocate for better spaces for people to spend time in and move through. In groups, people looked at the issue in hand using examples ranging from art installations, to activist campaigns to inspire them. Groups then brainstormed ideas about what might work in their neighbourhood with the resources they can have and fed back a shortlist of their chosen tactics. Building on Beautiful Rising\footnote{https://beautifulrising.org}, material was made for the workshop to guide the design process. All the materials produced by the participants were digitalised and archived, accompanied by audio recordings and photographs of the workshop.
+
+Workshop revealed that people are interested in environmental data, but often from places that it is not available and there is no plans from the city officials or decision-makers to collect it. Further analysis also showed that although people feel a bit uneasy about the accuracy of the data, they thought that it is more about how things are framed, and that having something out there for people to discuss is better than not having anything. The figures from the published report about the effects of air pollution and its consequences to people's health can feel remote citizens just going about their everyday activities in the city. However everyone is affected by it and in order to tackle the issue it needs to be made visible within the community by the people living there. There was a consensus among the participants that the issue needs local people to come together not only to collect data but also to make sense of it and to decide how it might be used to take action to make local streets more liveable places.
+
+After the initial design workshop I was approached by a small group of residents from an area couple of miles from the centre of the city. There had been multiple articles in the press lately about the air quality in cities around the world and that had sparked discussions among residents in different community meetings. One of the more proactive resident had also acquired diffusion tube and fitted it near their house. It had provided some concerning results, raising questions and desire to find out more. Some of the residents from that group also attended the initial design workshop. In contrast to the active lobbing group mentioned previously, this group did not have sensors in their local area and there was a lack of information to share with the community. Furthermore, according to the Department for Environment Food and Rural Affairs (DEFRA) air quality model, the pollutant levels were in accordance with the legal limits and it was not part of the two Air Quality Management Zones in the city, which meant that there was no active push from the government to start doing monitoring in the area. People were looking at the increasing high readings of pollutants in other areas of the city which had monitors and that led to a small group of residents getting together to looking at the topic in more detail. Residents expressed particular concerns about the effects of harmful pollutant to children and their developing lungs. This together with increased levels of through traffic trying to get to the city centre made residence worried about the lack of space for active travel and other infrastructure funding not going towards making their local streets healthier and safer for everyone to get a round.
+
+There was available funds from the Urban Observatory to acquire environmental monitoring equipment, however up to this point there was no toolkit in place and manage this shared resource, nor there was a clear view of where and the sort of environmental indicators that people are interested in measuring. Together with the research team\footnote{The research team of Urban Observatory consisted of Philip James, Jennine Jonczyk, David Pearson and later Richard Turland.} from Urban Observatory, we came up with a set of potential monitors we could acquire for the toolkit, provided there is a need from the people. In order to explore these avenues and to get an idea of what people are interested in, a meeting was set up with the group of residents. At the meeting the group gave a bit of background of the area, talked about the areas of concern and their desire for data to help residents make decisions. For making the conversation more related to the community, a printed out map of the area in question was used. After the group learned about the environmental indicator that can be potentially monitored using the sensors, they collaborated around the map (see Figure \ref{fig:areasofconcern}) to point out the areas of concern and marked the potential locations for different environmental monitors.
+
+%FIGURE areas of concern HERE
 \begin{figure}
 \centering
- \includegraphics[scale=0.4]{framework}
-  \caption{Illustration of the the four steps of the toolkit}
-  \label{fig:framework}
+ \includegraphics[scale=0.3]{heaton-sensor-map}
+  \caption{Initial mapping of areas of concern}
+  \label{fig:areasofconcern}
 \end{figure}
+
+Although, this type of engagement activity worked well in a focus group setting, it needed everyone to come together in a physical space with a support from myself or other researchers. For this to work with wider group on people it needed to take a from of an online participatory GIS system. Final prototype leveraged Make Place\footnote{https://make.place/}, a geographical survey tool developed in Open Lab at Newcastle University, enabling people to flag areas of concern, explore already identified areas and have a discussion around the issues with the community.
+
+In addition to being able to commission monitors from the Urban Observatory to be install in their community the people also wanted to be more actively involved in the investigation. This meant that there was a need for equipment that people can use on their commutes to work or taking their children to school. By doing that people could not only get an individual's perspective and an idea of personal exposure, which links to the health impacts, but also cover more ground in the neighbourhood and provide a good basis for decisions of further investigation around air quality in the area.
+
+% plan and propose
+
+From the results of monitoring with a hand-held sensors, people had the data to reflect on and 
+
+Following an investigation with a hand-held sensors people were presented with a set of data to reflect on. The map (see Figure \ref{fig:handheldmap} provided good overview of personal exposure on everyday commutes and laid a good base for planning and proposing areas that need more focus and additional monitoring using stationary device. 
+
+%FIGURE areas of concern HERE
+\begin{figure}
+\centering
+ \includegraphics[scale=0.2]{handheldmap}
+  \caption{Resulting map of hand-held sensing by the community}
+  \label{fig:handheldmap}
+\end{figure}
+
+Visit sensemystreet.ideaboard.co.uk and start a proposal for getting stationary monitors installed on your street. Make sure you share it with people in your community to get everyone's voices represented.
+
+Proposals are also looked over by people Urban Observatory to give you guidance how to get most out of the deployment.
+
+
+\section{SenseMyStreet Toolkit}
+
+% Describe the process step by step (maybe use the actual tutorials made for people)
+
+% When did the project start and who initiated it?
+
+The findings from the initial engagements, conversations with the community members, observations and the design workshop set the tone for prototyping the technology. The focus and emphasis was put on supporting initiatives where citizens are involved in problem definition, data collection and analysis hence taking the 'extreme citizen science approach'. Case study was conducted through iterative user-centred design process where the designed technology was a direct response to the requirements provided by the people. Through the development and use of participatory GIS and mapping, environmental sensing equipment and Human-Computer Interaction (HCI) for geospatial technologies, a final prototype of sensor commissioning toolkit was built. Toolkit consists of four steps which each have their associated processes and technologies:
+
+\begin{enumerate}
+\item Tell us your issue
+\item Plan and propose
+\item Get the facts
+\item Data for everyone
+\end{enumerate}
+
+%FIGURE 4-Steps HERE
+\begin{figure}
+\centering
+ \includegraphics[scale=0.3]{4-steps}
+  \caption{Illustration of the the four steps of the toolkit}
+  \label{fig:4steps}
+\end{figure}
+
+The aim of the case study was to investigate the possibilities around re-configuring smart cities to be led by the real needs and desires of citizens, rather than dictated by available technologies and the assumptions of decision makers.
+
+% SenseMyStreet is my PhD (https://digitalcivics.io/) project developed in collaboration between Open Lab (https://openlab.ncl.ac.uk) and the Urban Observatory (http://www.urbanobservatory.ac.uk/) at Newcastle University (https://www.ncl.ac.uk/). We started with the project in summer 2017 with running workshops around usage of data to advocate changes in local communities. We learned that people are interested in environmental data but often in places that it is not available and there’s no plans from the decision-makers to collect it. From their on we established SenseMyStreet that enables people commission scientific grade environmental from the Urban Observatory and locate them in places they are interested in, collecting data to inform or explore issues they are having. The project itself consists of multiple steps where people identify the issues, use hand-held sensors to do their own investigation and then focus on areas that need more data collection and installing stationary sensing equipment. More information is available at https://sensemystreet.uk/about/. 
+
+% Have you any information on new initiatives there has been made upon the data collection?
+
+% When we started there’s was one established community/pressure group that worked on influencing the decisions about the built environment in their local area - http://spaceforgosforth.com/. As we started our work people have now organised in different areas in Newcastle and started their own local groups from the example of the first - https://www.spaceforheaton.com/,  http://www.spaceforjesmond.com/ and others. Aim for these groups is to engage their local area with the issues and activities that people can do change them — one of them drawing attention to the air quality and issues with traffic. Through these groups we have a wider range of engagement. Also they are all collaborating with each other and sharing their knowledge.
+
+% Have you any information on CO2 levels or improvement of air quality?
+
+% This is a more complicated question to answer. A side note that the main concern has shifted from CO2 to NO2 emissions from diesel cars which are very harmful to people’s health. UK government published their policy around tackling roadside NO2 in 26 July 2017 which requests a response from local governments (including Newcastle council) to respond with their local plan to reduce pollution in the city. UK government has been sued multiple times for not addressing the illegal levels of air pollution in different local authorities - https://www.clientearth.org/government-loses-third-air-pollution-case-judge-rules-air-pollution-plans-unlawful/. In Newcastle there’s 2 air quality management areas (https://www.newcastle.gov.uk/environment-and-waste/pollution/air-pollution/monitoring-air-quality) which are the main concern for the government. ATM the local council is working with the translation providers, city planning officials, University (Including the Urban Observatory) and other experts to look at different solutions to improve the air quality in those areas mainly. However they are also trying to consult with the wider public around the issues of air quality, including the people who are actively involved with the SenseMyStreet project. The local government have to publish their proposed solution in March 2018. However a lot of people are worried because some of the other areas which are not in air quality management areas are still getting high values of pollution and if there’s going to be some change that will cause people to change their movement patterns the other areas can have a bigger impact. As we don’t know the plan at this moment I can’t speculate on what will happen. There needs to be a holistic approach to these things though including input from everyone - citizens, environmental sensors, experts, researchers and decision-makers (government). Also we need to look at things like social inclusion — sometimes making the environment better and air cleaner with clean air zones (taxing people in specific areas) will make people’s, who are from deprived areas, lives more difficult. 
+
+% However the only way to tackle the air quality issue is to go directly to the sources — ourselves. So it’s more about raising awareness in local communities and using the data to start conversations and draw people’s attention to the issue. The groups are working with council to deliver new schemes for active travel - https://www.newcastle.gov.uk/parking-roads-and-transport/cycling/streets-people-1, but the data is more useful for engaging the community and working on nudging people to change their behaviour.
+
+
+\section{Other initiatives related/Impact}
+
+% Planning proposals and changes (Streets for People, Cycle ambition fund)
+
+% Activist groups informing (Groups of concerned citizens) 
+
+% Community support
+
+% Sensing Our Street (SenseMyStreets in Schools and Sean's stuff)
+
+% Press interest, SPAN, available resources
+With the opening of Urban Sciences Building, my SenseMyStreet toolkit (case study 2) was featured in Newcastle Press10 , Chronicle Live11 and appeared as segment in BBC Look North (on 14/09/2017) lunchtime and evening show. Project was also discussed on blogs of communities taking part of the study. 
+
+% new innovations in smart cities
+
+% ncl.ac.uk/press/articles/archive/2017/09/sensemystreet 
+
+% chroniclelive.co.uk/news/north-east-news/smog-tyne-mine-what-newcastle-13610648  
+
+% spaceforheaton.com/articles
+
+% www.spaceforjesmond.com/2018/02/14/airquality_20180411
+
+% ouseburntrust.org.uk/Handlers/Download.ashx?IDMF=1cd379c7-ec59-4d31-af11-6e1ce5e71508
+
+The author advised the making and appeared in two BBC’s Geography: The Big Issues educational films made by Evans Woolfe Media, exploring the way that traffic affects the environment and people’s health. Films also featured the sensors in the SenseMyStreet toolkit
+
+% How are you communicating the project to the citizens and recruiting them?
+
+% At first the we communicated information about the project in different community meetings which we attended and also a lot of local councils stakeholder meetings about the city. A lot of information is passed via word of mouth and people pointing others to the website or directly to us. Also I have worked with different community organisations and local interest groups for in the area for over three years now and have established a good relationships with them.
+
+% process of design as building capacity, rather than the designed artifact as providing capability (Asad 2017)
+% WHat they know - trace of submission and what happened
+
+\section{Discussion}
+% motivational theories in phycology and social Cognitive theory (Albert Bandura, Huitt William)
+% While we have focused on the issue of air quality, there is no reason to assume the issue—as it was framed during our research—will remain static. (Asad 2017)
