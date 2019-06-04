@@ -32,39 +32,66 @@ This chapter sums up the process of setting up the toolkit and the development a
 % Hakalay from crowdsourcing to extreme citizen science (group projects)
 
 \subsection{Sensing the Urban Environment}
-Monitoring the urban environment is an important part of figuring out how the city operates and how are people influencing the city as a whole with their everyday lives. Collected data from the city can be a useful tool to understanding these complex processes, but also monitoring and evidencing the changes implemented. Motivations for doing monitoring can be for example creating a digital twin of a city \citep{bolton_gemini_2018}, understanding city soundscapes \citep{adams_sustainable_2006} or air quality \citep{department_for_environment_air_2018} to inform polices around planning and infrastructure changes in the city, or to build a smart city analytics tools for smart service delivery \citep{puiu_citypulse:_2016}. Majority of drivers for monitoring comes however from institutional actors and are ran by experts making assumptions about the population \citep{townsend_smart_2013}. It is partly to do with citizens not having the resources to acquire tools for monitoring, but also the lack of models that would enable citizens to access already existing resources to conduct their own investigations.
-
-More and more cities around the world are working on implementing their sensor networks do collect data, but also trying to pull other sources of data (e.g., administrative data, official statistics, operational data, social media, LBS data) together into one place to answer questions about the city. In addition to using that data in decision-making and governance, cities are also pushing that data out for others through data dashboards \citep{kitchin_real-time_2014}. Dashboards such as CityDashboard London\footnote{\url{http://citydashboard.org/london/}}, City of Los Angeles Hub\footnote{\url{http://geohub.lacity.org/}}, City of Sydney Dashboard\footnote{\url{http://citydashboard.be.unsw.edu.au/}} and Smart CEI Moncloa in Madrid\footnote{\url{https://ceiboard.dit.upm.es/dashboard/}}. It seems that in order to start calling the city `smart' it has to at least have one city data dashboard.
+Monitoring the urban environment is an important part of figuring out how the city operates and how are people influencing the city as a whole with their everyday lives. Collected data from the city can be a useful tool to understanding these complex processes, but also monitoring and evidencing the changes implemented. Motivations for doing monitoring can be for example creating a digital twin of a city \citep{bolton_gemini_2018}, understanding city soundscapes \citep{adams_sustainable_2006} or air quality \citep{department_for_environment_air_2018} to inform polices around planning and infrastructure changes in the city, or to build a smart city analytics tools for smart service delivery \citep{puiu_citypulse:_2016}. 
 
 % Pittsburgh air pollution monitoring, aircast, airbeam
-The affordances of ICT and IoT have enabled a new wave of citizen sensing toolkits.
+The affordances of ICT and IoT have enabled a new wave of smart city sensing which is done by the citizens. They can be connected to research effort or a citizen science project \citep{haklay_citizen_2013}, but often they are individuals or groups of people using some type of citizen sensing toolkits (see table X) or commercially available monitoring devices. Latter devices are what people can put in their own houses, for example to monitor indoor environment\footnote{\url{https://foobot.io}}\footnote{\url{https://www.airthings.com}}, but also kits that people could use outside and publish data to a bigger cloud platform\footnote{\url{https://www.netatmo.com/en-gb/weather/weatherstatio}}. These smart home devices are helpful for increasing self knowledge or understanding, optimising and improving one's living spaces. Using these devices for making a home smart can often be quite expensive and usually they do not provide any opportunities for customisation. However with the increasing popularity of open source hardware movement and the availability of micro-controllers such as Arduino, RasberryPi and MicroBit, people can now build their own sensors to use in citizen sensing. Although people can build their own kits using off the shelf components\footnote{\url{https://wonderfulengineering.com/10-best-raspberry-pi-sensor-kits/}} there are already available plug and play citizen sensing kits. Table X gives an overview of popular devices for citizens for doing environmental monitoring.
+
+\begin{table}[ht!]
+\scriptsize
+\captionsetup{font=footnotesize}
+\caption[Sensor Kits]{List of popular sensor kits.}% title of Table
+\centering % used for centering table
+\begin{tabular}{|l|c|c|c|c|}
+\hline %insert horizontal line
+\textbf{Name} & \textbf{Hardware Customisability} & \textbf{Source Code} & \textbf{Community}  & \textbf{Website}\\[0.5ex] % inserts table heading, puts a 0.5 vertical whitespace under the text
+\hline % inserts single horizontal line
+% inserting body of the table
+\rowcolor[gray]{.9}\textbf{AirBeam} 		& A & B & C	& http://aircasting.org \\
+\textbf{SmartCitizen Kit} 		& A & B & C 	& https://smartcitizen.me \\
+\rowcolor[gray]{.9}\textbf{AirQuality Egg} 		& A & B & C 	& https://airqualityegg.com \\
+\textbf{AirPi} 		& A & B & C	& http://airpi.es \\ [0.5ex]
+\hline%inserts single line
+\end{tabular}
+\label{table:data_portals} % is used to refer this table in the text
+\scriptsize
+\end{table}
+
+Usage of these devices are particularly good for people to get involved in gathering data about the environment to spark discussions around environmental issues with the community. science education.
+
+
+There are multiple crowdsourced monitoring projects for citizen action around the world which use low cost sensing equipment to collect data about environment issues and then use those data to advocate for positive change. 
+
+% Also, giving an overview of at tools for citizen data collection.
+% http://aircasting.org/
+% https://smartcitizen.me
+% https://airqualityegg.com/home
+
+% https://luftdaten.info/feinstaubsensor-bauen/
+% http://sensors-in-social-research.net/homesense-trial/
 
 % Experts are making assumptions
 % The public / citizens cannot afford equipment that really works. Toys… 
 % What is anybody going to do with the data?
 % Sensors are cheap and presented seductively for users to ‘have a go’
 
+
 % Making data meaningful by linking it to local issues
 % Pushing for change in the community How does sensor commissioning work? How do you manage this, common resource for people
 
-% Also, giving an overview of at tools for citizen data collection.
-% http://aircasting.org/
-% https://smartcitizen.me
-% https://airqualityegg.com/home
-% http://sensors-in-social-research.net/homesense-trial/
-
-% https://foobot.io/
-% https://www.netatmo.com/en-gb/aircare/homecoach
-% https://www.airthings.com Wave Plus
-
+% Groups that do crowdsource monitoring a projects for citizen action (using sensors)
 % http://www.sensr.org/
 % http://www.inhaleproject.ca/citizen_science_resources
 % http://www.bristolapproach.org
 
 % issues with data and its value
 
-% . All too often in actual constructivist science education, while the learning is approached processually—to be accessed via a postmodernist, socialed pedagogy— the content of scientific knowledge remains framed in modernist, “thing,” individuated terms. A typical result of failure to acknowledge the underlying inconsistency is that participation in activities framed as contributing to the development of scientific knowledge (for example, collecting data on weather) is substituted for real coconstructive learning. Related variations of this failure are frequent enough so that they are sometimes mistaken as characteristic of constructivism. Hakken (Page 384).
+% . All too often in actual constructivist science education, while the learning is approached processually — to be accessed via a postmodernist, socialed pedagogy — the content of scientific knowledge remains framed in modernist, “thing,” individuated terms. A typical result of failure to acknowledge the underlying inconsistency is that participation in activities framed as contributing to the development of scientific knowledge (for example, collecting data on weather) is substituted for real coconstructive learning. Related variations of this failure are frequent enough so that they are sometimes mistaken as characteristic of constructivism. Hakken (Page 384).
 
+Majority of drivers however for doing city scale monitoring come from institutional actors and are ran by experts making assumptions about the population and issues that are important to them \citep{townsend_smart_2013}. It is partly to do with citizens not having the resources to acquire the equipment for monitoring that is equivalent to the ones used by the city, but also the lack of mechanisms that would enable citizens to access already existing resources to conduct their own investigations.
+
+\subsection{Data and the City}
+Cities around the world are working hard on implementing their sensor networks do collect data, but also trying to pull other sources of data (e.g., administrative data, official statistics, operational data, social media, LBS data) together into one place to answer questions about the city. In addition to using that data in decision-making and governance, cities are also pushing that data out for others through data dashboards \citep{kitchin_real-time_2014}. Dashboards such as CityDashboard London\footnote{\url{http://citydashboard.org/london/}}, City of Los Angeles Hub\footnote{\url{http://geohub.lacity.org/}}, City of Sydney Dashboard\footnote{\url{http://citydashboard.be.unsw.edu.au/}} and Smart CEI Moncloa in Madrid\footnote{\url{https://ceiboard.dit.upm.es/dashboard/}}. It seems that a prerequisite to start calling a city smart is at least having one smart city interface \citep{al-hader_smart_2009,al-hader_soa_2009}. Having access to ubiquitous technologies and fast broadband are not the only things that will make the city smart, human factors also play a big role in making the city smart \cite{nam_smart_2011}. City might have a lot of infrastructure in place collecting data about the city, its operations and population, but it needs an engaged public to make use of that data.
 
 \subsection{Community organising}
 % Community networks - (John M Carroll and Mary Beth Rosson. 2003. A Trajectory for Community Networks. The Information Society 19: 381–393.)
