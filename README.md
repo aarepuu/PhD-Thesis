@@ -1,4 +1,7 @@
-![header](word_count.png)
+<p align="center"> 
+<img src="word_count.png">
+</p>
+
 # My Ph.D. thesis written in LaTeX
 
 ### Abstract
