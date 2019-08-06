@@ -17,6 +17,9 @@
 branch="master"
 words=0
 
+#header
+echo date added deleted words
+
 for commit in $(git rev-list --reverse $branch)
 do
   date=$(git show -s --format=%cd --date=short $commit)
