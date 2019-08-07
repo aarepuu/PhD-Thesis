@@ -18,14 +18,21 @@ data['date'] = pd.to_datetime(data['date'])
 
 # the plot
 plt.figure()
-plt.plot(data['date'], data['words'], color='r', label='PhD Progress')
-plt.xlabel('Date')
-plt.ylabel('Word Count')
-plt.title('Phd Progress')
+plt.plot(data['date'], data['words'], color='r')
+plt.xlabel('FINAL YEAR')
+plt.ylabel('THESIS WORD COUNT')
+plt.title('THESIS WORD COUNT vs. TIME')
+
+plt.text(data['date'].head(1), data['words'].head(1), 'CREATED THESIS FILE', horizontalalignment='center', verticalalignment='center', size='small', color='black')
+
 
 # format the ticks
 ax = plt.gca()
 ax.xaxis.set_major_locator(months)
 ax.xaxis.set_major_formatter(monthFmt)
+
+
 plt.gcf().autofmt_xdate() # Rotation
+# Annotate with text + Arrow
+# plt.annotate('CREATED THESIS FILE', xy=(25,50), arrowprops=dict(facecolor='black', shrink=0.05))
 plt.savefig('word_count.png')
