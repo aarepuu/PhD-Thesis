@@ -1,4 +1,4 @@
-<p align="center"> 
+<p align="center">
 <img src="word_count.png">
 </p>
 
@@ -22,17 +22,29 @@ Thesis was written in _Overleaf_ (https://www.overleaf.com/) platform, and then 
 
 ## Counting Words
 
-To count words over time in Tex files use a _Git Count Words_ LateX script by Bastian Rieck, available at https://gist.github.com/Submanifold/d7b996492dc3020f2acea87b49cc54c3.
-
+To count words over time in Tex files use a _Git Count Words_ LateX script by Bastian Rieck, originally available at https://gist.github.com/Submanifold/d7b996492dc3020f2acea87b49cc54c3.
 
 
 ### to use it
 
 ```
 $ ./word_count.sh
-# to generate progress graph
-$ ./word_count.sh | ./makegraph.py 
 ```
+
+### to set writing goals
+
+To set daily writing goals modify ```$daily_goal``` parameter in ```word_count.sh``` script and use today to run the script.
+
+```
+$ ./word_count.sh today
+```
+
+### to make graph
+
+```
+$ ./word_count.sh | ./makegraph.py
+```
+
 
 ## Table of Contents
 

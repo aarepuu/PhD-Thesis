@@ -4,3 +4,7 @@
 *.out
 *.pdf
 *.gz
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
