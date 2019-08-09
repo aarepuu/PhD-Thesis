@@ -16,7 +16,9 @@
 
 today=`date +%F`
 branch="master"
-words=-13077
+#additional *.tex files that are not part of thesis
+# this is diffeent for everyone
+words=-13238
 last_words=0
 todays_words=0
 daily_goal=500
