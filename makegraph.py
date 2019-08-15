@@ -1,10 +1,12 @@
 #!/usr/bin/env python3
 
-import datetime
 import sys
+from pandas.plotting import register_matplotlib_converters
 import matplotlib.pyplot as plt
 import matplotlib.dates as mdates
 import pandas as pd
+
+register_matplotlib_converters()
 
 # ticks formaters
 years = mdates.YearLocator()   # every year
