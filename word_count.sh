@@ -24,7 +24,9 @@ todays_words=0
 daily_goal=500
 
 #header
-echo date added deleted words
+if [[ "$1" != "today" ]]; then
+  echo date added deleted words
+fi  
 
 for commit in $(git rev-list --reverse $branch)
 do
@@ -38,7 +40,9 @@ do
   words=$(($words+$added))
   words=$(($words-$deleted))
 
+if [[ "$1" != "today" ]]; then
   echo $date $added $deleted $words
+fi
 
 done
 
