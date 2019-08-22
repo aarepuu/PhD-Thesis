@@ -2,7 +2,7 @@
 %*******************************************************************************
 %****************************** Fourth Chapter **********************************
 %*******************************************************************************
-\chapter[Technical]{Technical Challenges}
+\chapter[Accessible Data]{From Open Data to Accessible Data: Understanding (Technical) Challenges for Re-Purposing of Data on The Web}
 
 % **************************** Define Graphics Path **************************
 \ifpdf
@@ -12,15 +12,81 @@
 \fi
 
 
-This chapter focuses the technical challenges of accessing, making sense and using data in civic action advocacy.
+\section{Introduction}
+
+Call for open data has been echoing from technology and policy advocates for while now. In some respect it has been answered by institutions publishing their data, however the hopes and promises of open data empowering everyone has been short lived. There are abundance of data available on the web and more is being published daily, but there is actually a paucity of data and technology that would help understand what kind of questions could be answered with particular datasets. Data, often represented as machine readable files with abstract descriptions and column headers, holds the values of those specific purposes of data generation or production. By supporting the semantic web agenda (Berners-Lee 2011) those data can be standardised and described for querying and retrieval by machines. A great step to the right direction for helping to remove ambiguity around understanding what particular dataset represents and reducing development costs on data accessing, combining and merging. Although Linked Data standards for the web have been around for over a decade now, we are still far off achieving the goal of having a `Web of Data' as opposed to a sheer collection of datasets on the web. As a result, data science skills are becoming increasingly more important to aid exploration of data and support evidence based practices in decision-making. Furthermore organising and linking data on the is only the first step towards its effective use by communities and for civic participation and advocacy.
+
+Open data advocates often paint a romantic picture of the data being available for everyone to consume like the air that in the atmosphere, and making it ready to leverage its powers in aiding decision-making, improving public services, and fighting injustices and improving equality for all people. However in closer inspection things are not as they have been advertised. Depending on where a particular person sits in the society they may think that current systems for data access and use are either fantastic or are under-serving their needs. In addition to clear need of data science skills to interact with these data rich systems, there are also number of barriers for using that data for purposes other than their intended collection: published data is often not standardised; there is a lack of machine readable metadata; tools and systems for data access are disperse and often not fully functional; there is lack of clear documentation how to leverage the existing infrastructures.
+
+This chapter describes thesis' case studies and additional projects the author engaged in that support `accessible data' agenda from a perspective of an experienced data scientist and information engineer trying to build accessible data systems for community use. Chapter particularly focuses and analyses the technical challenges of \textit{accessing}, \textit{making sense} and \textit{effectively using} data in civic participation and advocacy. Additionally an analysis of the successes and failures of each project and initiative engaged within the studies was conducted. Through this, it was possible to chart the process in which accessible data systems are formed and what are the main barriers with technologies for data. 
+
+Understanding how people where interacting with data through the built digital systems provides a deeper contextualised knowledge when designing features that promote exploration, curiosity and improve retrieval of useful information from different data sources. The issue is that people do not acquire information in the manner of how machines do. To satisfy their curiosity and need for information on the web, people pose questions which often are open ended and do not map to any specific structure (Paritosh 2018). In order to re-purpose and use these abstract datasets by humans, there is a need for a system that links questions with the data that might bare the answers. These findings enabled to set criteria for accessible data systems that need to be satisfied in order for the re-purposing of open data to be successful. Although the existence of `Web of Data' is prerequisite for enabling the linking of data, the criteria suggests that there needs to be a larger emphasis on the `human data interaction' and linking questions with data on the web. Using this criteria and drawing on previous work and experiences of the author, with addition to available infrastructures on the web, a foundation is laid out of how might we reconfigure the way people interact with open data sources on the web start compiling and making use of this rich dataset of questions with linked open data sources.
+
+\section{Related Work}
+https://fourcorners.io/
+
+\section{Technical Challenges}
+Often there are links missing between data-sets, there is lack of machine readable metadata or lack of following of gold standards of open data.
+
+\subsubsection{Open Data Standards}
+This section describes the open data standards that is used to publish data on the web.
+
+
+\subsubsection{Linked Data}
+This section describes the potential and state of Linked Data to achieve the `Web of Data' goal for organising information on the web. 
+
+\section{Human Machine Communication}
+
+\subsection{Humans}
+This section describes how humans communicate ideas with each other.
+
+
+\subsection{Machines}
+This section describes how machines communicate with each others and how is it changing with coming technological achievements.
+
+\subsection{Human Data Interaction}
+This section looks into the developments of Human Data Interaction.
 
 
 \section{Contextualising data}
-Most of available open data is collected to make provide higher level statistics and for administrative purposes. 
+Most of available open data is collected to make provide higher level statistics and for administrative purposes. Linking the data with issues of importance and places of interest sets out series of difficult tasks. 
 
-Linking the data with issues of importance and places of interest sets out series of difficult tasks. Often there are links missing between data-sets, there is lack of machine readable metadata or lack of following of gold standards of open data.
+\subsection{Linking to Place}
+This section discusses all things related to place: common data standards, geographic data types and codes, links between geographies and mapping tools to explore that data. 
 
-\subsection{Place}
+\subsubsection{Standards in Place-Based Systems}
+\subsubsection{Linking Geographies}
+\subsubsection{Mapping Geographies}
 
+\subsection{Linking to Issues}
 
-\subsection{Issues}
+\subsection{Linking to Questions}
+
+\section{Common Grounds}
+
+\subsection{Criteria for Accessible Data}
+
+\subsection{Adjacent Possible: State of The Art of Available Infrastructures}
+
+% Unplatforming
+
+Data needs anchors for people to start exploring some of the questions that these datasets answer. Common anchors for open data platforms are things like domains or topics (e.g., transport, health, education, local services), publishing entities (e.g. and access formats (e.g., machine readable files, APIs, PDF files). Related work also shows that place is a valuable anchor for accessing and exploring datasets (Taylor 2015, Puussaar 2018). Identifying place and situated activities that people engage there, provides a valuable context for starting to explore data that might answer questions about those places. There is no value in data without somehow contextualising it. Anchoring is this sense is just another form of grounding or contextualising the data.
+Despite that the data can be situated in place, because of how it has been generated and archived for access, it still falls short having a direct route for answering questions that people come up every day. In search of information on the web, people often rely on the experiences of others finding out answers to similar questions. The uses of online forums like Quora and Reddit, problem solving platforms like StackOverflow are just few examples of places where people go to look for answers. Often the information or datasets people are seeking are already out there, but someone needs to make the link between the questions and the abstract datasets. This often requires an understanding of how the data compiled and what hidden values it represents. Furthermore the link between the actual data that answered the question might get lost in the noisy forum thread. 
+From the software development processes, people are familiar with issue tagging when they discover a bug or come up with an idea for improving the software. With explosion the open source software movement and having access to code repositories like GitHub, the issue tagging functionalities are becoming more and more similar to forum or AQ based interactions with the system. We can already see projects on GitHub that leverage this infrastructure to compile and archive links to open datasets. For example Awesome Public Datasets project which compiles a topic-centric list of open datasets in a public domain. It uses Github issues and pull requests to receive new proposals of dataset links. The project has tens of thousands of followers and majority people who contribute the datasets already seem to know how and what data they are looking for. However a brief observation reveals that some of the issues are actually more rephrased as questions without any link or routes to data. For example “How can I apply job for driver in canada/ usa”.  This request already has some of the ancours we mentioned previously: (1) a place - Canada or USA, (2) a issue or a topic - working as a driver. There has been number of other projects which make use the open source community and the capabilities of platforms such as GitHub. With this in mind, we posit an idea leveraging the ideas and infrastructure of the open source ecosystem to organise, archive and make accessible this contextual information which helps people link their questions to datasets which might hold the answers.
+
+\subsection{The System}
+
+The problem with using already available structured data systems that organise information on the web, is that the questions that people come up with does not obey any laws of structured data sources. Questions that people come up with are not some polished queries for exact piece of information, they are driven more by need and curiosity of people. Often these questions need to be understood by someone else with the knowledge of a possible information to address them. This also reveals some additional problems around multiplicity of views and biases of people thinking that they have the correct link to information answering the proposed questions. There is no one truth, there is only a matter of perspective corresponding to the values the person or a group looking for answers. Nevertheless the first step of organising this information and making it accessible for re-enquiry is to start documenting these knowledge enquiries and routes to data where the answer was found. Having this laid out for others to learn from, might make their discovery of information a bit easier.
+
+% For this approach of data access we feel 
+% GitHub for data storage for the links and and questions/issues.
+% QA site backed by datasets
+% forum like and QA like structure
+% Mechanism to ask questions and have generated questions that link similar questions together to show the route of discovery and data sources for those that have already answered.
+
+\subsubsection{Challenges}
+% Challenges for making this potentially even more useful:
+ %      - relating similar questions and responses … think merging and hierarchies … likely involves human intelligence (human computation / HITS), maybe NLP
+% Scaling strategy? Local communities and isolated questions / challenges first?
+
+\section{Conclusions}
