@@ -10,7 +10,9 @@ This PhD research explores more inclusive and participatory ways of designing da
 
 ## Declaration
 
-This theis is incordance with _Newcastle University's Guidelines for the Submission and Format of Theses_ found at https://www.ncl.ac.uk/students/progress/assets/documents/GuidelinesfortheSubmissionandFormatofThesis-November2018.pdf
+This thesis is in accordance with _Newcastle University's Guidelines for the Submission and Format of Theses_ found at https://www.ncl.ac.uk/students/progress/student-resources/PGR/Guideline%20for%20Submission%20and%20Format%20of%20Theses%20July%202019.pdf
+
+```Template HAS NOT been check against the latest guidelines!```
 
 This thesis is using a _Newcastle University template_ by André Catarino Guerra, available at https://github.com/AndreGuerra123/NUTT. Thanks for uploading the source on GitHub!
 
