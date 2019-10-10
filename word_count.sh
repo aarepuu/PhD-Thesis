@@ -18,7 +18,7 @@ today=`date +%F`
 branch="master"
 #additional *.tex files that are not part of thesis
 # this is diffeent for everyone
-words=-13238
+words=-8499
 last_words=0
 todays_words=0
 daily_goal=500
@@ -26,7 +26,7 @@ daily_goal=500
 #header
 if [[ "$1" != "today" ]]; then
   echo date added deleted words
-fi  
+fi
 
 for commit in $(git rev-list --reverse $branch)
 do
@@ -34,8 +34,8 @@ do
   if [[ $date == $today && $last_words -eq 0 ]]; then
     last_words=$words
   fi
-  added=$(git show -p --word-diff=porcelain $commit "*.tex" | grep -e '^+[^+]' | wc -w)
-  deleted=$(git show -p --word-diff=porcelain $commit "*.tex" | grep -e '^-[^-]' | wc -w)
+  added=$(git show -p --word-diff=porcelain $commit -- "*abstract.tex" "*chap*.tex" "*introduction.tex" | grep -e '^+[^+]' | wc -w)
+  deleted=$(git show -p --word-diff=porcelain $commit -- "*abstract.tex" "*chap*.tex" "*introduction.tex" | grep -e '^-[^-]' | wc -w)
 
   words=$(($words+$added))
   words=$(($words-$deleted))
