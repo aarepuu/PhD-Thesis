@@ -8,3 +8,6 @@
 *.blg
 *.fdb_latexmk
 *.fls
+thesis.lof
+thesis.lot
+thesis.toc
