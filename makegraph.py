@@ -39,4 +39,4 @@ plt.gcf().autofmt_xdate() # Rotation
 # Annotate with text + Arrow
 # plt.annotate('CREATED THESIS FILE', xy=(25,50), arrowprops=dict(facecolor='black', shrink=0.05))
 plt.savefig('word_count.png')
-os.system("git commit -m 'Progress...' -- word_count.png")
+os.system("git commit -m 'Progress...' -- word_count.png; git push")
