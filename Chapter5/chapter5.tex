@@ -21,6 +21,7 @@ This chapter focuses on understanding the challenges of making data \textit{usef
 
 Developing and deploying tools that promote better \textit{access}, \textit{comprehension} and \textit{usability} of data, does not mean that the data will find its way into actionable results. Data itself is not evident and inherently useful to a person or group who are able to access it. Both case studies, SenseMyStreet and Data:In Place, the technologies built aimed to make data more accessible by anchoring with place and local context for people to make sense of it. With SenseMyStreet it was the case of democratising data production and with Data:In Place it was the case of democratising data access. Both studies made good strives towards helping people access and explore different datasets on their own terms. However it might have also created an overload of choice for people, without helping people to come up with questions, queries and strategies for data use. From the case studies it became evident that it is not only up to engineers to build better tools and interfaces for data, there are also other, more human factors, that need to be explored to combine a more holistic approach for effective usage of data in civic action.
 
+\mynote{Rewrite this to reflect on the dual approach of in the redesign}
 Extending on the previous case studies, this chapter discusses what makes people go from ``I want to see all the data'' to ``I want to see data that relates to a question I have'', hence providing data an actionable purpose. Building from the previous chapter, this chapter explores how we might start linking data on the web with questions that people have. After an unsuccessful deployment of added features to Data:In Place platform to address the problem, a more human centred approach was taken to facilitate the use of these features. This was done through the process of running Data Consultations in focus groups with key stakeholders from a non-profit organisation and through leveraging Right Question Institute's (RQI)\footnote{https://rightquestion.org/} Question Formulation Technique (QFT) in a community workshop setting. This chapter presents empirical evidence about the effectiveness of these methods to define actionable steps towards purposing data and enables to start mapping out the supported processes needed for effective use of data in advocacy and action. Processes that have often been neglected by designers building systems for data discovery. Additionally there is still a role of a data professional or data scientist to play in enabling the use of data by communities.
 
 \section{Making Formal Data Request}
@@ -49,8 +50,8 @@ To unpack these issues, an investigation was taken up to understand the technica
 
 
 \section{Dual Approach}
-
-The aim of the case study was to explore methods and technical solutions for leveraging data in community contexts and for purposes of civic advocacy and action.\supnote{Pete:Was it? I thought it was about question framing?} The case study builds on previous work conducted in the scope of this thesis around community data production using SenseMyStreet commissioning platform (see Chapter \ref{chap:sensemystreet}) and exploring the uses of open governmental data for local decision making using Data:In Place platform (see Chapter \ref{chap:datainplace}), and combines the knowledge gained from designing, developing, deploying and evaluation these data systems. The Case Study follows the overall approach of using participatory action design research described in the thesis introduction, however to address the issues risen from previous case studies a more holistic approach was taken to work together closer with communities and implement set of \textit{mutually supporting strategies} (both technical and social cognitive) in the scope of and across two components. These include \textit{Component 1} -- environmental and systems approaches to promote usage of data and build support for data discovery and \textit{Component 2} -- interventions to make data actionable and to increase community capacity to take action. This approach simultaneously focuses on technical implementations that can be used by everyone who has access to the internet and social cognitive strategies that focus on specific communities or publics.
+\petenote{Was it? I thought it was about question framing?}
+The aim of the case study was to explore methods and technical solutions for leveraging data in community contexts and for purposes of civic advocacy and action. The case study builds on previous work conducted in the scope of this thesis around community data production using SenseMyStreet commissioning platform (see Chapter \ref{chap:sensemystreet}) and exploring the uses of open governmental data for local decision making using Data:In Place platform (see Chapter \ref{chap:datainplace}), and combines the knowledge gained from designing, developing, deploying and evaluation these data systems. The Case Study follows the overall approach of using participatory action design research described in the thesis introduction, however to address the issues risen from previous case studies a more holistic approach was taken to work together closer with communities and implement set of \textit{mutually supporting strategies} (both technical and social cognitive) in the scope of and across two components. These include \textit{Component 1} -- environmental and systems approaches to promote usage of data and build support for data discovery and \textit{Component 2} -- interventions to make data actionable and to increase community capacity to take action. This approach simultaneously focuses on technical implementations that can be used by everyone who has access to the internet and social cognitive strategies that focus on specific communities or publics.
 
 This is also known as \textit{Dual Approach} and is widely adopted in the context of public health interventions [REFs] and increasing health equity. The Dual Approach uses a model where strategies are applied to improve the health of general population while the same time using targeted interventions to address issues encountered by a specific targeted population. It follows the principle of \textit{targeted universalism}, which states that alleviating disparities of marginalised populations is essential for developing contextually relevant strategies for achieving universal goals and improving the well-being of everyone [REF]. 
 
@@ -326,7 +327,20 @@ This section presents the findings from analysis of transcribed audio recording 
 
 This section presents the findings from three data consultation focus-groups run with stakeholders from local charity. Findings are presented using the tree parts of the focus groups which are taken as main concepts. Figure \ref{fig:dc_mindmap} shows each part of the focus group and themes surfaced around them from analysing the worksheets and transcripts. Following chapters will describe these concepts and themes risen around them in a think aloud activities.
 
+% make new visualisation
+\begin{figure}[ht]
+\centering
+ \includegraphics[scale=0.1]{dc_mindmap}
+  \caption{PROVISIONAL - Mapping the process}
+  \label{fig:dc_mindmap}
+\end{figure}
+
+
 \subsubsection{Hypotheses}
+% complexity of hypothesis
+% Questions 
+% assumptions, local knowledge, domain knowledge
+% the unknown
 The hypothesis approach required participants to come up with a null hypothesis (HO) and two alternative hypotheses (H2, H2) as the initial part of the data consultation (see Appendix \ref{app:data_consultations}). What was observed straight away is that the participants found it difficult to come up with well formed hypotheses, and they fell back on asking simple questions which was more natural for them. For example trying to come up with H2, the program officer (PO) deposited following:
 \begin{quote}
     ``Has the wellbeing improved of residents in the city, I suppose, or people that have interacted with the campaign somehow.'' (PO)
@@ -346,13 +360,11 @@ Or another example of local knowledge from the OO when:
     ``[...] a hypothetical example. If we know that, if we already know [people's health in one part of a city] is great, it’s perfectly fine. Let’s go target [other part of the city], for example, instead.'' (OO)
 \end{quote}
 
-% complexity of hypothesis
-% Questions 
-% assumptions, local knowledge, domain knowledge
-% the unknown
-
-
-\subsubsection{Data Exists Out There}
+\subsubsection{Data and Other Resources}
+% official data, own data
+% A lot of data can be collected by the organisations - reflecting on own practices of getting better data
+% Collaboration
+% Comparing the general population
 When thinking about different datasets that might be used to investigate the proposed hypothesis the participants where convinced that data must exists somewhere amongst the official open data sources:
 \begin{quote}
 ``I know the data is probably out there. Attendance, homework… Attendance, especially, will definitely be out there, we’ll definitely be able to get hold of. Behaviour and homework will probably be recorded, but might just be kept to the individual schools.'' (OO)
@@ -370,6 +382,11 @@ However, putting down concrete hypotheses made participants think about how they
 \begin{quote}
     ``It’s something that we could record when we’re in schools. If we’re looking at the first hypothesis [H1], where we’re saying that [anon program] improves these things, we can definitely ask these schools, "Can we have your attendance information, your behaviour information, and your homework information while we’ve been here?"[...] There might be a standardised way in which we collect that or we ask the schools to give us that data.'' (OO)
 \end{quote}
+Also thinking about how to standardise these practices across the different program the organisation is running and perhaps also across the charity sector to promote data sharing and collaboration. Participants where also conscious of not loading the responsibility of this to the teachers who are already overworked and where leaning towards automated systems and processes: 
+\begin{quote}
+    ``If there is some sort of online portal that all schools have to upload to, then great. [...] The teachers don’t want any more work. If they need to start telling us behaviour, attendance, and homework of each single child in the school that’s a big pain.'' (OO)
+\end{quote}
+% Quate
 Hypotheses also helped participants to think about the bigger picture and all the different data sources that are needed. For example, in order to compare and relate the data that the organisation produces to the schools that they do not engage with, they would also need data about the general population:
 \begin{quote}
     ``I’m just thinking, for the second hypothesis, obviously we can’t go in and ask a school for that if they don’t want to buy into our primary schools package in the first place. That second hypothesis would have to be collected from data that’s already out there.'' (OO)
@@ -379,45 +396,47 @@ Which also made the participant reflect back to original rationale of the projec
     ``I suppose my original idea, with data and place, was, “How can I compare what I capture to the general population?” If I know the measures of the general population, I can relate my data to there and say that my programme is working, it’s great.'' (OO)
 \end{quote}
 
-
-
-
-% official data, own data
-% A lot of data can be collected by the organisations - reflecting on own practices of getting better data
-% Comparing the general population
-
-% Resources that are needed
-
-
-% visualising data
+\subsubsection{Visualisation of Data}
 % identity is important
 % types of visualisations depend on the audience
 
+Participants felt that the types of visualisations that are needed would depend on the target audience and purpose. There are differences in the way you communicate these concepts to different people. For example for official documents the participants would need facts and statistics, but for engaging the public they would need easily digestible infographics:
+\begin{quote}
+    ``I think if you had taken away- Obviously, I know we discussed who to show the data to. You’ve got certain people which you’d want to show a bar chart to. They’re probably the stakeholders and the people who are funding the project, for official documents. People who are more visual, it might go nicely into presentations and things for schools and showing teachers.'' (OO)
+\end{quote}
 
-% Investigations
+\subsubsection{Investigation}
 % replication of same results done by a professional (NUF app)
 
+\subsubsection{Routes to Action}
 % Action (Routes to action)
 % Utility of data
 % measure
 % quantify change
-
 % Data challenges
-
-% make new visualisation
-\begin{figure}[ht]
-\centering
- \includegraphics[scale=0.1]{dc_mindmap}
-  \caption{PROVISIONAL - Mapping the process}
-  \label{fig:dc_mindmap}
-\end{figure}
 
 \subsection{Community Action Day}
 \label{subs:community_action}
 
 \section{Discussion}
 % add stuff about mooqita here (commissioning data science problems)
-% come back to dual approach and stragegies
+% come back to dual approach and strategies
 
+
+\begin{itemize}
+    \item Power of right questions
+    \begin{itemize}
+        \item Focus on issues
+        \item Better understanding of what is needed (data, resources)
+        \item Promotes action (Actionable data)
+    \end{itemize}
+    \item Documenting Processes
+    \begin{itemize}
+        \item Reflecting on own practices
+        \item Digital trail
+    \end{itemize}
+    \item Community data interaction and collaboration
+    \item Combined approach (dual approach)
+\end{itemize}
 
 \section{Conclusions}
