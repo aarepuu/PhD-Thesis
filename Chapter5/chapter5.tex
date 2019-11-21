@@ -44,7 +44,7 @@ Through the case studies of the PhD the author has acted as a data professional 
   \label{fig:nuf_app}
 \end{figure}
 
-Indeed, it appears at the moment that people need these professional analysts or engineers to mediate these processes for them. Going forward, what is the role of a professional data analyst in these processes? Is there a process that makes citizens smarter and able to participate directly in decision making that involves data at the city, county or even country level? To make it truly democratic, the challenge is in how can those skill become transferable to ordinary citizens too do it for themselves or built into systems that can automate those processes for them. Designing and developing Data:In Place platform (see Chapter \ref{chap:datainplace} was authors first attempt of building a system that would help automate and facilitate some of these processes, however additional issues surfaced that where not solely linked to engineering and information processing challenges.
+Indeed, it appears at the moment that people need these professional analysts or engineers to mediate these processes for them. Going forward, what is the role of a professional data analyst in these processes? Is there a process that makes citizens smarter and able to participate directly in decision making that involves data at the city, county or even country level? To make it truly democratic, the challenge is in how can those skill become transferable to ordinary citizens too do it for themselves or built into systems that can automate those processes for them. Designing and developing Data:In Place platform (see Chapter \ref{chap:datainplace}) was authors first attempt of building a system that would help automate and facilitate some of these processes, however additional issues surfaced that where not solely linked to engineering and information processing challenges.
 
 To unpack these issues, an investigation was taken up to understand the technical approaches and social and cognitive processes linked to effective uses of data. This evolved: (1) a redesign of Data:In Place (see Chapter \ref{chap:datainplace}) to integrate additional features for enabling people make better request for datasets that could help them answer questions or evidence local issues, and for posting challenges to get support from the larger community; (2) coming up and trialling of methods that assist people in creating questions and challenges for using data in civic action. 
 
@@ -111,7 +111,7 @@ To improve data requests on the Data:In Place platform and add additional contex
 
 An issue that is was encountered in both of the previous case studies (see Chapters \ref{chap:sensemystreet} and \ref{chap:datainplace}) was lack of actions that for using the data once it was obtained. It was often an issue of not possessing the skills needed to work with the data in order to transform it into something usable (see Data:In Place Chapter \ref{chap:datainplace}), however it was also the lack of planning or mapping out routes to actions that would be of a local benefit. This meant developing attachments to the data and committing to activities that would use it. These issues are tightly coupled to building community capacity and reaching out to supporting networks for additional support and skills. Some of these processes could be automated, however it was still evident that in some cases people would be needing support form professionals.
 
-As a response, a \textit{Data Challenges} feature was added to the platform that enables people post challenges about \textit{finding}, \textit{producing}, \textit{making sense} of data and \textit{taking action} with data. This served two purposes: firstly to serve as a plan for taking action with data and secondly a way to increase the capacity and widening the community network by reaching out to people externally.
+As a response, a \textit{Data Challenges} feature was added to the platform that enables people post challenges about \textit{finding} or \textit{accessing}, \textit{producing}, \textit{making sense} of data and \textit{taking action} with data. This served two purposes: firstly to serve as a plan for taking action with data and secondly a way to increase the capacity and widening the community network by reaching out to people externally.
 
 \mynote{Describe technical implementation of features?
 - Using markdown and tagging for thinking of connecting to questions to datasets
@@ -233,6 +233,7 @@ Audio recordings where fully transcribed using a professional transcription serv
 \subsubsection{Community Conversational in Community Action - Issue Mapping}
 % Using Community Conversational to talk about local issues and build upon the previous sessions run using the tool.
 
+\kylenote{This section feels more like an `apparatus', maybe this description should be under study desingn where the phases are}
 Community Conversational (CC) is a tabletop turn taking game first developed in by \cite{johnson_community_2017} to support deliberation in consultation processes for local decision-making in community settings. It has proved to be a valuable tool to structure the process and document voices of people who traditionally would have not been included in these processes, making the process more inclusive and democratic. A modified version of CC (CCv2) was trialled in Case Study 2 to map local issues and gather people's opinions about them \cite{johnson_neighbourhood_2018}. The location based opinion data gathered through this process was then feed into Data:In Place platform (see Section \ref{chap:datainplace}) as another datasource generated by citizens themselves open for interrogation, side by side with official open datasets.
 
 % mocked paper map of issues (added old issues and markers to it)
@@ -276,7 +277,7 @@ The workshop made use of data gathered in previous workshops ran with the partic
 
 Second activity following the \textit{issue mapping} was \textit{issue prioritisation} built on the mapping exercise to help the group focus on a specific issue. Groups had to choose an issue from the map that had the most support and consolidate that issue using Data:In Place interface. Additionally to discussions in the group, people could also use Data:In Place platform to listen location based recordings from previous sessions ran using Ambit (see Chapter \ref{chap:datainplace}). After the group reached consensus through discussing and listening back previous opinions, they used a mapping functionality to mark the issue on a map similarly as they had done previously on the paper map. Issue mapping was a new feature added specially built for running Community Action workshops.
 
-One other added feature integrated into Data:In Place platform for the workshop was \textit{live map view} using WebSockets\footnote{\url{https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API}}. This enabled the participants to see what other groups are doing on the map in real time. This also guaranteed that the groups will work in different areas and on different issues, covering more ground.
+One other added feature integrated into Data:In Place platform for the workshop was \textit{live map view} using WebSockets\footnote{\url{https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API}}. This enabled the participants to see what other groups are doing on the map in real time promoting reflection and collaboration. This also guaranteed that the groups will work in different areas and on different issues, covering more ground.
 
 \mynote{Add some screenshots of Issue Mapping on data-in.place or a workflow}
 
@@ -288,15 +289,31 @@ All the data inserted into the Data:In Place system where saved for further anal
 % - sockets for seeing other group's issue live
 
 \subsubsection{QFT in Community Action - Question Asking}
+\label{sub:qft_action}
 This section talks about how QFT was appropriated as a design interaction method in a workshop setting for helping people to find uses for data in community action. Previous activities helped to feed into the QFT method by setting a focus for the question asking  asking (see Figure \ref{fig:QFT}).
-% talk more about how QFT is not used as workshop method and that is novel
-This part of the workshop was ran as a guided exercise where QFT was explained in a step-by-step using an example provided the thesis author. Additional worksheets where given to the participant on each of the step (see Appendix \ref{}), which where modified from the original QFT worksheets (see Figure \ref{fig:QFT}) to make them more focused on community action. This guaranteed that the participants follow the structure of the method, keep participants focused on only one task at the time and make the assessment on each stage easier. As a result of this activity people had a top priority question that they selected as a group from pool of questions created using the QFT method.
+\mynote{talk more about how QFT is not used as workshop method and that is novel and how it was modified}
+This part of the workshop was ran as a guided exercise where QFT was explained in a step-by-step using an example of `rock climbing` (chosen by the thesis author). Additional worksheets where given to the participant on each of the step (see Appendix \ref{}), which where modified from the original QFT worksheets (see Figure \ref{fig:QFT}) to make them more focused on community action. This guaranteed that the participants follow the structure of the method, keep participants focused on only one task at the time and make the assessment on each stage easier. As a result of this activity people had a top priority question that they selected as a group from pool of questions created leveraging the QFT method.
 
 \mynote{Add an example of the QTF method workflow}
 
 \subsubsection{Challenge Creation in Community Action}
 % This section will talk about how QFT will feed into the challenge creation process.
-Starting point for the challenge creation activity was the top priority question that the group chose in the last activity. Activity itself was set up for people to transform the questions into challenges for data. This was done through prompts that helped people think about different aspects of creating a data challenge (see Appendix \ref{}). Data science challenges fell under categories such as  data access, collection, data processing and analysis, augmentation and visualisation and contextualisation. Participants needed to think and document things that they already know, resources and data needed and how could they access them, and what can they do themselves and what kind of help they need externally. Similarly to Data Consultations people also had to think about how would they then bring that data into life through visualisations and how they use these visualisations to take action and advocate for change. Finally participants documented their challenges in Data:In Place platform using the data challenges functionality (see Section \ref{subs:data_challenge}).
+In this context a \textit{data science challenge} falls under categories such as data access, collection, data processing and analysis, augmentation and visualisation and contextualisation. Starting point for the challenge creation activity where the top priority questions (tree questions) that the group chose in the previous activity. Activity itself was set up for people to transform these questions into challenges for data, through thinking about what data and other resources (e.g., technology, people, skills) are needed. People where given additional worksheets ((see Appendix \ref{}) that had prompts on them, helping people think about different aspects of creating a \textit{data challenge}:
+\begin{itemize}
+    \item What do we already know?
+    \item What data/resources do we need to answer these questions:
+    \begin{itemize}
+        \item What is out there/what exists?
+        \item How to get access to it?
+        \item Do we need to collect something ourselves?
+    \end{itemize}
+    \item How to turn the data into something useful?
+    \item How to make data or the product of data actionable?
+\end{itemize}
+
+ Participants needed to think and document things that they already know, resources and data needed and how could they access them, and what can they do themselves and what kind of help they need externally. Similarly to Data Consultations people also had to think about how would they then bring that data into life through visualisations and how they use these visualisations to take action and advocate for change in the community. This was done through an open discussion withing the groups where participants also used provided worksheets to sketch down their ideas. Final step of data challenges where for the participants to document their challenges in Data:In Place platform using the data challenges functionality (see Section \ref{subs:data_challenge}).
+ 
+ Some of those challenges could be taken up by participants themselves without needing any external help, but some of those challenges need help from for example data analyst or policy maker. However the challenge creators would still be involved as the owners of those challenges, providing local insight and collaborating with the people who take up the challenges. Finally the participants are given an opportunity to be involved with the project going forward and indicate weather they want to collaborate or take up any of the challenges. They could do so providing information about skills that contribute and their preferred communication channel (e.g., email, post, face-to-face, Facebook, WhatsApp, Video calls etc).
 
 % talk about how these challenges would make it to people who can solve them
 % I’m trying to create an infrastructure to mediate this exploration of issues through data
@@ -317,7 +334,7 @@ Starting point for the challenge creation activity was the top priority question
 %   - community action workshop
 
 This section presents the findings from analysis of transcribed audio recording form Data Consultation focus groups and Community Action Day workshop. 
-% Write about the protocol
+\mynote{Write about the observation protocol in the workshop}
 
 \subsection{Data Consultation Focus Groups: Citizens Taking Power of Data}
 \label{subs:data_consultations}
@@ -400,9 +417,14 @@ Which also made the participant reflect back to original rationale of the projec
 % identity is important
 % types of visualisations depend on the audience
 
-Participants felt that the types of visualisations that are needed would depend on the target audience and purpose. There are differences in the way you communicate these concepts to different people. For example for official documents the participants would need facts and statistics, but for engaging the public they would need easily digestible infographics:
+Participants felt that the types of visualisations that are needed would depend on the target audience and purpose. There are differences in the way you communicate these concepts to different people. For example for official documents the participants would need numbers and statistics, but for engaging the public they would need easily digestible infographics:
 \begin{quote}
     ``I think if you had taken away- Obviously, I know we discussed who to show the data to. You’ve got certain people which you’d want to show a bar chart to. They’re probably the stakeholders and the people who are funding the project, for official documents. People who are more visual, it might go nicely into presentations and things for schools and showing teachers.'' (OO)
+\end{quote}
+It was important to the participants that the visualisations would have all the facts, but would be communicated in a clear way: ``Like I say, something that people look at and they go, 'Ah.' They can instantly see what it is, anyone can understand it, and it’s got the facts.'' (PM).
+Probably the most important aspect of the visualisation for the participants was that it needs to incorporate the identity of the organisation and the things they feel strongly about, ``So it’s identifiable that it’s us that’s presenting that infographic, not just anyone else.'' (PO). During the consultation activities, participants used the worksheets (see Appendix \ref{app:data_consultations}) to give an idea how it would look like:
+\begin{quote}
+    ``I think it’s quite nice to incorporate the [anon sports] club into a lot of this information that we portray. It might be the amount of seats in the stadium or it might be using a percentage of the [anon sports] pitch which has been… Taking the data, or taking the stats, and putting it into something that’s [anon sports] related and digestible.'' (OO) 
 \end{quote}
 
 \subsubsection{Investigation}
@@ -417,15 +439,176 @@ Participants felt that the types of visualisations that are needed would depend 
 
 \subsection{Community Action Day}
 \label{subs:community_action}
+Building on the findings of data consultations, a workshop around using data in community action was ran. This section presents the findings from that community workshop where set of methods and digital tools where trialled to explore their usefulness in guiding people through the process of using data in community action. Figure \ref{fig:comm_mindmap} illustrates the process of enquiry and steps of using data for community action which will be dissected in following subsections. Because of the nature of the workshop setting and having a lot of cross talk in the transcription, the community is represented as a united voice and quotes are presented without identity or pseudo identity. The distinctions are made however between the two groups formed in the workshop.
+
+% make new visualisation
+\begin{figure}[ht]
+\centering
+ \includegraphics[scale=0.1]{commact_mindmap}
+  \caption{PROVISIONAL - Community Action Process}
+  \label{fig:comm_mindmap}
+\end{figure}
+
+\subsubsection{Issue Mapping}
+Issue mapping through the use of Community Conversational (CC) provided people an open space to bring any issue onto the table. Participants where asked to use prompt cards (see Figure \ref{fig:ccv2_cards}) to provide more information about issues that where flagged in previous sessions (see Chapter \ref{sec:datainplace}) or add completely new issues to the map. Although people had the freedom to do so, throughout the longitudinal engagement with the local community there where particular set of issues that kept coming up and were being identified by the community. These were linked to things like lack of facilities for kids and green spaces that people in the neighbourhood could enjoy. Participants turned back to discussing those issues, from which some of them were also marked in a previous Community Action Day where CC was used. The utility of tools such Data:In Place or Ambit (the technology behind CC) where not only to document these processes for further use, but to also provide anchoring to these issues by situating them. 
+
+Issues that people where identifying where mainly observations about different places in the community, which they wanted something to be done about. As mentioned before, many of the issues where linked to underused fields or green areas that had been neglected and in need of maintenance. Such as:
+\begin{quote}
+    ``It’s on your left side and down the road, isn’t it. 
+	Where Ronsons was and then they got all the derelict ground.''
+\end{quote}
+    , or in another place in the area
+\begin{quote}
+    ``You got a lot of area out there on [anon] Road, haven’t you, that’s just like lying derelict.''
+\end{quote}	
+
+Participants felt that these spaces could be utilised better, for example providing activities for young people who did not have any facilities:
+\begin{quote}
+    ``Nothing, nothing. Absolutely nothing. Sometimes it does get used for kids drinking on the field, hiding in the bushes, so forth. So, I think a lot more could be done with that area, there. They could have a lot more for the kids to play on there. ''
+\end{quote}
+Although participants where noticing these issues in the community they felt that others, for example the local government, need to do something about it. There where also ideas of establishing new housing and businesses or allotments on those ``no man’s lands'', however participants shifted the actions back to the local council. 
+\begin{quote}
+    `` I mean, the council could put into plan a cheaper rent, for people to start their own businesses, or anything like that.''
+\end{quote}    
+    , with echoing similar attitudes from the another group
+\begin{quote}
+    ``Isn’t that because the council have a long list of people who would like an allotment and the council are so slow at informing the people when the allotments become available.''
+\end{quote}
+Using the prompt cards and taking turns flagging and discussing issues, both groups ended up with set of marked issues on the map. The activity was set up in a way that people could express support or agreement with others through the 'second that' prompt cards, loaning itself to help filter out issues that are most important to people and preparing for the next activity of prioritisation.
+
+\subsubsection{Issue Focus}
+To move onto exploring an issue, participants had to prioritise flagged issues by discussing amongst each other and listening back recording of other people's opinions, finally deciding on which issue is the most important to them. The mechanics of the CC already helped bring some of the issues forward which multiple people felt important for improving the community.
+
+As mentioned before and example focus of `rock climbing` (chosen by the thesis author) was provided to guide participants through the next steps of the process and the question formulation. However, having already gone around the map in the first activity and identifying issues provided participants a better, more anchored focus. One group took ownership of an issue regarding lack of facilities for children, ``[We] want to focus on [anon] Way, because there is nothing there for the kids'', and other group focused on green areas and wanted to ``Re-purpose [anon] View playing fields'' where half of it was used by a local football club. Once the focus was agreed, each group used Data:In Place platform's mapping function to document their focus an make it visible to the other group. This provided each group an issue to focus on, and location to anchoring it, before moving on to exploring it further through questions.
+
+\subsubsection{Question Formulation}
+At this point participants had identified and flagged issues, listened other people opinions on them (both live and recorded), discussed within the group and had chosen a focus for their investigation. They had to then use that focus and apply it within QFT that was modified for (see Section \ref{sub:qft_action}). 
+
+When people started asking questions about their issue they where not only constraint to what they could see in those places or ``what is it used for currently''. People had a more exploratory attitude, promoting curiosity and discovery, and coming up with questions like
+
+\begin{quote}
+    
+    ``What would we like to see there?''
+    
+    ``How much would it cost?'' and ``Where would the money come from''
+    
+    ``I wonder if there are any people who have already seen the places, what have you seen in the parks that you think we’d love to have that?''
+    
+    ``Would a sports day be -- I don’t want to say popular -- community sports day be something you’d value?''
+    
+    ``Also, how much would it cost to maintain? It might be like an ongoing thing.''
+\end{quote}
+
+Asking questions about the issue also shifted the focus from `what the council can do' to `what can the people themselves or the community do':
+\begin{quote}
+       ``First one would be what can \textbf{we} do with a bit of grass?''
+       
+       ``How would \textbf{we} go about changing it? The likes of who would \textbf{we} have to see?''
+       
+       ``We can only try. If \textbf{we} get the funding on it.''
+\end{quote}
+When people worked on their questions according to the QFT method (for example changing the openness of them), they also reflected on their own role as community leaders or spokespeople for the community. Perhaps using the same questions to give voice to the wider community, not and get more opinions forward:
+\begin{quote}
+    ``Actually between them two and these two [questions], what I’ve changed is you’re not giving people the option on what they would want there as in what- what was it then we changed, number four? We’re talking about the green area behind a specific thing and to me it would be a park but on my first question what would you like to see there? Now that gives everybody and anybody a chance to say what I would like a bike park, skate park, this park, that park. My next question is would a park benefit your children?''
+    
+    ``So, I probably shouldn't even use the word ‘park’, because that limits it a bit, doesn’t it?''
+    
+    ``How do we go about changing from what it is now to what we want it to be? Or what the community want it to be? It’s not what we want it to be, is it?''
+\end{quote}
+
+Additionally, questions sparked discussions around the way participants could figure out the needs of the wider community, make them visible to everyone and get community involved in delivering these changes for the neighbourhood. These points where the main considerations when prioritising questions for investigation and challenge creation for both groups:
+\begin{quote}
+    ``So, our priority questions were, what are the options for the use of the space? Quite broad. What is lacking in terms of the existing local provision, facilities? Then, what is the space already used for?''
+    
+    ``Our three questions were, because we would like to see more things on there for kids, so our three questions were; how do we get the community involved and maintain their involvement? Because if not everybody wants it then it is not plausible really, is it? It’s got to be everyone on board. Our second question was; how do we go about changing the space to make it what the community want to see? Our third question was; who would fund this?''
+\end{quote}
+Applying QFT on the issue focus set the groups up to have concrete questions at the end of the process which set the done for the challenge creation activity.
+
+\subsubsection{Challenge Creation}
+% who own the land
+% what are current uses
+Challenge creation aimed to break down each question using the prompts provided with the worksheets. Because both groups where looking at green areas, it was important to people to figure out who owns those lands first. People always assumed that that land is owned by the council, but nobody knew that for certain. This was a clear challenge in terms of \textit{data access} to obtain the information of land ownership.
+\begin{quote}
+    "I always thought, “Who owns the deeds of that land?” You know, because obviously I think they should be... [owned by council]. Then, of course, the football team come into it, but owns that last 50 percent of the field or whatever is left of it. Is it council or is private land?''
+    
+    ``So, local knowledge, council. Presumably, do the football club own their little patch?''
+    
+    ``Yes, it’s finding out the ownership, yes? So, what I was saying about the idea of finding out what the options are for how to use it.''
+\end{quote}
+Another challenge that both groups identified was to figure out current uses of those two spaces:  ``I wonder if the idea of the, what’s the space already used for? That’s quite a key question, isn’t it really?''. People had some ideas of the uses based on the observations of ``there is walking access, [...] there are a lot of dog owners that use it [the paths on fields]'' and ``there is a metal seat there, and there are metal goalposts, and a hoop [...] kids do use that [...], but sometimes it is full of glass and that''. Additionally when asked if there were any data about it, participants said that nothing that they were ``aware of''.
+
+In terms of data challenges, this was a challenge for \textit{data production}. This could have been done by observation or by compiling all the local knowledge of the workshop participants, but people thought this could be a good opportunity to collect data from the wider community -- people's current uses of the fields and their ideas for future. This was a challenge that came with immediate actions and people themselves could take it up, rather proposing it to someone externally.
+\begin{quote}
+    ``Right. To collect the data, or what people think, we would do a questionnaire. We could go door knocking in the local area. Yes [to figure out what people think], and in general if people would be interested and that.''
+\end{quote}
+This would also extend to not only collecting the current uses of the fields, but also getting people involved in thinking about what can be done with the spaces.
+\begin{quote}
+ ``So, as in, what do they know that’s elsewhere, that they’d like to have on their doorstep [...]''
+ 
+ ``I know this sounds like Eden, you know that big project down in Cornwall? A local communities thing called the Eden Communities, that help local communities to repurpose green spaces and that sort of thing or to organise themselves.''
+\end{quote}
+This also sparked conversations around compiling data of things people do in their free time and figuring what are the current available past time facilities in the area or neighbouring areas, creating multiple challenges for data in terms of \textit{data access} and \textit{data production}. 
+\begin{quote}
+    ``We could do with all this, knowing what the council provisions [...and] a little bit of just local knowledge that we could use there.''
+    
+    ``Yes, so actually even knowing that exists there is going to be useful, for just knowing what the options might be for knowing about the other facilities [...]''
+
+    ``There was one over the, I think it was Station Road in Newcastle. If you come off the [crossroad], you go down over the bank, there’s actually a massive park which has everything, obviously swings for kids and I think one looks like a full-sized basketball -- a tennis court, whatever, but they have full-sized court there, which is -- but I don’t know if it’s still there or not, but it looks like there’s a park for kids, swings [...]''
+    
+    ``I can't remember what information is in the census, because you know you can get the anonymised data from the census from 2011, whether that would have anything about what the pastimes... I don't know if that’s in there. You don’t happen to know?''
+\end{quote}
+% Data visualisations
+Next steps for people where to plan the challenges that would follow once the data is obtained or collected. These challenges where linked to \textit{data visualisations} and were prompting people to think how can they turn that data into something useful.
+
+% anchoring visualisations
+% presenting data back to the community to gain support
+
+
+
+% Council's provisioning 
+So, if you have an idea of what the council provision of their facilities have already got somewhere else, there’s potential, isn’t there, to stick some pictures in of the fact that they’ve got a skate park here. The likelihood is we’re not going to put something there, but just to say, “That’s there. There’s a bowling green there.” There’s whatever. So, again-
+
+
+% funding
+Perhaps the biggest challenge that people identified was, how to fund the development of these spaces and where would they start looking for those funds.
+\begin{quote}
+    ``Well, it’s got to be the big one, isn’t it? Where would the funding come from? Where would the money come from?''
+    
+    ``But, we could put it to the council, but then you could also put it out to… Oh, I don’t know. I would probably ask where could I go to find funding for it?''
+    
+    ``Yes, so I guess presumably different funding bodies will have very specific things they want to do and stuff.''
+\end{quote}
+Participants where not only thinking how they could convince the local government to fund these changes, but perhaps there where alternative ways to fund it, looking how they could collaborate with other organisations in the community and even outside of it
+\begin{quote}
+    ``Maybe get some businesses on board. There are local businesses around here. There are B\&Qs. There is GTF. Actually, there are also another two community centres. There is the [anon organisation] and the thingy, so maybe they could help.''
+    
+    ``Oh, yes. Presumably, there might be someone that can say, “Yes, okay, we’ve got a specific pot of money and we would build a kids’ playpark,” or, “We’ve got a specific pot of money that’ll do this or that.” That might influence what you end up doing.''
+\end{quote}
+
+
+% Actions
+% Getting community to put in the work
+Facilitator:	We sort of show them the data, do we, to say that this has got community backing?
+Female:	Yes. Ask the council if there is anything they can do, even if it’s half.
+Male:	“It’s gone past our budget for this year, sorry.” (Laughter) That’s what they’ll say.
+Female:	Yes. But maybe it is not all about them doing everything. It’s making them aware that the community are willing to help as well. 
+Facilitator:	Yes.
+Female:	Are you painting? Are you digging holes? Whatever it may take.
+
+
+
+
+
 
 \section{Discussion}
 % add stuff about mooqita here (commissioning data science problems)
 % come back to dual approach and strategies
 
-
 \begin{itemize}
     \item Power of right questions
     \begin{itemize}
+        \item Mapping issues provide observations, but asking questions promote action
+        % First people where just observing things and wanted something to be done about it. Derelict grounds everywhere, something should be done with it.
         \item Focus on issues
         \item Better understanding of what is needed (data, resources)
         \item Promotes action (Actionable data)
@@ -433,10 +616,13 @@ Participants felt that the types of visualisations that are needed would depend 
     \item Documenting Processes
     \begin{itemize}
         \item Reflecting on own practices
-        \item Digital trail
+        \item Digital trails
     \end{itemize}
     \item Community data interaction and collaboration
+    \item Challenges
     \item Combined approach (dual approach)
+    \item Ownership of issues
+    \item Wealth of Networks
 \end{itemize}
 
 \section{Conclusions}

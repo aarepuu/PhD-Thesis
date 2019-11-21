@@ -11,3 +11,4 @@ thesis.lof
 thesis.lot
 thesis.toc
 *.aux
+*gz(busy)
