@@ -31,10 +31,11 @@ With the Freedom of Information Act, a new mechanism was set up for people to ac
 Another scenario which can be encountered, is when a request is formulated as a direct question without an indication to particular requested resource. In that case somebody has to make the association between the question and a particular dataset (i.e., describe the relationship). Now we have reached to the same problem that was described in the previous chapter: \textit{the lack of links between questions and abstract datasets that might bare the answer}. The ways that these connections are made are largely unknown and often require specialist skills with combination of tacit knowledge. This means either understanding the organisational structures of a public authority or knowing the initial purpose for the data generation.
 
 \section{Role of a Professional Data Analyst}
+\label{sec:data_prof}
 
 In this context, the notion of a professional data analyst is a person who effectively makes data usable for people beyond just data visualisation, although it might involve visualisations, but also comes up with the right questions, knows where to look for data and presents data in a way that is comprehensible and actionable. This involves a lot of technical expertise that relate to information processing, however it also requires cognitive skills which take years of training. This is the reason why data science skills are in high demand and companies are willing to bay large amount of money for it.
 
-Through the case studies of the PhD the author has acted as a data professional for these communities providing technical support and skill for working with data. This often also involved making an initial analysis of the data and building a story around it to illustrate the power of using data. Such example can be seen on Figure \ref{fig:nuf_app} where the author used aggregated client data from a local charity to illustrate how they tackle inequality in the community by doing targeted engagements. In order to create this application, the author had to come up with a hypothesis, find the relevant data, process and merge it with the data form the local charity and use visualisation technologies to create the data rich narrative. Tasks that require skills both in engineering and information processing.
+Through the case studies of the PhD the author has acted as a data professional for these communities providing technical support and skill for working with data. This often also involved making an initial analysis of the data and building a story around it to illustrate the power of using data. Such example can be seen on Figure \ref{fig:nuf_app} where the author used aggregated client data from a local charity to illustrate how they tackle inequality in the community by doing targeted engagements. In order to create this application, the author had to come up with a hypothesis, find the relevant data, process and merge it with the data form the local charity and use visualisation technologies to create the data rich narrative. Tasks that require skills both in software engineering and information processing.
 
 % make new visualisation
 \begin{figure}[ht]
@@ -46,12 +47,13 @@ Through the case studies of the PhD the author has acted as a data professional 
 
 Indeed, it appears at the moment that people need these professional analysts or engineers to mediate these processes for them. Going forward, what is the role of a professional data analyst in these processes? Is there a process that makes citizens smarter and able to participate directly in decision making that involves data at the city, county or even country level? To make it truly democratic, the challenge is in how can those skill become transferable to ordinary citizens too do it for themselves or built into systems that can automate those processes for them. Designing and developing Data:In Place platform (see Chapter \ref{chap:datainplace}) was authors first attempt of building a system that would help automate and facilitate some of these processes, however additional issues surfaced that where not solely linked to engineering and information processing challenges.
 
-To unpack these issues, an investigation was taken up to understand the technical approaches and social and cognitive processes linked to effective uses of data. This evolved: (1) a redesign of Data:In Place (see Chapter \ref{chap:datainplace}) to integrate additional features for enabling people make better request for datasets that could help them answer questions or evidence local issues, and for posting challenges to get support from the larger community; (2) coming up and trialling of methods that assist people in creating questions and challenges for using data in civic action. 
+To unpack these issues, an investigation was taken up to understand the technical approaches and social and cognitive processes linked to effective uses of data. This involved: (1) understanding the cognitive processes through data consultations activities; (2) a redesign of Data:In Place (see Chapter \ref{chap:datainplace}) to integrate additional features for enabling people make better request for datasets that could help them answer questions or evidence local issues, and for posting challenges to get support from the larger community; (3) coming up and trialling of methods that assist people in creating questions and challenges for using data in civic action. 
 
 
 \section{Dual Approach}
 \petenote{Was it? I thought it was about question framing?}
-The aim of the case study was to explore methods and technical solutions for leveraging data in community contexts and for purposes of civic advocacy and action. The case study builds on previous work conducted in the scope of this thesis around community data production using SenseMyStreet commissioning platform (see Chapter \ref{chap:sensemystreet}) and exploring the uses of open governmental data for local decision making using Data:In Place platform (see Chapter \ref{chap:datainplace}), and combines the knowledge gained from designing, developing, deploying and evaluation these data systems. The Case Study follows the overall approach of using participatory action design research described in the thesis introduction, however to address the issues risen from previous case studies a more holistic approach was taken to work together closer with communities and implement set of \textit{mutually supporting strategies} (both technical and social cognitive) in the scope of and across two components. These include \textit{Component 1} -- environmental and systems approaches to promote usage of data and build support for data discovery and \textit{Component 2} -- interventions to make data actionable and to increase community capacity to take action. This approach simultaneously focuses on technical implementations that can be used by everyone who has access to the internet and social cognitive strategies that focus on specific communities or publics.
+\mynote{Aim needs rephrasing!}
+The aim of the case study was to explore methods and technical solutions for leveraging data in community contexts and for purposes of civic advocacy and action. The case study builds on previous work conducted in the scope of this thesis around community data production using SenseMyStreet commissioning platform (see Chapter \ref{chap:sensemystreet}) and exploring the uses of open governmental data for local decision making using Data:In Place platform (see Chapter \ref{chap:datainplace}), and combines the knowledge gained from designing, developing, deploying and evaluation these data systems. The Case Study follows the overall approach of using participatory action design research described in the thesis introduction (see \ref{chap:intro}), however to address the issues risen from previous case studies a more holistic approach was taken to work together closer with communities and implement set of \textit{mutually supporting strategies} (both technical and social cognitive) in the scope of and across two components. These include \textit{Component 1} -- environmental and systems approaches to promote usage of data and build support for data discovery and \textit{Component 2} -- interventions to make data actionable and to increase community capacity to take action. This approach simultaneously focuses on technical implementations that can be used by everyone who has access to the internet and social cognitive strategies that focus on specific communities or publics.
 
 This is also known as \textit{Dual Approach} and is widely adopted in the context of public health interventions [REFs] and increasing health equity. The Dual Approach uses a model where strategies are applied to improve the health of general population while the same time using targeted interventions to address issues encountered by a specific targeted population. It follows the principle of \textit{targeted universalism}, which states that alleviating disparities of marginalised populations is essential for developing contextually relevant strategies for achieving universal goals and improving the well-being of everyone [REF]. 
 
@@ -91,7 +93,7 @@ In the context of effective use of data and community action a dual approach was
 
 General interventions are linked to technical features integrated into the Data:In Place and targeted interventions are methods to help local communities to understand their data needs and plan actions for data. Next two sections describe these interventions in more detail and illustrate how they could be beneficial to make  
 
-\section{The Redesign of Data:In Place}
+\section{Redesign of Data:In Place}
 \label{sec:data-in-place_redesing}
 
 The initial prototype of Data:In Place was build (see Chapter \ref{chap:datainplace}) to enable community groups and charities to access and make sense of data related to their local area. The design and development of the platform was largely driven by the questions and issues of a specific public, and the datasets that were first integrated into the system were a direct response to issues and questions posited by the local Neighbourhood Planning Group at their meetings. Furthermore, additional datasets were added through engagement with local charities and looking into ways their work can be targeted and evidenced. In later stage of design of the platform a \textit{Data Request Feature} was added to the system that enabled people to put in requests for datasets digitally without having to meet face-to-face with a researcher making it a more generic for everyone to request adding datasets. Although this solved an issue physicality, it did not make it easier for people to compile these requests or for the researcher to reply to them. All these issues added to the core issue of these open datasets being underutilised by communities. Data:In place platform was facing the same issues that were pointed out in the case of What Do They Know website.
@@ -156,7 +158,7 @@ Asking the right questions might help people better \textit{access}, \textit{int
 
 Next section describes the study design taken to investigate the effectiveness of these approaches accompanied with the general intervention strategies described in Section \ref{sec:data-in-place_redesing}. This includes planning data consultation focus groups for hypothesis setting, leveraging Community Conversational (see Chapter \ref{chap:datainplace}) tabletop game for mapping and reflecting on issues, creating a modified approach of QFT method to help people come up with questions that can be answered by exploring different datasets, and integrating challenge creation guides with QFT to be trialled in community setting. The aim of applying these methods in a workshop setting with specific population was to enable people make better use of Data:In Place added features for data use (see Section \ref{sec:data-in-place_redesing}) that where part of the general interventions of the dual approach.
 
-\section{Study Design - Challenge Creation}
+\section{Study Design}
 % This section describes the study design of helping evaluate the methods for creating actions for data.
 % THIS IS MY PLAN
 % 2 phases - Data Consultations for scoping and Community Action Workshop
@@ -166,7 +168,7 @@ Next section describes the study design taken to investigate the effectiveness o
 The evaluation of the case study methods and processes where done in two subsequent phases:
 
 \begin{itemize}
-\item[PHI.] (\textit{Data Consultations}) Involves running focus groups with key stakeholders from local charity organisation who work on programs and interventions around health and wellbeing of young people, and who were also involved in the design of Data:In Place platform (see Chapter \ref{chap:datainplace}). Data consultations where run in a format where the author acted as a professional support for the participants exploring and purposing datasets. This phase served as an initial scoping to understand cogitative processes that people go through in order to come up with actionable strategies for data use.
+\item[PHI.] (\textit{Data Consultations}) Involves running focus groups with key stakeholders from local charity organisation who work on programs and interventions around health and wellbeing of young people, and who were also involved in the design of Data:In Place platform (see Chapter \ref{chap:datainplace}). Data consultations where run in a format where the author acted as a professional support for the participants exploring and purposing datasets. This phase served as an initial scoping to understand cogitative processes that people go through in order to come up with actionable strategies for data use. Additionally, focus groups provided requirements for further design the Data:In Place platform. 
 
 \item[PHII.] (\textit{Community Action}) Focuses on the evaluation of methods for helping people formulate better questions for data and deriving challenges from those questions. This phase built upon PHI and was conducted through a workshop where multiple methods where coupled to help participants explore and identify issues, posit problems and questions, and plan actions for utilising data in community context for civic action. Participants involved in this study where from the same local community who where participating in the neighbourhood planning meetings and the initial design of Data:In Place platform (see Chapter \ref{chapter:data-in-place}).
 \end{itemize}
@@ -177,7 +179,7 @@ Questions that are explored in this case study are following:
  \item How can people articulate the questions they are asking about the data?
  \item What is the real value for citizens accessing these datasets?
  \item How to citizens transform this data into something valuable?
- \item What role will non-professionals and (semi)professionals will play in this?
+ \item What role will non-professionals and (semi)/-professionals will play in this?
  \item How would the collaboration between professionals and non-professionals look like?
 \end{enumerate}
 
@@ -188,7 +190,7 @@ Questions that are explored in this case study are following:
 
 This section describes data included in the case study and how it was collected and analysed. Data collection and analysis is broken down by each phase of the study, where the second phase of the study, although run with different participants, builds on the lessons learned from the first phase.
 
-\subsection{Data Consultations}
+\subsection{Data Consultations (PHI)}
 % PHASE I
 As mentioned previously, throughout the PhD, the author acted as a professional data analysts for the communities that where engaged. One of the aims of that was to understand the complexities of these cognitive processes that are involved when making use of data. Another objective was also to investigate what role the data analyst should play in these processes of community sensemaking of data and how far can be the professional removed from these processes, or replaced or mediated by digital systems. Such as the the Data:In Place platform (see Chapter \ref{chap:datainplace}) designed and built to make open data accessible and usable for communities.
 
@@ -204,7 +206,7 @@ Focus groups where set up as guided ideation activities where participants follo
 
 Data collected in this phase where audio recordings from the three focus groups which where fully transcribed using a professional transcription service and participant worksheets that where filled in during the activities. Additionally screen capture was used to record participant activities using Data:In Place platform in the session producing visualisations out of data the correspond to their hypotheses. Transcribed audio was used in conjunction with the worksheets for constructive reflection to map out interactions and report on the focus group findings.
 
-\subsection{Using Data in Community Action}
+\subsection{Community Action (PHII)}
 % PHASE II
 % Aims
 % - Identify Priorities of the Community 
@@ -228,12 +230,13 @@ The aims and goals of the workshop are following:
 \end{itemize}
 
 % How to you measure/analyse
-Audio recordings where fully transcribed using a professional transcription service and qualitative analysis was conducted on the transcribed audio using thematic analysis approach \citep{braun_using_2006}. Additionally there was a set \textit{observation protocol} for the workshop that was agreed beforehand between two facilitators. This included X and Y to assess Z. This enabled the facilitators to note document participants journey throughout the workshop and assess...
+\mynote{I wouldn't call it thematic analysis per say.}
+Audio recordings where fully transcribed using a professional transcription service and qualitative analysis was conducted on the transcribed audio using thematic analysis approach \citep{braun_using_2006}. Additionally there was a set \textit{observation protocol} for the workshop that was agreed beforehand between two facilitators. This included X and Y to assess Z. This enabled the facilitators to chart out  participants' journey throughout the workshop and assess the usefulness of the methods.
 
 \subsubsection{Community Conversational in Community Action - Issue Mapping}
 % Using Community Conversational to talk about local issues and build upon the previous sessions run using the tool.
 
-\kylenote{This section feels more like an `apparatus', maybe this description should be under study desingn where the phases are}
+\kylenote{This section feels more like an `apparatus', maybe this description should be under study design where the phases are.}
 Community Conversational (CC) is a tabletop turn taking game first developed in by \cite{johnson_community_2017} to support deliberation in consultation processes for local decision-making in community settings. It has proved to be a valuable tool to structure the process and document voices of people who traditionally would have not been included in these processes, making the process more inclusive and democratic. A modified version of CC (CCv2) was trialled in Case Study 2 to map local issues and gather people's opinions about them \cite{johnson_neighbourhood_2018}. The location based opinion data gathered through this process was then feed into Data:In Place platform (see Section \ref{chap:datainplace}) as another datasource generated by citizens themselves open for interrogation, side by side with official open datasets.
 
 % mocked paper map of issues (added old issues and markers to it)
@@ -342,9 +345,10 @@ This section presents the findings from analysis of transcribed audio recording 
 % what we are looking for
 % wizard of oz'ing
 
-This section presents the findings from three data consultation focus-groups run with stakeholders from local charity. Findings are presented using the tree parts of the focus groups which are taken as main concepts. Figure \ref{fig:dc_mindmap} shows each part of the focus group and themes surfaced around them from analysing the worksheets and transcripts. Following chapters will describe these concepts and themes risen around them in a think aloud activities.
+This section presents the findings from three data consultation focus-groups ran with stakeholders from local charity. Findings are presented using the tree parts of the focus groups which are taken as main concepts and reported using pseudonymised quotes from the data set to illustrate discursive processes in temporal order. Figure \ref{fig:dc_mindmap} shows each part of the focus-group and themes surfaced around them from analysing the worksheets and transcripts. Following chapters will describe these concepts and themes around them that surfaced from think aloud activities, helping to chart out the cognitive processes that people go through to drive actionable results.
 
 % make new visualisation
+% add something about trust and privacy (who is taking challenges)
 \begin{figure}[ht]
 \centering
  \includegraphics[scale=0.1]{dc_mindmap}
@@ -358,7 +362,7 @@ This section presents the findings from three data consultation focus-groups run
 % Questions 
 % assumptions, local knowledge, domain knowledge
 % the unknown
-The hypothesis approach required participants to come up with a null hypothesis (HO) and two alternative hypotheses (H2, H2) as the initial part of the data consultation (see Appendix \ref{app:data_consultations}). What was observed straight away is that the participants found it difficult to come up with well formed hypotheses, and they fell back on asking simple questions which was more natural for them. For example trying to come up with H2, the program officer (PO) deposited following:
+The hypothesis approach required participants to come up with a null hypothesis (HO) and two alternative hypotheses (H2, H2) as the initial part of the data consultations (see Appendix \ref{app:data_consultations}). Hypotheses are the preferred way of conducting experiments or investigations in the scientific community at large. However, what was observed straight away was that the participants found it difficult to come up with well formed hypotheses, and they fell back on asking simple questions which was more natural to them. For example trying to come up with H2, the program officer (PO) deposited following:
 \begin{quote}
     ``Has the wellbeing improved of residents in the city, I suppose, or people that have interacted with the campaign somehow.'' (PO)
 \end{quote}
@@ -366,23 +370,24 @@ To which the outreach officer (OO) added:
 \begin{quote}
     ``What is their mental and physical wellbeing like now? [...and] What is it like after we’ve finished?'' (OO)
 \end{quote}
-Although all of these are valid questions, they are not in a form of a hypothesis and lack details for starting the investigation. Simple details like time period, place and population, but also the specific measure that of wellbeing for example that can be looked at using data. In order to move into the next phase of the consolation there was need to narrow down these details. Using a process of guiding questioning from the author, the participants where able to come up with all three hypotheses (see Appendix \ref{app:data_consultations}).
+Although all of these were valid questions, they were not in a form of a hypothesis and lacked details for starting the investigation. Simple details like time period, place and population, but also the specific measure that of wellbeing for example that can be looked at using data. In order to move into the next phase of the consolation there was a need to narrow down these details. Through the process of guiding questioning from the author, the participants were able to come up with all three hypotheses (see Appendix \ref{app:data_consultations}).
 
-Additional thing that surfaced was the fact that hypothesis where often derived through assumptions or linked to local and domain knowledge obtained in years of doing the work the community. Looking at school performance measures relating to charity's work, the learning and skills manager (SM) was narrowing down potential metrics:
+What also surfaced was the fact that hypotheses where often derived through assumptions or were linked to local and domain knowledge obtained in years of doing work in the community. Here is an example of the learning and skills manager (SM) narrowing down potential metrics to investigate among school performance measures relating to charity's work.
 \begin{quote}
     ``I can't imagine we'd have much impact on maths, but I suppose you could argue that if they're improving their attendance'' (SM)
 \end{quote}
-Or another example of local knowledge from the OO when:
+Or another example of local knowledge from the OO:
 \begin{quote}
     ``[...] a hypothetical example. If we know that, if we already know [people's health in one part of a city] is great, it’s perfectly fine. Let’s go target [other part of the city], for example, instead.'' (OO)
 \end{quote}
+This shows that \citet{ackoff_data_1999}'s proposed data-information-knowledge-wisdom (DIKW) hierarchy does not apply here. Data is not put into use to reveal new knowledge, it used to enforce arguments that are already known. It is also notable here that these snippets of local knowledge were essential for coming up hypotheses that would provide actionable insight for the charity and retain the ownership of investigation results.
 
 \subsubsection{Data and Other Resources}
 % official data, own data
 % A lot of data can be collected by the organisations - reflecting on own practices of getting better data
 % Collaboration
 % Comparing the general population
-When thinking about different datasets that might be used to investigate the proposed hypothesis the participants where convinced that data must exists somewhere amongst the official open data sources:
+When discussing  different datasets that might be used to investigate the proposed hypothesis, the participants where convinced that data must exists somewhere amongst the official open data sources:
 \begin{quote}
 ``I know the data is probably out there. Attendance, homework… Attendance, especially, will definitely be out there, we’ll definitely be able to get hold of. Behaviour and homework will probably be recorded, but might just be kept to the individual schools.'' (OO)
 \end{quote}
@@ -390,21 +395,21 @@ Additionally there where organisations that participants where aware which where
 \begin{quote}
     ``Maybe it’s an Ofsted thing, Ofsted might have hold of all these things because Ofsted go in and they scrutinise schools and they look through all the paperwork.'' (OO)
 \end{quote}
-Knowing that there might be data available however did not help them access and use it. Participants felt overwhelmed with the amount of effort and expert knowledge which is needed to find the datasets that would be interest to them. SM shared experiences trying to gather data for a funding bids and navigating all that data: 
+Knowing that there might be data available however did not help them access and use it. Participants felt overwhelmed with the amount of effort and expert knowledge which is needed to find the datasets that would be interest to them. SM shared experiences trying to gather information for funding bids and navigating all that data: 
 \begin{quote}
     ``How do you find it and how do you access it and how do we then understand some of them? I’ve looked at data sets before trying to find information for bids and they’re just a nightmare. Some of the stuff you get from the Department of Education is horrendous. For some of the stuff you need do need to be a data scientist to unpick it.'' (SM)  
 \end{quote}
 
-However, putting down concrete hypotheses made participants think about how they operate as a charity and whether they should also try to collect some of the data, hence reflecting on own practices and trying to get data that is more related to them. Current practices of the organisation was limited to couple of surveys that they asked the teachers to fill in, but thinking into the future participants started to consider new datasets that link to their hypotheses: 
+However, putting down concrete hypotheses made participants think about how they operate as a charity and whether they should also try to collect some of the data, hence reflecting on own practices and trying to get data that is more related to them. Current practices of the organisation was limited to couple of surveys that they asked the teachers to fill in, but thinking into the future participants started to consider new datasets that link to their hypotheses.
 \begin{quote}
     ``It’s something that we could record when we’re in schools. If we’re looking at the first hypothesis [H1], where we’re saying that [anon program] improves these things, we can definitely ask these schools, "Can we have your attendance information, your behaviour information, and your homework information while we’ve been here?"[...] There might be a standardised way in which we collect that or we ask the schools to give us that data.'' (OO)
 \end{quote}
-Also thinking about how to standardise these practices across the different program the organisation is running and perhaps also across the charity sector to promote data sharing and collaboration. Participants where also conscious of not loading the responsibility of this to the teachers who are already overworked and where leaning towards automated systems and processes: 
+Also thinking about how to standardise these practices across the different program the organisation is running and perhaps also across the charity sector to promote data sharing and collaboration. Participants where also conscious of not loading the responsibility of this to the teachers who are already overworked and where leaning towards automated systems and processes.
 \begin{quote}
     ``If there is some sort of online portal that all schools have to upload to, then great. [...] The teachers don’t want any more work. If they need to start telling us behaviour, attendance, and homework of each single child in the school that’s a big pain.'' (OO)
 \end{quote}
 % Quate
-Hypotheses also helped participants to think about the bigger picture and all the different data sources that are needed. For example, in order to compare and relate the data that the organisation produces to the schools that they do not engage with, they would also need data about the general population:
+Hypotheses helped participants to think about the bigger picture and all the different data sources that are needed. For example, in order to compare and relate the data that the organisation produces to the schools that they do not engage with, they would also need data about the general population.
 \begin{quote}
     ``I’m just thinking, for the second hypothesis, obviously we can’t go in and ask a school for that if they don’t want to buy into our primary schools package in the first place. That second hypothesis would have to be collected from data that’s already out there.'' (OO)
 \end{quote}
@@ -412,23 +417,67 @@ Which also made the participant reflect back to original rationale of the projec
 \begin{quote}
     ``I suppose my original idea, with data and place, was, “How can I compare what I capture to the general population?” If I know the measures of the general population, I can relate my data to there and say that my programme is working, it’s great.'' (OO)
 \end{quote}
+The statement above illustrates that there are notable distinctions between \textit{open data}, \textit{accessible data} and \textit{data in context}. The latter two should be the preferred forms of data and the ones that could potentially be used in an actionable way.
 
 \subsubsection{Visualisation of Data}
+\label{sec:data_visualisation}
 % identity is important
 % types of visualisations depend on the audience
-
-Participants felt that the types of visualisations that are needed would depend on the target audience and purpose. There are differences in the way you communicate these concepts to different people. For example for official documents the participants would need numbers and statistics, but for engaging the public they would need easily digestible infographics:
+Data could provide the charity confidence that they are doing good work and having an impact in the community, but in order to show that to others it needs to be curated. Participants felt that the types of visualisations that are needed would depend on the target audience and purpose. There are differences in the way you communicate these concepts to different people. For example for official documents the participants would need numbers and statistics, but for engaging the public they would need ``easily digestible infographics''.
 \begin{quote}
     ``I think if you had taken away- Obviously, I know we discussed who to show the data to. You’ve got certain people which you’d want to show a bar chart to. They’re probably the stakeholders and the people who are funding the project, for official documents. People who are more visual, it might go nicely into presentations and things for schools and showing teachers.'' (OO)
 \end{quote}
 It was important to the participants that the visualisations would have all the facts, but would be communicated in a clear way: ``Like I say, something that people look at and they go, 'Ah.' They can instantly see what it is, anyone can understand it, and it’s got the facts.'' (PM).
-Probably the most important aspect of the visualisation for the participants was that it needs to incorporate the identity of the organisation and the things they feel strongly about, ``So it’s identifiable that it’s us that’s presenting that infographic, not just anyone else.'' (PO). During the consultation activities, participants used the worksheets (see Appendix \ref{app:data_consultations}) to give an idea how it would look like:
+Probably the most important aspect of the visualisation for the participants was that it needs to incorporate the identity of the organisation and the things they feel strongly about, ``So it’s identifiable that it’s us that’s presenting that infographic, not just anyone else.'' (PO). During the consultation activities, participants used the worksheets (see Appendix \ref{app:data_consultations}) to give an idea how it would look like. Here is OO commenting on the sketched visualisation:
 \begin{quote}
     ``I think it’s quite nice to incorporate the [anon sports] club into a lot of this information that we portray. It might be the amount of seats in the stadium or it might be using a percentage of the [anon sports] pitch which has been… Taking the data, or taking the stats, and putting it into something that’s [anon sports] related and digestible.'' (OO) 
 \end{quote}
 
+Setting hypotheses, thinking about data and resources needed to investigate them and types of outputs people expected, created a basis for the second consultation. In order to investigate the hypothesis some of the pre-work had to be done by data professional. These included finding the relevant data sources, pre-processing them (if needed) and making them accessible thought the Data:In Place platform's map based query system. These tasks could have been fully automated through data requests built in to the system, or done by any data professionals leveraging the collaborative open source system, however for the purposes of this case study it was done by the author of the thesis who acted as data consultant for the charity. Also having been working closely with the organisation for long period of time, a level of trust had been established which enabled to share some of the operational data needed to carry out the investigation. 
+
+
 \subsubsection{Investigation}
+\label{sec:data_investigation}
 % replication of same results done by a professional (NUF app)
+% Trust and add ownership
+\mynote{Maybe it makes sense to split the timeline into first data consultation, community action day (questions instead hypotheses), adding data-in-place new features and them the investigation activity with the nuf. That might have been the actual chronological order of things as well.}
+
+At the start of the engagement with the local charity a data application was created by the author without any input from the organisation (see Figure \ref{fig:nuf_app}. This data narrative was an output of a professional's work and represented an insight into the way the organisation operates, however the usefulness of it to the charity was not guaranteed. The aim of data consultations where not only to replicate these results using participation methods and digital tools, but also do seek ways these processes could democratised to represent the voice of the charity (and citizens as a whole).
+
+Going to the process of hypotheses setting coupled with ideation activities fostering data use, provided that crucial input from participants to set a precedent to guide the investigation in the second data consultation. Second data consultation aimed to prove/disprove the hypotheses set by the participants. In this stage only the Operation Officer (OO) was present at the consulation. With guidance from the author (who acted as a data professional) participant used Data:In Place in a think aloud activity do access official statistics and merge it with their own organisational data. 
+
+Participant started off with drawing the boundary around a place of interest, ``Say we’re looking at Newcastle…'' and using the map query system (see Chapter \ref{chap:datainplace}) to narrow down the request, ``Yes. That’s [Hebburn north]. We’ll get rid of Hebburn. [...] Camperdown, get rid of that. I think Camperdown is in North Tyneside, as far as I’m aware. Is this in alphabetical order?''. 
+
+Once the desired area was selected, the investigation continued with selecting the official data of school locations, ``We’ll look at schools for now, yes?'', to get them to appear on the map. To prove/disprove the set hypotheses the participant needed to look up and mark schools that they had already done engagements in. 
+\begin{quote}
+    ``Newcastle, let’s try Hawthorn Primary. [I know we’ve been there]. H-A-W-T-H-O-R-N. [...] Oh, it turns them all to blue. [...] Byker, is that in that area? Yes, cool. St Lawrence’s will be… It’ll be S-T and then there might be a dot, St Lawrence’s. Or even just Lawrence. Oh, there it is.''
+\end{quote}
+Above interaction marked the first time that the participants where able to replicate the same results that was initially achieved programmatically by the author (see Figure \ref{fig:nuf_app}) opening possibilities for further investigations in the future. However, often schools had similar names which made this process more complicated. This promoted the participant to go back to discussing the ways the organisation records their own data. One of the options could be to use unique identifiers to improve cross referencing the schools.
+\begin{quote}
+    ``I suppose we could. I don’t know if the school will have those readily at hand, if you were to… I’m just thinking, if we’ve got our coaches there in the school and they ask the secretary what their unique reference code is they’re probably not going to know. [...] I wonder when… When schools sign up, to whatever, we just ask them for their unique ID as they’re filling out the form. [...] If there was a tool that I could use to input all of those schools and find out all the reference numbers, then that would be great.``
+\end{quote}
+Next steps were to select official data that included Ofsted statistics about school performance measures (e.g., reading scores, maths, attendance etc) to retrieve data about selected (engaged and not yet engaged) schools in the area. Looking at examples of the engaged schools we could already see that there where some differences between the ones that they had not been in. This was encouraging for the participant, however in order to use use that data it needed to be visualised. Participant chose \textit{absence trends} to visualise using the RAWGraph (see Chapter \ref{chap:datainplace}) graphing functionality built into the platform. Being able to easily graph the and see the visualisations made the participant think about new alternative representations of the statistics.
+\begin{quote}
+    If you were looking at the whole UK, it would be 88\% are steady [absence rate], 6\% are increasing. Then what’s that? 6\% are decreasing, or something like that. Then compare that to our engagement, you’ve got 90\% are steady [absence rate], 8\% are increasing, 2\% are decreasing. Then we can say that, `On average, our engagement has got either steady or improving schools.' " (OO)
+\end{quote}
+The tread here represents the conversation between participant and the author after making making the above visualisation that can be seen on Figure X:
+Interviewer:	Their absence rate is decreasing.
+\begin{quote}
+    \textit{Participant}: ``Oh, excellent, right. So they’re coming to school more?''
+    
+    \textit{Author}:	``Yes, they’re coming to school more because they are interested in the things that are happening. [...] You can already say, “Is this…” That’s already something we’re flagging.''
+
+    \textit{Participant}: ``Yes, definitely. That was the point, wasn’t it? That was the hypothesis. [...] Yes, wicked, yes, I mean I’ll show that to whoever is interested back in the office. I’m sure that will please some people.''
+    
+    \textit{Author}: ``In terms of simple statistics, we’ve proved it. We didn’t run any specific tests, but kind of [conversation-starter]''
+
+    \textit{Participant}: ``Yes, we’re not bothered about peer levels or anything like that, or whether or not it satisfies the criteria. It’s visually… That visually, to us, looks good, that’s all we care about.``
+\end{quote}
+Above marks another milestone towards democratising data science practices by enabling citizens to make sense and visualise data in context through the use of digital tools. Using Data:In Place platform participants were able to utilise data to give answers to the hypotheses set by themselves, similarly to the professional work done by the author previously (see Section \ref{sec:data_prof}). This was also a step closer to removing the researcher from the equation an letting the citizens to it by themselves.
+\begin{quote}
+    ``That’s the idea, isn't it? There is no point you sitting here showing me, you doing it for me, because when I go look I won’t have a clue. So I agree, definitely. It will be worth me going away and having a play myself. [...] As I say, I’ll try to figure it out. I’ll have a play and just give you my feedback and see if I can figure something out. It looks- It’s coming on, it’s definitely getting there. It’s exciting, it’ll be great. Those graphs that you showed me, very simple stuff, will make some people in the office interested and they’ll be happy with what we’re doing. I suppose that’s the main objective, isn't it, making people happy?``
+\end{quote}
+With new skills learned by the participant and additional design requirements gathered for the Data:In Place platform, marked the conclusion the second data consultation activity. Participant was happy with the initial results of the investigation, however discussions of the actual use of them did not get further than ``making people in the office happy'', indicating to the fact that there was still steps needed to be taken for the potential use the data in action.
 
 \subsubsection{Routes to Action}
 % Action (Routes to action)
@@ -436,6 +485,90 @@ Probably the most important aspect of the visualisation for the participants was
 % measure
 % quantify change
 % Data challenges
+% Trust
+The final part of the data consultation with the local charity concentrated on discussing of how output of data could be potentially used for action. Throughout the process of data consultations, participants had identified multiple utilities for uses of data such as for self knowledge, evidence, measuring and recording behavioural change, getting funds to continue delivering interventions, tool for quantifying change.
+\mynote{Make a choice between these quotes}
+\begin{quote}
+    ``They might just be interested in it, but it might help them with making sure that what they’re doing is actually working I suppose.'' (OO)
+    
+    ``	We would want to know that personally, so that stuff we’re doing with [anon researcher] is great but it’s’ backed up what we knew was happening. If he came back and said, “Look, the kids step counts [physical activity] is going down,” we wouldn’t publish that fact but we would do something about it. So we would have to be changing intervention.'' (SM)
+    
+    ``We’ve just got to try to do something that evidences what we have done has made a difference to mental wellbeing. For example, we could do a match day campaign. As a result of that, 1,000 people could ring Mind for some support. How do we evidence that’s what we did that made people ring Mind, and not that just suddenly loads of people decided to ring Mind? We’re in the very early stages of looking at all of this. We’re going to get another company to help us figure out how we record the behaviour change, basically.'' (PO)
+    
+    ``One of the things I’m working on at the moment is going to be an awareness campaign, city-wide, through match days and our social media, amongst other things, trying to improve health and wellbeing. We want to be able to prove that what we’ve done has made a difference.'' (PO)
+    
+    `` I think, in my understanding of behaviour changes, there are loads of different theories out there in terms of what makes people do stuff and what makes people change the way they do stuff. There’re kind of different aspects in terms of your motivation behind things and your determination, where you start at the beginning, are you in the right environment for you to change your behaviour in the first place? So there’re loads and loads and loads of different measures, or different theories of behaviour change. The way in which we measure the change, again, there’re quite a lot of theories or quite a lot of measures out there'' (OO)
+    
+    ``That’s where that our health and wellbeing department is at the moment. We’ve got that aspect, we’ve also got the bit that I’m doing in terms of the targeted mental health intervention. If we’re trying to relate that to data and place, for me, I know that I’m going to have a 12-week programme in which they’ll be sessions which try to improve the mental and physical wellbeing of the guys that take part. Looking at the long-term behaviour change and the long-term measures of those, that I take at the beginning, over 12 months would be great.'' (OO)
+\end{quote}
+% Aim for the outputs
+Those aspiration for data where guiding the participants in the hypothesis setting and investigation parts of the consultation, aiming to come up with outputs that serves those needs. Participants where focusing on the two main aims for the data output: (1) official documents and (2) presentations.
+\begin{quote}
+% Stats for the bids
+``If we were reporting- Say if we had funding, and we were reporting back to the stakeholders or the people that funded us, then a graph would be a good visual tool to use. In terms of writing a funding bid, it’s the facts that we would need, percentages or official figures.'' (SM)
+
+``We want the facts and figures for...[...]. Yes, official funding documents or reports to stakeholders. Then we’re going to settle on easily-digestible... What are they called?. Infographics using the [anon sports] club as a metaphor, I suppose.'' (OO)
+\end{quote}
+When presenting the data to people outside the organisation participants felt that the data outputs need to be converted into something that represents their identity (similarly discussed in the first part of the data consultation in section \ref{sec:data_visualisation}). These custom infographics could potentially be used to reach different audiences through multiplicity of channels.
+% Infographics made for the schools and presentations (gala) (identity of club)
+\mynote{Make quotes smaller a bit}
+\begin{quote}
+``I think for your average Joe consumer, customer, it’s plain, simple, facts. As an example, we’ve got an event on the 22nd March when we’re inviting a variety of schools that we’ve worked with and schools that we’ve never worked with [...]. This is going to be a room full of teachers who are in charge of budgets. We want to sell, to them, our product. If, at some point, we can say, “Up on the screen now, you can see that these are the schools that we haven’t been in, their attendance, behaviour, and homework. These are the schools that we have been in, their attendance, behaviour, and homework. As you can see, there is a significant change between those two. When we go into a school, we now know that these things improve.” That would be a visual thing. It wouldn’t be, [not] “Let me read from a paragraph and give you loads of statistics and loads of numbers.” People wouldn’t get that.'' (OO)
+
+``They [organisation marketing officers] might go to that school, knock on the schools door if they’ve never been in before, and now might take with them this infographic. They might go, “Look, this is a simple way of us showing the impact that we’ve got, the impact that we’ve done in the region. The schools that we’ve worked in with [anon program] have beaten the away team, the team that hasn’t had [anon program].” It would probably be the same infographic as what was used in the presentation held at the stadium. That would be taken and put onto some sort of booklet or brochure or easy-digestible material that they can take to schools. That’s probably our two ways in which we sell, I suppose.'' (OO)
+
+% Channels for action
+``Infographics are great because they’re also shareable. If you put that on social media, people are more likely to go, “Oh, I’ll share this.” Then it just gets… It’s more awareness of the foundation as a whole, isn't it, rather than it just being just a graph.'' (PM)
+\end{quote}
+% collaboration and connecting people
+However making these custom infographics was something that could have not been achieved by the participants themselves, even when using the Data:In Place platform, and would have needed support of a data visualisation professional. Throughout the consolation process that person was the author of the thesis who took the role of the data professional. Going forward there was need to find new ways of providing that expertise.
+% Role of data professional
+\begin{quote}
+    ``I think what you’re saying is you know the answers, you know what the data are, you know all those different things and know the questions with those answers and it’s creating those pathways which I get that [...].'' (SM)
+    
+    ``There needs to be somebody who’s not you, who’s got your skill set but is able to do that. I suppose you probably know more than we would whether or not there are people out there that would be incentivised enough to answer the questions and challenges.'' (OO)
+\end{quote}
+Participants here where starting to think about how could these connections between data professionals and issue owners be created.
+\begin{quote}
+    ``It would almost be like a message board that challenges one to start with. [...] I guess a lot of the stuff we always ask is often the same, so it will just be like first run through and asking for data and it’s usually general`` (SM)
+\end{quote}
+This opens up new opportunities for expanding the skills network of the by reaching out to external parties. Although this was promising, the participants saw multiple barriers due to the temporalities of these `data challenges' and ways to incentivise these individuals to take them up.
+% incentives
+\begin{quote}
+    ``I mean we can post as many challenges as we want in terms of we want to know something in a certain area, a lot of the time it’s last minute as well. It’ll be like, right we need to know who’s doing what in here within the next two weeks. So say, for example, we post that on this system here who’s going to pick that up? Why would they pick it up? Is it because they want to be socially doing more things for the society and things? You’d probably know more than me because you’re sat in that position and representing that individual, whereas I personally when I go home from work I don’t want to go back to work. So whether or not that guy picks it up on the other end and whether or not he can turn that around within two weeks, will probably be the task.`` (OO)
+\end{quote}
+Other barriers included unwanted competition, safe ways of sharing data and establishing trust and credibility between issue owners and challenge takers.
+% data challenges
+\begin{quote}
+    ``I suppose there might be a bit in there in terms of say, you’ve got a chat board or a chat room or whatever it is on here, everybody can see that [the organisation] has just asked, does anybody know what the crime rate is like in the west end of Newcastle? Other people might go, “Why are they asking that?” Then that could suddenly increase competition for certain bids as well.'' (OO)
+    
+    ``I suppose it’s what you were saying before, how do we then trust that person, how do we know who that person is in a way. So how is that person verified through the system or through a different web, because it could theoretically be, it could be then walking down the hill. `` (SM)
+    
+    ``That could be a 12 year old kid in his room and he’s just got computer (OO). Get some data and just likes chucking it all over the internet somewhere which hopefully it wouldn’t be but you never know really, do you.'' (SM)
+\end{quote}
+Participant went on to discuss ways people could be verified on the web and trusted by challenge creators:
+\begin{quote}
+    ``Bio almost. With even links to other stuff that you’ve done in the past.'' (SM)
+    
+    ``I’m going to trust our Eddie who’s got x, y and z or hundreds of publications on data science more than I am Jimmy who’s 12 years old.'' (OO)
+    
+    ``And our Ed works at Newcastle University part of Open Lab at Newcastle University as opposed to Jimmy who’s 12.'' (SM)
+\end{quote}
+Potentially those people could also be learners who want to improve their skills and solve real life challenges.
+\begin{quote}
+    ``I suppose your future pool of people could be undergraduate or post-graduate who you want to build a portfolio as a data scientist.'' (OO)
+
+    ``Real life programme and challenge for a company while studying, that’s probably one of the issue for students.'' (SM)
+\end{quote}
+One of the ideas participants proposed was also to build an ecosystem around data challenges that would enable a community of data scientist to grow and sustain the service.
+\begin{quote}
+    ``I suppose if you want starting off small with your smaller community of data scientists in order for them to want to do this, incentivise them with a potential stake in the company or whatever it is or in your page or a stake in the interest of it as opposed to suddenly become they’re your panel members and your decision makers of who is awarded certain statuses as future data scientists.'' (OO)
+\end{quote}
+
+\mynote{Needs something to bridge here}
+
+
+\mynote{In terms of timeline, maybe I should put the redesign here after the data consultation. That was the actual timeline as well}
 
 \subsection{Community Action Day}
 \label{subs:community_action}
@@ -540,6 +673,12 @@ Another challenge that both groups identified was to figure out current uses of 
 In terms of data challenges, this was a challenge for \textit{data production}. This could have been done by observation or by compiling all the local knowledge of the workshop participants, but people thought this could be a good opportunity to collect data from the wider community -- people's current uses of the fields and their ideas for future. This was a challenge that came with immediate actions and people themselves could take it up, rather proposing it to someone externally.
 \begin{quote}
     ``Right. To collect the data, or what people think, we would do a questionnaire. We could go door knocking in the local area. Yes [to figure out what people think], and in general if people would be interested and that.''
+    
+    ``Actually, I think you would have to put it into a different thingy. Not what would you want to see there? Because you could have one person wanting that, that and that. If you said, “Would you be interested in a park being put on?” It would then be a closed question, as in yes or no. Then your piece of paper would just be two. Or it could be three. You might have someone who says, “Maybe.” (Laughter) Then you would only have two, and then it’s pros and cons, isn’t it? Yes and no.''
+    
+    ``Do more people want a park than not?''
+    
+    ``So, I think the collecting stuff ourselves thing, that’s going to be what people would want to see it used for, isn’t it and what they’re already doing. So, there is potential there for collecting data from existing usage and that, potentially.''
 \end{quote}
 This would also extend to not only collecting the current uses of the fields, but also getting people involved in thinking about what can be done with the spaces.
 \begin{quote}
@@ -558,16 +697,34 @@ This also sparked conversations around compiling data of things people do in the
     ``I can't remember what information is in the census, because you know you can get the anonymised data from the census from 2011, whether that would have anything about what the pastimes... I don't know if that’s in there. You don’t happen to know?''
 \end{quote}
 % Data visualisations
-Next steps for people where to plan the challenges that would follow once the data is obtained or collected. These challenges where linked to \textit{data visualisations} and were prompting people to think how can they turn that data into something useful.
-
+Data challenges did not only focus on the first part of getting the data (i.e., data access and production), but also got the participants thinking about challenges that would follow once the data is obtained or collected. These challenges where linked to \textit{data visualisations} which prompted people to think how can they turn that data into something useful. Participants thought that it would be best to present that data back to the community back to the community to gather support and get feedback on ideas. 
+\begin{quote}
+    ``I think you could put it into a leaflet, we could put one through the doors or if you go on the computer, then that’s all that data on there.''
+    
+    ``With the computer or just talk, have a chat sort of thing.''
+\end{quote}
+That would potentially include data collected from the community using the questionnaires which are process as ``[...] information in simple numbers, or graphs``, ``then you would probably put them into categories. Would people want it as this, this or this'' and merged with data from official statistics ``to give a simple answer everyone can understand''.
+\begin{quote}
+    ``The questions would... What would you like to see on the field? What would you like to see the field used for, blah, blah, blah? When the questions are all done, stacked up.''
+    
+    ``So, from any data that we would collect from door knocking or talking to people, or whatever, that could be presented in a... ‘Fifty people said, wouldn't it be fab if we had a kids’ playpark. A hundred people wanted a...’ So, there could be some graphical representation of [statistics].''
+    
+	``Could we also put in something there about the census pastime stuff as well? So, you know, we’ve got 300 people from the [X place], who love to cycle.
+\end{quote}
+However people where interested in not just representing people numbers and official statistics. They wanted to seek feedback from people and start contesting these numbers:
+\begin{quote}
+    ``If we stuck in a bike park, it’s a bit of -- they don’t quite [add up]. So, just [If you point your finger with that sort of thing there], then there is a load of cycle tracks, but if that’s the place you mean?''
+\end{quote}
 % anchoring visualisations
 % presenting data back to the community to gain support
-
-
-
-% Council's provisioning 
-So, if you have an idea of what the council provision of their facilities have already got somewhere else, there’s potential, isn’t there, to stick some pictures in of the fact that they’ve got a skate park here. The likelihood is we’re not going to put something there, but just to say, “That’s there. There’s a bowling green there.” There’s whatever. So, again-
-
+Participants where interested in presenting data about the spaces -- what exists, current uses and potential ideas --  in a way that its more interactive and representing the community identity.
+\begin{quote}
+    ``Yes, I guess the visual representation of the space, we’re just using a map of the space and saying, “That’s already the football thing. That’s already this. This is the space we’re talking about,” which represents the landownership bit.``
+    
+    ``So, if you have an idea of what the council provision of their facilities have already got somewhere else, there’s potential, isn’t there, to stick some pictures in of the fact that they’ve got a skate park here. The likelihood is we’re not going to put something there, but just to say, “That’s there. There’s a bowling green there.” There’s whatever.''
+    
+    ``I guess you can, sort of, mark bits out, so people can go, “Could this be this? Could it be that? Could it be that?” I wonder as well, if you were going to do a leaflet for the [Blue Sky Way’s] bit, then there’s potential to just say, “Oh, this place in Sheffield has this and green space like this place. There, has that...”
+\end{quote}
 
 % funding
 Perhaps the biggest challenge that people identified was, how to fund the development of these spaces and where would they start looking for those funds.
@@ -584,21 +741,48 @@ Participants where not only thinking how they could convince the local governmen
     
     ``Oh, yes. Presumably, there might be someone that can say, “Yes, okay, we’ve got a specific pot of money and we would build a kids’ playpark,” or, “We’ve got a specific pot of money that’ll do this or that.” That might influence what you end up doing.''
 \end{quote}
+For the last activity participants where brainstorming actions they can take with the data. Their initial idea was to compile all the data and the seek feedback from the community to build support:
+\begin{quote}
+    ``Yes, I mean, so in terms of making the information actionable, are we going to say to people from this leaflet, “Give us a tick to say, ‘Yes, we’ll want to do that,’ or a cross to say, ‘No, I don’t want to do that.’”''
+    
+    ``Yes, or do we say, “Just come along to the meeting and we’ll talking about it as a meeting,” and a present a much more concrete ideas about things.''
+    
+    ``Getting all the community together to brainstorm something like that. I know you can’t keep everybody happy.''
+    
+    ``I guess, in this exercise, we’re assuming that if we’re doing this, there’s a certain level of buy-in, we’re happy, as people, doing this to galvanise a bit of... You know, if we’re talking about doing something with here, we’re happy to lead a bit on saying, “Come and get behind this, we’re going to do something with it.”''
+\end{quote}
+and then taking that information to the local government:
+\begin{quote}
+    ``You would have to get a meeting with the council [..] we would have to contact the council, wouldn’t we?
+    You would take your findings from that to your council.
 
+    ``If everybody agrees then you go to council and just say, “This is what we’d like to happen.”''
 
+    ``[saying to the council] `This is what the community wants. We have done that door-to-door. We have done whatever is needed'...''
+
+    ``We sort of show them the data, do we, to say that this has got community backing?''
+    
+    ``Yes. Ask the council if there is anything they can do, even if it’s half.''
+\end{quote}
 % Actions
 % Getting community to put in the work
-Facilitator:	We sort of show them the data, do we, to say that this has got community backing?
-Female:	Yes. Ask the council if there is anything they can do, even if it’s half.
-Male:	“It’s gone past our budget for this year, sorry.” (Laughter) That’s what they’ll say.
-Female:	Yes. But maybe it is not all about them doing everything. It’s making them aware that the community are willing to help as well. 
-Facilitator:	Yes.
-Female:	Are you painting? Are you digging holes? Whatever it may take.
+Participants where not really convinced that the council can do anything and would probably respond with ``[...] “It’s gone past our budget for this year, sorry.” (Laughter) That’s what they’ll say.''. However people started to shift into the mindset that perhaps council does not have to do it all and there are ways to do it together with the community.
+\begin{quote}
+    ``Yes. But maybe it is not all about them doing everything. It’s making them aware that the community are willing to help as well.''
+    
+    ``So, I guess, almost then using that as the start of trying to gather people together, affirmation of it, so people say, “Yes, we would do that,” or, “Yes, I want to do that and I'm also willing to put the time and effort into making it happen.”''
+    
+    ``Are you [member of community] painting? Are you digging holes? Whatever it may take.''
+\end{quote}
+Here the participants used the challenge creation activity to think about not only what others can do to make things happen for them, but also looking at what actions can they take themselves. Finding skills within the community and also using Data: In Place platform to post data challenges to get access to professional expertise externally. Figure \ref{fig:action_plan} illustrates the proposed action plan of one group. Furthermore, statements such as ``It would have to be a community project.'' represented the realisation that it has to be collective effort of the community where data could potentially used to foster dialog (between different stakeholders) and bring the community together to take action.
 
-
-
-
-
+% make new visualisation
+\begin{figure}[ht]
+\centering
+ \includegraphics[scale=0.1]{action_plan}
+  \caption{PROVISIONAL - Action Plan}
+  \label{fig:action_plan}
+\end{figure}
 
 \section{Discussion}
 % add stuff about mooqita here (commissioning data science problems)
@@ -623,6 +807,8 @@ Female:	Are you painting? Are you digging holes? Whatever it may take.
     \item Combined approach (dual approach)
     \item Ownership of issues
     \item Wealth of Networks
+    \item Visual identity
+    \item Simple stats
 \end{itemize}
 
 \section{Conclusions}
