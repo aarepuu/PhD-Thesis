@@ -21,7 +21,7 @@ branch="master"
 words=-8499
 last_words=0
 todays_words=0
-daily_goal=500
+daily_goal=1000
 
 #header
 if [[ "$1" != "today" ]]; then
