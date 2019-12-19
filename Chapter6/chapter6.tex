@@ -13,3 +13,43 @@ t%!TEX root = ../thesis.tex
 \fi
 
 This chapter presents a reflection on existing work and drawing upon PhD case studies and literature defines a set of processes and tools for effective use of data in this area and discusses the whole PhD.
+
+
+\section{Common Grounds}
+
+
+
+\subsection{Adjacent Possible: State of The Art of Available Infrastructures}
+
+% Unplatforming
+Data needs anchors for people to start exploring some of the questions that these datasets answer. Common anchors for open data platforms are things like domains or topics (e.g., transport, health, education, local services), publishing entities (e.g. and access formats (e.g., machine readable files, APIs, PDF files). Related work also shows that place is a valuable anchor for accessing and exploring datasets (Taylor 2015, Puussaar 2018). Identifying place and situated activities that people engage there, provides a valuable context for starting to explore data that might answer questions about those places. There is no value in data without somehow contextualising it. Anchoring is this sense is just another form of grounding or contextualising the data.
+Despite that the data can be situated in place, because of how it has been generated and archived for access, it still falls short having a direct route for answering questions that people come up every day. In search of information on the web, people often rely on the experiences of others finding out answers to similar questions. The uses of online forums like Quora and Reddit, problem solving platforms like StackOverflow are just few examples of places where people go to look for answers. Often the information or datasets people are seeking are already out there, but someone needs to make the link between the questions and the abstract datasets. This often requires an understanding of how the data compiled and what hidden values it represents. Furthermore the link between the actual data that answered the question might get lost in the noisy forum thread. 
+From the software development processes, people are familiar with issue tagging when they discover a bug or come up with an idea for improving the software. With explosion the open source software movement and having access to code repositories like GitHub, the issue tagging functionalities are becoming more and more similar to forum or AQ based interactions with the system. We can already see projects on GitHub that leverage this infrastructure to compile and archive links to open datasets. For example Awesome Public Datasets project which compiles a topic-centric list of open datasets in a public domain. It uses Github issues and pull requests to receive new proposals of dataset links. The project has tens of thousands of followers and majority people who contribute the datasets already seem to know how and what data they are looking for. However a brief observation reveals that some of the issues are actually more rephrased as questions without any link or routes to data. For example “How can I apply job for driver in canada/ usa”.  This request already has some of the ancours we mentioned previously: (1) a place - Canada or USA, (2) a issue or a topic - working as a driver. There has been number of other projects which make use the open source community and the capabilities of platforms such as GitHub. With this in mind, we posit an idea leveraging the ideas and infrastructure of the open source ecosystem to organise, archive and make accessible this contextual information which helps people link their questions to datasets which might hold the answers.
+
+\subsection{The System}
+
+The problem with using already available structured data systems that organise information on the web, is that the questions that people come up with does not obey any laws of structured data sources. Questions that people come up with are not some polished queries for exact piece of information, they are driven more by need and curiosity of people. Often these questions need to be understood by someone else with the knowledge of a possible information to address them. This also reveals some additional problems around multiplicity of views and biases of people thinking that they have the correct link to information answering the proposed questions. There is no one truth, there is only a matter of perspective corresponding to the values the person or a group looking for answers. Nevertheless the first step of organising this information and making it accessible for re-enquiry is to start documenting these knowledge enquiries and routes to data where the answer was found. Having this laid out for others to learn from, might make their discovery of information a bit easier.
+
+% For this approach of data access we feel 
+% GitHub for data storage for the links and and questions/issues.
+% QA site backed by datasets
+% forum like and QA like structure
+% Mechanism to ask questions and have generated questions that link similar questions together to show the route of discovery and data sources for those that have already answered.
+
+\subsubsection{Challenges}
+\kylenote{These are very low level technology specific, what are the bigger conceptual challenges? How do you build a HDI?}
+\begin{itemize}
+    \item Challenges for making this potentially even more useful:
+    \begin{itemize}
+        \item relating similar questions and responses
+        \item think merging and hierarchies
+        \item likely involves human intelligence (human computation / HITS), maybe NLP
+    \end{itemize}
+    \item Scaling strategy
+    \begin{itemize}
+        \item Local communities and isolated questions
+        \item challenges first to build momentum
+    \end{itemize}
+\end{itemize}
+
+\kylenote{Talk about limitations + sustainability}
