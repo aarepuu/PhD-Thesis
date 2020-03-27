@@ -1,5 +1,15 @@
 %!TEX root = ../thesis.tex
 % ******************************* Thesis Appendix A ****************************
-\chapter{This is the first appendix} 
-\label{app:data_consultations}
-% put some created workshop material in appendix for people to reuse
+
+
+% **************************** Define Graphics Path **************************
+\ifpdf
+    \graphicspath{{Appendix1/Figs/Raster/}{Appendix1/Figs/PDF/}{Appendix1/Figs/}}
+\else
+    \graphicspath{{Appendix1/Figs/Vector/}{Appendix1/Figs/}}
+\fi
+
+\chapter{Guide for Using Hand-held Monitor} 
+\label{app:fidas-guide}
+% https://www.pdfconverters.net/how-to/insert-pdf-to-latex/
+%\includepdf[page=-]{fidas-guide}

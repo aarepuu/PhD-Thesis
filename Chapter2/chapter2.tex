@@ -2,7 +2,7 @@
 %*******************************************************************************
 %****************************** Second Chapter **********************************
 %*******************************************************************************
-\chapter[SenseMyStreet]{SenseMyStreet - Sensor Commissioning Toolkit for Communities}
+\chapter[SenseMyStreet]{SenseMyStreet: Sensor Commissioning Toolkit for Communities}
 \label{chap:sensemystreet}
 
 
@@ -13,31 +13,21 @@
     \graphicspath{{Chapter2/Figs/Vector/}{Chapter2/Figs/}}
 \fi
 
-\section{Introduction}
-\petenote{This chapter seems to jump in at the deep end. I would reverse the two paragraphs. Start with something more like “This chapters explains…” and go onto to the overview of what sense my street is, the collaboration and so on.}
-A strong case has been made for evidence based decision-making by using data as resource to make educated and informed decisions. However, there is a disjoint between the people who are affected by these decisions and them also having access to tools and resources to collect data in order to provide the needed evidence for change. To investigate how data collected through a sensor commissioning toolkit can support citizen evidencing local concerns, and to understand the processes linked to operating a sustainable and transparent sensor commissioning toolkit, a number of deployments and engagement activities have been carried out in Newcastle Upon Tyne and surrounding areas over the period of three years. This Chapter describes the iterative design process and deployments of SenseMyStreet, a project that has been set up together with Urban Observatory (UO) – UK’s largest urban data sensing network. Sensor commissioning toolkit enables citizens and communities to commission environmental monitors and determine where they will be located on their streets, collecting evidence to inform local issues. SenseMyStreet toolkit was officially launched in the summer of 2017. Since then over 60 people have signed up, 7 groups of people have done environmental sensing with hand-held monitors loaned from the toolkit in their commutes to explore issues in their local area and three communities have commissioned stationary sensors to be deployed in their neighbourhood. Through constant engagement activities with the communities and feedback from online systems, the toolkit went through an iterative design process to involve into an operational citizen sensor commissioning toolkit.
+\epigraph{With data collection, `The sooner the better' is always the best answer.}{--- \textup{Marissa Mayer}}
 
-% mention amount of sensor we have in the toolkit??
+This chapter describes the iterative user-centred design process, development and deployments of SenseMyStreet, a sensor commissioning toolkit that has been set up together with Urban Observatory (UO) – UK’s largest urban data sensing network. Toolkit enables citizens and communities to use and to commission data from scientific grade environmental monitors, determining where they will be located on their streets, collecting evidence to inform local issues. A strong case can be made for evidence based decision-making by using data as resource to make educated and informed decisions. However, there seems to be a disjoint between the people who are affected by these decisions and them also having access to tools and resources to collect data in order to provide the needed evidence for change. To truly democratise this process and for citizens to become active producers and makers of data, there is a need for new mechanism of citizen data production. This chapter begins by explaining the motivations for establishing a sensor commissioning toolkit for the community through the critiques in the literature and the current state of the art of citizen sensing; gives the context of the study; documents the process of designing and setting up the toolkit, also giving an overview of the technical specification; and describes the development and deployments carried out by the author collaborating with the technicians from the Urban Observatory. Furthermore, an analysis of the use of the toolkit, and its associated platforms and technologies are provided. The toolkit continues to operate as part of UO at Newcastle University, enabling communities and citizens gather data relevant to issues that are important to them at a hyper-local scale.
 
-This chapter explains the motivation for establishing sensor commissioning toolkit for the community, sums up the process of designing and setting up the toolkit, and the development and deployments carried out by the author collaborating with the technicians from the Urban Observatory. This is followed by the evaluation of the use of the toolkit by the communities. The data used in the analysis will include the fieldwork conducted by the author which studied different groups using the toolkit and appropriating the data gathered from the environmental monitors and the interactions recorded through the digital systems. The results from this project will be used to analyse the methods used in the design process and the overall challenges and opportunities associated with developing a transparent sensor commissioning toolkit, which allows people to collect, share, explore and purpose data collected using high precision environmental sensors. Furthermore, the toolkit continues to operate as part of Urban Observatory at Newcastle University to give communities and citizens the power to gather data relevant to issues that are important to them at a very local scale.
+\section{Motivations}
+\label{sec:sms_mod}
 
-\section{Background/Related work}
-% \subsection{Civic Participation}
-%Participation in smart city
-
-% \subsection{Data-driven Solutions}
-
-% \subsection{Participatory sensing, VGI, participatory GIS}
-
-% \subsection{From Citizen Science to Citizen Sensing}
-% Hakalay from crowdsourcing to extreme citizen science (group projects)
+This section expands on the literature and related work presented in Chapter \ref{chap:literature} around active citizen participation and production of data in the Smart city. Focusing at a more specific related work in citizen sensing regarding environmental data: how those data is currently generated; who gets access to it and in what way; how can it be used for community problem solving activities; and how might the generation, access and use of that data could be democratised in the future.
 
 \subsection{Sensing the Urban Environment}
-\petenote{A good opening motivation its all there but at times it seems to wonder off the point, which is how is environmental data generated currently and who gets access to it (and what kind of access), who can uses it, and how might generation,  access and use be democratised.}
-Monitoring the urban environment is an important part of figuring out how the city operates and how are people influencing the city as a whole with their everyday lives. Collected data from the city can be a useful tool to understanding these complex processes, but also monitoring and evidencing the changes implemented. Motivations for doing monitoring can be for example creating a digital twin of a city \citep{bolton_gemini_2018}, understanding city soundscapes \citep{adams_sustainable_2006} or air quality \citep{department_for_environment_air_2018} to inform polices around planning and infrastructure changes in the city, or to build a smart city analytics tools for smart service delivery \citep{puiu_citypulse:_2016}.
+Monitoring the urban environment is an important part of figuring out how the city operates and how are people influencing the city as a whole with their everyday activities. The collected data from the city can be useful for understanding these complex processes, but could be also used for monitoring and evidencing the changes implemented in the city. Motivations for doing monitoring can be for example creating a digital twin of a city \citep{bolton_gemini_2018}, understanding city soundscapes \citep{adams_sustainable_2006} or air quality \citep{department_for_environment_air_2018} to inform polices around planning and infrastructure changes in the city, or to build a smart city analytics tools for smart service delivery \citep{puiu_citypulse:_2016}.
 
-
-The affordances of ICT and IoT have enabled a new wave of smart city sensing which is done by the citizens. They can be connected to research effort or a citizen science project \citep{haklay_citizen_2013}, but often they are individuals or groups of people using some type of citizen sensing toolkits (see Table \ref{table:citizen_kits}) or commercially available monitoring devices. Latter devices are what people can put in their own houses, for example to monitor indoor environment\footnote{\url{https://foobot.io}}\footnote{\url{https://www.airthings.com}}, but also kits that people could use outside and publish data to a bigger cloud platform\footnote{\url{https://www.netatmo.com/en-gb/weather/weatherstatio}}. These smart home devices are helpful for increasing self knowledge or understanding, optimising and improving one's living spaces. Using these devices for making a home smart can often be quite expensive and usually they do not provide any opportunities for customisation. However with the increasing popularity of open source hardware movement and the availability of micro-controllers such as Arduino, RasberryPi and MicroBit, people can now build their own sensors to use in citizen sensing. Although people can build their own kits using off the shelf components\footnote{\url{https://wonderfulengineering.com/10-best-raspberry-pi-sensor-kits/}} there are already available plug and play citizen sensing kits. Table \ref{table:citizen_kits} gives an overview of popular devices for citizens for doing environmental monitoring and reviews their openness and ability to get the larger community involved.
+\subsubsection{The Tools}
+\label{sub:sensetools}
+The affordances of ICT and IoT have enabled a new wave of smart city sensing which is done by the citizens. These initiatives can be connected to a research effort or a citizen science project \citep{haklay_citizen_2013}, but they can also be initiated by individuals or groups of people using some type of citizen sensing toolkit (Table \ref{table:citizen_kits}) or commercially available monitoring devices. Latter devices are what people can put in their own houses, for example to monitor indoor environment\footnote{\url{https://foobot.io}}\footnote{\url{https://www.airthings.com}}, but also kits that people could use outside and publish data to a bigger cloud platform\footnote{\url{https://www.netatmo.com/en-gb/weather/weatherstatio}}. These smart home devices are helpful for increasing self knowledge or understanding, optimising and improving one's living spaces. Using these devices for making a home `smart' can often be quite expensive and usually these devices do not provide any opportunities for customisation. However with the increasing popularity of open-source hardware movement and the availability of micro-controllers such as Arduino, RasberryPi and MicroBit, people can now build their own sensors to use in citizen sensing. Although people can build their own kits using off the shelf components\footnote{\url{https://wonderfulengineering.com/10-best-raspberry-pi-sensor-kits/}} there are already available plug and play citizen sensing kits. Table \ref{table:citizen_kits} gives an overview of popular devices for citizens for doing environmental monitoring and reviews their openness and ability to get the larger community involved.
 
 % Maybe change this into some feature comparison (tech, source-code, programming knowledge, data access, cloud sources/hosting)
 % https://www.instructables.com/id/Air-Quality-Test-Box/
@@ -64,18 +54,22 @@ The affordances of ICT and IoT have enabled a new wave of smart city sensing whi
 \hline%inserts single line
 \end{tabular}
 \label{table:citizen_kits} % is used to refer this table in the text
-\scriptsize
-\footnotesize\emph{Source:} Table created by the author
+\smallskip\centering
+\footnotesize\emph{Source: Author}
 \end{table}
 
-These sensor kits have found usage in science education but because of their low barriers to entry, they are particularly good for people to get involved in gathering data about the environment to spark discussions around environmental issues with the community. There are multiple crowdsourced monitoring projects for citizen action around the world where volunteers use low cost sensing equipment to collect data about environment issues and then use those data to advocate for positive change. Non-profit groups like GASP\footnote{\url{https://gasp-pgh.org}} and INHALE\footnote{\url{http://www.inhaleproject.ca}} who recruit people to participate in local air quality monitoring or AirCasting\footnote{\url{http://aircasting.org}} which provides a full platform for air quality monitoring, mapping and exploring; university initiatives such as London Air\footnote{\url{http://www.londonair.org.uk}} which provide up-do date information about regional air quality. Industry is also getting together in projects like HAMNAIR\footnote{\url{http://www.hamnair.ca}} and Aclima partnering up with Google to instrument Street View cars with monitors and publish data on Google Maps platform providing a new source of accessible environmental data \citep{aclima_aclima_2018}.
+These sensor kits have found usage in science education but because of their low barriers to entry. These devices are particularly good for people to get involved in gathering data about the environment to spark discussions around environmental issues with the community. There are multiple crowdsourced monitoring projects for citizen sensing around the world, where volunteers use low cost sensing equipment to collect data about environment issues and then use those data to advocate for positive change. Examples are non-profit groups like GASP\footnote{\url{https://gasp-pgh.org}} and INHALE\footnote{\url{http://www.inhaleproject.ca}} who recruit people to participate in local air quality monitoring, or AirCasting\footnote{\url{http://aircasting.org}} which provides a full platform for air quality monitoring, mapping and exploring; and university initiatives such as London Air\footnote{\url{http://www.londonair.org.uk}} which provide up-do date information about regional air quality. Industry has also come together in projects like HAMNAIR\footnote{\url{http://www.hamnair.ca}} and Aclima partnering up with Google to instrument Street View cars with monitors and publish data on Google Maps platform providing a new source of accessible environmental data \citep{aclima_aclima_2018}.
 
 % A review of citizen science and community-based environmental monitoring: issues and opportunities (Cathy C. ConradKrista G. Hilchey)
 % https://www.caravanstudios.org/citizenscienceresources
 
-A lot of these projects however come from already framed agendas similarly to citizen science projects, which sometimes are presented to people seductively to just `have a go'. \citet[p. 384]{hakken_social_2003} is critical of these kind of approaches stating that real constructive learning is replaced with participation in the development of scientific knowledge. Although contributing to scientific knowledge and open resources is important to advance the knowledge of humans, it does not give the individual citizens the power and choice to create knowledge around issues that are important to them. As a response to this, new type of citizen sensing and community investigation tools are surfacing that are more focused on citizen-led projects and enabling citizens to come up with their own problems, conduct investigation and create knowledge to act upon. Examples of such tools are Open Data Kit (ODK) \citep{hartung_open_2010}, EpiCollect \citet{aanensen_epicollect:_2009}, Sensr \citep{kim_sensr:_2013}, wq.io \citep{sheppard_wq:_2012}, CitSci.org \citep{newman_art_2011} and DisCoPar \citep{zaman_discopar:_2015} which enable people propose their own investigations through reusable mobile or web app that can be reconfigured and deployed to specific project. \citet{garbett_app_2016} has taken this one step further and set up a commissioning framework called App Movement where citizens can co-create dedicated applications for their community investigation and data collection. 
+\subsubsection{The Approaches}
 
-Majority of drivers however for doing city scale monitoring come from institutional actors and are ran by experts making assumptions about the population and issues that are important to them \citep{townsend_smart_2013}. Citizens sensing projects are often disregarded by the decision makers, because of lack of trust in the data quality or accountability of the process -- having a perspective that these are people going around using `toys'. It is partly to do with citizens not having the resources to acquire the equipment for monitoring that is equivalent to the ones used by the city, but also the lack of mechanisms that would enable citizens to access already existing resources to conduct their own investigations. Research around smart cities have started to look into issues of spacial inequality and inclusiveness with projects such Spatial Inequality and the Smart City \citep{franklin_spatial_2019} leading the way. It is important to understand and identify these risks and their impacts for citizens, when implementing smart city technology in order to create sensor deserts and to create a smart city of all the citizens. The city needs to serve the needs of all its citizens, not only the select few. Collecting data about the city is just a small part that. There is need for mechanisms that help incorporate the wishes and desires of citizens into the picture of how a city operates.
+A lot of these projects however come from already framed agendas similarly to citizen science projects, which sometimes are presented to people seductively to just `have a go'. \citet[p. 384]{hakken_social_2003} is critical of these kind of approaches stating that real constructive learning is replaced with participation in the development of scientific knowledge. Although contributing to scientific knowledge and open resources is important to advance the knowledge of humans, it does not give the individual citizens the power and choice to create knowledge around issues that are important to them. As a response to this, new type of citizen sensing and community investigation tools are surfacing that are more focused on citizen-led projects and enabling citizens to come up with their own problems, conduct investigation and create knowledge to act upon. Examples of such tools are Open Data Kit (ODK) \citep{hartung_open_2010}, EpiCollect \citep{aanensen_epicollect:_2009}, Sensr \citep{kim_sensr:_2013}, wq.io \citep{sheppard_wq:_2012}, CitSci.org \citep{newman_art_2011} and DisCoPar \citep{zaman_discopar:_2015} which enable people propose their own investigations through reusable mobile or web app that can be reconfigured and deployed to specific project. \citet{garbett_app_2016} has taken this one step further and set up a commissioning framework called App Movement where citizens can co-create dedicated applications for their community investigation and data collection. Furthermore, research around smart cities have started to look into issues of spacial inequality and inclusiveness with projects such Spatial Inequality and the Smart City \citep{franklin_spatial_2019} leading the way. It is important to understand and identify these risks and their impacts for citizens, when implementing smart city technology in order not to create sensor deserts and to create a smart city of all the citizens. Clearly, the city needs to serve the needs of all its citizens, not only the select few. Collecting data about the city is just a small part that, there is also need for mechanisms that help incorporate the wishes and desires of citizens into the picture of how a city operates.
+\newline
+
+\noindent
+Indeed, it seems that the majority of drivers for doing city scale monitoring come from institutional actors and are mainly ran by experts; making assumptions about the population and issues that are important to them \citep{townsend_smart_2013,tenney_data-driven_2016}. Furthermore, citizens sensing projects are often disregarded by the decision makers, because of lack of trust in the data quality or accountability of the process -- having a perspective that these are people going around using `toys' \citep{gabrys_just_2018}. It seems that it is partly to do with citizens not having the resources to acquire the equipment for monitoring that is equivalent to the ones used by the city, but also the lack of mechanisms that would enable citizens to access already existing resources to conduct their own investigations.
 
 % Also, giving an overview of at tools for citizen data collection.
 % http://aircasting.org/
@@ -103,19 +97,20 @@ Majority of drivers however for doing city scale monitoring come from institutio
 
 % . All too often in actual constructivist science education, while the learning is approached processually — to be accessed via a postmodernist, socialed pedagogy — the content of scientific knowledge remains framed in modernist, “thing,” individuated terms. A typical result of failure to acknowledge the underlying inconsistency is that participation in activities framed as contributing to the development of scientific knowledge (for example, collecting data on weather) is substituted for real coconstructive learning. Related variations of this failure are frequent enough so that they are sometimes mistaken as characteristic of constructivism. Hakken (Page 384).
 
-\subsection{Data and the City}
-Cities around the world are working hard on implementing their sensor networks do collect data, but also trying to pull other sources of data (e.g., administrative data, official statistics, operational data, social media, LBS data) together into one place to answer questions about the city. In addition to using that data in decision-making and governance, cities are also pushing that data out for others through data dashboards \citep{kitchin_real-time_2014}. Dashboards such as CityDashboard London\footnote{\url{http://citydashboard.org/london/}}, City of Los Angeles Hub\footnote{\url{http://geohub.lacity.org/}}, City of Sydney Dashboard\footnote{\url{http://citydashboard.be.unsw.edu.au/}} and Smart CEI Moncloa in Madrid\footnote{\url{https://ceiboard.dit.upm.es/dashboard/}}. It seems that a prerequisite to start calling a city smart is at least having one smart city interface \citep{al-hader_smart_2009,al-hader_soa_2009}. Having access to ubiquitous technologies and fast broadband are not the only things that will make the city smart, human factors also play a big role in making the city smart \citep{nam_smart_2011}. City might have a lot of infrastructure in place collecting data about the city, its operations and population, but it needs an engaged public to make use of that data \citep{mcmillan_data_2016}.
+\subsection{Data And The City}
+Cities around the world are working hard on implementing their sensor networks do collect data, but also trying to pull other sources of data (e.g., administrative data, official statistics, operational data, social media, location based data) together into one place to answer questions about the city. In addition to using that data in decision-making and governance, cities are also publishing that data for others through data dashboards \citep{kitchin_real-time_2014}. Dashboards such as CityDashboard London\footnote{\url{http://citydashboard.org/london}}, City of Los Angeles Hub\footnote{\url{http://geohub.lacity.org}}, City of Sydney Dashboard\footnote{\url{http://citydashboard.be.unsw.edu.au}} and Smart CEI Moncloa in Madrid\footnote{\url{https://ceiboard.dit.upm.es/dashboard}}. It seems that a prerequisite to start calling a city `smart' is at least having one Smart city interface \citep{al-hader_smart_2009,al-hader_soa_2009}. However, people have criticised this by pointing out that having access to ubiquitous technologies and fast broadband are not the only things that will make the city smart, human factors also play a big role in making the city smart \citep{nam_smart_2011}. City might have a lot of infrastructures in place for collecting data about the city, its operations and population; but it needs an engaged public to make use of that data \citep{mcmillan_data_2016}.
 
-Whether data in the city is generated through citizen science or crowd sourcing effort, research or through governmental initiatives, the way it is presented to people depends largely on the purpose of generation -- either it is for public awareness, policy making, research or civic engagement. In order to figure out what purpose does the city data serve, it needs to be looked into from the perspective of its potential users. There are two distinguishable type of potential users of city data -- experts and non-experts. Table \ref{table:data_users} show different types of data users, also showing the overlaps of experts and non-experts within groups.
+Whether data in the city is generated through citizen science or crowdsourcing effort, research or through governmental initiatives, the way it is presented to people depends largely on the purpose of generation -- either it is for public awareness, policy making, research or civic engagement. In order to figure out what purpose does the city data serve, it needs to be looked into from the perspective of its potential users. There are two distinguishable type of potential users of city data -- experts and non-experts. Table \ref{table:data_users} show different types of data users, also showing the overlaps of experts and non-experts within groups.
 
 % Make this into some kind of other visualisation
-\begin{table}[htbp!]
-\scriptsize
+\begin{table}[!th]
 \centering
-\caption[Categorisation of potential city data users]{Categorisation of potential city data users}
+\footnotesize\centering\emph{Source: Author}
+\smallskip\centering
+\caption{Categorisation of potential city data users}
 \begin{tabular}{|c|c|}
   \hline
-	\textbf{Non-Experts} & \textbf{Experts} \\
+	\textbf{Non-Expert} & \textbf{Expert} \\
   \hline
    \rowcolor[gray]{.9}\multicolumn{2}{|c|}{Citizen-scientists} \\
    \hline
@@ -125,18 +120,21 @@ Whether data in the city is generated through citizen science or crowd sourcing 
    \hline
    Community Groups &  Private Companies  \\
   \hline
-\end{tabular}
-\label{table:data_users}
+\end{tabular}\label{table:data_users}
+% \footnotesize\emph{Source: Author}
 \end{table}
 
-Researching and comparing\footnote{Initial research was conducted by The West Oakland Air Quality team and was extended by the thesis author.} existing data platforms and taking account user categories (see table \ref{table:data_users}) it is possible to look at different ways data is made accessible to each group in terms of \textit{feature selection} on these platforms. 
+Researching and comparing\footnote{Initial research was conducted by The West Oakland Air Quality team and was extended by the thesis author.} existing data platforms and taking account user categories enabled to look at different ways data is made accessible to each group in terms of the \textit{feature selection} on these platforms. Table \ref{table:data_users} gives an overview of how data is published for different based on different user groups -- non-expert and expert users.
 
 % features on sites. Modify this to include examples for each feature.
 \begin{table}[htbp!]
 \scriptsize
 \centering
+\footnotesize\centering\emph{Source: Author (adapted from The West Oakland Air Quality team's research)}
+\smallskip\centering
+\scriptsize
 \captionsetup{font=footnotesize}
-\caption[Features]{List of features on environmental data platforms.}% title of Table
+\caption{List of features on environmental data platforms}% title of Table
 \begin{tabular}{|c|c|}
 \hline %insert horizontal line
     \multicolumn{2}{|c|}{\textbf{Features}} \\
@@ -145,38 +143,45 @@ Researching and comparing\footnote{Initial research was conducted by The West Oa
 \hline % inserts single horizontal line
 % inserting body of the table
 \rowcolor[gray]{.9} Emphasis on health and quality of life & Emphasis on research \\
-Colour themes for background or site & Sliders, Levels, Dials, larger colour range for detail \\ 
-\rowcolor[gray]{.9} Mapping: local, overall basic & Mapping: granular \\
+\hline
+Colour themes for background or site & Sliders, levels, dials, larger colour ranges for detail \\ 
+\hline
+\rowcolor[gray]{.9} Mapping: local, overall, basic & Mapping: granular \\
+\hline
 Storytelling & Agnostic \\ 
+\hline
 \rowcolor[gray]{.9} Emojis & Agnostic \\ 
+\hline
 Simpler vocabulary & Technical, scientific vocabulary \\ 
-\rowcolor[gray]{.9} Popular Icons & Scientific Icons \\ 
+\hline
+\rowcolor[gray]{.9} Popular icons & Scientific icons \\ 
+\hline
 Fewer numbers & More numbers \\ 
-\rowcolor[gray]{.9} Summaries & Data Layers \\
-Pollutant seen as aggregate or not specifically named & Types of pollutants \\ 
-\rowcolor[gray]{.9}\multicolumn{2}{|c|}{Charts} \\ 
+\hline
+\rowcolor[gray]{.9} Summaries or aggregates & Data layers \\
+\hline
+Pollutants shown as aggregates or not specifically named & Types of pollutants \\ 
+\hline
+\rowcolor[gray]{.9}\multicolumn{2}{|c|}{Charts } \\ 
+\hline
 \multicolumn{2}{|c|}{Scale: local and national} \\
+\hline
 \rowcolor[gray]{.9}\multicolumn{2}{|c|}{Search} \\ [0.5ex]
-\hline%inserts single line
+\hline
 \end{tabular}
 \label{table:data_features} % is used to refer this table in the text
-\scriptsize
-% \footnotesize\emph{Source:} Table created by the author
 \end{table}
 
 Looking at these features helps understand some of the motivations for people to engage with city data. With non-expert systems there is a clear emphasis on features that put data in a form that gives people immediate benefits (e.g., providing daily levels of pollutants) and links it to health and quality of life. There is also importance on personal and place-placed awareness through making links with places of importance (e.g, schools, nurseries, shopping areas) and activities that people engage in there (e.g., storytelling). Non-expert systems also try to give people already processed data (e.g., air quality indexes and summaries, readings represented through emojis and popular icons) rather than fine grain readings from the sensors.
 
-% what are the motivations and goals for people to engage with the data
-% community informatics stuff here?
-There is vast quantities of data being generated from sensing the city and they are increasingly becoming available for people, however the question of what to with those data remains. How can people use this data effectively to improve their life and community? What are issues that are impacting people in these communities and how can these new data sources help to assert positive change in light of those issues? Enabling communities to start voicing their ideas and issues would help find links where data and technology could act as a resource for exploring and tackling those issues.
+There are vast quantities of data being generated from sensing the city and those data are increasingly becoming available for people through different platforms. However the question of what can citizens do with those datasets remains. Looking back to \citet{arnstein_ladder_1969} ladder of participation (Chapter \ref{chap:literature} on Figure \ref{fig:ladder}), it seems that most of the current ways of projecting city data to non-expert citizens are still on the \textit{tokenism} steps. It is becoming more evident that issue-led approaches are having greater impact to the lives of citizens than the ones that are implemented through organisational strategies. There are examples of projects like Bristol Approach, initiated by \citet{balestrini_city_2017}, which take people led and issue led approach in tackling community issues through capacity building and usage of sensor technology and Public Lab\footnote{\url{https://publiclab.org}} which bring together, community groups, researchers and technologist to come up with low cost solutions and tools to explore local issues. This is also evident in Citizen Science, where platforms like SciStarter\footnote{\url{https://scistarter.com}} enables citizen scientist to form community networks around issues that are important to them and instead of just volunteering their time or acting as `citizen sensors' \citep{goodchild_citizens_2007}, they can engage with other citizen scientists and scientists working on different projects. To help citizens move up on the participation latter, the research needs to look into ways data can be used by citizens to improve their personal and community life. A good starting point might be understanding and helping communities start voicing the issues that are impacting their neighbourhoods, and looking at ways where data and technology could act as a resource for exploring and tackling those issues at a hyper-local scale.
 
+% how can these new data sources help to assert positive change in light of those issues. 
+% Enabling communities to start voicing their ideas and issues
+% would help find links where data and technology could act as a resource for exploring and tackling those issues.
 % Change title maybe -- Community Networks
 % Add a section about infrastructuring here
-\subsection{Communities and Networks}
-\petenote{2.3.1/2.3.2/2.3.3.  Study Context. Air that we breathe. Configuring participation
- A good bit of context setting. But it feels like it lacks a bit of direction, the sentences that finish each section don’t always lead the reader naturally into the next section, and the experience is of getting lots of chunks of very interest information but not seeing how to relate them. Probably just need to rehearse the ordering of sections and the logic of the argument that underlies the ordering you have chosen.
-Section 2.3.3 is a bit of a jump to a methods section rather than a background.
-I suggest you consider whether 2.3.3. does work better as part of 2.3.4. (Approach) which is more about how you designed the study.}
+\subsection{Data For Community Problem Solving Activities}
 % Publics - Dewey 1954 [1927]
 % Community networks - (John M Carroll and Mary Beth Rosson. 2003. A Trajectory for Community Networks. The Information Society 19: 381–393.)
 % Korn, M. & Voida - infrastructuring
@@ -184,7 +189,7 @@ I suggest you consider whether 2.3.3. does work better as part of 2.3.4. (Approa
 % Bristol approach
 % Non-profits focused on enviromental (http://habitatmap.org/ aircasting)
 % air pollution experts
-An important prerequisite of using data within communities is to identify the needs of community through surfacing common concerns \citep{marres_issues_2007}. This comes back to the ideas of communities of practice posited by \citet{lave_situated_1991} which stresses the importance of issues that overweight the organisational ties and bring people together to achieve common goals. Furthermore, it is commonplace for \textit{community networks} to form around those issues which support interactions between people, help articulate shared concerns and values, facilitate gathering information and build up shared knowledge \citep{carroll_trajectory_2003}.
+It is becoming apparent that an important prerequisite of using data by communities is to identify the needs of community through helping surface common concerns \citep{marres_issues_2007}. Literature review in Chapter \ref{chap:literature} Section \ref{sub:com_net} looked at different ways how groups, CoPs \citep{lave_situated_1991} and \textit{publics} \citep{dewey_public_1954} form and come together around issues to achieve common goals. Furthermore, it was pointed out that mix of different groups are often referred to as \textit{community networks}, which support interactions between people in different groups, help articulate shared concerns and values, facilitate gathering information and build up shared knowledge \citep{carroll_trajectory_2003}.
 
 % https://wenger-trayner.com/resources/communities-versus-networks/
 % All communities of practice are networks in the sense that they involve connections among members. But not all networks are communities of practice: a community of practice entails shared domain that becomes a source of identification. This identity creates a sense of commitment to the community as a whole, not just connections to a few linking nodes.
@@ -204,29 +209,13 @@ An important prerequisite of using data within communities is to identify the ne
 % https://snuffelfiets.nl/
 
 % organisations inform around issues
-Although communities of practice move away from organisational ties and issues take precedence, organisations or community based institutions \citep{carroll_trajectory_2003} often organically form around issues of importance. It is particularly prevalent with environmental justice, where groups of individuals come together to fight issues linked to climate change and sustainability. For example international non-profit organisation such as Friends of the Earth\footnote{\url{https://friendsoftheearth.uk/}} who campaigning for climate change, nature conservation and environmental protection, or more localised citizens' groups like Group Against Smog (GAS) in Pennsylvania, US and SPACE for Gosforth in Newcastle, UK who are campaigning towards healthier, safer and sustainable environments. 
+Although community networks move away from organisational ties and issues take precedence, organisations or community based institutions \citep{carroll_trajectory_2003} often organically form around issues of importance. It is particularly prevalent with environmental justice, where groups of individuals (from different professional and non-professional backgrounds) come together to fight issues linked to climate change and sustainability. For example international non-profit organisation such as Friends of the Earth\footnote{\url{https://friendsoftheearth.uk/}} who campaigning for climate change, nature conservation and environmental protection, or more localised citizens' groups like Group Against Smog (GAS) in Pennsylvania, US and SPACE for Gosforth in Newcastle, UK who are campaigning towards healthier, safer and sustainable environments. These groups are definitely one of the potential active users of city data, and are often already actively leveraging the existing data for raising awareness and for community problem solving activities.
 
-Nowadays wider availability of internet and ICT are enabling community networks to form quicker and mobilise better. Digital tools and network capabilities give people change to participate in community life even when they can not attend face-to-face meetings. Additionally, with the rise of civic minded \citep{olivier_digital_2015} approaches to service provisioning, more resources are becoming available for communities to conduct and help engage people in inquiry-driven investigations. Among these are online-resources such as Beautiful Rising\footnote{\url{https://beautifulrising.org/}} which provides a resources for activist groups to voice their concerns and Digital Civics Toolkit\footnote{\url{https://www.digitalcivicstoolkit.org}} that aims to help educators engage youth in exploration of civic issues and capabilities of digital tools for political participation. Formation of community networks are also supported by popularity of social media platforms and online communities, and increasing push to create digital cities, digital twins and digital communities. 
+However, nowadays the wider availability of the Internet and ICT are enabling community networks to form quicker and mobilise better. Digital tools and network capabilities are enabling people to participate in community life even when they can not attend face-to-face meetings. Internet has provided people mediums for communications and for new networks to surface. For example posting of information to public websites and blogs, sharing of content on social media platforms like Twitter and engaging people in discussions around local issues on Facebook groups. In addition to popularity of social media platforms and online communities \citep{crivellaro_pool_2014,afzalan_planning_2015}, the formation of community networks are also supported by increasing push to create digital cities, digital twins \citep{bolton_gemini_2018} and digital communities \citep{carroll_strengthening_2018}. \citet{carroll_trajectory_2003} makes a distinction between community networks and network communities, pointing out that the latter is limited to only having interactions on the internet. However they acknowledge that the availability of different technologies (i.e., community network resources) are changing the way how community networks and \textit{proximate communities}, that associate with common activities and places in the community, operate. Furthermore, with the rise of civic minded \citep{olivier_digital_2015,vlachokyriakos_digital_2016} approaches to service provisioning, more resources are becoming available for communities to conduct and help engage people in inquiry-driven investigations. Among these are online-resources such as Beautiful Rising\footnote{\url{https://beautifulrising.org/}} which provides a resources for activist groups to voice their concerns and Digital Civics Toolkit\footnote{\url{https://www.digitalcivicstoolkit.org}} that aims to help educators engage youth in exploration of civic issues and capabilities of digital tools for political participation. Although ICT provides more ways to increase communication and exploration of common issues, it can also inhibit participation by creating network communities which are limited to people who have access to these online digital services resulting in a bigger \textit{`digital divide'} \citep{gurstein_effective_2003}. Additionally there is often more tangible value generated from in situ and informal social encounters where information exchange in happening. \citet{carroll_trajectory_2003} points out that social context helps gain focus and makes the activities more goal-oriented. People are more likely to commit to responsibilities and make something happen which has vital importance, because the success and failure in community-led projects depend largely on individual initiative-taking \citep{carroll_participatory_2007}. However how things are actually done and responsibilities to make something happen is face-to-face and in small core groups of communities which have combined people with different skills. 
+\newline
 
-\citet{carroll_trajectory_2003} distinguish community networks from network communities which are only limited to interactions on the internet. However they acknowledge that the availability of different technologies (i.e., community network resources) are changing the way how community networks and \textit{proximate communities}, that associate with common activities and places in the community, operate. 
-
-% importance of place to a community
-
-% identify the underlying relations that constitute networks as supporting infrastructure for proximate communities
-
-Internet provides mediums for communications and for new networks to surface. For example posting of information to public websites and blogs, sharing of content on social media platforms like Twitter and engaging people in discussions around local issues on Facebook groups. Although ICT provides more ways to increase communication and exploration of common issues, it can also inhibit participation by creating network communities which are limited to people who have access to these online digital services resulting in a bigger \textit{`digital divide'}. Additionally there is often more tangible value generated from in situ and informal social encounters where information exchange in happening. \citet{carroll_trajectory_2003} points out that social context helps gain focus and makes the activities more goal-oriented. People are more likely to commit to responsibilities and make something happen which has vital importance, because the success and failure in community led projects depend largely on individual initiative-taking \citep{carroll_participatory_2007}. 
-
-
-However how things are actually done and responsibilities to make something happen is face to face and in small core groups of communities which have combined people with different skills.
-
-% Community groups however are often limited to the tools and resources that they can use to participate in the decision making processes and are being dependent on professional services provided by government and experts. This means that somebody else controls the knowledge making processes around those issues. 
-
-It is becoming more evident that issue-led approaches are having greater impact to the lives of citizens than the ones that are implemented through organisational strategies. 
-
-There are examples of projects like Bristol Approach, initiated by \citet{balestrini_city_2017}, which take people led and issue led approach in tackling community issues through capacity building and usage of sensor technology and Public Lab\footnote{\url{https://publiclab.org}} which bring together, community groups, researchers and technologist to come up with low cost solutions and tools to explore local issues. This is also evident in Citizen Science, where platforms like SciStarter\footnote{\url{https://scistarter.com}} enables citizen scientist to form communities of practice around issues that are important to them and instead of just volunteering their time or acting as `citizen sensors' \citep{goodchild_citizens_2007}, they can engage with other citizen scientists and scientists working on different projects.
-
-An interesting 
-
+\noindent
+Multiple concerns have been surfaced around the way city data is currently generated, made available and used by communities to surface and address local issues. What was surfaces is that community groups are often limited in terms of tools and resources that they can access and use to participate in the decision making processes, and are often dependent on professional services and solutions provided by governments and experts. This means that somebody else might be controlling the knowledge making processes around those issues. On the other hand, there are already examples of groups that are actively using the data for example environmental justice, however there might be more groups that have different agendas, focuses and skills; who are yet to benefit from the city data. There is a need for mechanisms that support different community groups and individuals coming together to form networks, which consist of multiple stakeholders at different levels of expertise and also power structures. Furthermore, there a need for creating a synergy of online-offline infrastructures and participation methods in order to address the inequality issues around participation and local decision making using data.
 
 % This is an interesting case because it emphasises that distinction between a community network and network community is not necessarily a matter of the current distance between interlocutors as it is a matter of the place-based knowledge and experiences they share. (Carroll 2003)
 
@@ -234,131 +223,115 @@ An interesting
 % different groups have different agendas and focuses and skills
 % Identifying  community champions who are willing to engage the rest of community 
 % multifaceted
-Looking at issues in the city needs a holistic approach and inclusion of all multiplicity of stakeholders.
-Carroll et al has identified the .... for community networks
+% Looking at issues in the city needs a holistic approach and inclusion of all multiplicity of stakeholders.
+% Carroll et al has identified the .... for community networks
 % maintenance issues of information services, can be solved with automated scripts that pull data from the sources (data generators)
-synergy of online-offline presents and participation methods.
 
-\section{Study context}
+\section{Study Context}
+
+The following sections will give an overview of the context that this research was conducted: what were the particularities of the context in terms of challenges and also the opportunities for the research.
 
 \subsection{Effects of Urbanisation}
 \label{sub:urbanisation}
 
-Everyone needs their space to live, work and get around doing their everyday activities. However with more than half of the world's population now living in cities it is becoming increasingly more difficult. It is estimated that the urbanisation will continue and almost 90\% of they world's population will live in densely populated urban environments by the year 2050. As the space in the centres become more of a deficit, cities become dispersed and more people inhabit the outskirts of urban areas. Although people live on the edges of downs and cities, they often work or have to travel because of work to the centres. According to UK government's department of transport the total number of vehicles in Great Britain has increased every year since the Second World War with an average growth of 640 thousand per year. This increased volumes of traffic and people commuting to the city centres consequently creates problems of congestion and air quality. This means that cities are faced with a multifaceted problem that requires the collaboration of policy-makers, city architects, transportation and city planners, public health officials, but also citizens.
+Every citizen needs their space to live, work, play and get around doing their everyday activities. However with more than half of the world's population now living in cities it is becoming increasingly more difficult. It is projected that the urbanisation will continue and about 68\% \citep{ritchie_urbanization_2018} of they world's population will live in densely populated urban environments by the year 2050. As the space in the centres become more of a deficit, cities become dispersed and more people inhabit the outskirts of urban areas. Although people live on the edges of downs and cities, they often work or have to travel because of work to the centres. According to UK government's department of transport the total number of vehicles in Great Britain has increased every year since the Second World War with an average growth of 630 thousand per year\footnote{\url{https://www.gov.uk/government/statistics/vehicle-licensing-statistics-2018}}. This increased volumes of traffic and people commuting to the city centres consequently creates problems of congestion and air quality. This means that cities are faced with a multifaceted problem (i.e., `wicked problem') that requires the collaboration of policy-makers, city architects, transportation and city planners, public health officials, but also citizens.
 
-% similarly to other cities like Atlanta (Asad 2017) the city is undergoing an urban shift and trying to create an environment for modal changes. cycling focus
+In July 2017 the Department for Environment, Food and Rural Affairs (DEFRA) and Department for Transport announced its plan for tackling roadside nitrogen dioxide concentrations in the UK. This was a direct response to the illegal levels of air pollutants in 29 of local authorities in the UK\footnote{\url{https://www.gov.uk/government/publications/air-quality-plan-for-nitrogen-dioxide-no2-in-uk-2017}}. Among them were Gateshead Metropolitan Borough, North Tyneside and Newcastle in the North East of England, which are the focus areas of this case study. The local authorities have to come up with a combined task force to come up with proposals and solution to tackle these illegal levels of air pollutants. 
+Newcastle and Gateshead which are facing opposite to each other, separated by the River Tyne and connected via multiple bridges are both old coal mining areas, and with North Tyneside and connection to the North Sea the area also has also strong routes to shipbuilding. Although both of these industries are not active any more, they are still part of peoples historical identities, places and spaces. Newcastle is the biggest city in the North East of England with an area of 44 square miles and the population of 300,196 averaging an age of 37 years, having a 58.3 percentage of households who own or have access to a car according to Census 2011. As new developments are taking place in the and more people are moving into the area, the roads need to cope with increased amounts of traffic.
 
-In July 2017 the Department for Environment, Food and Rural Affairs and Department for Transport announced its plan for tackling roadside nitrogen dioxide concentrations in the UK. This was a direct response to the illegal levels of air pollutants in 45 of local authorities in the UK. Among them were Gateshead Metropolitan Borough, North Tyneside and Newcastle upon Tyne (Newcastle) which are the focus areas of this case study. The local authorities have to come up with a combined task force to come up with proposals and solution to tackle these illegal levels of air pollutants. 
-Newcastle and Gateshead which are facing opposite to each other, separated by River Tyne and connected via multiple bridges are both old coal mining areas, and with North Tyneside and connection to the North Sea the area also has also strong routes to shipbuilding. Although both of these industries are not active any more, they are still part of peoples historical identities, places and ....
-
-% add stats about the population (count, med age, etc) and car ownership old mining and ship building industrial area
-As new developments are taking place in the 
-more people moving into the area
-Roads are not built to accommodate these amounts of traffic
-
-There were already two 'Air quality Management Zones' is the Newcastle upon Tyne which have been under constant monitoring from 1995 since the release of the Environmental Act. Similarly to other cities and towns in the UK, the area is undergoing an urban shift to try create an environment for modal change and multi-modal transportation. Alongside with attempts of improving the public transportation networks there is a particular focus on improving cycling infrastructure and update of cycling as means of transport in the are. Up to this date, the local council (i.e. Newcastle council) has taken steps to promote alternative means of travel and invested in infrastructure for active travel through the UK Government's The Cycling and Walking Investment Strategy (CWIS). Despite these measures, the problems still persist and there are discussions of implementing more drastic measures like closing roads and implementing Clean Air Zones. Even if these kind of measures are put in place, with the growing trend of urbanisation, the estimation of zero emissions journeys emissions by 2050 seem unrealistic. It became clear quite early that the only way to tackle issues with air quality is to tackle the sources. This means a wider engagement with citizens to increase public awareness around the issue and work together to come up with viable solution for getting around the city for everyone.
-
-% section about Streets for People and SpaceForGosforth?
-% One part of the Newcastle has a group
+There were already two 'Air quality Management Zones' in Newcastle, which have been under constant monitoring from 1995 since the release of the Environmental Act\footnote{\url{http://www.legislation.gov.uk/ukpga/1995/25/contents}}. Similarly to other cities and towns in the UK, the area is undergoing an urban shift to try create an environment for modal change and multi-modal transportation. Alongside with attempts of improving the public transportation networks there is a particular focus on improving cycling infrastructure and update of cycling as means of transport in the are. Up to this date, the local council (i.e., Newcastle council) has taken steps to promote alternative means of travel and invested in infrastructure for active travel through the UK Government's Cycling and Walking Investment Strategy (CWIS)\footnote{\url{https://www.gov.uk/government/publications/cycling-and-walking-investment-strategy}}. Despite these measures, the problems still persist and there are discussions of implementing more drastic measures like closing roads and implementing Clean Air Zones. Even if these kind of measures are put in place, with the growing trend of urbanisation, the estimation of zero emissions journeys emissions by 2050 seem unrealistic. It became clear quite early that the only way to tackle issues with air quality is to tackle the sources. This means a wider engagement with citizens to increase public awareness around the issue and work together to come up with viable solution for getting around the city for everyone.
 
 \subsection{The Air We Breathe}
 \label{sub:breathe}
 
-According to the 2016 report "Every breath we take - The lifelong impact of air pollution" published by the Royal College of Physicians and the Royal College of Paediatrics and Child Health, outdoor pollution is linked to around 40,000 yearly deaths in the United Kingdom. In addition to explaining the repercussions of bad air quality on people's health, the report also provides recommendations for action and research for national and local
-government, business and industry, schools and the National Health Service (NHS), as well as communities and individuals citizens. Among the recommendations for tackling air pollution as an individual were: be aware of the air quality where you live and harness technology to stay informed and monitor air pollution effectively. Having access to this kind of information locally could not only help raise awareness around the issue, but also could help people make better decisions about their travel choices. However, what does it mean to monitor air pollution effectively and does everyone have the means to do that in their neighbourhood?
+According to the 2016 report "Every breath we take - The lifelong impact of air pollution" published by the Royal College of Physicians and the Royal College of Paediatrics and Child Health\footnote{\url{https://www.rcplondon.ac.uk/projects/outputs/every-breath-we-take-lifelong-impact-air-pollution}}, outdoor pollution is linked to around 40,000 yearly deaths in the United Kingdom. In addition to explaining the repercussions of bad air quality on people's health, the report also provides recommendations for action and research for national and local
+government, business and industry, schools and the National Health Service (NHS), as well as communities and individuals citizens. Among the recommendations for tackling air pollution as an individual were: \textit{``be aware of the air quality where you live and harness technology to stay informed and monitor air pollution effectively''}. Having access to this kind of information locally could not only help raise awareness around the issue, but also could help people make better decisions about their travel choices. However, not everyone has the means to monitor air pollution `effectively' and even more so do it in their local neighbourhood. 
 
-City of Newcastle upon Tyne hosts one of six national urban observatories in the United Kingdom [REF]. Each city take a slightly different viewpoint, but are all focused on environmental monitoring and data collection in some way or another. Newcastle's Urban Observatory\footnote{\url{http://urbanobservatory.ac.uk}} aims to provide a resource for understanding the impact of the city and the complex interactions in it through sensing and data collection. The observatory operates as openly and transparently as possible to provide the best public access to environmental information from the city and do it the way in which promotes that information being used by a wide range of stakeholders - environmental scientists, city officials, universities, businesses, but also including regular citizens to promote initiatives that involve community-led investigation. Observatory's data portal has had over 5 million data downloads from when it was initially set up. Despite of the best efforts of the project to make data accessible and usable for everyone the data were mainly used by individuals or groups of expert users thus not living up for the slogan of the observatory - "Data for Everyone". The questions that surfaced where whether the public actually cares about environmental data or is there a need for a different approach of citizen engagement? 
+City of Newcastle hosts one of the six national urban observatories in the United Kingdom\footnote{\url{https://gtr.ukri.org/projects?ref=EP/R013411/1}}. Each city takes a slightly different viewpoint, but are all focused on environmental monitoring and data collection in some way or another. Newcastle's Urban Observatory (UO)\footnote{\url{https://urbanobservatory.ac.uk}} aims to provide a resource for understanding the impact of the city and the complex interactions in it through sensing and data collection. The UO operates as openly and transparently as possible to provide the best public access to environmental data from the city and do it the way in which promotes that information being used by a wide range of stakeholders -- environmental scientists, city officials, universities, businesses, but also including regular citizens to promote initiatives that involve community-led investigation. The UO's data portal\footnote{\url{https://newcastle.urbanobservatory.ac.uk}} has had over 5 million data downloads from when it was initially set up. Despite of the best efforts of the project to make data accessible and usable for everyone the data were mainly used by individuals or groups of expert users thus not living up for the slogan of the observatory -- "Data for Everyone". Having the UO already established served as a great opportunity to investigate ways that we can open these resources up for citizens and for community use, helping to understand whether the public actually cares about environmental data or is there a need for a different approach of citizen engagement. 
+\newline
 
-In order to answer these questions, a more participatory approach was taken to explore ideas of engaging citizens with the smart city and data produced by the Urban Observatory. The aim of the research was not ....
-These In the early stages of the investigation there 
-Although issue of air quality is not the sole focus of the study around citizen participation in the smart city it is definitely one of the key drivers for the local authority and the citizens effected and involved in the study.
+\noindent
+In order to get a better understanding of the challenges in this context and use the available opportunities, a more participatory approach was taken to explore ideas of active citizen participation in the smart city and with the data produced by the UO. The aim of the research was come up with mechanisms to democratise data production and use in the smart city, by enabling citizens to collect and explore data relevant to the issues that are important to them at hyper-local scale.
 
+\subsection{Study Design}
 
-% Early in the research, we were interested in contrasting the difference in advocacy practices present in the two cities. However, even as specific street-level solutions would dif- fer, or where political rhetoric reflected local conditions, the tools and techniques for outreach and building support were very similar in both contexts. Across both cities, cycling advocacy work engaged insider and outsider strategies, as well as diverse technological platforms to execute those strategies: from individual cyclists concerned with personal safety, to self-organized community events aimed at raising visibility and awareness, to institutional actors lobbying for specific bike-friendly policy changes. (Asad 2017)
+The motivations outlined in Section \ref{sec:sms_mod} within the context of local issues of increasing urbanisation which affect peoples' health and how they get around in the city (Section \ref{sub:urbanisation} and \ref{sub:breathe}), and the potential availability of resources which could be used to shed light on those issues, opened up an opportunity for research to understand how could data production be democratised and used to better engage communities affected by these issues.
 
-\subsection{Configuring Participants}
-\philnote{Anecdotes not good. How to you present that -- personal reflection}
+The case study followed the overall methodology of the research conducted in this thesis (see Section \ref{sec:research-approach}), which uses participatory action design research, aiming to understand the communities needs through engagement activities and user-centred design processes to come up with digital tools and processes to support people led investigations and advocacy efforts. The initial interest of the community was explored in a 2.5 hour workshop (Section \ref{sub:pinsonamap}) where two activities were run in order to explore current practices of advocacy groups, communities' data needs and technologies which would support collection and effective use of that data for civic advocacy and action. The workshop was recorded and transcribed for further analysis. Transcriptions and written material from the workshop were analysed and coded drawing on \citet{braun_using_2006}, to identify themes around concerns and flesh out initial design ideas for the usages of data by communities.
 
-One of the areas of Newcastle had an already established community action group who were advocating for changes to city infrastructure to promote walking and cycling. It consisted of people of different demographics, skills and backgrounds. The group was doing a lot of lobbing and raising awareness around the effects of air quality and the infrastructure changes being 
-implemented in the city, but doing it in a more digestible blog form to the members of the general public. They were also actively using the data produced by some of the sensors deployed by the Urban Observatory at Newcastle University. Form the initial meetings with the group initiators span an ongoing 3-year ethnographic engagement with walking and cycling advocates in the area. Ethnographic work helped to understand the exciting practices of the groups and how they leverage data and technology in their advocacy work. The core members of the action group became the key people for making connections with the wider community.
+\subsubsection{Configuring Participants}
+\label{sub:config_par}
 
-In addition to having meetings with the group organisers I also attended group's annual meeting where they planned their focus and activities for the year. Based on observations and conversations with members of the group, it was evident there is a lot of interest in using data in an actionable way. Also there was potential funds for infrastructure changes allocated for public proposals and people were keen to gather evidence about air quality and traffic movements in the area to use as a basis for backing up their proposed changes. From these findings the initial workshop was designed to explore further ways to promote usage of data for raising awareness about the issues in local neighbourhoods and for civic action.
+One of the areas of Newcastle already had an established community action group who were advocating for changes to city infrastructure to promote walking and cycling. It consisted of people of different demographics, skills and backgrounds. The activities of the group included lobbing and raising awareness around the effects of air quality and the infrastructure changes being implemented in the city. The main communication of ideas from the group was done through public meetings and by publishing articles on a blog form to the members of the general public. They were also actively using the data produced by some of the sensors deployed by the UO at Newcastle University. From the initial meetings with the group initiators followed a 2-year ethnographic engagement with walking and cycling advocates in the area. Ethnographic work helped to understand the exciting practices of the groups and how they have leveraged the data and technology in their advocacy work. The core members of the action group became the key people for making connections with the wider community. In addition to having meetings with the group organisers the author also attended group's annual meetings where they planned their focus and activities for the year. Reflecting on the ethnographic work and conversations had with the members of the group, there seemed to be a lot of interest in using data in as resource for advocacy and action. Furthermore, there were potential funds for infrastructure changes allocated for public proposals and people were keen to gather evidence about air quality and traffic movements in their local areas to use as a basis for backing up their proposed changes.
 
-Initial workshop participants were recruited by snowball sampling through the existing advocacy group members. Overall 22 participants took part in the workshop activities. Workshop did not only provide a deeper insight to people's perceptions of data and its uses for civic advocacy, it also helped broaden the participation and make connections with a group of interested residents in another part of the city (2 miles from Newcastle city centre) which had scarcity of hyper-local environmental data. The area itself has historically seen as heavily populated by students, which now is now shifting more towards residential with bigger proportion of young professionals and families settling down in the neighbourhood. Furthermore there was no interest from the government to start doing environmental monitoring in the area because of the lack of evidence to do so from official modelling. However people who used the spaces daily were seeing issues raising with infrastructure changes and increased volumes of traffic.
+From these reflections an initial workshop (Section \ref{sub:pinsonamap}) was designed to explore further ways to promote usage of data for raising awareness about the issues in local neighbourhoods and for civic advocacy and action. The initial workshop participants were recruited by snowball sampling through the existing advocacy group members. Overall 22 participants took part in the workshop activities. The workshop did not only provide a deeper insight to people's perceptions of data and its uses for civic advocacy, it also helped broaden the participation and make connections with a group of interested residents in another part of the city (2 miles from Newcastle city centre) which had scarcity of hyper-local environmental data. The area itself has historically seen as heavily populated by students, which now is now shifting more towards residential with bigger proportion of young professionals and families settling down in the neighbourhood.
+% Furthermore, according to the participants there was no known plans from the government to start doing environmental monitoring in the area because of the lack of evidence to do so from the official air quality modelling. However people who used the spaces daily, pointed out that they are seeing issues raising with the infrastructure changes and increased volumes of traffic.
 
-The group of residents who helped guide the design for setting up the sensor commissioning toolkit consisted of 8 local residents. Each participant had a degree of knowledge around modern ICT technologies and social computing. All the participants where professionals or ex-professionals working across different disciplines: academia, planning, law, health care, ICT. All participants had previously taken part, or were involved in public consultations (i.e., new cycle schemes and infrastructure changes) in the area and took part in advocacy activities in some respect. These efforts manifested in taking part of group bike rides, organising community meetings, raising awareness in the community (e.g., by engaging local schools, churches and talking at community events) and having active social media presents. Four participants where involved in forums like healthy streets board which discusses transport, health, air quality and cycling stakeholder forum which brings together people who have interest in cycling in the city. One participant was also involved with a local charity which is promoting cycling and up-cycling old bikes for donations. All participants where active advocates in their respective fields. For example publishing videos as public health professionals raising awareness about increasing health issues caused by lack of activity and air pollution, analysing and publishing data about car traffic to support promotion of active travel in planning polices.
+\begin{table}[!th]
+\centering
+\footnotesize\centering\emph{Source: Author}
+\smallskip\centering
+\caption{People involved in the co-design process}
+\begin{tabular}{|c|c|}
+  \hline
+	\textbf{Participant} & \textbf{Roles} \\
+  \hline
+   \rowcolor[gray]{.9} P1 &  father, general practitioner working at the NHS \\
+   \hline
+    P2 &  local charity trustee, retired council worker (city planner) from a different council  \\
+  \hline
+   \rowcolor[gray]{.9}  P3 &  professional working in ICT \\
+  \hline
+    P4 &  father, manager working in academia \\
+  \hline
+   \rowcolor[gray]{.9}  P5 &  father, lawyer \\
+  \hline
+    P6 &  mother, professional working at the NHS \\
+  \hline
+   \rowcolor[gray]{.9}  P7 &  father, public relations officer \\
+  \hline
+    P8 &  consultant \\
+  \hline
+\end{tabular}\label{table:sms_par}
+\end{table}
 
-Clearly all the participants in the group where part of set of different networks and already involved with official and unofficial or \textit{insider} and \textit{outsider} activities \citep{asad_tap_2017} around the issues. Insider activities being the ones connected to institutional strategies and outsider activities are more indirect which often involve community organising and using ad-hock digital technologies to participate in civic advocacy. All the the participants where regular cyclist themselves and used their bikes for communing, leisure rides and in case of one participant also for sport. Additionally, three participants who here parents with young children where encouraging active lifestyles for their young by doing school runs on bikes, scoots or on foot. 
-% setting examples and committing individual efforts
+The group of residents who were the main people who helped guide the design for setting up the sensor commissioning toolkit consisted of 8 local residents (Table \ref{table:sms_par}). Each participant had a degree of knowledge around modern ICT technologies and social computing. All the participants where professionals or ex-professionals working across different disciplines: academia, planning, law, healthcare, ICT. All participants had previously taken part, or were involved in public consultations (i.e., new cycle schemes and infrastructure changes) in the area and took part in advocacy activities in some respect. These efforts manifested in taking part of group bike rides, organising community meetings, raising awareness in the community (e.g., by engaging local schools, churches and talking at community events) and having active social media presents. Four participants where involved in forums like healthy streets board which discusses transport, health, air quality; and cycling stakeholder forum which brings together people who have interest in cycling in the city. One participant was also involved with a local charity which is promoting cycling and up-cycling old bikes for donations. All participants where active advocates in their respective fields. For example publishing videos from a perspective of a public health professional raising awareness about increasing health issues caused by lack of activity and air pollution, or analysing and publishing data about car traffic to support promotion of active travel in planning polices.
 
-This case study analysis is mainly focused on the small sample of participants in a particular advocacy group which limits the findings to be generalised to the whole population. Additionally this particular group consisted of people who were professionals in their respective areas and had a very good knowledge of the issues they engaged with. However, outside this group more people have signed up through the infrastructure that have been set up as a result of this research. The success of the project and the interest from the community is also illustrated by the fact that additional organised advocacy groups have been created based on the model of this one. Particularly using data and digital tools that have been designed through the project to raise awareness and push for positive change in the community.
+Clearly all the participants in the group were part of set of different community networks and already involved with official and unofficial or \textit{insider} and \textit{outsider} activities \citep{asad_tap_2017} around the issues. Insider activities being the ones connected to institutional strategies and outsider activities are more indirect which often involve community organising and using ad-hock digital technologies to participate in civic advocacy. All the the participants were regular cyclist themselves and used their bikes for communing, leisure rides and in case of one participant also for sport. Additionally, three participants who here parents with young children were encouraging active lifestyles for their young by doing school runs on bikes, scoots or on foot.
 
-% Cycling community (SPACE for Gosforth) 14 July 2016 first met Ali
-% Ethnographic work and going to their events
-% Building relationships with the community
-% workshop - 22 participants
-% snowball sampling
+\subsubsection{Design Process}
 
-% initial interest group focus
-% ethnographic work - participating in meetings and in citizen organised events (setting up the group)
-% focus groups and interviews and participating in email exchange and in online media groups
-% Core group of 8 + me and Sean (core group was 5 people excluding me)
-% talk about the limitations of the sample
+The case study consists of two parts: (1) the design, development, deployment and analysis of community commissioning toolkit; and (2) the evaluation of use and value of the commissioned sensor data by the community (Chapter \ref{chap:sensemystreet-eval}). The first part of the case study, which is described in this chapter, focuses on the setting up of the sensor commissioning toolkit through working together with a group of residents who are advocating for active travel and infrastructure changes in their local area and the city. This was conducted through an 8-month long iterative design process which consisted of: building relationships and understanding the community; gathering design requirements and responding with technologies that could help people better generate data; and assessing the use of the tools and processes by the community. The process is reported through ethnographic engagement with a advocacy group which involved regular meetings, emails and discussions of Facebook group; observations at group organised public events and meetings around the issues of concern; and collected statistic of the use of different platform of the toolkit.
 
-% Demographics of the participants (retired ex professionals, professionals) health professionals also concerned about peoples health. Academia - planning, law, NHS professional, retired former council worker from a different council (city planner), general practitioner working for NHS, professional working in IT
+This part of the case study analysis is mainly focused on the small sample of participants in a particular advocacy group which limits the findings to be generalised to the whole population. Additionally the particular group involved in the design of the toolkit consisted of people who were professionals in their respective areas and had a very good knowledge of the issues they engaged with. However, outside this group more people have signed up through the infrastructures that have been set up as a result of this research. The success of the project and the interest from the community is also illustrated by the fact that additional organised advocacy groups have been created based on the model of this one. Particularly using data and digital tools that have been designed through the project to raise awareness and push for positive change in the community. Although issue of air quality took precedent in the case study and was definitely one of the key drivers for the local authority and the citizens involved in the study, it is not the sole focus of the commissioning toolkit, and the research around active citizen participation and data production in the smart city.
 
-% Advocacy work outside - group rides, organising community meetings, raising awareness in the community (schools, churches, community events), active social media presents, participating in public consultations and schemes. 
-% insider outsider activities/online offline activities/ Part of networks
-
-% Regular cyclists for commuting, sport and leisure
-
-% Outside the group this analysis focuses on more people have signed up through the infrastructure ...
-% Also additional advocacy groups have been started to base on the model of this one
-% Having data to display and point at
-
-\subsection{Approach}
-\petenote{Reads more like a study design than a general approach
-Why action research why not design research?
-Commissioning re-appears here but has been missing from sections leading to this point, which are mainly about problem/issue setting not solution design. Consider adding to those lead up sections a section to include what the design proposal is and why (how it responds to the problem setting sections).}
-Case study followed the overall methodology of the PhD research (see Section \ref{sec:research-approach}) which uses action research (Hayes 2011) aiming to understand the communities needs through engagement activities and user centred design processes to come up with tools and processes to support people led investigations and advocacy efforts.
-
-The motivation for the study (see Section \ref{sub:urbanisation} and \ref{sub:breathe}) was the increasing urbanisation which affect peoples' health and how they get around in the city, and the availability of resources which could shed light on these processes and issues they rise. Although there was increasing availability of data about these issues there was not a lot of engagement from the people who were affected by these issues.
-
-The Initial interest of the community was explored in a X hour workshop where two activities were run in order to explore current practices of advocacy groups, communities data needs and technologies which would support collection and effective use of that data for civic action and advocacy. The Workshop was recorded and transcribed for further analysis. Transcriptions and written material from the workshop were analysed and coded drawing on Braun and Clarke, to identify themes around concerns and flesh out initial design ideas for the toolkit.
-
-The case study consists of two phases: (1) the designing of community commissioning toolkit and (2) the evaluation of its use by the community. The first part of the case study focuses on the setting up of the sensor commissioning toolkit through working together with a group of residents who are advocating for active travel and infrastructure changes in Newcastle Upon Tyne. This was a 8-month long iterative design process which consisted of building relationships and understanding the community, gathering design requirements and responding with technologies that could help people better generate data, and access it for use in their advocacy efforts. The process is reported through ethnographic engagement with a advocacy group which involved regular meetings, emails and discussions of Facebook group, observations at group organised public events and meetings around the issues of concern.
- 
-The second part of the case study focuses on the evaluation of the use of the toolkit in the wild. The analysis is conducted through three phases: (1) analysis of the usage and activities on digital platforms built to support the community commissioning of sensors, (2) analysis of the discussions of a specific advocacy group on Facebook (i.e., community discussion), (3) analysis of audio recorded reflections of the core members from the same group on their advocacy efforts and the role of data generated using the toolkit (i.e., community reflection). Additionally, case study provides an analysis of observations of groups and individuals who are purposing the data in their advocacy efforts and the impact it has had.
-
-The data collected to report on the case study is however not definitive, as the toolkit is still operational, constantly evolving and being used by communities to gather data for exploring and evidencing issues in their neighbourhood.
-
-% and specific focus group that reflected on the advocacy effort and the role of generated sensor data through the toolkit. Research data collected in the process are in form of researchers notes, recorded focus group, documents produced by the advocacy group and discussions on social media platforms (i.e., Twitter and Facebook).
 
 \section{Designing Community Resources}
+\label{sec:design_sms}
 
-Following section will describe the process of gathering requirements for setting up the community sensor commissioning toolkit. A five month engagement involving a workshop, community meetings, focus groups and ongoing ethnographic work resulted into the first prototype of the commissioning toolkit. Work done is presented in a chronological order to better document the design process.
-\petenote{Coming in to 2.4, I don’t feel I know much about the community groups you are working with o the issues they are interested in or why the focus is air pollution. This maybe because I have forgotten what I read in the earlier sections or maybe because you plan to explain that in an earlier chapter. But just to let you know, so you can check that you get that scene setting information in somewhere.}
+Following section will describe the process of gathering requirements for setting up the community sensor commissioning toolkit. A five month engagement involving a workshop, community meetings, focus groups and ethnographic work resulted in the first prototype of the sensor commissioning toolkit. Work done is presented in a chronological order to better document the design process.
+
 \subsection{Design Workshop}
-\petenote{2.4.1
-Set the workshop context up a bit more in terms of what the participants were doing, why and how what happened there connects to the design (2.5) When we are talking about collecting data here. What kind of data is it? Is it personal data or environmental data when you say “air pollution AND SAFETY” is that two different kinds of data? Are they actually collecting data about SAFETY? Or is this one of the questions they want to find out from the data (i.e. are pollution levels safe?)}
-A community workshop called "Beyond Pins On A Map" was run by the research team\footnote{The research team consisted of Thomas Maskell and the author. Together we designed the workshop activities, conducted and analysed the workshops to come up with the initial design requirements for the toolkit.} in spring 2017 around how people can collect meaningful data about their everyday journeys, take ownership and use the data in advocating for positive changes in local communities. Workshop engaged with 22 local residents from different parts of Newcastle upon Tyne who took part of two activities to explore the opportunities and challenges of using data to push for change.
+\label{sub:pinsonamap}
 
-The first activity looked at some challenging scenarios that were related to collecting data about air pollution and safety. In groups, people explored issues such as privacy, reliability of the data and how other people not involved in the study might trust the data that has been collected. There were lively discussions going around the tables which were captured and transcribed for further analysis. Second task prompted participants to think about how could that data be used to advocate for better spaces for people to spend time in and move through. In groups, people looked at the issue in hand using examples ranging from art installations, to activist campaigns to inspire them. Groups then brainstormed ideas about what might work in their neighbourhood with the resources they can have and fed back a shortlist of their chosen tactics. Building on Beautiful Rising\footnote{\url{https://beautifulrising.org}}, material was made for the workshop to guide the design process. All the materials produced by the participants were digitalised and archived, accompanied by audio recordings and photographs of the workshop.
+A community workshop called ``Beyond Pins On A Map'' was run by the research team\footnote{The research team consisted of Thomas Maskell and the author. Through collaborative effort workshop activities were created, conducted and analysed to help understand the community data needs.} in spring 2017 around how people can collect meaningful data about their everyday journeys, take ownership and use the data in advocating for positive changes in local communities. Workshop engaged with 22 local residents from different parts of Newcastle who took part in two activities to explore the opportunities and challenges of using data to positive change in the community. The workshop already had a previously identified focus of air quality, and pedestrian and cycling safety (Section \ref{sub:urbanisation}, \ref{sub:breathe}, \ref{sub:config_par})
 
-Workshop revealed that people are interested in environmental data, but often from places that it is not available and there is no plans from the city officials or decision-makers to collect it. Further analysis also showed that although people feel a bit uneasy about the accuracy of the data, they thought that it is more about how things are framed, and that having something out there for people to discuss is better than not having anything. The figures from the published report about the effects of air pollution and its consequences to people's health can feel remote citizens just going about their everyday activities in the city. However everyone is affected by it and in order to tackle the issue it needs to be made visible within the community by the people living there. There was a consensus among the participants that the issue needs local people to come together not only to collect data but also to make sense of it and to decide how it might be used to take action to make local streets more liveable places.
+The first activity looked at some challenging scenarios that were related to collecting data about air pollution and safety. That included speculating on the uses of low cost citizen sensing (Section \ref{sub:sensetools}) equipment and bespoke solutions \citep{maskell_spokespeople:_2018} to gather data from peoples everyday commutes, and thinking about the city datasets already published by the UO. In groups, people explored issues such as privacy, reliability of the data and how other people not involved in the study might trust the data that has been collected. There were lively discussions going around the tables which were captured and transcribed for further analysis. Second task prompted participants to think about how could that data be used to advocate for better spaces for people to spend time in and move through. In groups, people looked at the issue in hand using examples ranging from art installations, to activist campaigns to inspire them. Groups then brainstormed ideas about what might work in their neighbourhood with the resources they can have and fed back a shortlist of their chosen tactics. Building on Beautiful Rising\footnote{\url{https://beautifulrising.org}}, material was made for the workshop to guide the design process. All the materials produced by the participants were digitalised and archived, accompanied by audio recordings and photographs of the workshop.
 
-After the initial design workshop I was approached by a small group of residents from an area couple of miles from the centre of the city. There had been multiple articles in the press lately about the air quality in cities around the world and that had sparked discussions among residents in different community meetings. One of the more proactive resident had also acquired diffusion tube and fitted it near their house. It had provided some concerning results, raising questions and desire to find out more. Some of the residents from that group also attended the initial design workshop. In contrast to the active lobbing group mentioned previously, this group did not have sensors in their local area and there was a lack of information to share with the community. Furthermore, according to the Department for Environment Food and Rural Affairs (DEFRA) air quality model, the pollutant levels were in accordance with the legal limits and it was not part of the two Air Quality Management Zones in the city, which meant that there was no active push from the government to start doing monitoring in the area. People were looking at the increasing high readings of pollutants in other areas of the city which had monitors and that led to a small group of residents getting together to looking at the topic in more detail. Residents expressed particular concerns about the effects of harmful pollutant to children and their developing lungs. This together with increased levels of through traffic trying to get to the city centre made residence worried about the lack of space for active travel and other infrastructure funding not going towards making their local streets healthier and safer for everyone to get a round.
+Workshop findings revealed that people were interested in environmental data, but often from places that it was not available and there were no known plans from the city officials or decision-makers to collect it from. Further analysis also showed that although people feel a bit uneasy about the accuracy of the data (collected from low cost citizen sensing devices described in Section \ref{sub:sensetools}), they thought that it is more about how things are framed, and that having something out there for people to discuss is better than not having anything. The figures from the published report about the effects of air pollution and its consequences to people's health (Section \ref{sub:breathe}) can feel remote to citizens just going about their everyday activities in the city. However everyone in the community is affected by it in some way or another. In order to tackle the issue it had to be made visible within the community by the people living there. There was a consensus among the participants that the issue needs local people to come together not only to collect data but also to make sense of it and to decide how it might be used to take action to make local streets more liveable places.
+
+After the initial design workshop the author was approached by residents from an area couple of miles from the centre of the city (Section \ref{sub:config_par}). There had been multiple articles in the press lately about the air quality in cities around the world and that had sparked discussions among residents in different community meetings. One of the more proactive resident had also acquired a diffusion tube\footnote{\url{https://laqm.defra.gov.uk/diffusion-tubes/diffusion-tubes.html}} for monitoring air quality and had fitted it near their house. It had provided some concerning results, raising questions and desire to find out more. Some of the residents from that group also attended the initial design workshop. In contrast to the active lobbing group mentioned previously who were using data from the UO, this group did not have sensors in their local area and there was a lack of information to share with the community. Furthermore, according to the group the DEFRA air quality model\footnote{\url{https://uk-air.defra.gov.uk/research/air-quality-modelling}} showed that the pollutant levels were in accordance with the legal limits and the area was not part of the two Air Quality Management Zones in the city, which meant that there was no known plans from the government to start doing monitoring in the area. However people who used the spaces daily, pointed out that they are seeing issues raising with the infrastructure changes and increased volumes of traffic. People were also looking at the increasing high readings of pollutants in other areas of the city which had monitors and that led to a small group of residents getting together to looking at the topic in more detail. Residents expressed particular concerns about the effects of harmful pollutant to children and their developing lungs. This together with increased levels of through traffic trying to get to the city centre made residence worried about the lack of space for active travel and other infrastructure funding not going towards making their local streets healthier and safer for everyone to get a round.
+
 
 \subsection{Mapping/Surfacing Community Concerns}
-
 % talk about the opportunity to lobby for infrastructure changes linked to streets for people (similar to how Dantec et al 2013 described it p.253)
 % publics forming around future objects
 % maybe talk about counterpublics
+The initial design workshop findings provided indicative evidence of community interest and also community to get involved with the co-design process. Furthermore, were available funds from the UO to acquire environmental monitoring equipment, however up to this point there was no commissioning toolkit in place and manage this shared resource, nor there was a clear view of in which places and the sort of environmental indicators that people are interested in measuring. Together with the research team\footnote{The research team of the Urban Observatory consisted of Prof Philip James, Dr Jennine Jonczyk, Neil Harris, Dr Luke Smith, David Pearson and later Richard Turland.} from the UO, we came up with a set of potential monitors that could be acquired or re-purposed, provided there was a interest from the people. These included scientific grade air quality, noise and traffic monitors that could be located on lamp posts by UO engineers, and hand-held environmental monitors that people could use themselves on commutes.
 
-There were available funds from the Urban Observatory to acquire environmental monitoring equipment, however up to this point there was no toolkit in place and manage this shared resource, nor there was a clear view of where and the sort of environmental indicators that people are interested in measuring. Together with the research team\footnote{The research team of Urban Observatory consisted of Philip James, Jennine Jonczyk, David Pearson and later Richard Turland.} from Urban Observatory, we came up with a set of potential monitors we could acquire for the toolkit, provided there was a interest from the people. In order to explore these avenues and to get an idea of what people are interested in, a meeting was set up with the group of residents. At the meeting the group gave a bit of background of the area, talked about the areas of concern and their desire for data to help residents make better decisions and advocate for change. For making the conversation more related to the community, a printed out map of the area in question was used. After the group learned about the environmental indicator that can be potentially monitored using selection of scientific grade sensors, they collaborated around the map (see Figure \ref{fig:areasofconcern}) to point out the areas of concern and marked the potential locations for different environmental monitors. 
+In order to explore these avenues and to get an idea of what people are particularly interested in measuring, a meeting was set up with the group of residents (Table \ref{table:sms_par}). At the meeting the group gave a bit of background of the area, talked about the areas of concern and their desire for data to help residents make better decisions and advocate for change. For making the conversation more related to the community, a printed out map of the area in question was used. After the group learned about the environmental indicators that could be potentially monitored using a selection of scientific grade sensors, they collaborated around the map (see Figure \ref{fig:areasofconcern}) to point out the areas of concern and marked the potential locations for different environmental monitors. 
 
-Having no data available from that area, people had to rely on their perception and local knowledge when deciding on where are the most important places that need investigating through environmental sensors. Through discussion, people had to agree on where to focus their effort and use the limited resources to gather environmental data. As five of the participants where parents whose children go to the local schools the focus was on areas where young people might be exposed to harmful effects of roadside traffic pollution. This focus has been a reoccurring theme with all community groups engaged through the project. Advocates are trying to voice the concern of the ones who might not be able to do it themselves (e.g., young children, elderly, people with reduced mobility) but often are the ones who are affected by the issue the most. 
-
+Having no data available from that particular area, the residents had to rely on their perception and local knowledge when deciding on which are the most important places that need investigating through environmental sensing. Through discussion, people had to agree on where to focus their effort and use the limited resources to gather environmental data about the area. As five of the participants were parents whose children go to the local schools the focus was on areas where young people might be exposed to harmful effects of roadside traffic pollution. This focus has been a reoccurring theme with almost all community groups engaged through the project. Advocates are trying to voice the concern of the ones who might not be able to do it themselves (e.g., young children, elderly, people with reduced mobility) but often are the ones who are affected by the issue the most. Although, this type of engagement activity worked well in a focus group setting, it needed everyone to come together in a physical space and needed support from the researcher to facilitate the mapping. Reflecting on the engagements, it seemed that in order for this process to scale, and enable a broader participation from the community, it needed to take some from of an online participation system.
 % issues of representations when people act as proxy for others
 
 \begin{figure}
@@ -368,12 +341,10 @@ Having no data available from that area, people had to rely on their perception 
   \label{fig:areasofconcern}
 \end{figure}
 
-Although, this type of engagement activity worked well in a focus group setting, it needed everyone to come together in a physical space with a support from myself or other researchers. For this to scale and enable a broader participation, it needed to take a from of an online participatory GIS system.
-
 % plan and propose
 \subsection{Planning Community Investigation}
-
-After the initial meetings with the community group, they came up with proposal called \textit{Air Pollution in Heaton - The desire for data to help residents make decisions} which consisted of:
+\label{sub:com_plan}
+The first set of meetings and engagements with the community group helped identify places in the neighbourhood and the issues that people wanted to explore in those places. Next steps for the community group was to come up with an action plan. After the initial meetings and conversations with the community group, they came up with a proposal called \textit{``Air Pollution in Heaton - The desire for data to help residents make decisions''} which consisted of:
 \begin{enumerate*}[label=\itshape\alph*\upshape)]
 \item Background;
 \item Areas of concern;
@@ -383,107 +354,405 @@ After the initial meetings with the community group, they came up with proposal 
 \item Areas for hand-held monitoring.
 \end{enumerate*}
 
-People where driven by the fact that there was no data available from the area to make an informed statement about the air quality. The first aim for people was to establish a baseline on the level of pollution in the area. This document also set out a clear action plan for doing that by collecting the data, but also using those data for advocacy and activities for local benefits. The following is a statement from the air pollution bid submitted by the residents.
+People were driven by the fact that there was no data available from the area to make an informed statement about the air quality. The first aim for people was to establish a baseline on the level of pollution in the area. This document also set out a clear action plan for doing that by collecting the data, but also using those data for advocacy and activities for local benefits. The following is a statement from the air pollution bid submitted by the residents.
 
 \begin{quote}
 \textit{``The hope is that the data collected from these monitors will fill in the current gaps in air quality data for the area and provide a good base line for decisions of further research around measure designed to improve air quality.''} \citep{space_for_heaton_air_2017}
 \end{quote}
 
-At this point there was no fixed process in place which would set the criteria of how resources are given to the people, nor was there any mechanism of transparency. The back and forth conversations between the research team and the community group that guided the creation of the proposal were not documented and stayed within the close group. In addition to the issue of transparency there was also no opportunity for others to learn from the process. Although the exercise of creating an action plan (i.e., proposal) was a good for setting the agenda for the community-led investigation the knowledge shared and obtained in the process stayed with the specific action group. This knowledge however could potentially be used by another community group and lessons learned from it would help improve the process of the commissioning. There was a need to design a mechanism that encourages wider participation through active discussions and feedback loops.
+At this point there was no fixed process in place which would set the criteria of how resources are would be allocated to the people, nor was there any mechanism of transparency. The back and forth conversations between the the author and the community group that guided the creation of the proposal were not documented and stayed within the close group. In addition to the issue of transparency there was also no opportunity for others to learn from these processes. Although the exercise of creating an action plan (i.e., proposal) was a good for setting the agenda for the community-led investigation the knowledge shared and obtained in the process stayed with the specific community group. This knowledge however could potentially be used by another community group and lessons learned from it would help improve the process of the commissioning. Reflecting on the process of community coming up with the data collection plan, there seemed to be a need to design a mechanism that encourages wider participation of the community through active discussions and feedback loops.
 
 \subsection{Initial Community Investigation}
+\label{sub:com_invest}
 
-In addition to being able to commission monitors from the Urban Observatory to be installed in their community the people also wanted to be more actively involved in the investigation. This meant that there was a need for equipment that people can use on their commutes to work or taking their children to school. By doing that people could not only get an individual's perspective and an idea of personal exposure, which links to the health impacts, but also cover more ground in the neighbourhood and provide a good basis for decisions of further investigation around air quality in the area. Although these sensors would provide a snapshot of data, they would still provide a basis for discussions and decision making for the residents. In a way this part of the process is less liked advocacy, and more about self-knowledge and taking ownership of the investigation of issues.
+In addition to enabling people commission environmental monitors from the UO and get them deployed in their community, the people also wanted to be more actively involved in the investigation. This meant that there was a need for equipment that people themselves could use on their commutes to work or taking their children to school. By doing that, people could not only get an individual's perspective and an idea of personal exposure, which links to the health impacts, but also cover more ground in the neighbourhood and provide a good basis for decisions of further investigation around air quality in the area. Although these sensors would provide a snapshot of data, they would still provide a basis for discussions and decision making for the residents. In a way this part of the process was less linked advocacy and raising awareness, and more about self-knowledge and taking ownership of the investigation of the community issues. The main concerns pointed out by the members of the groups were linked to the increased volumes of traffic, having impacts to people's safety and air quality. Through the UO project at Newcastle University a high precision hand-held particulate monitor\footnote{\url{https://www.palas.de/en/product/fidasfrog}} was then purchased and loaned out to the community group to start investigating the air quality in the area. At this point all the communication with the advocacy group were done through a face-to-face meetings or through an email correspondence. This also included the scheduling of the sensor handover and return to the UO. This meant that there was always reliance of the researcher to make connections with community groups and coordinate the sensor loans. This surfaced another design challenge and requirement for the technology. This stage of the investigation was highly dependent on the contributions of people. After they got the sensor and a brief introduction of how to use it, they needed to figure out the monitoring schedule (Section \ref{sub:com_plan}), time allocation and logistics around exchanging the monitor within the group to meet the monitoring schedule. People were given an overview of data collection methods, sampling, variability of different indicators and robustness of the data, but the actual monitoring plan was intentionally left for them to set out. An additional reason for promoting community-led investigation was the emphasis on peoples experiences of living and moving around the area which provided local tacit knowledge not obtained by the search team. These experiences were also important for understanding the issues and different perspectives around them. In order to share these perspectives there needed to be a mechanism that enabled to capture them in addition to the sensor readings from the hand-held sensor.
+\newline
 
-The main concerns pointed out by the members of the advocacy groups where linked to the increased volumes of traffic, having impacts to people's safety and air quality. Through the Urban Observatory project at Newcastle University a high precision hand-held particulate monitor was purchased and loaned out to the community group to start investigating the air quality in the area. At this point all the communication with the advocacy group were done through a face to face meetings or through an email. This also included the scheduling of the sensor handover and return to the UO. This meant that there was always reliance of the researcher to make connections with advocacy groups and coordinate the sensor loans. This surfaced another design requirement for the toolkit.
-
-Next stage of the investigation was highly dependent on the contributions of people. After they got the sensor and a brief introduction of how to use it, they needed to figure out the monitoring schedule, time allocation and logistics around exchanging the monitor within the group to meet the monitoring schedule. People were given an overview of data collection methods, sampling, variability of different indicators and robustness of the data, but the actual monitoring plan was intentionally left for them to set out. An additional reason for promoting community led investigation was the emphasis on peoples experiences of living and moving around the area which provided local tacit knowledge not obtained by the search team. These experiences where also important for understanding the issues and different perspectives around them which meant that there should be a way of capturing them additional to the sensor readings.
-
-% needs a closing paragraph
+\noindent
+This case study was conducted through user-centred design process where the designed technologies were direct responses to the requirements that surfaced from engaging with the people. A number of requirements for the design of the technology was surfaced from the initial engagement with the community group around local issues. However, because of the participatory nature of the research, the main focus of was not only on acquiring and providing people artefacts (i.e., the environmental monitors) that would give them capabilities to do community-led investigations, but on the whole design process and the \textit{coupled technologies} which were considered as a way of creating knowledge, expanding community networks and helping to build capacity of the community. This approach and strategies linked to it have also echoed from scholars working on civic engagement \citep{asad_tap_2017} and participatory design \citep{vines_configuring_2013,binder_design_2011}. 
 
 \section{SenseMyStreet Toolkit}
-\philnote{What kit: How they different from others? Price? Procces in transistion. Make clearer what is design and what is implementation}
-\mynote{Clean up this section and make it more conceptual by taking out the technical bits.}
 \label{sec:sms-toolkit}
-% Describe the process step by step (maybe use the actual tutorials made for people)
-\petenote{2.5 Good clear structure and useful figure of the process. If anything, I would like to hear a little bit more about the technology side of the toolkit and what was used in what stage of the process. Could this be achieved by extending or elaborating the figure, and adding a para or two?}
-The findings from the initial engagements, conversations with the community members, observations and the design workshop and the process of designing for community commissioning all fed into the first prototyping of the technology. From the beginning the focus and emphasis was put on supporting initiatives where citizens are involved in problem definition, data collection and analysis hence taking the \textit{extreme citizen science} \citet{haklay_citizen_2013} approach. This case study was conducted through user-centred design process where the designed technologies were direct responses to the requirements that surfaced from engaging with the people. However, because of the participatory nature of the research, the main focus was not on the actual artefacts (i.e., the environmental monitors) that would provide people the capabilities to do community led investigations, but on the whole design process and the \textit{coupled technologies} which where considered as a way of creating knowledge and helping to build capacity within the community. This approach and strategies linked to it have also echoed from scholars working on civic engagement \citep{asad_tap_2017} and participatory design \citep{vines_configuring_2013,binder_design_2011}.The aim of the case study was not to develop stacks more of digital technology because there is already an abundance of smart city technologies available that needs to be put to use by the citizens. The focus with the study was more on the process which investigates the possibilities around re-configuring smart cities to be led by the real needs and desires of citizens, rather than dictated by available technologies and the assumptions of decision makers.
 
-Through the development and use of participatory GIS and mapping, environmental sensing equipment and Human-Computer Interaction (HCI) for geospatial technologies, the first prototype of sensor commissioning toolkit was built. Following sections describe the prototype and digital technologies linked to it. Toolkit is still being used by people and is constantly involving, however for this case study the analysis focuses on the first prototype. The prototype consisted of four steps which each have their associated processes and technologies (see figure \ref{fig:4steps}): \begin{enumerate*}[label=\itshape\alph*\upshape)]
-\item Tell us your issue;
+From the beginning the research, the focus and emphasis was put on supporting initiatives were citizens are involved in problem definition, data collection and analysis; hence taking the \textit{extreme citizen science} \citep{haklay_citizen_2013} approach and helping people to achieve more control \citep{arnstein_ladder_1969}. 
+The findings from the initial engagements, conversations with the community members, observations and the design workshop and the process of designing for community resources (Section \ref{sec:design_sms}) all fed into the first prototype of the SenseMyStreet toolkit. When designing the toolkit the aim was not to develop stacks more of digital technologies because there were already an abundance of smart city technologies available, put to also look at how existing technologies could be re-configured to be put to use by citizens for community problem solving activities. Through the development and use of participatory GIS and mapping, leveraging environmental sensing equipment, the models of community commissioning \citet{garbett_designing_2017} and HCI for geospatial technologies; the first prototype of sensor commissioning toolkit was built. Following sections describe the process (Section \ref{sub:sms_process}) and the implementation of digital technologies (Section \ref{sub:sms_impl}) linked to the first prototype. The toolkit is continued to be used by communities and is constantly involving, however for this case study analysis the focus is on the first prototype.
+
+\subsection{The Process}
+\label{sub:sms_process}
+
+This section will give an overview of the process for sensor commissioning toolkit that was derived form the initial engagement work (Section \ref{sec:design_sms}), and explains how certain design decisions where made at each set of the process. Figure \ref{fig:4steps} shows the overall makeup of the first prototype which consisted of four steps which each had their associated processes and technologies: 
+\begin{enumerate*}[label=(\arabic*)]
+\item Identify the issues;
 \item Plan and propose;
-\item A desire for data;
 \item Get the facts;
 \item Data for everyone.
 \end{enumerate*}
-SenseMyStreet toolkit consists of a website\footnote{\url{https://sensemystreet.uk}} with MakePlace mapping tool; scheduling system built using Google Forms, Calendar and Scripting (link); SenseMyStreet mobile application\footnote{\url{https://play.google.com/store/apps/details?id=uk.sensemystreet}}; data parser\footnote{\url{https://github.com/aarepuu/fidasfrogparser}} for parsing hand-held sensor data and merging with GPS reading; Carto\footnote{\url{https://sensemystreet.carto.com}} maps for visualising data from hand-held monitoring devices; Ideaboard\footnote{\url{https://sensemystreet.ideaboard.co.uk}} for collaborating around proposals for fixed monitoring.
-
+Each step of is broken down to smaller activities to show give better details of the whole process of issue identification, citizen data collection and sensor commissioning.
 %FIGURE 4-Steps HERE
 \begin{figure}
 \centering
- \includegraphics[scale=0.3]{4-steps}
+ \includegraphics[scale=0.3]{4-stepsn}
   \caption{Illustration of the the four steps of the toolkit}
   \label{fig:4steps}
 \end{figure}
 
-% bridging sentence here
+\subsubsection{Identify The Issues: Negotiating with the community}
 
-\subsection{Tell Us Your Issue}
+Similarly to the initial engagements (Section \ref{sec:design_sms}) the first step of the toolkit was to aid people in identifying the issues that they are concerned with and want to explore in their neighbourhood. This might have been something that an individual was concerned in particularly, or something that a group of residents might advocate for, nevertheless these issues were almost always connected to places in the community and something that could potentially nourish a creation of a community network. The back and forth communication between the group and researcher, and planning and organising of sensor handover was replaced with automated systems that people could access online. Figure \ref{fig:flag-issue} illustrates the steps of identifying and exploring issues.
 
-First step of the toolkit was to help people identify the issues that they are concerned with and want to explore in their neighbourhood. This might be something that an individual is concerned of particularly or something that a group might advocate for, nevertheless these issue were always connected to a place in the community and something that could nourish a creation of a community network. Similar process, as initial community meeting where people collaborated around a map, was mirrored on a website. SenseMyStreet\footnote{\url{https://sensemystreet.uk}} website was set up which provided all the information about the project, its resources, description of the commissioning process and contact details for the research team. To enable participatory mapping, the website also integrated Make Place\footnote{\url{https://make.place}} software, a geographical survey tool developed in Open Lab at Newcastle University. After creating an account on the website it enabled people to flag areas of concern (figure~\ref{fig:4steps}), explore already identified areas (figure~\ref{fig:4steps}) and have a discussion around the issues with the community (figure~\ref{fig:4steps}). Website was based on Silverstripe with configurable elements and was deployed using Docker. Make Place software included re-configurable features such as: configurable geographical surveys; Application Programming Interface (API) to access the survey data programmatically; commenting and voting on survey responses; full Content Managment System (CMS) to input content and design the look of the website; configurable dynamic filtering interface; theme customisation using Docker variables. These features provided additional ways of integrating data with other systems in the toolkit which will be discussed in later sections.
+\begin{figure}[ht!]
+\centering
+ \includegraphics[width=\textwidth]{flag-issue}
+  \caption[Process of identifying the issues]{Process of identifying the issues: (1) visit the project website and sign up, (2) flag the issues, (3) identify neighbourhood areas for monitoring and apply for a monitor, (4) loan a had-held monitor, (5) conduct preliminary monitoring.}
+  \label{fig:flag-issue}
+\end{figure}
 
-%MakePlace Figures HERE like Data:In place where - three in a row
+Enabling community to use an online map to identify issues expanded the participation to people that might not be present at the community meetings, but also to people who might not even be aware of these issues in the neighbourhood. They could then engage with the other residents and start a discussion around these issues of concern and plan further investigations with the community. To extend the exploration of the flagged issues, the toolkit enabled people do investigate them further through conducting environmental monitoring with hand-held monitors. People could identify areas of concern and then apply online to borrow hand-held monitors from the UO. A set of hand-held monitors were acquired based on the type of issues people flagged through the website. First prototype of the toolkit had three different types of hand-held monitors: particulate monitors, noise monitors and traffic counters\footnote{\url{https://sensemystreet.uk/sensors}}. What distinguishes SenseMyStreet from most other citizen sensing initiatives is that the types of monitors uses in the toolkit were scientific grade monitors, which are considered to be high precision and often cost ten times more than the usual low-cost equipment. Once resources became available, people received or picked up a hand-held monitor from the UO, which they could use for a maximum period of one month to do monitoring on their commutes. Sensor data accompanied by individual perspectives were then uploaded and shared with the community to help them further understand the issues (Figure \ref{fig:handheldresults}).
 
-To extend the exploration of the flagged issues, the framework enabled people do investigate them further through conducting environmental monitoring. A set of hand-held sensors where acquired based on the type of issues people flagged through the mapping website. Toolkit had three different types of hand held monitors: particulate monitors, noise monitors and traffic counters. Generally all the monitors, hand-held and their fixed counterparts, could be categorised into three themes: \textit{air quality}, \textit{noise} and \textit{traffic}. To coordinate on-boarding, scheduling and managing for the hand-held sensors, an online sign up form using Google Forms were used which integrated with a Google Scripting to allocate resources and schedule sensor pickups/drop offs.
-% having one place for coordination which is up to date
+\begin{figure}[ht!]
+\centering
+ \includegraphics[width=\textwidth]{handheldmap}
+  \caption[Hand-Held monitoring results]{Example map of readings from community monitoring with a hand-held sensor.}
+  \label{fig:handheldresults}
+\end{figure}
 
-% Talk about the SenseMyStreet app here to reflect on their journeys
-% individual perspective
-% enrichment of data with qualitative comments and on the ground knowledge
-% add image and talk more about the tech, add on the toolkit section
-To enable people to record additional qualitative data and their experiences, a mobile application was built and deployed with the hand-held sensors. System used was repackaged application from a study conducted by \citet{maskell_spokespeople:_2018}, for crowd sourcing collection of issues around cycling in the city, which used Android application and a blue-tooth Flick\footnote{\url{https://flic.io}} button to control the functionality on the application. Application enabled people to record their monitoring journeys, insert textual comments and recording of audio snippets while they were doing monitoring and also reflect upon their journey once finished.
-
-% Screen grabs from SenseMySteet app or Tom's images
-
-\subsection{Plan and Propose}
+\subsubsection{Plan And Propose: Negotiating with the UO and other stakeholders}
 
 % Talk more about this in the discussion, it confirms the ideas of having plan before data (Knowledge/information becomes before data)
-Following an investigation with a hand-held sensor people were presented with a set of data to reflect on. Additional to giving people the datasets they generated on their monitoring journeys, data were also visualised as average air quality readings on the map (see Figure \ref{fig:handheldmap}). Using the API functionality on the SenseMyStreet website, the locations of the issues flagged by people beforehand were also visualised on the map. This was helpful for people to give a bit of context and see if their worries around the severity of the issue in those locations were confirmed or not. 
-
-The map did not only provide an overview of personal exposure on everyday commutes and laid a good base for planning and proposing areas that need more focus and additional monitoring using stationary monitors. People used this data as a discussion point where they would need to continue monitoring to get a better picture of the issue. Similarly to the first group, people needed to provide a proposal for the monitors. To help people collaborate around the proposal, an online tool called Ideaboard\footnote{\url{https://sensemystreet.ideaboard.co.uk}} was set up that enables people to collaborate around ideas and consolidate them into a proposal. Ideaboard enables people to have discussions around ideas using modern social media functionalities such as online chatting, media sharing, polling, video recording and calling, collaborative whiteboards and online forums. 
-
-There was no fixed structure for the proposals or the discussion, however an example proposal was provided on the platform which was modelled on the first proposal that was submitted by the initial advocacy group. The elements that where essential for the proposal were question of \textit{what, why, where, when}: (1) what data are needed; (2) why would these data be use useful; (3) where should the monitors be deployed; (4) when should the deployment take place.
-
-Taking the proposal creation online provided a way for people who could not make the community meetings to participate in the discussion and get their voices represented. Additionally it also helped to document the process for transparency and reproduction, sharing the knowledge with other groups who might want to do their own investigations and submit a proposal of their own. Proposals were also looked over by professionals at the Urban Observatory who could give guidance how to get most out of the deployment in terms of data quality and placements of the monitors.
-
-% figures of proposal elements on ideaboard platform
+Using hand-held monitors provided people an opportunity to collect data from places and about issues that were not possible before. People could use that data to look at whether the issues they flagged where also showing up in the data, to see if their worries around the severity of the issue in those locations were confirmed or not. The snapshot of data did not only provide an overview of personal exposure on everyday commutes, it laid a good base for planning and proposing areas that need more focus and additional monitoring using fixed monitors. People could use this data as a discussion point of deciding where they would need to continue monitoring to get a better picture of the issue. The Plan and Propose step was similar to the \textit{Planning Community Investigation} activity people engaged in the design of the toolkit described in Section \ref{sec:design_sms}, but now it was also taken online (Figure \ref{fig:plan-propose}).
 
 \begin{figure}
 \centering
- \includegraphics[scale=0.2]{handheldmap}
-  \caption{Resulting map of hand-held monitoring by the community with flagged issues}
-  \label{fig:handheldmap}
+ \includegraphics[width=\textwidth]{plan-and-propose}
+  \caption[Process of plan and propose]{Process of plan and propose: (6) visit the proposal website, (7) create and collaborate on a proposal, (8) plan the deployments.}
+  \label{fig:plan-propose}
 \end{figure}
 
 
-\subsection{Get the Facts}
+\subsubsection{Get The Facts}
 
-After the community consolidated their discussions into a proposal and it was approved by everyone who participated, it moved to the next stage of scheduling the deployment with the Urban Observatory. This step of the toolkit did not introduce any additional technologies to the process, but relied on the information and scheduling obtained form the proposals created by the community groups. Once deployment was agreed, engineers at UO scheduled it in with the overall deployment plan. From this point forward the responsibility of data collection was handed over from the community to the researchers at UO, which meant that they had to guarantee a successful deployment and deliver best possible quality of the data possible. Initially the maximum deployment time was one month, but because the monitors needed some time to settle, the deployment time was extended up to 2 months. This did not mean however that the same group could not re-apply for an extension of the deployment. It all depended on the deployment queue and whether there was available resources.
+After the community had consolidated their discussions into a proposal and it was approved by everyone who participated, it moved to the next stage of scheduling the deployment with the Urban Observatory. This step of the toolkit did not introduce any additional technologies to the process, but relied on the information and scheduling obtained from the proposals created by the community group. Once deployment was agreed, engineers at UO scheduled it in with the overall deployment plan. From this point forward the responsibility of data collection was handed over from the community to the researchers and engineers at UO, which meant that they had to guarantee a successful deployment and deliver best possible quality of the data possible. Initially the maximum deployment time was one month, but because the monitors needed some time to settle, the deployment time was extended up to 2 months. However, community could re-apply for another deployment in the future once the resources where available again.
 
-\subsection{Data for Everyone}
-\petenote{2.5.4 I would like more detail here. I’d like to see a figure of the dashboard and have a sense of how much data was collected over how long a period and how many people were involved and how the data was used (if at all).}
-Once the monitors where successfully deployed, people where notified and they gained access to data from their commissioned monitors. To avoid creating another data silo, the data collected from the commissioned sensors were made accessible in real time on UO data portal -- similarly to other monitors deployed in the city. People could use the portal to view the last readings, graph 24 hours or 7 days of readings and use data download functionality or the API to get data on any period of the deployment. Having the data for the whole city accessible in one place allowed people to also compare the sensor readings from their area to other areas giving them an idea how does their neighbourhood match up to others.
+\subsubsection{Data For Everyone}
 
-% figure of the platform and all the parts of it
-\subsection{SenseMyStreet Platform/Systems}
-\philnote{Technical design out the software, data flow architecture. Make better claims of what was done!}
-\mynote{Technical description of the toolkit and its parts here with a figure. Move all technical description here. }
+Once the monitors were successfully deployed, people were notified and they could access the data from their commissioned monitors using Urban Observatory's city data portal (Figure \ref{fig:data-portal}). To avoid creating another data silo, the data collected from the commissioned sensors were made accessible in real time on UO city data portal -- similarly to other monitors deployed in the city. The monitors where recording up to nine different environmental indicators saving a reading every minute. Hence, in a month one monitor would have recorded \textit{9*43,800=394,200} readings from a commissioned place in the neighbourhood. People could then use the portal to view the last readings, graph 24 hours or 7 days of readings, and use data download functionality or the API to get data on any period of the deployment.Figure \ref{fig:last-steps} illustrates the last steps of the process -- \textit{Get the facts} and \textit{Data for everyone}.
 
-\subsection{Summary}
+\begin{figure}[ht!]
+\centering
+ \includegraphics[width=\textwidth]{last-steps}
+  \caption[Data for Everyone]{Process getting the data: (9) getting the commissioned monitor deployed by UO, (10) getting data uploaded to the UO city data portal, (8) accessing commissioned data from the portal.}
+  \label{fig:last-steps}
+\end{figure}
 
-SenseMyStreet has enabled successfully carry out a citizen led deployment of environmental monitors and helped generate data about issues that are important to communities. Toolkit has also created a situation where data is demand-driven rather than the usual open data portal's ideology -- ``If we put data out there people will use it''. Although the toolkit has created an opportunity for communities to access resources to investigate local issues, generating and making data available is only the first step of its effective use by the community. The initial questions of how to provide local communities resources to take part in issue exploration in the city got answered through the design and development of community sensor commissioning toolkit. However the utility of this infrastructure to act as a catalyst for civic action needed to be assessed through an evaluation of its use by the communities.
-\kylenote{What goes in this discussion? Some of the points from next chapter introduction or even discussion below?}
-\mynote{Write a bridge here and deposit questions for the evaluation. Brief discussion of existing communities + challenges what motivated the next chapter. Also restrictions -- what is available to evaluate}
-\philnote{Explain what and why we have handover period why people do it and why then UO does it.}
-\philnote{Summarize stuff in the beginning of sections. Often literture review in case study sections is breaking the narrative}
-\mynote{Comments all go to chap3}
+\begin{figure}[ht!]
+\centering
+ \includegraphics[width=\textwidth]{dataportal}
+  \caption[Commissioned Monitor on UO City Data Portal]{View of a commissioned monitor page on Urban Observatory city data portal}
+  \label{fig:data-portal}
+\end{figure}
+
+\subsection{The Implementation}
+\label{sub:sms_impl}
+
+The first prototype of the SenseMyStreet toolkit consisted of four main development stacks: SenseMyStreet platform, automated sensor loan scheduling system, hand-held monitoring tools, SenseMyStreet Proposals platform; and some external services (Figure \ref{fig:sms-stack}). The SenseMyStreet platform consists of a web based application written in PHP leveraging \href{https://make.place}{make.place}, a re-configurable GIS platform developed in Open Lab at Newcastle University (based on Silverstripe framework), and a RESTful JSON API for communicating with the MYSQL database. The main website had multiple re-configurable elements and was deployed using Docker, which made the application scalable and easily deployable on virtual or physical infrastructure. Software included re-configurable features such as: configurable geographical surveys; API to access the survey data programmatically; commenting and voting on survey responses; full Content Management System (CMS) to input content and design the look of the website; configurable dynamic filtering interface; and theme customisation using Docker variables. These features provided additional ways of integrating data with other systems and platforms in the SenseMyStreet ecosystem (Section \ref{sub:data-flow}). The SenseMyStreet website provided all the information about the project, its resources (i.e., available environmental monitors), description of the sensor commissioning process (Section \ref{sub:sms_process}) and contact details for the research team. Website also acted as on-boarding component for the SenseMyStreet toolkit: where people could create account on the website, learn about the project and its resources, and start flag areas of concern using the participatory mapping tool on the platform. Furthermore, platform users could explore already identified areas and have a discussion around the issues with the community.
+
+
+\begin{figure}[ht!]
+\centering
+ \includegraphics[width=\textwidth]{sms-stack}
+  \caption[SenseMyStreet Toolkit Architecture]{SenseMyStreet Toolkit Architecture}
+  \label{fig:sms-stack}
+\end{figure}
+
+
+The automated sensor loan scheduling system consisted of monitor loan forms\footnote{\url{https://goo.gl/forms/7A9eVtB4KwyuM0AA2}} and an automatic monitor loan scheduler\footnote{\url{https://goo.gl/14wrgM}} and deployment calendar\footnote{\url{https://calendar.google.com/calendar/b/1?cid=c2Vuc2VteXN0cmVldEBnbWFpbC5jb20}} built using Google Apps Scripting. The sensor scheduling system automatically allocated resources and schedules hand-held sensor handovers to the community, while also automatically publishing the list of available resources and the deployment calendar. This enabled people to get notifications of when the resource becomes available and when they can expect to receive a monitor to start doing their investigations. Furthermore, this enabled to have one place for coordination of resources which was always up to date.
+
+The hand-held monitoring tools consisted of hand-held monitors; SenseMyStreet mobile application\footnote{\url{https://play.google.com/store/apps/details?id=uk.sensemystreet}} (based on SpokesPeople App \citep{maskell_spokespeople:_2018}) with and a blue-tooth Flick\footnote{\url{https://flic.io}} button integration to control the functionality on the application; automatic sensor data uploader (using Google Drive); data parser\footnote{\url{https://github.com/aarepuu/fidasfrogparser}} written in Python (using Pandas library) for parsing hand-held sensor data and merging with GPS readings; and Carto\footnote{\url{https://sensemystreet.carto.com}} maps for visualising data from hand-held monitoring devices. Hand-held monitors were loaned out with easy to use instructions (Appendix \ref{app:fidas-guide}) which were developed through the process of community investigation (Section \ref{sub:com_invest}). The additional mobile application enabled people to record their monitoring journeys, insert textual comments and recording of audio snippets while they were doing monitoring and also reflect upon their journey once finished. The system enabled to automatically send hand-held sensor readings, GPS and personal reflections to the cloud from the sensor commutes once the devices were connected to the Internet. Furthermore, having data available online would enable to build a pipeline where the readings get automatically parsed, processed and visualised.
+
+The SenseMyStreet Proposals platform was a web based Node.JS application leveraging Ideaboard\footnote{\url{https://ideaboard.co.uk}}, a re-configurable online collaboration and feedback platform developed in Open Lab at Newcastle University (based on Vue.JS framework), and RESTful JSON API for communicating with the MongoDB database. People could use the platform to create an account and start collaborating around proposals for fixed monitors. The system enabled people to have discussions around issues and ideas using modern social media functionalities such as online chatting and discussion boards, media sharing, polling, video recording and calling, collaborative whiteboards and online forums. Furthermore, platform provided sharing functionalities for other social media platforms (e.g., Twitter, Facebook, LinkedIn) feeds to get wider community involved with the proposals.
+
+Additionally, there were several external services used to add functionality or support the SenseMyStreet toolkit. Amazon Web Services (AWS) for deploying two web based platforms and guaranteeing the data backups (using S3 storage) on the systems. SendGrid email delivery service for sending out email notification for subscribed users on SenseMyStreet platforms. Google Maps API for mapping functionalities on the SenseMyStreet platform's GIS system, Google Analytics to provide metrics on user visits, and Google reCAPTCHA for protecting against malicious automated software activity. Lastly, Firebase for syncing data between the mobile application and the SenseMyStreet web platform's API.
+
+
+\section{Interactions With The SenseMyStreet Toolkit}
+
+This section will describe the different interactions that people could have at different stages of issue exploration and sensor commissioning process. Each stage is described through a user story (i.e., system walkthrough) and data flow diagrams.
+
+\subsection{On-Boarding and Issue Exploration}
+
+The initial engagement with SenseMyStreet begins with a community member going on the SenseMyStreet website\footnote{\url{https://sensemystreet.uk}} to identify and flag an issue on the map. After creating an account on the website (Figure \ref{fig:sms-reg}), people could use the map to flag areas of concern and submit issues (Figure \ref{fig:sms-flag} and \ref{fig:sms-submit}), explore already identified areas and issues (Figure \ref{fig:sms-map} and \ref{fig:sms-filter}) and have discussions around the issues with the community (Figure \ref{fig:sms-comment}). The issue submission form also enabled people to add a photo of the place where they are interested in doing environmental monitoring.
+
+\begin{figure}[ht!]
+\begin{subfigure}{0.31\textwidth}
+\includegraphics[width=\linewidth]{sms-reg}
+\caption{Register or login} \label{fig:sms-reg}
+\end{subfigure}
+\hspace*{\fill} % separation between the subfigures
+\begin{subfigure}{0.31\textwidth}
+\includegraphics[width=\linewidth]{sms-flag}
+\caption{Choose a location on the map} \label{fig:sms-flag}
+\end{subfigure}
+\hspace*{\fill} % separation between the subfigures
+\begin{subfigure}{0.31\textwidth}
+\includegraphics[width=\linewidth]{sms-submit}
+\caption{Fill form to submit an issue} \label{fig:sms-submit}
+\end{subfigure}
+\caption[Issue Flagging]{Issue flagging on SenseMyStreet platform} \label{fig:sms-flag-issue}
+\end{figure}
+
+\begin{figure}[ht!]
+\begin{subfigure}{0.31\textwidth}
+\includegraphics[width=\linewidth]{sms-map}
+\caption{Explore flagged issues} \label{fig:sms-map}
+\end{subfigure}
+\hspace*{\fill} % separation between the subfigures
+\begin{subfigure}{0.31\textwidth}
+\includegraphics[width=\linewidth]{sms-filter}
+\caption{Filter by issue} \label{fig:sms-filter}
+\end{subfigure}
+\hspace*{\fill} % separation between the subfigures
+\begin{subfigure}{0.31\textwidth}
+\includegraphics[width=\linewidth]{sms-comment}
+\caption{Discuss and show support} \label{fig:sms-comment}
+\end{subfigure}
+\caption[Issue Exploration]{Exploring issues on SenseMyStreet platform} \label{fig:sms-explore-issues}
+\end{figure}
+
+\subsection{Hand-held Monitor Loans}
+
+To investigate the issues, people could loan hand-held environmental monitors from the toolkit. SenseMyStreet website provided people information about the sensors and the link to the sign-up form (Figure \ref{fig:sms-sensors}), explore the loan schedule (Figure \ref{fig:sms-schedule}) and the deployment calendar (Figure \ref{fig:sms-cal}). Generally all the monitors, hand-held and their fixed counterparts, could be categorised into three themes: \textit{air quality}, \textit{noise} and \textit{traffic}. To sign-up for sensor loan, people needed to use a dedicated online form (using Google Forms). The form consisted of three parts: a brief description of project and research consent agreement (Figure \ref{fig:sms-form1}), sensor loan agreement (Figure \ref{fig:sms-form2}) and sensor equipment and handover details (Figure \ref{fig:sms-form3}). The details that needed to be provided where: the type of sensor to be loaned, the reason for the loan, the time period for the loan, and contact details for sensor pickup and drop off.
+
+\begin{figure}[ht!]
+\begin{subfigure}{0.31\textwidth}
+\includegraphics[width=\linewidth]{sms-sensors}
+\caption{Learn about available sensors} \label{fig:sms-sensors}
+\end{subfigure}
+\hspace*{\fill} % separation between the subfigures
+\begin{subfigure}{0.31\textwidth}
+\includegraphics[width=\linewidth]{sms-schedule}
+\caption{Look at the loan schedule} \label{fig:sms-schedule}
+\end{subfigure}
+\hspace*{\fill} % separation between the subfigures
+\begin{subfigure}{0.31\textwidth}
+\includegraphics[width=\linewidth]{sms-cal}
+\caption{Explore deployment calendar} \label{fig:sms-cal}
+\end{subfigure}
+\caption[Hand-held Sensors]{Exploring hand-held sensors and deployment information} \label{fig:sms-explore-sensors}
+\end{figure}
+
+\begin{figure}[ht!]
+\begin{subfigure}{0.31\textwidth}
+\includegraphics[width=\linewidth]{sms-form1}
+\caption{Learn about the research project} \label{fig:sms-form1}
+\end{subfigure}
+\hspace*{\fill} % separation between the subfigures
+\begin{subfigure}{0.31\textwidth}
+\includegraphics[width=\linewidth]{sms-form2}
+\caption{Read the loan agreement} \label{fig:sms-form2}
+\end{subfigure}
+\hspace*{\fill} % separation between the subfigures
+\begin{subfigure}{0.31\textwidth}
+\includegraphics[width=\linewidth]{sms-form3}
+\caption{Choose a sensor to loan} \label{fig:sms-form3}
+\end{subfigure}
+\caption[Sensor Loan Process]{Hand-held sensor loan process} \label{fig:sms-loan-sensors}
+\end{figure}
+
+
+\subsection{Community Sensing}
+
+\mynote{Need images from the app, or screen grabs from SenseMySteet app or Tom's images}
+Once an individual or a community group received a hand-held sensor kit in (custom designed kits show on Figure \ref{fig:sms-kit}) with instructions (Appendix \ref{app:fidas-guide}), they could start doing monitoring in their local area. There was no fixed monitoring schedule for people, they had to come up with their own, which often meant negotiating with people in the community to cover more ground. Hand-held sensing kits came pared with SenseMyStreet mobile application which enabled people to record additional qualitative data about their experiences. The mobile application enabled people to record the GPS track of their monitoring journeys, insert textual comments and recording of audio snippets while they were doing monitoring and also reflect upon their journey once finished.
+
+\begin{figure}[ht!]
+\centering
+ \includegraphics[width=\textwidth]{sensors}
+  \caption[SenseMyStreet Hand-Held Sensor Kits]{SenseMyStreet Hand-Held Sensor Kits}
+  \label{fig:sms-kit}
+\end{figure}
+
+
+\subsection{Sensor Commissioning}
+
+After the community sensing step and reflecting on the results of the monitoring, people could start collaborating around a proposal for sensor commissioning from the UO. The planning for this could have taken place offline, at a community meetings, but in order to propose for extended monitoring people had to use the SenseMyStreet Proposals website. To start collaborating around a proposal: a person needed to register on the platform (Figure \ref{fig:sms-idea1}); create an idea with title, tagline, a short description and a banner or image (Figure \ref{fig:sms-idea2}); and start off the discussion with the community (Figure \ref{fig:sms-idea3}). There was no fixed structure for the proposals or the discussion, however an example proposal (Figure \ref{fig:sms-idea-ex1}) was provided on the web platform which was modelled on the first proposal that was submitted by the first community group (Section \ref{sec:design_sms}). The elements that were essential for the proposal were question of \textit{what, why, where, when}: (1) what data are needed; (2) why would those data be use useful; (3) where should the monitors be deployed; (4) when should the deployment take place (Figure \ref{fig:sms-idea-ex2}). Additionally people could explore other proposals, learn from them or join the discussion (Figure \ref{fig:sms-ideas}). Once the proposal was ready the platform enabled people to consolidate it into a proposal document (Figure \ref{fig:sms-proposal}).
+
+
+\begin{figure}[ht!]
+\begin{subfigure}{0.31\textwidth}
+\includegraphics[width=\linewidth]{sms-idea1}
+\caption{Register or login} \label{fig:sms-idea1}
+\end{subfigure}
+\hspace*{\fill} % separation between the subfigures
+\begin{subfigure}{0.31\textwidth}
+\includegraphics[width=\linewidth]{sms-idea2}
+\caption{Start a proposal} \label{fig:sms-idea2}
+\end{subfigure}
+\hspace*{\fill} % separation between the subfigures
+\begin{subfigure}{0.31\textwidth}
+\includegraphics[width=\linewidth]{sms-idea3}
+\caption{Start the discussion} \label{fig:sms-idea3}
+\end{subfigure}
+\caption[Proposal For Sensor Commissioning]{Process of starting proposal for sensor commissioning} \label{fig:sms-sensor-comm}
+\end{figure}
+
+
+\begin{figure}[ht!]
+\begin{subfigure}{0.31\textwidth}
+\includegraphics[width=\linewidth]{sms-idea-ex1}
+\caption{Look at the example proposal} \label{fig:sms-idea-ex1}
+\end{subfigure}
+\hspace*{\fill} % separation between the subfigures
+\begin{subfigure}{0.31\textwidth}
+\includegraphics[width=\linewidth]{sms-idea-ex2}
+\caption{Learn about the proposal} \label{fig:sms-idea-ex2}
+\end{subfigure}
+\hspace*{\fill} % separation between the subfigures
+\begin{subfigure}{0.31\textwidth}
+\includegraphics[width=\linewidth]{sms-ideas}
+\caption{Explore other proposals} \label{fig:sms-ideas}
+\end{subfigure}
+\caption[Example Proposal For Sensor Commissioning]{Example Proposal For Sensor Commissioning} \label{fig:sms-example-prop}
+\end{figure}
+
+\begin{figure}[ht!]
+\centering
+ \includegraphics[scale=0.2]{sms-proposal}
+  \caption[Example Sensor Commissioning Proposal Document]{Example Sensor Commissioning Proposal Document}
+  \label{fig:sms-proposal}
+\end{figure}
+
+\subsection{Data Flow}
+\label{sub:data-flow}
+
+Figure \ref{fig:data-flow} shows the data flow through the whole of the SenseMyStreet toolkit. Figure illustrates how data is being exchanged and synced using the Geo API functionalities of the SenseMyStreet platform. Using Firebase the mobile application synced GPS tracks to the SenseMyStreet platform using the Geo API, which was then used by the data parser to merge with sensor readings. Additionally, the locations of the issues flagged by people on the platform were synced together with the processed hand-held monitor readings (from the data parser stored in Google Drive) to the Carto platform to be visualised on the map (Figure \ref{fig:handheldresults}).
+
+\begin{figure}[ht!]
+\centering
+ \includegraphics[width=\textwidth]{data-flow}
+  \caption[SenseMyStreet Toolkit Data Flow]{SenseMyStreet Toolkit Data Flow}
+  \label{fig:data-flow}
+\end{figure}
+
+\section{Toolkit Usage Analysis}
+
+\subsection{Collected Data}
+
+This section reports on the usage data of SenseMyStreet and observed interactions with it across different platforms and tools linked to the toolkit. Participants included in this reporting are everyone who took part in community engagement activities, the design of the toolkit or who engaged with any of the toolkits' digital platforms. An overview of the submitted issues are given with their geographical division in relation to the Index of Multiple Deprivation (IMD)\footnote{\url{https://www.gov.uk/government/statistics/english-indices-of-deprivation-2015}}. Additionally, this analysis provides an overview of activities for different groups and individuals who took part in the case study and engaged with the digital systems. 
+
+The SenseMyStreet toolkit enables the collection of metrics from three different bespoke user facing platforms: SenseMyStreet website, automated sensor loan scheduling system, and SenseMyStreet Proposals website. Each system uses its own technology (Section \ref{sub:sms_impl}) to collect statistics about the engagement:
+\begin{itemize}
+    \item SenseMyStreet website allows reporting on the number of people signed up and reported issues and provide locations and information about inserted issues;
+    \item Automated sensor loan scheduling system allows reporting on the number of people applied for doing hand-held sensing and their advocacy group association;
+    \item SenseMyStreet Proposals website allows reporting on number of proposals created and the groups that were involved;
+\end{itemize}
+In addition, there were Google Analytics provided metrics collected from both websites (SenseMyStreet and SenseMyStreet Proposals) and additional external third-party platforms in the SenseMyStreet toolkit such as Carto Maps\footnote{\url{https://sensemystreet.carto.com}} which provides the number of views on each map, however they were excluded from the analysis on the basis of their lack of use in this particular evaluation.
+
+\begin{figure}[ht!]
+\centering
+ \includegraphics[width=\textwidth]{imd}
+  \caption[Flagged Issues and IMD]{Flagged Issues mapped against Indexes of Multiple Deprivation (IMD) statistics: from \colorbox{red!30}{10\% of most deprived} to \colorbox{yellow!20}{10\% of least deprived}}
+  \label{fig:sms-imd}
+\end{figure}
+
+The SenseMyStreet toolkit was officially launched in the summer of 2017. Over two years leading up to this evaluation, 65 people had signed up through the SenseMyStreet website and 47 issues had been submitted using the mapping tool on the site. From there, 6 groups (G1-G6) and 7 individuals (I1-I7) signed-up (Table \ref{table:sensemystreet_usage}) to borrow hand-held monitors, using the sign-up form linked to the automated sensor loan scheduling system. Following that, 4 proposals were submitted through the SenseMyStreet Proposals platform for commissioning fixed monitors to be installed by the Urban Observatory, and 4 deployments have been carried out. Additional data used for this analysis originates from ethnographic work which includes field notes from private meetings, community events organised by the group and public meetings around particular issues of concern. Although each platform was independent and often required users to sign-up separately, ethnographic work conducted by the author enabled links to be made between each participants' activities across different platforms, and an overview of each participant's level of engagement to be compiled. The data collected to report on the case study is however not definitive, as the toolkit is still operational, constantly evolving and being used by communities to gather data for exploring and evidencing issues in their neighbourhood.
+
+\subsection{Analysis}
+
+Table \ref{table:flagged-issues} shows that the majority of issues were linked to air quality in the neighbourhood, which was also one of the main drivers of this case study (Section \ref{sub:breathe}). Issues with traffic were also mainly related to the air quality issue, however one of the traffic monitoring submission was to do with counting the number of people using the new cycle lane. The issue form also enabled people to flag issues about things the toolkit could not measure at that point. The other issues submitted where about measuring water level and quality in the river, and vibration from the building works on residential area. This could help to expand the toolkit in the future and to acquire new sensing equipment to respond to citizen's concerns. 
+
+\begin{table}[!th]
+\centering
+\footnotesize\centering\emph{Source: Author}
+\smallskip\centering
+\caption[Submitted Issues]{Distribution of submitted issues on the SenseMyStreet platform}
+\begin{tabular}{|l|c|}
+  \hline
+	\textbf{Issue Type} & \textbf{Count} \\
+  \hline
+   Air Pollution &  38 \\
+   \hline
+   Noise Pollution &  3 \\
+   \hline
+   Traffic &  3 \\
+   \hline
+   Other &  3 \\
+  \hline
+\end{tabular}\label{table:flagged-issues}
+\end{table}
+\mynote{Map pins on make place and sensor locations with reference to IMD, AirQ Managment Areas and existing sensor network. Also maybe before and after looks}
+Furthermore, having the mapping component on the SenseMyStreet website and the availability of Geo API enables to analyse issues through geography. Figure \ref{fig:sms-imd} illustrates all the submitted issues mapped against the IMD. It is the official measure of relative deprivation for small areas in England and Wales, as outlined by the Office of National Statistics (ONS). These statistics are published at the level of Lower Super Output Areas (LSOAs) that contain an average of 1,500 residents within any given boundary. The IMD uses seven domains to produce this overall measure: Income, Employment; Education, Skills and Training, Health and Disability, Crime, Barriers to House and Services, and Living Environment. Using this metric it is possible to look the socioeconomic characteristics of the areas and draw comparison between different neighbourhoods within England and Wales. When looking at the flagged issues against the IMD, it is revealed that the majority of the issues that are flagged are in the \colorbox{yellow!20}{10\% of the least deprived} areas according to the metric. This might be an indication that the people who engaged with the toolkit where living in those areas. However, the map shows some issues being flagged on the border areas of different LSOAs which could indicate that the people are living in either area.
+
+Based on participant's self reporting and ethnographic work an analysis of the overall engagement was conducted. This reports on the activities across the digital platforms developed to support the process of community sensor commissioning. In order to understand the factors that influence active citizen engagement with the commissioning toolkit, a comparison of activities for each community group or individual are analysed. Table \ref{table:sensemystreet_usage} shows the level on engagement and usage of the different technologies across the toolkit. The key aspects that are considered are: existing community \textit{group}, formed \textit{issues} mapped on SenseMyStreet platform, engagement in hand-held \textit{monitoring}, formulation of a \textit{publics} \citep{dewey_public_1954} around the issue, submission of a \textit{proposal} for sensor commissioning, an action \textit{plan} for data use, and usage of \textit{data} by community. Additionally each individual or group's communication \textit{channel(s)} with the community are provided as a comparison.
+
+The analysis indicated that the existence of a community group is not essential for starting to engage with the toolkit. In many cases groups and publics formed alongside participating in the activities of related to SenseMyStreet toolkit. However, it was paramount to identify the issues within the community to focus on at a specific location in the neighbourhood. Participants who did not identify the issues or did not have a specific agenda in mind, did not manage to get further from doing hand-held monitoring. There was one special case where an individual's advocacy efforts might have had negative consequences to their quality of life, which meant that the issue was dropped by the individual. However it could be picked up again if there is enough people who are interested in the issue and want to do something about it. This indicates that there is a need for a publics to emerge at some point in order for the successful use of the toolkit and the data it generates. The findings also indicated that participant(s) who set a prerequisite action plan that would follow data generation, managed to make use of the data. This was prominent on both cases -- when people used hand-held monitors to collect measurements or using data generated through commissioned monitors. There were instances where participants engaged with the toolkit up to the point of getting fixed monitors commissioned from the UO, seeing that as the end results for the engagement. Although the data generated might become useful in the future, for example when there would be an infrastructure changes implemented in the area, however without any promotion or intended use by citizens, it does not serve the efforts off effective use of data by community for civic participation, advocacy and action.
+
+\begin{table}[ht!]
+\scriptsize
+\captionsetup{font=footnotesize}
+\caption[SenseMyStreet Usage]{SenseMyStreet Toolkit Usage: empty fields indicate that the engagement is ongoing (no data yet) and `None' indicates no data available}% title of Table
+\centering % used for centering table
+\begin{tabular}{|l|c|c|c|c|c|c|c|c|}
+\hline %insert horizontal line
+\textbf{Participant(s)} & \textbf{Group} & \textbf{Issues} & \textbf{Monitoring} & \textbf{Publics} & \textbf{Proposal} & \textbf{Plan} & \textbf{Data} & \textbf{Channel(s)} \\[0.5ex] % inserts table heading, puts a 0.5 vertical whitespace under the text
+\hline % inserts single horizontal line
+% inserting body of the table
+\rowcolor[gray]{.9} \textbf{G1}	& \xmark & \checkmark & \checkmark & \checkmark & \checkmark & \checkmark & \checkmark & Blog, FB, Newsletter, Twitter \\
+\hline
+\textbf{I1}	& \xmark & \checkmark & \checkmark & \checkmark & \checkmark & \checkmark & \checkmark & Blog, Twitter \\
+\hline
+\rowcolor[gray]{.9} \textbf{G2}	& \checkmark & \checkmark & \checkmark & \checkmark & \checkmark & \xmark & \xmark & FB, Website \\
+\hline
+\textbf{I2}	& \xmark & \xmark & \checkmark & \xmark & \xmark & \xmark & \xmark & None \\
+\hline
+\rowcolor[gray]{.9} \textbf{G3}	& \checkmark & \checkmark & \checkmark & \checkmark & \xmark & \xmark & \xmark & FB \\
+\hline
+\textbf{G4}	& \checkmark & \xmark & \checkmark & \xmark & \xmark & \xmark & \xmark & Website \\
+\hline
+\rowcolor[gray]{.9} \textbf{I6}	& \xmark & \xmark & \checkmark & \xmark & \xmark & \xmark & \xmark & None \\
+\hline
+\textbf{I4}	& \xmark & \xmark & \xmark & \xmark & \xmark & \xmark & \xmark & None \\
+\hline
+\rowcolor[gray]{.9} \textbf{G5}	& \checkmark & \checkmark & \checkmark & \checkmark & \checkmark & \checkmark & & Website, FB \\
+\hline
+\textbf{I3}	& \xmark & \checkmark & \checkmark & \checkmark & \checkmark & \xmark &  & None \\
+\hline
+\rowcolor[gray]{.9} \textbf{G6}	& \checkmark & \checkmark & \checkmark & \checkmark &  &  &  & FB \\
+\hline
+\textbf{I5}	& \xmark & \checkmark & \checkmark &  &  &  &  & None \\
+\hline
+\rowcolor[gray]{.9} \textbf{I7}	& \xmark & \checkmark & \checkmark &  &  &  &  & None \\ [0.5ex]
+\hline%inserts single line
+\end{tabular}
+\label{table:sensemystreet_usage} % is used to refer this table in the text
+\scriptsize
+\end{table}
+ 
+% Space For Heaton G1
+% Streets For People Jesmond / SPACE for Jesmond I1
+% Kingston Park Neighbourhood Forum G2
+% Gosforth Garden Village Action G3
+% On behalf of NICA G4
+% None (Shieldfield) I2
+% South Gosforth First School Parent I3
+% Friends of Leazes Park G5
+% Visualsoft I4
+% West End I5
+% Newcastle sixth form college I6
+% Personal / no organisation I7
+% Grange Residents Association G6
+
+
+\section{Discussion}
+
+The SenseMyStreet toolkit and the process of sensor commissioning had successfully enabled to carry out a citizen led deployment of environmental monitors and helped generate data about issues that are important to communities. The Toolkit had also created a situation were data is demand-driven rather than the usual open data portal's ideology -- ``If we put data out there people will use it''. Furthermore, taking things online enabled to scale the commissioning process and extend the participation through different forms of communications for people unable, or unwilling, to engage in face-to-face talk. For example taking the proposal creation online provided a way for people who could not make or were not aware of the community meetings to participate in the discussion and get their voices represented. Additionally it also helped to document the process for transparency and reproduction, sharing the knowledge with other groups who might want to do their own investigations and submit a proposal of their own. Proposals were also looked over by expert professionals at the UO who could give community guidance how to get most out of the deployment in terms of data quality and placements of the fixed monitors.
+
+ The act of citizen data generation was actually a two stage process: (1) citizen sensing using hand-held monitors (2) and commissioning environmental sensor data from the UO. In the first stage was for the citizens to learn more about the issue and what goes into doing environmental monitoring -- what are the issues with the technologies, the uncertainties with the readings and the value of the data. This would have helped the community to get a personal perspective of the issue and enabled them to take ownership of the issue in hand. Enabling citizens access the smart city tools that are already used by the city officials and scientist responded to the cirques of citizen sensing projects, which are often discarded because the types of sensors used by the public is considered to be `toys' \citep{gabrys_just_2018}. Furthermore, the reason why in the second stage professionals where collecting data was to guarantee that the data collected for citizen commissioned locations would have the same quality as the rest of the data collected from the city. Additionally, having the data for the whole city accessible in one place helped avoid creating another `data silo' and also enabled people to compare the sensor readings from their area to other areas giving them an idea how does their neighbourhood match up to others.
+ 
+ Although the commissioned sensor data was published on the UO city data portal, available for everyone, it was up to the citizens to make use of the data and turn it into activities for local benefit. The toolkit had created an opportunity for communities to access resources to investigate local issues, however generating and making data available is only the first step of its effective use by the community. The initial aim of the case study to come up with mechanisms to democratise data production and use in the smart city got responded through the design, development and deployment of community sensor commissioning toolkit. The indicative findings from the toolkit usage suggest that there is an importance of establishing a strong community network. It is not only important for keeping up the engagement with the toolkit, but also for sharing skills, increasing social capital and building up community knowledge. There is a need for identifying the underlying relations that help constitute networks as supporting infrastructure for proximate communities. Furthermore, these should be also integrated into the design of the digital tools and processes to promote creation of these networks, specially for communities that are placed in a disadvantage position. However the utility of this infrastructure to act as a catalyst for civic advocacy and action needed to be assessed through an evaluation of its use by the communities. Hence, the extended analysis of the case study will be presented in the following chapter which gives an in depth chronological breakdown of activities of the initially engaged group of residents' (Section \ref{sub:config_par} and \ref{sec:design_sms}) using the commissioned sensor data for advocating for changes in their community.
+
+\section{Summary}
+
+This chapter described the design, development, deployments and analysis of SenseMyStreet, a sensor commissioning toolkit for communities that enables people use scientific environmental sensing equipment to investigate local issues and commission environmental sensors from the Urban Observatory; placing them in the neighbourhood to gather data relevant to issues of the community at a hyper-local scale. The chapter described in detail the iterative design process of setting up SenseMyStreet and giving overview of the processes and digital technologies linked to operating a sustainable sensor commissioning toolkit. Furthermore, a detailed description of user interactions on the platforms where given and how data is exchanged within the SenseMyStreet ecosystem. Finally, a analysis of the toolkit usage was provided to report on the ways that people engaged with the technologies. An extended analysis of how different groups engaged with the digital tools of the toolkit was also provided to understand the key factors that influence the effective use of the toolkit. The purpose of this step was to get an overview of the usage of the system, but also to develop a conceptual understanding for the analysis of the case study for the following chapter. The next chapter provides an analysis of the use of the data by a particular advocacy group to further develop an understanding of effective use of data by communities.
+
+
+%\mynote{Comments all go to chap3}
