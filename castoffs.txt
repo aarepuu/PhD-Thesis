@@ -1,0 +1,560 @@
+% abstract castoffs
+
+We live in the age of data, where it is being collected and archived in tremendous volumes and velocities. Historically data collections were mainly carried out by the state, for example to count the citizens for tax purposes or inform the government about eligible young men for military service. Nowadays new Information and Communication Technologies (ICTs) extend data generation abilities to other contexts. Smart cities are a good example of generation and use of data with an aim of improving the lives of citizen. In addition, the efforts of open data movement promoting publishing of data has enabled citizen to gain access to Open Governmental Data (OGD) and other sources of open data. People have theorised that opening up data for everyone has the potential to innovate public services, increase transparency and empower citizens to take action. Furthermore, some citizens are also becoming producers of data through engaging with academia and Citizen Science initiatives. While the technology to generate and store vast quantities of data is ubiquitous, what remains a significant challenge is how could communities leverage that data for activities of local benefit. Although there might be a huge potential for data to be used for social good and in processes of community decision-making, civic participation, advocacy and action; it is yet to be unlocked and there is lack of clear evidence of it having any meaningful or long lasting impact on governance or citizen participation in democracy. This thesis investigates the barriers of using data in civic advocacy and action, identifying issues with existing models of citizen participation through data, and uses a more inclusive and participatory ways for designing data-driven, people-centred technology that promotes sustained engagement and effective use of data by communities. The thesis contributes an understanding of effective use of data by communities for civic participation, advocacy and action, and the exploration of how re-positioning the role of data in knowledge creation networks enables them it to become useful for communities.  First case study presents the design and deployment of SenseMyStreet, a commissioning toolkit that helps manage a common resource of environmental sensors for gathering evidence to inform and raise awareness around local issues, and to advocate for physical infrastructure changes. Second case study presents the design and development of Data:In Place, an open source web platform which supports citizens in accessing, interpreting and making sense of OGD to support local decision-making and provide resource for action. Both technologies continue to exist and be used by communities, creating more resources for collective action. Drawing on these case studies a new model of Community-Data Interaction (CDI) is offered which enables researcher discuss and design for effective use of data by communities for civic participation, advocacy and action. Lastly, the third case study provides an example of practical use of CDI for supporting communities taking action.
+
+\newline
+There is an emphasis on data-driven and evidence based decision making and knowledge from data can lead to better decisions and actions. Having that resource available for the public creates new opportunities for people to be more involved in creating the spaces they live in larger scale of civic participation. Data helps understand the impact of cities and complex interactions in it, collecting the evidence for change.
+CI systems need to be both useful and usable
+
+\mynote{Castoffs from the Introduction. Dunno if useful or not. Just keeping them here ATM}
+
+\philnote{Doesn't make sense}
+There is no denying that data creates opportunities, but it can also impose people its use. For example in extreme cases of \textit{datafication} in governance, where there is no need for engaging the public in any issue around the state because there is data that can simply be tallied up to enforce decisions. This means that all the intricacies, unique cultural peculiarities and imperfect organic ways people do things are discarded, and communities are boiled down to fabricated algorithmic identities.
+
+\philnote{A bit of a clumily written paragraph.}
+\petenote{Claiming stuff with no evidence. Heading to the loss of confidence in the author. style here, for me, it was the first thing I read, while ago now was that you sort of making quite a few claims. You weren't sort of referencing or evidencing or anything. And it began to feel a little bit like
+the mind my confidence in the academic quality of it, or the, you know, the quality of the arguments}
+But what happens to people in these communities? Do people just have to stay as subjects of this data or could this data be leveraged by them also to participate in these decision-making processes? There is a growing demand for data and evidence from the civil society when engaging in decision-making processes -- either at local or national level [REF]. Often there is lack of data for these groups to state their claims, but in some cases data is already generated. For example by the government conducting censuses and released the data as Governmental Open Data. However in many cases the value offers from that data are hidden from these community groups because of lack of access, know-how, skills or unevenly distributed resources. They are left to their own devices to make data work for them.
+
+% Although the the amounts of data generated are vast, there is often paucity of information about how to use it in a purposeful way. 
+% What is the role of data science and data scientist is it mealy a janitorial work for cleaning data
+
+%Data:In Place is a GIS system built using open-source database and web technologies such as PostgreSQL, Node and Angular JS, Leaflet interactive mapping framework and D3.js visualisation framework. Platform is built to utilise visual map based querying system to help define requests for official data sources connecting to their expert systems and retrieving data to be visualised on the map. Additionally, built in georeferencing enables users to automatically map their own data sources to reference with the official datasets. Furthermore, leveraging a open source visualisation library RawGraphs\footnote{\url{https://rawgraphs.io}} the platform enables to make simple downloadable graphs and charts. The case study aimed to address the information engineering problem of removing technical barriers to data access and interpretation, and make interrogation of open data possible for non experts, however it approached this issue from a community problem solving perspective.
+
+\philnote{Does corporatization of technology need further explanation?}
+Data might be out there, however to condense it into the form that it is accessible and usable by everyone is not a straight forward task due do because of; lack of clear documentation and technical support; corporatization of technology; and absence of unified data standard across the board. Thesis expands on these issues further through reflection and discussion on the lessons learned from designing and building systems for accessible data in Chapter 4. However making data accessible is only the tip of the iceberg of effectively using it in civic advocacy and action. Chapter 5 reflects on both case studies to understand the linked processes around effective use of data and relevant social capital needed turn it into activities for local benefit. 
+
+\mynote{Write here what has been successful, e.g., people still use SenseMyStreet}
+Finally drawing on the literature the thesis reflects on the research conducted and the systems built for accessible data and their utility for communities hoping to instrument change, to propose a framework for effective use of data. Reflecting on case studies the framework helps to identify the key principles for successful engagement, contributing new understanding of the relationships between data, communities and knowledge networking and providing further design considerations for creators of technologies that aim to democratise data science practices use data for social good.
+
+Chapter starts off with describing the role of data in the context of knowledge and value creation for civic action linked to complex decision-making processes. Moving away from the assumption that data is the `silver bullet', meaning if there is data information, knowledge and wisdom reveals itself without additional steps, naturally, automatically; to identifying the key principles of knowledge creation from data that leads to action. Chapter concludes with a suggested framework for effective use of data that helps understand the gaps and needed resources to promote data use within the civil society for actively participating in renewed democratic processes. 
+
+
+so it is often natural for systems engineers and informaticians (i.e., data scientists) to bring the same methodology to accompany with the data.
+This is also referred to as tacit knowledge which is hard or nearly impossible to communicate.
+\cite{hakken_social_2003} also points to the shortcomings of expert systems not adequately dealing with the social, contextual and cultural dynamics at the centre of knowledge networking. By not recognising the social. We can’t ignore the social and just engineer or model intelligence, information and knowledge.
+
+\petenote{weak defence for digital civics}
+To respond to these challenges, new \textit{digital civics} \citep{olivier_digital_2015} approaches have emerged that recognise the importance of `social' in these processes. The affordance of internet of thing devices, and connected collaborative nature of the internet has enabled new models of knowledge production that promote participation and co-creation of information sources and services. Examples of such approaches are citizen sensing \citep{balestrini_city_2017,gabrys_programming_2014}, crowd sourcing for planning \citep{maskell_spokespeople:_2018,le_dantec_planning_2015} or even communities commissioning their own technologies to create a new data sources \citep{garbett_app_2016}. Projects like these have enabled citizens to generate alternative data sources to be used within the community to evidence issues and potentially challenge decisions. Although the data is now generated by the citizens themselves there is a considerable step from having the data and turning that data into actionable knowledge and activities for local benefit. This often involves working with multiple sets of data from different sources; accessing, cleaning, merging and interpreting them, and using visualisation techniques to tell a story - all which are activities that a technically literate and experienced data scientist would do.
+
+
+\mynote{Castoffs from Chapter1}
+
+This literature review gives an overview of the underlying concepts touched in this thesis, however for each case study a more in depth and context specific body of research is reviewed and presented.
+
+Where do citizens fit in this data saturated world?
+
+Is there a role for them beyond that of simply being the source of data feeding `smart' decision algorithms? How do and how could citizens use big data for their own civic and community purposes. 
+
+Is there a role for `citizen science' and citizen-generated data in smart city management? 
+
+How could big data be made accessible and usable by citizens? How could big data be used to inform civic decision-making at the level of local communities and local area planning?
+
+And how could all of this be done without the need of a professional data analyst to act as intermediary?
+
+\petenote{There is room for meta narrative here, that would bring us back to citizens, the kind of people they are, and how they might participate in the decision making processes in the smarter city}
+% \citet{townsend_smart_2013} wrote in his book 
+
+% open knowledge section
+% https://www.guaana.com/
+% Aaron Swartz and Alexandra Elbakyan
+
+
+\petenote{Open needs to be set up in the equation. available (accessible) != usable, visualisation != comprehension != actionable. Make a drawing/map.}
+
+% data portals table
+
+% Maybe don't include the tech, because can't find all the tech from private stuff
+% Technology behind it
+% Name, Company, Technology, Main Functionality (discoverability, Interoperability), Open Source/Proprietary, Examples
+% CKAN (Open Knowledge International)
+% OPEN DATA SOFT
+% PUBLISH MY DATA (SWIRRL)
+% DATAPRESS (ODI Startup)
+% DATASHARE (REDBRIDGE)
+% SOCRATA (BLIST)
+% INSTANTATLAS (ESRI)
+% DKAN (NU CIVIC)
+% EDP (Energy)
+% CUSTOM (UO)
+
+% one sentence here to sum it up the multilaterals
+% maybe about open washing and it is not enough to just build capacity
+% We are seeing a rising trend of what can be termed “open-washing” (inspired by “greenwashing“) – meaning data publishers that are claiming their data is open, even when it’s not – but rather just available under limiting terms. If we – at this critical time in the formative period of the data driven society – aren’t critically aware of the difference, we’ll end up putting our vital data streams in siloed infrastructure built and owned by international corporations. But also to give our praise and support to the wrong kind of unsustainable technological development.
+
+%\philnote{quite a strong statement - this is not 100\% true in all circumstances and therefore you need to be a little more circumspect in your language}
+%Civil society groups are too busy competing with each other and even with start-up companies, and trying to please the funders, that they are often forgetting the mission they set out to do -- help improve the lives of people in the community  \citep{johnson_neighbourhood_2018}. 
+
+% https://www.databoxproject.uk/about/
+%Aiding data collection and storage. 
+% Researchers needs to go further to make sure it is relevant to communities who have been identified as potential beneficiaries of open data. (state of open data)
+% Lack of social impact using data in research
+% Sustainability of research projects around data and technology
+
+
+% Narrow focus of tools
+% Lack of understanding of the hole process from data access to use and a clear framework to guide it
+% support of community, creating capacities, increasing social capital, exchanging of knowledge, bridging community with decision-makers
+
+% https://www.theguardian.com/cities/2014/mar/13/too-smart-cities-visions-utopia-reality-check
+% https://scholar.google.com/citations?user=grfQwUIAAAAJ&hl=en
+% https://www.open.edu/openlearn/ocw/mod/oucontent/view.php?id=67886&section=1
+
+This chapter describes related research around the use of data in knowledge creation and citizen participation in democracy. The use of data in civic life and within communities spans across a wide range of disciplines from technical fields like sensing networks, pervasive computing and information engineering to human computer interaction (HCI) and computer-supported collaborative work (CSCW). The first two sections of the literature review give an overview of the increasing use of data in decision-making through the lens of smart city and looks at the ways that citizens are involved or not involved in these data driver processes. Subsequent section describe the new ways of creating knowledge sources and opening them up for everyone to use and re-purpose. This also includes opportunities for new interpretations of open data sources published by the governments or other data generators. Fourth section describes the research around data production and different ways citizens can generate their own data sources, whether it is to contribute to science or to evidence local issues and contest decisions. Fifth section describes the current state-of the-art of data visualisation and storytelling through data which is essential for data science practices and the effective us of data. Drawing on work done by State of Open Data\footnote{\url{https://www.od4d.net/stateofopendata}} project and its contributors, section six tries to map out the relevant stakeholder groups around data production, use and dissemination of derived knowledge from it. It is essential to understand these complex relationships and roles of stakeholders, as we are increasingly coming to contend with significant challenges and questions relating to what data may be relevant and for whom; how to translate and represent it; as well as how different representations might be combined to better support communication and sense-making of complex information that sits at the boundaries between what may be private, shared and public. Building from that, section seven reviews the relevant literature about communities of practice and the knowledge networking within these communities. Finally the last section looks at the research into civic advocacy and action with the support of data and technology, including the existing models of successful and unsuccessful citizen decision-making. This literature review gives an overview of the underlying concepts touched in this thesis, however for each case study a more detailed and specific body of research is reviewed and presented.
+
+
+Initially all notable members of free software movement adopted the term, however later Richard Stallman, the founder of the foundation have criticised that open source has missed the point of `free software'\footnote{\url{https://www.gnu.org/philosophy/open-source-misses-the-point.html.en}}.
+He argues that when software is published `free', then all the modification of that software has to be published also as `free software', and using the same licence. However Linus Tonvalds, the creator of Linux kernel, does not agree with these principles and stated that the creator of the software should have the freedom to choose what ever kind of licences she preference -- even proprietary software. Putting restrictions on the release of the software does in fact restrict the freedom of it and therefore suppresses progress.
+
+\mynote{The following sections are things I took out from the literature review. They are either not needed, repetition of stuff, or things that are giving too much away and should probably go to other chapters/discussion. I don't really know yet!}
+
+\mynote{Don't know yet where this fits in}
+The promises from tech giants to `wire up' the city to solve some of the `wicked' problems might have been overstated or perhaps a bit premature. Many fancy dashboards and data silos later, society is starting to realise that data is not an end in itself. Having all the numbers does not give all the answers, to make sense and use the data, we must ask the right questions or possess the knowledge relevant to the issue at hand which can only obtained through a collaborative effort. This means we are not relaying on one piece of knowledge, but multiple and obtained from different sources -- smart city sensors, experts, city managers, researchers, decision-makers and citizens. There is an important role for designers and technologist to play here, working together with citizens to develop smart city tools for data collection, access, interpretation that promote civic participation and aim to democratise data science practices in the smart city. Similar design principles have guided the development of case studies in this thesis, where the developed tools and technology are direct responses to the needs of citizens.
+
+\mynote{Don't know yet where this fits in}
+All of these can be taken as context needed to produce and understand knowledge, because in these cases knowledge is always situated in activities engaged in the context of collective consciousness \citep{winograd_understanding_1986,hakken_social_2003}. In these situations knowledge mostly takes a tacit form \citep{polanyi_tacit_2009} which makes it difficult for individuals and organisations from outside the CoP to obtain any information. In order to understand the information it conveys, there is a need to understand what the context is and what does it mean \citep{hakken_social_2003}. At the same time this makes it difficult for people outside the domain to contribute to the knowledge base or identify additional resources needed that would benefit the practices.
+
+In cyberspace people are increasingly relying on different data sources to derive knowledge. 
+\philnote{?Who is pushed out here - needs clarification}
+Often generated by somebody other than individuals involved in the CoPs and pushed out as they are, missing crucial context to really understand and use those data in knowledge creation. An example of this are datasets published as Open Government Data which represent the information collected for the purpose of governance and depict the viewpoint of the government. However that data is connected to organisational practices, which share some similarities with CoPs in terms of having a knowledge base in which it operates, but in reality it is inherently different from the organically created CoPs which do not possess the fixed hierarchical structures and tasked roles within (REF). This does not imply that that data is useless in community practices, it means that data needs to be contextualised by the community related to their practises. It is known from situation theory that information is in fact situated data and knowledge is information whose situation or context is known \citep{hakken_social_2003}. Case studies in this thesis explore ways that available data sources can be made into information that is useful for the communities and their practices. However, there should not be a confusion between \textit{information society} and \textit{knowledge society}. Whereas information society is more focused on generating and publishing data, knowledge society is more concerned with creating mechanisms and processes for effective use of those datasets and putting it into action towards improving the society as a whole. By designing tools with and for CoPs to collect data (SenseMyStreet) or help connect data to concerns (Data:In Place) enable people build stronger community networks, helping create and share knowledge for the community to act upon.
+
+% contributing to an already existing systems (UO)
+% difficult to achieve these links, also if they do not fit into the governmental structures they don't work. Data is just collected, but not acted upon
+On the one end it is difficult use data without knowing the context behind the generation and purpose. At the other end of the spectrum new tools are often creating new processes that do not link or interact with the existing ones, if they do not fit into the governmental structures they fail to produce any results. Data is just collected, but not acted upon. There is a lack of understanding of the hole process from data access to use and a clear framework to guide citizens in that process to use data in knowledge creation towards actionable results.
+
+% dialog discourse
+Although there are different focuses and strategies for civic advocacy, \citet{asad_tap_2017} emphasised that in complex civic processes, which usually involve more than one stakeholder, there is need to view issue advocacy across \textit{multiple sites} and venues. 
+
+
+\philnote{What are the spaces in this context - don't follow.}
+Developing a common language is critical in order to open spaces where common understandings of what data may be important for civic life can be developed for common purposes. Furthermore, a deeper examination of issues and tensions arising from processes of data classification, representation and interpretation becomes necessary in order to develop technologies and processes to better support collaborations around data capture, analysis, and sensemaking\citep{furnas_making_2005} , envisaged for a range of purposes from personal data management to community, civic and political engagement.
+
+\philnote{We need more lining text from previous to this paragraph.}
+% Look at the IBIS for HCI - Making Claims
+% https://en.wikipedia.org/wiki/Issue-based_information_system
+Trying to explore, map out and make sense of complex issues in a multi-stakeholder setting is not a new problem. It is often called dialogue mapping and associated with Issue Based Information Systems (IBIS). The original IBIS was developed in the early 1970s by Kunz and colleagues as a tool to support planning and policy design processes \citep{kunz_issues_1970} and with its computerised versions called graphical IBIS (gIBIS) following a decade later \citep{conklin_gibis:_1989,conklin_gibis:_1988}. 
+
+% sentence about how now in addition to planners and government, people are added to the the mix of stakeholders
+However, new challenges arise when trying to connect and navigate analytics and qualitative data, dialogues and opinions. There are two parts to this: (1) the visual sensemaking of analytics and (2) the exchange of opinions and judgements on the subject. Both are highly social and shared activities, where people collectively make sense of \citep{furnas_making_2005} analytics and then add their own layers of meaning to create knowledge.
+
+
+\mynote{I don't know where this should go and even is it important.}
+Finally, there is the question of what makes people participate and whether these new digital tools guarantee increase in participation? Multiple researchers have studied the way participation is affected when digital tools are implemented \citep{conroy_e-participation_2006,macintosh_e-democracy_2008,kim_e-participation_2012,macintosh_characterizing_2004,kitsing_online_2011}. Perhaps the most influential digital participation to governance is internet voting (I-voting) which is gaining popularity countries like Estonia, Switzerland, US, Canada and France. One of the pioneers in the area Estonia, has been using I-voting for all of its elections (local, parliamentary and EU parliamentary) since 2005. Although the participation through e-voting has increased, the overall voter turnout has stayed pretty much the same\footnote{\url{https://www.valimised.ee/en/archive/statistics-about-internet-voting-estonia}}. \citet{kitsing_online_2011} argues that though internet voting has a quicker turnover and is cheaper for the government, it does not necessarily make the process more inclusive. People who are already activity engaged will have another channel for participation, however the people who have never engaged will not necessarily start now because of a new technologically superior system. \citet{kitsing_online_2011} adds however, that having insights from a real world use case helps us understand these processes, and the heterogeneous nature of them, a bit better which opens up a space for reconfigurement of these processes.
+
+
+\mynote{I don't know if this is something perhaps for Data:In Place chapter's, because there was citizens generating data that is not necessarily big data or numbers/stats}
+Data however does not always have to refer to something that simply can be counted and represented as quantifiable values (e.g., `big data') \citep{michael_toward_2016,mcmillan_data_2016}, it can be much broader and diverse set of `things' often characterised as contemporary media such as 3D printed physical fabrications of data \citep{nissen_data-things:_2015}; travelling suitcases filled with stories and memories \citep{crivellaro_re-making_2016}; interactive physical graphs \citep{sweeney_pixel_2019}. Often a good way to engage people with data is through installations and art practices that use technology coupled with engineering practices to show data under a critical lens. Examples of these kind of projects are Take a Bullet for The City\footnote{\url{http://www.digiart21.org/art/take-a-bullet-for-the-city}}, which uses data from New Orleans Police Department to fire a blank shot every time when a report of a firearm discharge occurs and Invisible Airs\footnote{\url{http://yoha.co.uk/invisible}}, which uses different `machines' to visualise the public spending of Bristol City Council. In may cases this way of `releasing data' is far more effective than a flat machine readable file on some data portal and gets people more engaged with the issue in hand. In addition to the benefits of being able to combine digital and non-digital tools to visualise data, situated urban displays also enables people to keep the data in the place it was collected from and with the community it belongs to. For example using chalk and tape to visualise locally collected data to raise awareness around local issues and promote dialog between residents \citep{koeman_what_2014} or using public spaces to display private household data in order to promote behavioural change around energy usage \citep{moere_comparative_2011,bird_pulse_2010}. It is known however that the way in which different data comes to be interpreted is always entangled with and dependent upon both contexts and situations \citep{suchman_plans_1985,taylor_data--place:_2015}. While, there is a tendency for civic technology projects to place emphasis on quantitative data -- on the assumption that quantitative data may be relevant to people -- qualitative data describing things that cannot be easily quantified or measured are not less important. Indeed, it is often this type of `data' that helps people making sense of what matters and help generate actionable knowledge.
+% How people make sense of data
+% Chalk and tape, showing data in the community
+% gameified interactions
+
+\noindent
+This thesis presents research conducted with citizens in a `smart city' that aimed to explore the role of technologies in supporting active citizen participation and advocacy through data. In order to investigate the implications of active citizen participation to data, an participatory action design research approach was taken which resulted in the design and development of tools for data in community contexts. This thesis supports an activist approach and presents three case studies to look at different modes of active citizen participation using data: data generation or making (Chapter \ref{chap:sensemystreet}); data access, interpretation and comprehension (Chapter \ref{chap:datainplace}); and data use for civic advocacy and action (Chapter \ref{chap:sensemystreet-eval} and \ref{chap:cdi_in_action}). Throughout the thesis a dual agenda was considered, where both engineering problem solving agenda and community problem solving activities was given focus, resulting in new challenges for community data interaction and a holistic approach towards use of data by local communities (Chapter \ref{chap:cdi}). In Chapter \ref{chap:cdi_in_action} dual approach was trialled through the use of technologies and guiding methods of inquiry. The discussion Chapter (Chapter \ref{chap:discussion}) of the thesis will show how the findings of the studies respond to the critiques of active civic participation and effective use of data by citizens, and how the model of Community-Data Interaction (CDI) supports the future agendas of active public engagement and democratisation of data science.
+
+\mynote{Castoffs of Chapter2}
+
+% the tools section
+% Maybe change this into some feature comparison (tech, source-code, programming knowledge, data access, cloud sources/hosting)
+% https://www.instructables.com/id/Air-Quality-Test-Box/
+% Airbeam - lends out monitors as well - http://www.thepollutiondetectives.org/?page_id=245
+% How to get monitors what are the cost of deployment?
+% Building your own sensors
+
+% However there are initiatives like Public Lab\footnote{\url{https://publiclab.org}} which bring together, community groups, researchers and technologist to come up with low cost solutions and tools to explore local issues and projects such as luftdaten.info\footnote{\url{https://luftdaten.info}}, from OK Lab Stuttgart, which provides open knowledge and resources for people to self build sensors kits. 
+
+% A review of citizen science and community-based environmental monitoring: issues and opportunities (Cathy C. ConradKrista G. Hilchey)
+% https://www.caravanstudios.org/citizenscienceresources
+
+
+% Also, giving an overview of at tools for citizen data collection.
+% http://aircasting.org/
+% https://smartcitizen.me
+% https://airqualityegg.com/home
+
+% https://luftdaten.info/feinstaubsensor-bauen/
+% http://sensors-in-social-research.net/homesense-trial/
+
+% Experts are making assumptions
+% The public / citizens cannot afford equipment that really works. Toys… 
+% What is anybody going to do with the data?
+% Sensors are cheap and presented seductively for users to ‘have a go’
+
+
+% Making data meaningful by linking it to local issues
+% Pushing for change in the community How does sensor commissioning work? How do you manage this, common resource for people
+
+% Groups that do crowdsource monitoring a projects for citizen action (using sensors)
+% http://www.sensr.org/
+% http://www.inhaleproject.ca/citizen_science_resources
+% http://www.bristolapproach.org
+
+% issues with data and its value
+
+% . All too often in actual constructivist science education, while the learning is approached processually — to be accessed via a postmodernist, socialed pedagogy — the content of scientific knowledge remains framed in modernist, “thing,” individuated terms. A typical result of failure to acknowledge the underlying inconsistency is that participation in activities framed as contributing to the development of scientific knowledge (for example, collecting data on weather) is substituted for real coconstructive learning. Related variations of this failure are frequent enough so that they are sometimes mistaken as characteristic of constructivism. Hakken (Page 384).
+
+
+% how can these new data sources help to assert positive change in light of those issues. 
+% Enabling communities to start voicing their ideas and issues
+% would help find links where data and technology could act as a resource for exploring and tackling those issues.
+% Change title maybe -- Community Networks
+% Add a section about infrastructuring here
+
+%\subsection{Data For Community Problem Solving Activities}
+% Publics - Dewey 1954 [1927]
+% Community networks - (John M Carroll and Mary Beth Rosson. 2003. A Trajectory for Community Networks. The Information Society 19: 381–393.)
+% Korn, M. & Voida - infrastructuring
+% Communities of practice. Inquiry and issue led practices. Environmental justice groups
+% Bristol approach
+% Non-profits focused on enviromental (http://habitatmap.org/ aircasting)
+% air pollution experts
+
+\subsection{Data For Community Problem Solving Activities}
+
+% https://wenger-trayner.com/resources/communities-versus-networks/
+% All communities of practice are networks in the sense that they involve connections among members. But not all networks are communities of practice: a community of practice entails shared domain that becomes a source of identification. This identity creates a sense of commitment to the community as a whole, not just connections to a few linking nodes.
+
+% The network aspect refers to the set of relationships, personal interactions, and connections among participants, viewed as a set of nodes and links, with its affordances for information flows and helpful linkages.
+
+% The community aspect refers to the development of a shared identity around a topic that represents a collective intention—however tacit and distributed—to steward a domain of knowledge and to sustain learning about it.
+
+% And at any given time, which aspect needs to be developed as a way to increase the learning capability of the group?
+
+
+% https://friendsoftheearth.uk/
+% https://luftdaten.info/en/home-en/
+% https://gasp-pgh.org/
+% https://publiclab.org/
+% http://spaceforgosforth.com/
+% https://snuffelfiets.nl/
+
+% organisations inform around issues
+
+% This is an interesting case because it emphasises that distinction between a community network and network community is not necessarily a matter of the current distance between interlocutors as it is a matter of the place-based knowledge and experiences they share. (Carroll 2003)
+
+% Groups like habitatmap and
+% different groups have different agendas and focuses and skills
+% Identifying  community champions who are willing to engage the rest of community 
+% multifaceted
+% Looking at issues in the city needs a holistic approach and inclusion of all multiplicity of stakeholders.
+% Carroll et al has identified the .... for 9community networks
+% maintenance issues of information services, can be solved with automated scripts that pull data from the sources (data generators)
+
+% configuring participants
+% Furthermore, according to the participants there was no known plans from the government to start doing environmental monitoring in the area because of the lack of evidence to do so from the official air quality modelling. However people who used the spaces daily, pointed out that they are seeing issues raising with the infrastructure changes and increased volumes of traffic.
+
+\subsection{Mapping/Surfacing Community Concerns}
+% talk about the opportunity to lobby for infrastructure changes linked to streets for people (similar to how Dantec et al 2013 described it p.253)
+% publics forming around future objects
+% maybe talk about counterpublics
+
+\mynote{Map pins on make place and sensor locations with reference to IMD, AirQ Managment Areas and existing sensor network. Also maybe before and after looks}
+
+% participants
+% Space For Heaton G1
+% Streets For People Jesmond / SPACE for Jesmond I1
+% Kingston Park Neighbourhood Forum G2
+% Gosforth Garden Village Action G3
+% On behalf of NICA G4
+% None (Shieldfield) I2
+% South Gosforth First School Parent I3
+% Friends of Leazes Park G5
+% Visualsoft I4
+% West End I5
+% Newcastle sixth form college I6
+% Personal / no organisation I7
+% Grange Residents Association G6
+
+These In the early stages of the investigation there 
+Although issue of air quality is not the sole focus of the study around citizen participation in the smart city it is definitely one of the key drivers for the local authority and the citizens effected and involved in the study.
+
+This phase provides an overview of activities for different groups and individuals who took part in the study. Purpose of the this step is to get an overview of the usage of the system and develop a theoretical basis for the analysis of the case study.
+
+setting examples and committing individual efforts
+Cycling community (SPACE for Gosforth) 14 July 2016 first met Ali
+Ethnographic work and going to their events
+Building relationships with the community
+workshop - 22 participants
+snowball sampling
+
+initial interest group focus
+ethnographic work - participating in meetings and in citizen organised events (setting up the group)
+focus groups and interviews and participating in email exchange and in online media groups
+Core group of 8 + me and Sean (core group was 5 people excluding me)
+talk about the limitations of the sample
+
+Demographics of the participants (retired ex professionals, professionals) health professionals also concerned about peoples health. Academia - planning, law, NHS professional, retired former council worker from a different council (city planner), general practitioner working for NHS, professional working in IT
+
+Advocacy work outside - group rides, organising community meetings, raising awareness in the community (schools, churches, community events), active social media presents, participating in public consultations and schemes. 
+insider outsider activities/online offline activities/ Part of networks
+
+Regular cyclists for commuting, sport and leisure
+Outside the group this analysis focuses on more people have signed up through the infrastructure ...
+Also additional advocacy groups have been started to base on the model of this one
+Having data to display and point at
+ 
+The second part of the case study focuses on the evaluation of the use of the toolkit in the wild. The analysis is conducted through three phases: (1) analysis of the usage and activities on digital platforms built to support the community commissioning of sensors, (2) analysis of the discussions of a specific advocacy group on Facebook (i.e., community discussion), (3) analysis of audio recorded reflections of the core members from the same group on their advocacy efforts and the role of data generated using the toolkit (i.e., community reflection). Additionally, case study provides an analysis of observations of groups and individuals who are purposing the data in their advocacy efforts and the impact it has had. The data collected to report on the case study is however not definitive, as the toolkit is still operational, constantly evolving and being used by communities to gather data for exploring and evidencing issues in their neighbourhood.
+
+and specific focus group that reflected on the advocacy effort and the role of generated sensor data through the toolkit. Research data collected in the process are in from of researchers notes, recorded focus group, documents produced by the advocacy group and discussions on social media platforms (i.e., Twitter and Facebook).
+
+
+\petenote{This chapter seems to jump in at the deep end. I would reverse the two paragraphs. Start with something more like “This chapters explains…” and go onto to the overview of what sense my street is, the collaboration and so on.}
+
+To investigate how data collected through a sensor commissioning toolkit can support citizen evidencing local concerns, and to understand the processes linked to operating a sustainable and transparent sensor commissioning toolkit, a number of deployments and engagement activities have been carried out in Newcastle Upon Tyne and surrounding areas over the period of three years. 
+
+ SenseMyStreet toolkit was officially launched in the summer of 2017. Since then over 60 people have signed up, 7 groups of people have done environmental sensing with hand-held monitors loaned from the toolkit in their commutes to explore issues in their local area and three communities have commissioned stationary sensors to be deployed in their neighbourhood. Through constant engagement activities with the communities and feedback from online systems, the toolkit went through an iterative design process to involve into an operational citizen sensor commissioning toolkit.
+ 
+ 
+ The data used in the analysis will include the fieldwork conducted by the author which studied different groups using the toolkit and appropriating the data gathered from the environmental monitors and the interactions recorded through the digital systems. 
+
+The results from this project will be used to analyse the methods used in the design process and the overall challenges and opportunities associated with developing a transparent sensor commissioning toolkit, which allows people to collect, share, explore and purpose data collected using high precision environmental sensors.
+% mention amount of sensor we have in the toolkit??
+
+% Furthermore, the reason why in the second stage professionals where collecting data was to guarantee that the data collected for citizen commissioned locations would have the same quality as the rest of the data collected from the city. 
+
+\mynote{Castoffs from Chapter3}
+---Have you any information on new initiatives there has been made upon the data collection?---
+
+When we started there’s was one established community/pressure group that worked on influencing the decisions about the built environment in their local area - http://spaceforgosforth.com/. As we started our work people have now organised in different areas in Newcastle and started their own local groups from the example of the first - https://www.spaceforheaton.com/,  http://www.spaceforjesmond.com/ and others. Aim for these groups is to engage their local area with the issues and activities that people can do change them — one of them drawing attention to the air quality and issues with traffic. Through these groups we have a wider range of engagement. Also they are all collaborating with each other and sharing their knowledge.
+
+---Have you any information on CO2 levels or improvement of air quality?---
+
+This is a more complicated question to answer. A side note that the main concern has shifted from CO2 to NO2 emissions from diesel cars which are very harmful to people’s health. UK government published their policy around tackling roadside NO2 in 26 July 2017 which requests a response from local governments (including Newcastle council) to respond with their local plan to reduce pollution in the city. UK government has been sued multiple times for not addressing the illegal levels of air pollution in different local authorities - https://www.clientearth.org/government-loses-third-air-pollution-case-judge-rules-air-pollution-plans-unlawful/. In Newcastle there’s 2 air quality management areas (https://www.newcastle.gov.uk/environment-and-waste/pollution/air-pollution/monitoring-air-quality) which are the main concern for the government. ATM the local council is working with the transportation providers, city planning officials, University (Including the Urban Observatory) and other experts to look at different solutions to improve the air quality in those areas mainly. However they are also trying to consult with the wider public around the issues of air quality, including the people who are actively involved with the SenseMyStreet project. The local government have to publish their proposed solution in March 2018. However a lot of people are worried because some of the other areas which are not in air quality management areas are still getting high values of pollution and if there’s going to be some change that will cause people to change their movement patterns the other areas can have a bigger impact. As we don’t know the plan at this moment I can’t speculate on what will happen. There needs to be a holistic approach to these things though including input from everyone - citizens, environmental sensors, experts, researchers and decision-makers (government). Also we need to look at things like social inclusion — sometimes making the environment better and air cleaner with clean air zones (taxing people in specific areas) will make people’s, who are from deprived areas, lives more difficult. 
+
+However the only way to tackle the air quality issue is to go directly to the sources — ourselves. So it’s more about raising awareness in local communities and using the data to start conversations and draw people’s attention to the issue. The groups are working with council to deliver new schemes for active travel - https://www.newcastle.gov.uk/parking-roads-and-transport/cycling/streets-people-1, but the data is more useful for engaging the community and working on nudging people to change their behaviour.
+
+---How are you communicating the project to the citizens and recruiting them?----
+
+At first the we communicated information about the project in different community meetings which we attended and also a lot of local councils stakeholder meetings about the city. A lot of information is passed via word of mouth and people pointing others to the website or directly to us. Also I have worked with different community organisations and local interest groups for in the area for over three years now and have established a good relationships with them.
+
+\section{Other initiatives related/Impact}
+
+Planning proposals and changes (Streets for People, Cycle ambition fund)
+Activist groups informing (Groups of concerned citizens) 
+Community support
+Sense Explorers (SenseMyStreets in Schools and Sean's stuff)
+
+Press interest, SPAN, available resources
+With the opening of Urban Sciences Building, my SenseMyStreet toolkit (case study 2) was featured in Newcastle Press10 , Chronicle Live11 and appeared as segment in BBC Look North (on 14/09/2017) lunchtime and evening show. Project was also discussed on blogs of communities taking part of the study. 
+
+new innovations in smart cities
+ncl.ac.uk/press/articles/archive/2017/09/sensemystreet 
+chroniclelive.co.uk/news/north-east-news/smog-tyne-mine-what-newcastle-13610648  
+spaceforheaton.com/articles
+www.spaceforjesmond.com/2018/02/14/airquality\_20180411
+ouseburntrust.org.uk/Handlers/Download.ashx?IDMF=1cd379c7-ec59-4d31-af11-6e1ce5e71508
+
+The author advised the making and appeared in two BBC’s Geography: The Big Issues educational films made by Evans Woolfe Media, exploring the way that traffic affects the environment and people’s health. Films also featured the sensors in the SenseMyStreet toolkit
+
+digital leaders smartest city of the year 2019
+
+
+\mynote{Chapter 3 castoffs}
+\begin{quote}
+    \textit{``You know I looked at the Heaton ones and the ozone was the same graph as the particles. No I don’t know if that was because the graph hadn't updated because it didn't have any data, or something like that. This is why we just need, like we discussed, basic data, averaged to the weeks and the we can say… because that is all that most people will see is the email or tweet or something that we do that. Most of them aren't even gonna be in the article we just keep sharing the average graph and saying: “outside your school today was this”.''} (P2)
+\end{quote}
+
+\begin{quote}
+    \textit{``We want to know in, you know after these proposed changes, whatever they may be, after a year’s worth of dividing [or something] traffic, has it got better, has it got worse? Um, we can’t go back in time, we can’t say is it better than last year. If we got few months’ worth of data, we can say is this week better than last week. Last week was different, because, or next week was different because it is half term. So, there is a potential difference so we could compare those 3 weeks. But just on its own, it is just a start, isn’t it. We need to be able to say, in October 2018 the average for the month was this, the average for the weekdays was this, the average for weekends was whatever. Even from that you could sort of start saying: “well look, it is lower at weekends because there is less traffic”. But we don’t have accurate traffic counts for any of those locations where the sensors are, so you have to be a bit careful.''} (P2)
+\end{quote}
+
+%\subsubsection{Campaign for ``Hearts and Minds''}
+%\kylenote{Visibility and motivations? Also seems linked with `establishing local knowledge base'. Multi-faceted approach? Council=slow, public change alongside?}
+
+%\kylenote{Research question for the findings -- higher level. Discussion is too heavy on the 'what they did with the data', only about the end bit of the data}
+
+\section{Community Outcomes}
+Use this framework to look at the focus group data
+How might digital technology/data support citizens tacking local issues?
+
+By changing the built environment
+- Activism & advocacy
+- Working on new schemes for active travel
+- Working together with council, transportation providers, environmental experts to deliver Clean air zones. Interested groups are working with councils to deliver new schemes for active travel (Streets for People). Healthy streets.
+
+By changing policy
+- Activism & advocacy
+
+By changing behaviour directly 
+- Personal & place-based awareness
+- Citizens are able to make decisions that effect their life
+
+By changing the social environment
+- raise awareness, spark up conversations in the community, nudge people to change their behaviour.
+- Start a conversation with the community
+- Community building and capacity building
+- Knowledge creation and local-decision making
+- schools engagement (next generation)
+
+
+\section{Discussion}
+BASED ONLY ON THE EVALUATION
+Key Points (Magic 3 maybe 4)
+  - Tech - infrastructure as success or infrastructuring. Not thinking about data as solution, but something that is useful once the publics have informed. Physical infrastructure (useful system) vs infrastructuring
+ Finally, we consider the role design discourse plays in motivating the kind of participation necessary to constitute a public, pointing out that PD provides appropriate methodological tools for directing the infrastructuring work needed to contend with future issues, rather than focusing solely on proximate concerns (Le. Dantec et al 2013)
+  - Community dynamics and links - building the creation of publics into the system
+
+  - Knowledge building - building in action and attachments
+        Taking action outside the regulatory ways - pirate radio, white sheets on the road
+
+What actually happened and in terms of wider research community
+
+formulation of public
+framing of issues
+developing attachments
+taking ownership
+plans of action
+
+% The following section discusses how to design to help support the creation of strategies for data that would assert its use; how to appropriate data and digital tools to build and disseminate community knowledge; and how turn that knowledge into activities for local benefit.
+....
+
+\philnote{Top + Tail Section. Explain format of discussion. Social makeup of participants, inequality issue - to me is social capital, but no analysis. Check IMD of locations. Some repetition}
+\section{Introduction}
+Through the process of engaging people in commissioning collection of environmental data, a lot of new opportunities for collaboration and community building was surfaced. However also multiple challenges raised around the readiness of IoT technology, representation of data to serve the needs of the community and their ability to effectively use the data to take action. This chapter will shed light on these issues through the evaluation of the toolkit and providing empirical examples of its appropriation by communities. Drawing on the evaluation of the case study and the literature around community-based participatory design, the discussion looks at how commissioning of infrastructure can provide a basis for community action. Furthermore, the analysis of the case study reveals the importance of taking \textit{ownership} and creating \textit{plans of action} to be considered as part of infrastructuring to promote community action.
+
+Additionally, case study provides an analysis of observations of groups and individuals who are purposing the data in their advocacy efforts and the impact it has had. The data collected to report on the case study is however not definitive, as the toolkit is still operational, constantly evolving and being used by communities to gather data for exploring and evidencing issues in their neighbourhood.
+
+and specific focus group that reflected on the advocacy effort and the role of generated sensor data through the toolkit. Research data collected in the process are in from of researchers notes, recorded focus group, documents produced by the advocacy group and discussions on social media platforms (i.e., Twitter and Facebook).
+
+
+\petenote{This chapter seems to jump in at the deep end. I would reverse the two paragraphs. Start with something more like “This chapters explains…” and go onto to the overview of what sense my street is, the collaboration and so on.}
+ 
+The data used in the analysis will include the fieldwork conducted by the author which studied different groups using the toolkit and appropriating the data gathered from the environmental monitors and the interactions recorded through the digital systems. 
+
+The results from this project will be used to analyse the methods used in the design process and the overall challenges and opportunities associated with developing a transparent sensor commissioning toolkit, which allows people to collect, share, explore and purpose data collected using high precision environmental sensors.
+% mention amount of sensor we have in the toolkit??
+
+Initial plan was to use the same theoretical basis (i.e., using social cogitative theory) to code the data hence evaluating its application on the commissioning toolkit. However insights revealed from the analysis in the PHI prompted the author to extend on the theory and preform an inductive analysis on the transcribed content. The data were coded and three themes were inductively derived: `establishing local knowledge base', `multiplicity of agendas', `campaign for hearts and minds'. Additionally confirmatory content were where pulled from the previous analysis (i.e, post and comments from PHI) to illustrate the ... of the new framework. Under each theme the sensor commissioning toolkit and its functionalities are reflected upon and reported on using anonymised quotes from the transcripts to illustrate how the capabilities of the toolkit can be appropriated for citizen led action.
+
+Bandura
+Theory states that learning and acquiring knowledge occurs by observations of others through social interactions and experiences. Bandura merges ideas from cognitive learning theory, which stresses the importance of psychological factors towards learning, and behavioural learning theory, which states that learning is a direct response to an environmental stimulation, by suggesting that learning occurs in a social context with a dynamic and relational interactions of the \textit{person}, \textit{environment}, and \textit{behaviour}.
+
+\section{Thematic analysis}
+This section makes use of the social cognitive action framework and reports on the process of citizen commissioning toolkit and its utility to act as a resource for people to support tackling local issues. Data used in this analysis originates from ongoing ethnographic work which includes field notes from meetings, audio recorded focus group with participants (n=3) reflecting on the overall process and setting the main strategies for changing the community. Data collected through ethnographic work and using the analysis of the group activities on FB described in the previous section enabled to compile an informed view of the process of sensor commissioning for local communities. This was followed by a focus group where participants involved in the study reflected on the authors informed view by providing their feedback. Focus group was organised as fairly unstructured conversation. It started off with introduction, the processes engaged within the scope of the toolkit and the current status of the group in relation of utilising the data generated using the technology. This was followed by an open discussion in the group facilitated by the author providing occasional prompts to keep people on track. Social cognitive action framework was also used in the focus group with the participants to help reflect on the activities enabled by commissioning toolkit the set the focus and future strategies for effectively using the collected data in civic action.
+
+
+\mynote{Chapter 5 castoffs}
+
+% The terminology defined in the community commissioning framework is derived from the case study presented in chapter 6, as well as the literature discussed in Chapter (5) and draws briefly upon existing public service commissioning literature to provide a transferrable and shared understanding of commissioning more generally across applied contexts.
+% To ensure that this framework is cross compatible within similar domains, the framework is applied to existing practices and processes within; Open Government Data, Sharing Economy, Commons-based Peer Production, and Citizen Science. Within each of these approaches four key elements can be identified; Roles, Infrastructure, Resources, and Constraints (Table 10).
+%https://blogs.lt.vt.edu/grad5104/multiintertrans-disciplinary-whats-the-difference/
+
+% Young Foundation and Mulgan [16], reinforcing the idea that it is dual by nature. It gets better ways to meet human needs and, simultaneously, has interest in strengthening bonds of commitment and solidarity.
+
+\mynote{Chapter 6 castoffs}
+
+% To unpack these issues, an investigation was taken up to understand the technical approaches and social and cognitive processes linked to effective uses of data. This involved: (1) understanding the cognitive processes through data consultations activities; (2) a redesign of Data:In Place (see Chapter \ref{chap:datainplace}) to integrate additional features for enabling people make better request for datasets that could help them answer questions or evidence local issues, and for posting challenges to get support from the larger community; (3) coming up and trialling of methods that assist people in creating questions and challenges for using data in civic action. Next two sections describe these interventions in more detail and illustrate how they could be beneficial to make  
+
+
+\subsubsection{Taking Action}
+
+\textit{``I think, in my understanding of behaviour changes, there are loads of different theories out there in terms of what makes people do stuff and what makes people change the way they do stuff. There’re kind of different aspects in terms of your motivation behind things and your determination, where you start at the beginning, are you in the right environment for you to change your behaviour in the first place? So there’re loads and loads and loads of different measures, or different theories of behaviour change. The way in which we measure the change, again, there’re quite a lot of theories or quite a lot of measures out there''} (OO)
+
+\textit{``They might just be interested in it, but it might help them with making sure that what they’re doing is actually working I suppose.''} (OO)
+    
+
+% \mynote{Describe the process of using Ambit}
+
+% THIS IS WHAT PARTICIPANTS DID:
+% - Starting with a general “bring in any issues” brainstorming with the participants. 
+% - Other option would be to preset the focus with the organisations to focus on a certain topic (e.g. play areas for children). 
+% - Maybe collect all the issues with Data:In Place. Might have too much info on the map and need some way to highlight the ranked important ones.
+% - One option would be to use Community Conversational to talk about issues to get them all mapped to data-in.place straightaway.
+% - Has set of cards and wild card (new information, new location or new information about the same place), 2 Second that (priority of issues task 2)
+% - Take words out off the table. Mark stuff already. Use them from previous session. 
+
+% THIS IS WHAT PARTICIPANTS DID:
+% - Choose a n-most-interesting issues to most in the group list quickly, where n corresponds to the number of groups of 3 - 4 ppl. 
+% - You can nicely form using the workshop participants and orgs representatives. Rank the issues identified - self assignment.
+
+% listening old audio recordings
+% new workshop features
+% - focus bar
+% - sockets for seeing other group's issue live
+
+% talk about how these challenges would make it to people who can solve them
+% I’m trying to create an infrastructure to mediate this exploration of issues through data
+% Currently we have done it through me and I’m the bottle neck of this
+% I’m now looking ways to match you up with relevant people
+% There will be a follow up where we look at the results of these challenges
+% What would be useful communication channels? - email, post, face-to-face, facebook, whatsapp, video calls etc.
+% How actively they want to be involved Challenges you are interested in collaborating or owning.
+% If you are the one or know who would have the skills to take up the challenge indicate on the sheet. 
+% Do we want to make the conversation data available for everyone?
+
+% 3 focus groups (3 people)
+% - 1 participated in all, 2 others in one
+% Outreach, Delivery of Programs, Strategic Planning.
+% Health and Wellbeing Project Officer, 
+
+% PHASE II
+% Aims
+% - Identify Priorities of the Community 
+% - Explore relevant data
+% - Come up with ideas for action
+
+\section{Findings}
+% WHAT ACTUALLY HAPPENED
+% Data consultations
+% Community action day
+% Thematic analysis
+%   - Focus groups
+%   - community action workshop
+
+\section{Discussion}
+%The following sections discuss ways different methods can be implemented to design systems of inquiry that support people in discourse, how data and its appropriation can promote action, and how the use of digital systems can mediate exchanging of skills by increasing the community network making way for new models of civic participation.
+
+% \begin{itemize}
+%     \item Mapping issues provide observations, but asking questions promote action
+%     % First people where just observing things and wanted something to be done about it. Derelict grounds everywhere, something should be done with it.
+%     \item Focus on issues
+%     \item Better understanding of what is needed (data, resources)
+%     \item Promotes action (Actionable data)
+% \end{itemize}
+% \mynote{Maybe talk about why hypothesis approach was dropped and QFT chosen instead}
+
+% Holistic Approach to Information Inquiry
+% Applied social informatics
+%Dual approach for CDI (6.10.1)
+% (a) How to citizens transform data into something valuable (i.e., make data useful)?
+% (b)  What is the real value for citizens accessing these datasets?
+\subsection{Holistic Approach To Community Informatics}
+% \begin{itemize}
+%     \item Documenting Processes
+%     \item Reflecting on own practices
+%     \item Digital trails
+%     \item Visual identity (the social context)
+%     \item Simple stats
+% \end{itemize}
+
+%Roles in Community-Data Interaction (6.10.3):
+%   What role will non-professionals and (semi)/-professionals will play in this?
+%   How would the collaboration between professionals and non-professionals look like?
+\subsection{Community-Data Interaction and Collaboration}
+% \begin{itemize}
+%     \item Ownership of issues
+%     \item Wealth of Networks
+%     \item Network Publics
+%     \item new models of civic participation
+%     \item roles in CDI
+% \end{itemize}
+
+% \subsection{Data Challenges}
+% \begin{itemize}
+%     \item How to scale
+%     \item Future direction
+% \end{itemize}
+
+\mynote{Chapter 4 Castoffs}
+
+% John M. Carroll & Mary Beth Rosson (2003) A Trajectory for Community Networks Special Issue: ICTs and Community Networking, The Information Society, 19:5, 381-393, DOI: 10.1080/714044685
+
+% This is done with an aim to inform polices, to help optimise resources and to improve the lives of citizens \cite{Chourabi2012,Kassen2013}. However, when these datasets are made open they can potentially be used for novel forms of participation, democracy, and social interactions \cite{Chourabi2012,Janssen2012}. Having government and private sector releasing data creates potential opportunities for data-driven civic participation \cite{Tenney2016}. Making data open not only has the potential to promote transparency and openness, it may also serve to shift the power relationships between ordinary people and decision-makers away from transactional models of information services to more relational ones \cite{Olivier2015,Robinson2010}.
+
+% With the growing popularity of the open data movement \cite{Baack2015}, crowd sourced data \cite{LeDantec2015} and commercial companies sharing their datasets\footnote{\url{http://movement.uber.com}}\footnote{\url{http://labs.strava.com}}\footnote{\url{http://developer.zoopla.co.uk}}, UK government institutions (and multiple other countries) are also releasing statistics from official sources as open governmental data (OGD) under Open Government Licence\footnote{\url{http://nationalarchives.gov.uk/doc/open-government-licence/version/3/}} in order to invite communities and a wider field of players to re-use the data and provide solutions and services \cite{Jetzek2014}. An example of this is \textit{CivTech}\footnote{\url{http://civtech.atlassian.net}}, the Scottish Government's initiative to drive public sector innovation with the help of private sector and citizens. There are already multiple systems in place from different central governmental departments to provide the public access to these raw datasets of official statistics\footnote{\url{http://data.gov.uk}}\footnote{\url{http://data.police.uk}}\footnote{\url{http://opendatacommunities.org}}\footnote{\url{http://nomisweb.co.uk}}\footnote{\url{http://geoportal.statistics.gov.uk}}\footnote{\url{http://ukdataservice.ac.uk}}, as well as initiatives from local governments to release locally collected data \footnote{\url{http://datamillnorth.org}}\footnote{\url{http://data.london.gov.uk}}\footnote{\url{http://open.manchester.gov.uk}}. This led to new digital tools (both free and commercial) being created to aid community groups to make use of that data (see Section \ref{sec:platforms}). One example is \textit{MapIt}\footnote{\url{http://mapit.mysociety.org}} - a tool that displays constituency, parish and local council area for an inputted postcode. However, there has been critique that the `measure of openness' for governmental institutions is how many datasets and repositories they have online \cite{Davies2013} and that there are more nuances to the effective re-use of open data than simply the ability to access the raw data files. 
+
+% We deliberately excluded official platforms like UK Police Crime Map\footnote{\url{http://police.uk}}, Public Health England's Fingertips Tool\footnote{\url{http://fingertips.phe.org.uk}} and open data demonstrators like the Indexes of Multiple Deprivation (IMD) Explorer\footnote{\url{http://dclgapps.communities.gov.uk/imd/idmap.html}}, because they are meant to help people interact with a specific dataset, illustrating the mean of production of that data. 
+
+
+% \subsection{Future Developments}
+
+% In the workshops there were groups working together to collectively understand the situation by looking at different sources of data and coming up with shared understandings through a process of collaborative sensemaking \citep{furnas_making_2005}. Data:In Place was effective in enabling better access to data as a resource for this collaborative process of forming shared understandings. However, the act of collaborative sensemaking itself, and the cognitive and social dimensions of it are not themselves documented. Related work by \citet{otjacques_open_2012} has started looking at documenting open data exploration processes (i.e., viewpoints) for future interrogation and use. They built an additional layer on top of visualisation software which enabled viewpoints and scenarios to be stored, shared and reloaded at the exact state of visualisations when valuable knowledge was discovered. This functionality is future work for Data:In Place, but in addition to recording viewpoints, we envision a collaborative narrative-based interaction or `\textit{data stories}' which allows constant addition, documentation and interrogation of data. This also means that the new sense makings of the data is not owned by the institutions that published the datasets, it is more objective and based on a strong consensus of the community \cite{Vertesi2011}. One example of this type of approach to data collection is Open Street Map\footnote{\url{http://openstreetmap.org}}. It is a volunteered geographic information system \cite{Haklay2013,Tenney2016} where people (professionals and non-professionals) volunteer to map the world. In addition to volunteered geographic information by the people, the map also consists of repurposed data published by governmental institutions. Although the data originates from different sources, the new meaning and purpose of it is being generated as a result of collaborative efforts. The tool could also be extended to include help and expertise from outside to understand and explore issues using data science. This means adding a new layer of communication between citizens and experts.
