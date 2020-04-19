@@ -49,8 +49,9 @@ to specificities of individual computing system or proprietary protocol, which r
 \begin{figure}[!ht]
 \centering
  \includegraphics[scale=0.5]{odi_badges}
-  \newline
-  \footnotesize\emph{Source: https://certificates.theodi.org/en/about/badgelevels}
+  
+  \centering
+    \footnotesize\emph{Source: https://certificates.theodi.org/en/about/badgelevels}
   \caption[Levels of open data]{Levels of commitment for open data}
   \label{fig:badges}
 \end{figure}
@@ -172,14 +173,14 @@ Participatory design, participatory action research (PAR) (and also its extensio
 \footnotesize\emph{Source: \citet{rocha_paradigm_2018}}
 \caption{New skills for designer}\label{fig:si_skills}
 \end{subfigure}
-\hspace*{\fill} % separation between the subfigures
+\hspace*{\fill}
 \begin{subfigure}{0.44\textwidth}
 \includegraphics[width=\linewidth]{social_economy}
 \centering
 \footnotesize\emph{Source: \citet{ferreira_social_2020}}
 \caption{Social economy} \label{fig:siframe}
 \end{subfigure}
-\caption[Social Innovation]{New skills for social learning and innovators in a social economy} \label{fig:social_innov}
+\caption[Social Innovation Models]{New skills for social learning and innovators in a social economy} \label{fig:social_innov}
 \end{figure}
 
 \subsection{Model of CDI}
@@ -206,10 +207,9 @@ Having a formal model of CDI enables now to discuss how could designers refer to
 \begin{table}[htb!]
 \scriptsize
 \centering
-\caption[Elements of CDI]{Five elements of Community-Data Interaction}
 \begin{tabular}{?p{30mm}?c?c?c?c?}
   \hline
-	\textbf{Roles}  & \textbf{Resources} &  \textbf{Constraints} & \textbf{Infrastructures} & \textbf{Capacities}\\
+	\textbf{Roles}  & \textbf{Resources} &  \textbf{Constraints} & \textbf{Infrastructures} & \textbf{Capacities} \\[0.5ex]
   \hline
    \rowcolor[gray]{.9}Community Member & \multicolumn{2}{c?}{Time} & System & Community links \\
    \hline
@@ -225,13 +225,14 @@ Having a formal model of CDI enables now to discuss how could designers refer to
    \hline
    Elected Member of LA & & Complexity &  Content and Formatting/Content services  & Cohesion \\
    \hline
-   Professional Data Analyst, \newline Researcher, \newline Instructional Designer & & Advocacy &  & Social Capital \\
+   Professional Data Analyst, \newline Researcher, \newline Instructional Designer & & Advocacy &  & Social Capital \\ [0.5ex]
   \hline
 \end{tabular}
-\label{table:CDI_objects}
-\medskip\centering
-\newline
-\footnotesize\emph{Source: Author}
+
+\smallskip\centering
+    \footnotesize\emph{Source: Author}
+\caption[Elements of CDI]{Five elements of Community-Data Interaction}    
+\label{table:CDI_objects}    
 \end{table}
 
 \subsection{Roles}
@@ -243,14 +244,13 @@ An underlining agenda of this thesis is to look closely at the role of the data 
 
 Through the case studies of the PhD the author has acted as a data professional for these communities providing technical support and skill for working with data. This often also involved making an initial analysis of the data and building a story around it to illustrate the power of using data. Such an example can be seen on Figure \ref{fig:nuf_app} where the author used aggregated client data from a local charity to illustrate how they tackle inequality in the community by doing targeted engagements. In order to create this application, the author had to develop a hypothesis, find the relevant data, process and merge it with the data form the local charity and use visualisation technologies to create the data rich narrative. Tasks that require skills both in software engineering and information processing (i.e., skills of a data scientist).
 
-\begin{figure}[ht]
+\begin{figure}[!ht]
 \centering
- \includegraphics[width=\linewidth]{nuf_app}
- \centering
- \medskip
+ \includegraphics[width=\textwidth]{nuf_app}
+ \smallskip\centering
   \footnotesize\emph{Source: Author}
   \caption[Data Narrative Application]{Data narrative application for the local charity}
-  \label{fig:nuf_app}
+\label{fig:nuf_app}
 \end{figure}
 
 Indeed, it appears at the moment that people need these professional analysts or engineers to mediate these processes for them. Going forward, what is the role of a professional data analyst in these processes? Is there a process that makes citizens smarter and able to participate directly in decision making that involves data at the city, county or even country level? To make it truly democratic, the challenge here is how can those skill become transferable to ordinary citizens too do it for themselves or built into systems that can automate those processes for them. Designing and developing Data:In Place platform (Chapter \ref{chap:datainplace}) was author's first attempt of building a system that would help automate and facilitate some of these processes, however additional issues surfaced that where not solely linked to engineering and information processing challenges. These challenges where more linked to community problem solving activities (Section \ref{sec:social_chall}) such as coming up with questions for data and then making that data useful in the context of community issues. 
@@ -303,10 +303,9 @@ Chapter \ref{chap:datainplace} focused on the ideas of making data accessible an
 \begin{table}[hbt!]
 \scriptsize
 \centering
-\caption[Linking to Place]{Standards, techniques and methods of linking data to place}
 \begin{tabular}{?c?c?c?}
   \hline
-	\textbf{Standards in Place-Based Systems}  & \textbf{Techniques} &  \textbf{Methods} \\
+	\textbf{Standards in Place-Based Systems}  & \textbf{Techniques} &  \textbf{Methods} \\ [0.5ex]
   \hline
    \rowcolor[gray]{.9}National Grid & Conversions & GIS software \\
    \hline
@@ -318,13 +317,14 @@ Chapter \ref{chap:datainplace} focused on the ideas of making data accessible an
    \hline
    \rowcolor[gray]{.9}Representation of geodata (GeoJSON, WKT, KML/KMZ, Shapefiles) & Post Code & \\
    \hline
-   Linked Geo Data & Translators & \\
+   Linked Geo Data & Translators & \\ [0.5ex]
   \hline
 \end{tabular}
-\label{tab:geo_standards}
-\medskip\centering
-\newline
+
+\smallskip\centering
 \footnotesize\emph{Source: Author}
+\caption[Linking to Place]{Standards, techniques and methods of linking data to place}
+\label{tab:geo_standards}
 \end{table}
 
 \subsubsection{Linking to Issues}

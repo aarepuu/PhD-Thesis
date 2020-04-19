@@ -72,11 +72,11 @@ In addition to sensors in the city, passive and active data-driven participation
 
 According to the network of National Contact Points for Science with and for Society\footnote{\url{https://www.sisnetwork.eu/sis.net-project}} definition, citizen science projects are \textit{`projects where citizens contribute to actual science research'} \citep{eitzel_citizen_2017}. Examples of these kind of initiatives are BioBlitz, a biological surveying project; and British Bird Watching, a bird surveying project. It seems that citizen science has multiple definitions and often it is down to the `scientists' to decide how they are framing it, however it is not often clear who `is the scientist' \citep{haklay_citizen_2013} in these project. \citet[p.11]{haklay_citizen_2013} proposes a framework to classify citizen science projects which focuses on the level of engagement and involvement of participant in science activities (Figure \ref{fig:4levels}). It is somewhat similar to \citet{arnstein_ladder_1969}'s \textit{`ladder of participation'} (Figure \ref{fig:ladder}) however instead of solely focusing on the power relationships between citizens and decision-makers on a fixed ladder, \citet{haklay_citizen_2013} also points out the processes of obtaining new understandings which fosters curiosity and promotes knowledge creation, and is likely to move people up the ladder of participation. In addition to finding appropriate and sustainable engagement level for the project there is also the question of `who knows best'? Although there have been successful citizen science projects like Neighbourhood Nest Watch \citep{evans_neighborhood_2005} or volunteer computing projects like \href{climateprediction.net}{climateprediction.net} and Rosetta@home, there is an ongoing debate on should the `science' be left to the `scientists' should we fully accept citizen contribution to science activities \citep{gabrys_just_2018,cohn_citizen_2008}.
 
-\begin{figure}[!ht]
+\begin{figure}[hbt!]
 \begin{subfigure}{0.49\textwidth}
-\includegraphics[width=\linewidth]{Arnsteins-ladder-1969.jpg}
+\includegraphics[width=\linewidth]{arstein-ladder}
 \smallskip\centering
-  \footnotesize\emph{Source: \href{http://www.georgejulian.co.uk/2013/01/22/social-media-and-citizen-engagement/}{George Julian}}
+  \footnotesize\emph{Source: Author}
 \caption{Ladder of participation \citep{arnstein_ladder_1969}} \label{fig:ladder}
 \end{subfigure}
 \hspace*{\fill}
@@ -86,12 +86,12 @@ According to the network of National Contact Points for Science with and for Soc
   \footnotesize\emph{Source: \citet[p. 11]{haklay_citizen_2013}} 
 \caption{Levels of participation in citizen science \citep{haklay_citizen_2013}} \label{fig:4levels}
 \end{subfigure}
-\caption[Citizen Participation]{PROVISIONAL - Ladder of participation and levels of participation Citizen Science } \label{fig:levels_or_par}
+\caption[Citizen Participation]{Ladder of participation and levels of participation in Citizen Science } \label{fig:levels_or_par}
 \end{figure}
 
 However there can be other purposes than advancing science or providing data to the smart city, for doing citizen data collection. For example for self knowledge and personalised health interventions \citep{huck_mapping_2014,swan_health_2012,larkin_towards_2017}, to raise public awareness around an issue \citep[ch. 16]{loreto_participatory_2017} \citep{hasenfratz_participatory_2012,kuznetsov_participatory_2010}, evidence an issue in the community \citep{disalvo_local_2009} or push for change \citep{balestrini_city_2017}. Latter approaches involve community-led investigation where citizens are actively involved in definition of the issue, collection or acquiring of data and the analysis of it. In relation to typologies of \citet{arnstein_ladder_1969}'s ladder and \citet{haklay_citizen_2013}'s 4 levels, these approaches come on the very top in terms of level of active engagement. \citet{balestrini_city_2017} looks at this type of participation through a \textit{City-Commons Framework for Citizen Sensing} (Figure \ref{fig:city_commons}) which nurtures a bottom-up approach to orchestrate citizen sensing and community engagement. These type of citizen sensing projects that explore issues related to environment and place, often involve some sort of sensing technologies \citep{thompson_crowd-sourced_2016} and PPGIS or mapping coupled with HCI for geospatial technologies. Examples of such platforms are Aircasting\footnote{\url{http://aircasting.org}} and SmartCitizen\footnote{\url{https://smartcitizen.me}} (Chapter \ref{chap:sensemystreet}) which both consist of lightweight sensing equipment and GIS application for exploring the data. Citizen sensing provides an opportunity to rethink the role of data in civic participation and focus on digital technology and mechanisms that could support these grassroots approaches. More projects like this are now being developed around the world with community volunteers using sensing equipment and collecting data with an aim to promote dialogue on environmental issues getting closer to the next level of participation through data.
 
-\begin{figure}[!ht]
+\begin{figure}[hbt!]
 \centering
  \includegraphics[scale=0.28]{city-in-common}
  \smallskip\centering
@@ -140,29 +140,36 @@ Then there are Open Data, data that \textit{``can be freely accessed, used, modi
 \label{sub:access-open-data}
 One way to make data open is to make it available for others to use. The preferred method of making open data available is usually through open data portals. Leigh Dodds, chair of BathHacked\footnote{\url{https://www.bathhacked.org}} and the Director of Advisory at the Open Data Institude\footnote{\url{https://theodi.org}} defines a most basic open data portal as: \textit{``a list of datasets with pointers to how those datasets can be accessed''} \citep{dodds_what_2015}. Saying that this definition is the \textit{minimum viable product (MVP)} for open data portal, however when data portal needs to cater to a wide range of audiences \citep{davies_open_2010} it is worth looking into some more sophisticated solution. The usual functions of open data portals are categorised into two groups: (1) discoverability - functions which help index and organise the metadata in order to make data discoverable, (2) interoperability - functions that help interlink the data from different sources and make it programmatically accessible through Application Programming Interface (API). Table \ref{table:data_portals} lists the most popular software systems with their features and example usages.
 
-\begin{table}[htb!]
+\begin{table}[hbt!]
 \scriptsize
-\captionsetup{font=footnotesize}
-\caption[Data Portals]{List of popular data portals, their features and example usages}
 \centering
 \begin{tabular}{|l|c|c|c|c|c|}
 \hline
 \textbf{Portal} & \textbf{Maintainer} & \textbf{Discoverability} & \textbf{Interoperability} & \textbf{Openess} & \textbf{Example}\\[0.5ex]
 \hline
 \rowcolor[gray]{.9}\textbf{CKAN} 		& Open Knowledge 	& Metadata API & RPC API & Open Source & \href{https://daten.berlin.de}{daten.berlin.de} \\
+\hline
 \textbf{OPENDATASOFT} 		& OpenDataSoft	& Catalogue & RESTful API & Proprietary & \href{https://datos.cdmx.gob.mx}{datos.cdmx.gob.mx}  \\
+\hline
 \rowcolor[gray]{.9}\textbf{PUBLISHMYDATA}	& Swirrl	& Linked Data & SPARQL & Proprietary & \href{http://statistics.data.gov.uk/}{statistics.data.gov.uk} \\
+\hline
 \textbf{DATAPRESS}			& Datapress  	& Catalogue & RESTful API & Proprietary & \href{https://datamillnorth.org}{datamillnorth.org} \\
+\hline
 \rowcolor[gray]{.9}\textbf{DATASHARE}	& RedBridge  & Catalogue & RESTful API & Proprietary & \href{https://data.redbridge.gov.uk}{data.redbridge.gov.uk} \\
+\hline
 \textbf{JUNAR}	& Junar	& Catalogue & RESTful API & Proprietary & \href{https://data.cityofpaloalto.org}{data.cityofpaloalto.org} \\
+\hline
 \rowcolor[gray]{.9}\textbf{SOCRATA}	& Tyler Technologies  & Metadata API & RESTful API & Proprietary & \href{https://data.cityofchicago.org}{data.cityofchicago.org} \\
+\hline
 \textbf{INSTANTATLAS}	& Esri 	& Catalogue & Map Creator & Proprietary & \href{https://www.suffolkobservatory.info}{suffolkobservatory.info} \\
+\hline
 \rowcolor[gray]{.9}\textbf{CUSTOM}	& Newcastle University 	& Metadata API & RESTful API & Open Source* & \href{https://urbanobservatory.ac.uk}{urbanobservatory.ac.uk} \\ [0.5ex]
 \hline
 \end{tabular}
+
 \smallskip\centering
-\newline
-  \footnotesize\emph{Source: Author} 
+  \footnotesize\emph{Source: Author}
+\caption[Data Portals]{List of popular data portals, their features and example usages}
 \label{table:data_portals}
 \end{table}
 
@@ -202,12 +209,11 @@ From smart city management to citizen sensing, data is the epicentre of our worl
 
 \begin{figure}[htb!]
 \centering
- \includegraphics[width=\linewidth]{data_network}
- \smallskip\centering
- \newline
+\includegraphics[width=\linewidth]{data_network}
+\smallskip\centering
   \footnotesize\emph{Source: Author} 
-  \caption[Data Network]{Stakeholder group network around data}
-  \label{fig:data_network}
+\caption[Data Network]{Stakeholder group network around data}
+\label{fig:data_network}
 \end{figure}
 
 
@@ -216,7 +222,7 @@ From smart city management to citizen sensing, data is the epicentre of our worl
 \centering
 \begin{tabular}{|c|c|}
   \hline
-	\textbf{Stakeholder} & \textbf{Roles} \\
+	\textbf{Stakeholder} & \textbf{Roles} \\ [0.5ex]
   \hline
    \rowcolor[gray]{.9} Government &  data generator, data publisher, data user \\
    \hline
@@ -232,12 +238,12 @@ From smart city management to citizen sensing, data is the epicentre of our worl
   \hline
    \rowcolor[gray]{.9}  Data activists &  data user, (data publisher) \\
   \hline
-    Citizens &  data generator \\
+    Citizens &  data generator \\ [0.5ex]
   \hline
 \end{tabular}
+
 \smallskip\centering
-\newline
-\footnotesize\emph{Source: Author}
+    \footnotesize\emph{Source: Author}
 \caption[Data Roles]{Stakeholder group roles in a data network}
 \label{table:data_roles}
 \end{table}
@@ -304,7 +310,7 @@ Information systems (IS) and information system design (ISD) have strong theoret
 However, working with communities the main aim is to address the issues that people have or the things they want to change in the community rather than the problems of technology. Similarly they are not bounded to an organisational structures and uses of particular technologies is a specific context. As a result scholars such as \citep{hakken_social_2003}, \citet{bradley_social_2006}, \citet{gurstein_introduction_2000} and \citet{carroll_participatory_2007} have expanded on these ideas of SI to go beyond the context of organisations and users. A new field of \textit{community informatics} (CI) \citet{gurstein_introduction_2000} has emerged that is focused on the design and implementation of technologies that help local communities address their issues. Later definitions of CI have also taken account other fields that influence the CI in practice and expanded to things like equal opportunities; recognition of importance of ``lived physical community''; user-focused underestanding of ICT; applied social leadership entrepreneurship and creativity \citep[p. 12]{gurstein_what_2007}. The overarching aim of CI is to overcome the `digital divides' through the design and implementation of ICT that enable and empower citizens. 
 
 
-\begin{figure}[!ht]
+\begin{figure}[htb!]
 \begin{subfigure}{0.49\textwidth}
 \includegraphics[width=\linewidth]{is_frame}
 \smallskip\centering
@@ -318,7 +324,7 @@ However, working with communities the main aim is to address the issues that peo
   \footnotesize\emph{Source: \citet[p. 259]{stillman_community_2009}} 
 \caption{Adapted CI object system classes} \label{fig:ci_frame}
 \end{subfigure}
-\caption[ISD Object System Classes]{Object System Classes for Information System Design} \label{fig:object_system_classes}
+\caption[ISD Object System Classes]{Object System Classes for Information System Design and Community Informatics} \label{fig:object_system_classes}
 \end{figure}
 
 

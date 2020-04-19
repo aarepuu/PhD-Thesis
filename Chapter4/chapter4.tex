@@ -48,29 +48,26 @@ However, despite available tools showing promise for better engagement, very few
 \label{sec:platforms}
 
 % Table
-\begin{table}[htb!]
+\begin{table}[hbt!]
 \scriptsize
 \centering
-\begin{minipage}{\linewidth}
-\begin{center}
 \begin{tabular}{|l|p{20mm}|p{25mm}|p{25mm}|p{19mm}|p{15mm}|}
   \hline
-  \textbf{Platform} & \textbf{Datasets} & \textbf{Access} & \textbf{Contextualising} & \textbf{Expandability} & \textbf{Openness} \\
+  \textbf{Platform} & \textbf{Datasets} & \textbf{Access} & \textbf{Contextualising} & \textbf{Expandability} & \textbf{Openness} \\ [0.5ex]
   \hline
   UK Censusdata & Static Census 2011 & Search datasets by postcode or drill down from country level & Displays official boundaries on the map and a fix set of charts and
-graphs & Not possible & Free to use, proprietary\\
+graphs & Not possible & Free to use, proprietary \\
   \hline
-  Know My Neighbourhood & Fixed set of different socioeconomic dataset & Web and PDF reports based on requested area (e.g., user provided boundary) & Displays official boundaries on a static map. Fixed set of charts and graphs & Not possible & Commercial, proprietary\\
+  Know My Neighbourhood & Fixed set of different socioeconomic dataset & Web and PDF reports based on requested area (e.g., user provided boundary) & Displays official boundaries on a static map. Fixed set of charts and graphs & Not possible & Commercial, proprietary \\
   \hline
-  Community/ Local Insight & 896 different socioeconomic dataset (up-to date) & Web application for exploring and PDF reports & Enables drawing areas on a dynamic map. Fixed set of different visualisations & Adding own organisational data via file with postcodes & Commercial, proprietary\\
+  Community/ Local Insight & 896 different socioeconomic dataset (up-to date) & Web application for exploring and PDF reports & Enables drawing areas on a dynamic map. Fixed set of different visualisations & Adding own organisational data via file with postcodes & Commercial, proprietary \\ [0.5ex]
   \hline
 \end{tabular}
-\end{center}
+
 \smallskip\centering
-\footnotesize\emph{Source:} Table created by the author
-\caption{Comparison of Open Data Platforms for local communities and non-professionals}
+    \footnotesize\emph{Source:} Table created by the author
+\caption[Open Data Platforms for Non-professionals]{Comparison of Open Data Platforms for local communities and non-professionals}
 \label{table:comm_portals}
-\end{minipage}
 \end{table}
 
 The popularity of open data and the availability of different data sources has stimulated the development of a variety of platforms to make use of these datasets. Literature review in Chapter \ref{chap:literature} outlined the ways data is made available or `open' for others to make use of. In addition to `official' specialist data portals, there are also multiple tools that try do make that data more accessible. This section will go through some of the most popular free and commercial tools used by communities and non-professionals (based on our engagements with different communities) to make use of open data. Similar to data portals, this analysis focuses on tools intended for exploration of multiple datasets. Hence, tools such as Public Health England's Fingertips Tool\footnote{\url{http://fingertips.phe.org.uk}} and open data demonstrators like the Indexes of Multiple Deprivation (IMD) Explorer\footnote{\url{http://dclgapps.communities.gov.uk/imd/idmap.html}} are excluded, because they are meant to help people interact with a specific dataset, illustrating the mean of production of that data. A broad assessment of existing open data platforms was made based on the following criteria (Table \ref{table:comm_portals}): their ease of \textit{access} to work with the data; the support provided for \textit{contextualising} the data with communities or issues; the \textit{expandability} of the available data for working with, and \textit{openness} of the tools concerning paywalls and collaboration.
@@ -191,7 +188,7 @@ A user's first interaction with the system starts with defining a place they are
 \includegraphics[width=\linewidth]{fig1_c}
 \caption{Zoom out to retrieve new level area polygons} \label{fig:zoom_levels}
 \end{subfigure}
-\caption[PROVISIONAL - Draw a Boundary]{PROVISIONAL - Visual map based query system for open datasets} \label{fig:map_queries}
+\caption[Draw a Boundary]{Visual map based query system for open datasets} \label{fig:map_queries}
 \end{figure}
 
 \subsection{Pick a Dataset: Accessing Official Governmental Datasets}
@@ -214,7 +211,7 @@ Next the user could pick from a list of official datasets (Figure \ref{fig:pick_
 \includegraphics[width=\linewidth]{fig2_c}
 \caption{Explore data with boundary} \label{fig:explore_data}
 \end{subfigure}
-\caption[PROVISIONAL - Pick a Dataset]{PROVISIONAL - Automatic linking to different governmental APIs to access official data in one place}\label{fig:2}
+\caption[Pick a Dataset]{Automatic linking to different governmental APIs to access official data in one place}\label{fig:2}
 \end{figure}
 
 \subsection{Map Your Data: Mapping Community Data}
@@ -235,7 +232,7 @@ Next the user could pick from a list of official datasets (Figure \ref{fig:pick_
 \includegraphics[width=\linewidth]{fig4_c}
 \caption{Map postcodes} \label{fig:map_postcodes}
 \end{subfigure}
-\caption[PROVISIONAL - Map Your Data]{PROVISIONAL - Mapping community datasets and comparing with the official sources} \label{fig:map_commdata}
+\caption[Map Your Data]{PROVISIONAL - Mapping community datasets and comparing with the official sources} \label{fig:map_commdata}
 \end{figure}
 
 If the user had their own administrative data to map, they needed to upload that data to the system by either copy and pasting it, uploading a file or specifying a URL destination. Once data was loaded the system tired to automatically map it by parsing the data fields. If the system did not successfully georeferenced the data (Figure \ref{fig:georeferencing}, there was controls for the users to do it manually. System was able to map most of standardised geographic data such as point based data (Figure \ref{fig:map_points}), but also UK postcodes as a heatmap (Figure \ref{fig:map_postcodes}). This feature enabled users to add community datasets for mapping and comparison with the official data sources.

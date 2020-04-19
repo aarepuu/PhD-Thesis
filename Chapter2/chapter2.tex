@@ -28,25 +28,27 @@ Monitoring the urban environment is an important part of figuring out how the ci
 \label{sub:sensetools}
 The affordances of ICT and IoT have enabled a new wave of smart city sensing which is done by the citizens. These initiatives can be connected to a research effort or a citizen science project \citep{haklay_citizen_2013}, but they can also be initiated by individuals or groups of people using some type of citizen sensing toolkit (Table \ref{table:citizen_kits}) or commercially available monitoring devices. Latter devices are what people can put in their own houses, for example to monitor indoor environment\footnote{\url{https://foobot.io}}\footnote{\url{https://www.airthings.com}}, but also kits that people could use outside and publish data to a bigger cloud platform\footnote{\url{https://www.netatmo.com/en-gb/weather/weatherstatio}}. These smart home devices are helpful for increasing self knowledge or understanding, optimising and improving one's living spaces. Using these devices for making a home `smart' can often be quite expensive and usually these devices do not provide any opportunities for customisation. However with the increasing popularity of open-source hardware movement and the availability of micro-controllers such as Arduino, RasberryPi and MicroBit, people (those with the capacity or a particular skill-set) can now build their own sensors to use in citizen sensing. Although people can build their own kits using off the shelf components\footnote{\url{https://wonderfulengineering.com/10-best-raspberry-pi-sensor-kits/}} there are already available plug and play citizen sensing kits. Table \ref{table:citizen_kits} gives an overview of popular devices for citizens for doing environmental monitoring and reviews their openness and ability to get the larger community involved.
 
-\begin{table}[htb!]
+\begin{table}[hbt!]
 \scriptsize
-\captionsetup{font=footnotesize}
-\caption[Citizen Sensor Kits]{List of popular citizen sensor kits}
 \centering
 \begin{tabular}{|l|c|c|c|c|}
 \hline
 \textbf{Name} & \textbf{Hardware Customisability} & \textbf{Community}  & \textbf{Website}\\[0.5ex]
 \hline
 \rowcolor[gray]{.9}\textbf{AirBeam}	& None & Open map and data, link sharing & \href{http://aircasting.org}{http://aircasting.org} \\
+\hline
 \textbf{SmartCitizen Kit} & None & Open map, data and API	& \href{https://smartcitizen.me}{https://smartcitizen.me} \\
+\hline
 \rowcolor[gray]{.9}\textbf{AirQuality Egg} & Choice of Sensors& Open map, limited data access & \href{https://airqualityegg.com}{https://airqualityegg.com} \\
+\hline
 \textbf{AirPi} & Full Customisation & Manual data uploads & \href{http://airpi.es}{http://airpi.es} \\ [0.5ex]
 \hline
 \end{tabular}
-\label{table:citizen_kits}
-\medskip\centering
-\newline
-\footnotesize\emph{Source: Author}
+
+\smallskip\centering
+    \footnotesize\emph{Source: Author}
+\caption[Citizen Sensing Kits]{List of popular citizen sensing kits}    
+\label{table:citizen_kits}    
 \end{table}
 
 These sensor kits have found usage in science education but because of their low barriers to entry. These devices are particularly good for people to get involved in gathering data about the environment to spark discussions around environmental issues with the community. There are multiple crowdsourced monitoring projects for citizen sensing around the world, where volunteers use low cost sensing equipment to collect data about environment issues and then use those data to advocate for positive change. Examples are non-profit groups like GASP\footnote{\url{https://gasp-pgh.org}} and INHALE\footnote{\url{http://www.inhaleproject.ca}} who recruit people to participate in local air quality monitoring, or AirCasting\footnote{\url{http://aircasting.org}} which provides a full platform for air quality monitoring, mapping and exploring; and university initiatives such as London Air\footnote{\url{http://www.londonair.org.uk}} which provide up-do date information about regional air quality. Industry has also come together in projects like HAMNAIR\footnote{\url{http://www.hamnair.ca}} and Aclima partnering up with Google to instrument Street View cars with monitors and publish data on Google Maps platform providing a new source of accessible environmental data \citep{aclima_aclima_2018}.
@@ -64,13 +66,11 @@ Cities around the world are working hard on implementing their sensor networks d
 Whether data in the city is generated through citizen science or crowdsourcing effort, research or through governmental initiatives, the way it is presented to people depends largely on the purpose of generation -- either it is for public awareness, policy making, research or civic engagement. In order to figure out what purpose does the city data serve, it needs to be looked into from the perspective of its potential users. There are two distinguishable types of potential users of city data -- experts and non-experts. Table \ref{table:data_users} show different types of data users, also showing the overlaps of experts and non-experts within groups.
 
 \begin{table}[hbt!]
+\footnotesize
 \centering
-\footnotesize\centering\emph{Source: Author}
-\smallskip\centering
-\caption{Categorisation of potential city data users}
 \begin{tabular}{|c|c|}
   \hline
-	\textbf{Non-Expert} & \textbf{Expert} \\
+	\textbf{Non-Expert} & \textbf{Expert} \\ [0.5ex]
   \hline
    \rowcolor[gray]{.9}\multicolumn{2}{|c|}{Citizen-scientists} \\
    \hline
@@ -78,27 +78,27 @@ Whether data in the city is generated through citizen science or crowdsourcing e
    \hline
    General Public &  Researchers \\
    \hline
-   Community Groups &  Private Companies  \\
+   Community Groups &  Private Companies  \\ [0.5ex]
   \hline
-\end{tabular}\label{table:data_users}
+\end{tabular}
+
+\smallskip\centering
+    \footnotesize\emph{Source: Author}
+\caption{Categorisation of potential city data users}
+\label{table:data_users}
 % \footnotesize\emph{Source: Author}
 \end{table}
 
 To provide an insight into the ways environmental data is published, a set of popular data platforms (n=21) were reviewed\footnote{Initial research was conducted by The West Oakland Air Quality team and was extended by the thesis author.} from the perspective of different user groups and in terms of the \textit{feature selection} on these platforms. Table \ref{table:data_users} gives an overview of how data is published for different based on different user groups -- non-expert and expert users.
 
-\begin{table}[htbp!]
+\begin{table}[hbt!]
 \scriptsize
 \centering
-\footnotesize\centering\emph{Source: Author (adapted from The West Oakland Air Quality team's research)}
-\smallskip\centering
-\scriptsize
-\captionsetup{font=footnotesize}
-\caption{List of features on environmental data platforms}
 \begin{tabular}{|c|c|}
 \hline
-    \multicolumn{2}{|c|}{\textbf{Features}} \\
+    \multicolumn{2}{|c|}{\textbf{Features}} \\ [0.5ex]
 \hline
-    \textbf{Non-Expert} & \textbf{Expert} \\
+    \textbf{Non-Expert} & \textbf{Expert} \\ [0.5ex]
 \hline
 \rowcolor[gray]{.9} Emphasis on health and quality of life & Emphasis on research \\
 \hline
@@ -127,6 +127,10 @@ Pollutants shown as aggregates or not specifically named & Types of pollutants \
 \rowcolor[gray]{.9}\multicolumn{2}{|c|}{Search} \\ [0.5ex]
 \hline
 \end{tabular}
+
+\smallskip\centering
+    \footnotesize\emph{Source: Author (adapted from The West Oakland Air Quality team's research)}
+\caption{List of features on environmental data platforms}
 \label{table:data_features}
 \end{table}
 
@@ -179,12 +183,12 @@ One of the areas of Newcastle already had an established community action group 
 
 From these reflections an initial workshop (Section \ref{sub:pinsonamap}) was designed to explore further ways to promote usage of data for raising awareness about the issues in local neighbourhoods and for civic advocacy and action. The initial workshop participants were recruited by snowball sampling through the existing advocacy group members. Overall 22 participants took part in the workshop activities. The workshop did not only provide a deeper insight to people's perceptions of data and its uses for civic advocacy, it also helped broaden the participation and make connections with a group of interested residents in another part of the city (2 miles from Newcastle city centre) which had a scarcity of hyper-local environmental data. The area itself has historically seen as heavily populated by students, which now is now shifting more towards residential with bigger proportion of young professionals and families settling down in the neighbourhood.
 
-\begin{table}[!th]
+\begin{table}[!hbt]
 \scriptsize
 \centering
 \begin{tabular}{|c|c|}
   \hline
-	\textbf{Participant} & \textbf{Roles} \\
+	\textbf{Participant} & \textbf{Roles} \\ [0.5ex]
   \hline
    \rowcolor[gray]{.9} P1 &  local charity trustee, retired council worker (city planner) from a different council \\
    \hline
@@ -200,12 +204,12 @@ From these reflections an initial workshop (Section \ref{sub:pinsonamap}) was de
   \hline
    \rowcolor[gray]{.9}  P7 &  father, public relations officer \\
   \hline
-    P8 &  consultant \\
+    P8 &  consultant \\ [0.5ex]
   \hline
 \end{tabular}
+
 \smallskip\centering
-\newline
-\footnotesize\emph{Source: Author}
+    \footnotesize\emph{Source: Author}
 \caption[SenseMyStreet Participants]{People involved in the co-design process}
 \label{table:sms_par}
 \end{table}
@@ -242,10 +246,10 @@ In order to explore these avenues and to get an idea of what people are particul
 
 Having no data available from that particular area, the residents had to rely on their perception and local knowledge when deciding on which are the most important places that need investigating through environmental sensing. Through discussion, people had to agree on where to focus their effort and use the limited resources to gather environmental data about the area. As five of the participants were parents whose children go to the local schools the focus was on areas where young people might be exposed to harmful effects of roadside traffic pollution. This focus has been a reoccurring theme with almost all community groups engaged through the project. Advocates are trying to voice the concern of the ones who might not be able to do it themselves (e.g., young children, elderly, people with reduced mobility) but often are the ones who are affected by the issue the most. Although, this type of engagement activity worked well in a focus group setting, it needed everyone to come together in a physical space and needed support from the researcher to facilitate the mapping. Reflecting on the engagements, it seemed that in order for this process to scale, and enable a broader participation from the community, it needed to take the form of an online participation system.
 
-\begin{figure}
+\begin{figure}[hbt!]
 \centering
- \includegraphics[scale=0.3]{heaton-sensor-map}
-  \caption{Initial mapping of areas of concern}
+ \includegraphics[width=\textwidth]{heaton-sensor-map}
+  \caption[Local Map]{Initial mapping of areas of concern}
   \label{fig:areasofconcern}
 \end{figure}
 
@@ -291,12 +295,12 @@ This section will give an overview of the process for sensor commissioning toolk
 \item Get the facts;
 \item Data for everyone.
 \end{enumerate*}
-Each step of is broken down to smaller activities to show give better details of the whole process of issue identification, citizen data collection and sensor commissioning.
+Each step of is broken down to smaller activities to give better details of the whole process of issue identification, citizen data collection and sensor commissioning.
 
-\begin{figure}
+\begin{figure}[hbt!]
 \centering
- \includegraphics[scale=0.3]{4-stepsn}
-  \caption{Illustration of the the four steps of the toolkit}
+ \includegraphics[width=\textwidth]{4-steps}
+  \caption[SenseMyStreet Process]{Illustration of the the four steps of the toolkit process}
   \label{fig:4steps}
 \end{figure}
 
@@ -306,7 +310,7 @@ Similarly to the initial engagements (Section \ref{sec:design_sms}) the first st
 \begin{figure}[ht!]
 \centering
  \includegraphics[width=\textwidth]{flag-issue}
-  \caption[Process of identifying the issues]{Process of identifying the issues: (1) visit the project website and sign up, (2) flag the issues, (3) identify neighbourhood areas for monitoring and apply for a monitor, (4) loan a had-held monitor, (5) conduct preliminary monitoring.}
+  \caption[Identifying the Issues]{Process of identifying the issues: (1) visit the project website and sign up, (2) flag the issues, (3) identify neighbourhood areas for monitoring and apply for a monitor, (4) loan a had-held monitor, (5) conduct preliminary monitoring.}
   \label{fig:flag-issue}
 \end{figure}
 
@@ -315,7 +319,7 @@ Enabling community to use an online map to identify issues expanded the particip
 \begin{figure}[ht!]
 \centering
  \includegraphics[width=\textwidth]{handheldmap}
-  \caption[Hand-Held monitoring results]{Example map of readings from community monitoring with a hand-held sensor.}
+  \caption[Hand-Held Monitoring Map]{Example map of readings from community monitoring with a hand-held sensor}
   \label{fig:handheldresults}
 \end{figure}
 
@@ -325,7 +329,7 @@ Using hand-held monitors provided people an opportunity to collect data from pla
 \begin{figure}
 \centering
  \includegraphics[width=\textwidth]{plan-and-propose}
-  \caption[Process of plan and propose]{Process of plan and propose: (6) visit the proposal website, (7) create and collaborate on a proposal, (8) plan the deployments.}
+  \caption[Plan and Propose]{Process of plan and propose: (6) visit the proposal website, (7) create and collaborate on a proposal, (8) plan the deployments.}
   \label{fig:plan-propose}
 \end{figure}
 
@@ -552,7 +556,7 @@ After the community sensing step and reflecting on the results of the monitoring
 \begin{figure}[ht!]
 \centering
  \includegraphics[scale=0.2]{sms-proposal}
-  \caption[Example Sensor Commissioning Proposal Document]{Example Sensor Commissioning Proposal Document}
+  \caption[Sensor Commissioning Proposal]{Example Sensor Commissioning Proposal Document}
   \label{fig:sms-proposal}
 \end{figure}
 
@@ -593,13 +597,11 @@ The SMS toolkit was officially launched in the summer of 2017. Over two years le
 Table \ref{table:flagged-issues} shows that the majority of issues were linked to air quality in the neighbourhood, which was also one of the main drivers of this case study (Section \ref{sub:breathe}). Issues with traffic were also mainly related to the air quality issue, however one of the traffic monitoring submissions was to do with counting the number of people using the new cycle lane. The issue form also enabled people to flag issues about things the toolkit could not measure at that point. The other issues submitted where about measuring water level and quality in the river, and vibration from the building works on residential area. This could help to expand the toolkit in the future and to acquire new sensing equipment to respond to citizen's concerns. 
 
 \begin{table}[!th]
+\small
 \centering
-\footnotesize\centering\emph{Source: Author}
-\smallskip\centering
-\caption[Submitted Issues]{Distribution of submitted issues on the SenseMyStreet web platform}
 \begin{tabular}{|l|c|}
   \hline
-	\textbf{Issue Type} & \textbf{Count} \\
+	\textbf{Issue Type} & \textbf{Count} \\ [0.5ex]
   \hline
    Air Pollution &  38 \\
    \hline
@@ -607,9 +609,14 @@ Table \ref{table:flagged-issues} shows that the majority of issues were linked t
    \hline
    Traffic &  3 \\
    \hline
-   Other &  3 \\
+   Other &  3 \\ [0.5ex]
   \hline
-\end{tabular}\label{table:flagged-issues}
+\end{tabular}
+
+\smallskip\centering
+    \footnotesize\emph{Source: Author}
+\caption[Submitted Issues]{Distribution of submitted issues on the SenseMyStreet web platform}    
+\label{table:flagged-issues}
 \end{table}
 
 Furthermore, having the mapping component on the SenseMyStreet website and the availability of Geo API enables to analyse issues through geography. Figure \ref{fig:sms-imd} illustrates all the submitted issues mapped against the IMD. It is the official measure of relative deprivation for small areas in England and Wales, as outlined by the Office of National Statistics (ONS). These statistics are published at the level of Lower Super Output Areas (LSOAs) that contain an average of 1,500 residents within any given boundary. The IMD uses seven domains to produce this overall measure: Income, Employment; Education, Skills and Training, Health and Disability, Crime, Barriers to House and Services, and Living Environment. Using this metric it is possible to look the socioeconomic characteristics of the areas and draw comparison between different neighbourhoods within England and Wales. When looking at the flagged issues against the IMD, it is revealed that the majority of the issues that are flagged are in the \colorbox{yellow!20}{10\% of the least deprived} areas according to the metric. This might be an indication that the people who engaged with the toolkit where living in those areas. However, the map shows some issues being flagged on the border areas of different LSOAs which could indicate that the people are living in either area.
@@ -620,8 +627,6 @@ The analysis indicated that the existence of a community group is not essential 
 
 \begin{table}[ht!]
 \scriptsize
-\captionsetup{font=footnotesize}
-\caption[SenseMyStreet Usage]{SenseMyStreet Toolkit Usage: blank fields indicate that the engagement is ongoing (no data yet) and `None' indicates no data available}
 \centering
 \begin{tabular}{|l|p{15mm}|p{10mm}|p{15mm}|p{15mm}|p{15mm}|p{10mm}|p{7mm}|p{15mm}|}
 \hline
@@ -654,6 +659,10 @@ The analysis indicated that the existence of a community group is not essential 
 \rowcolor[gray]{.9} \textbf{I7}	& \xmark & \checkmark & \checkmark &  &  &  &  & None \\ [0.5ex]
 \hline
 \end{tabular}
+
+\smallskip\centering
+    \footnotesize\emph{Source: Author}
+\caption[SenseMyStreet Usage]{SenseMyStreet Toolkit Usage: blank fields indicate that the engagement is ongoing (no data yet) and `None' indicates no data available}
 \label{table:sensemystreet_usage}
 \scriptsize
 \end{table}
