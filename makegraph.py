@@ -69,7 +69,7 @@ ax.annotate("Funding stopped", xy=('2019-09-25', 47000),  xycoords='data',
                             connectionstyle="arc3,rad=-0.2"), **style)                             
 
 ax.annotate("Focused writing", xy=('2019-11-18', 52000),  xycoords='data',
-            xytext=(-20, 35), textcoords='offset points',
+            xytext=(-30, 30), textcoords='offset points',
             arrowprops=dict(arrowstyle="->",
                             connectionstyle="arc3,rad=0.2"), **style)
 
@@ -88,8 +88,12 @@ ax.annotate('', xy=('2019-12-20', 75000), xytext=('2020-01-24', 75000),
 ax.annotate("Final Push", xy=('2020-02-25', 75000),  xycoords='data',
             xytext=(10, -30), textcoords='offset points',
             arrowprops=dict(arrowstyle="->",
-                            connectionstyle="arc3,rad=-0.2"), **style)                                         
+                            connectionstyle="arc3,rad=-0.2"), **style)
 
+ax.annotate("Submitted", xy=('2020-04-24', 88000),  xycoords='data',
+            xytext=(10, -30), textcoords='offset points',
+            arrowprops=dict(arrowstyle="->",
+                            connectionstyle="arc3,rad=-0.2"), **style)    
 
 plt.gcf().autofmt_xdate() # Rotation
 plt.savefig('word_count.png')
