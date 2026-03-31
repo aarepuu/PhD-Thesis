@@ -8,6 +8,21 @@
 
 This PhD research explores more inclusive and participatory ways of designing data-driven, people-centred smart city tools that serve the needs of citizens. In contrast to passive participation through data, this research focuses on ways of using data and technology for bringing people together to address issues in the community, and to intervene in the public space. Through different case studies I explore the role of data in civic participation and advocacy, focusing on active participation through data and digital tools that support collaborative sensemaking of that data.
 
+## Table of Contents
+
+- [Introduction](Introduction/).....................................1
+- [Chapter 1: Literature Review](Chapter1/).........................5
+- [Chapter 2: Case Study I - Data Production](Chapter2/)............12
+- [Chapter 3: Case Study I - Data Use](Chapter3/)....................25
+- [Chapter 4: Case Study II - Data Access](Chapter4/)................39
+- [Chapter 5: CDI Model](Chapter5/)..................................50
+- [Chapter 6: Case Study III](Chapter6/).............................62
+- [Chapter 7: Discussion](Chapter7/)..................................75
+- [Chapter 8: Conclusions](Chapter8/)................................90
+- [Appendix 1](Appendix1/)...........................................105
+- [Appendix 2](Appendix2/)...........................................110
+- [Appendix 3](Appendix3/)...........................................115
+
 ## Declaration
 
 This thesis is in accordance with _Newcastle University's Guidelines for the Submission and Format of Theses_ found at https://www.ncl.ac.uk/students/progress/student-resources/PGR/Guideline%20for%20Submission%20and%20Format%20of%20Theses%20July%202019.pdf
