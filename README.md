@@ -4,9 +4,11 @@
 
 # My Ph.D. thesis written in LaTeX
 
-### Abstract
+## Abstract
 
 This PhD research explores more inclusive and participatory ways of designing data-driven, people-centred smart city tools that serve the needs of citizens. In contrast to passive participation through data, this research focuses on ways of using data and technology for bringing people together to address issues in the community, and to intervene in the public space. Through different case studies I explore the role of data in civic participation and advocacy, focusing on active participation through data and digital tools that support collaborative sensemaking of that data.
+
+## Table of contents
 
 - [Introduction](Introduction/).....................................1
 - [Chapter 1: Literature Review](Chapter1/).........................15
