@@ -10,15 +10,15 @@ This PhD research explores more inclusive and participatory ways of designing da
 
 ## Table of contents
 
-- [Introduction](Introduction/).....................................1
-- [Chapter 1: Literature Review](Chapter1/).........................15
-- [Chapter 2: Case Study I - Data Production](Chapter2/)............47
-- [Chapter 3: Case Study I - Data Use](Chapter3/)....................87
-- [Chapter 4: Case Study II - Data Access](Chapter4/)................113
-- [Chapter 5: CDI Model](Chapter5/)..................................137
-- [Chapter 6: Case Study III](Chapter6/).............................167
-- [Chapter 7: Discussion](Chapter7/)..................................207
-- [Chapter 8: Conclusions](Chapter8/)................................223
+- [Introduction](Introduction/)..........................................1
+- [Chapter 1: Literature Review](Chapter1/).............................................15
+- [Chapter 2: Case Study I - Data Production](Chapter2/).............................................47
+- [Chapter 3: Case Study I - Data Use](Chapter3/).............................................87
+- [Chapter 4: Case Study II - Data Access](Chapter4/)............................................113
+- [Chapter 5: CDI Model](Chapter5/)............................................137
+- [Chapter 6: Case Study III](Chapter6/)............................................167
+- [Chapter 7: Discussion](Chapter7/)............................................207
+- [Chapter 8: Conclusions](Chapter8/)............................................223
 - [Appendix 1](Appendix1/)...........................................227
 - [Appendix 2](Appendix2/)...........................................231
 - [Appendix 3](Appendix3/)...........................................235
